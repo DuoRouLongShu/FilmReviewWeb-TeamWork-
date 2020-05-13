@@ -7,6 +7,7 @@ import com.FilmReviewWeb.Service.Impl.FilmPageServiceImpl;
 import com.alibaba.fastjson.JSON;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,6 +18,7 @@ import java.util.ArrayList;
  * @author HTwo2O
  * @date 2020/5/13 14:30
  */
+@WebServlet("/filmpage/getReviews")
 public class GetReviewsOfAFilmServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
