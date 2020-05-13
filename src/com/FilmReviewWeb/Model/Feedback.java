@@ -1,10 +1,12 @@
 package com.FilmReviewWeb.Model;
 
+import java.io.Serializable;
+
 /**用户反馈
  * @author HTwo2O
  * @date 2020/5/12 20:58
  */
-public class Feedback {
+public class Feedback implements Serializable {
     private int feedbackId;
     private int userId;
     private String userName;

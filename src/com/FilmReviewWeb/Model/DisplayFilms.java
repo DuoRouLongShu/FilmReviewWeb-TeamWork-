@@ -1,11 +1,13 @@
 package com.FilmReviewWeb.Model;
 
+import java.io.Serializable;
+
 /**
  * 首页展示电影
  * @author HTwo2O
  * @date 2020/5/12 20:52
  */
-public class DisplayFilms {
+public class DisplayFilms implements Serializable {
     private int displayId;
     private int filmId;
     private String filmName;
