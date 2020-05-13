@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+
+    <script>
+        var name = {};
+        $.ajax({
+            url:"http://localhost:8080/FilmReviewWeb/filmpage/getData",
+            data:{filmName:"倾国倾城"},
+            type:"get",
+            success:function (data) {
+                data = name;
+            },
+            dataType:"json"
+        });
+        console.log(name);
+    </script>
+</head>
+<body>
+来电东西
+
+
+</body>
+</html>

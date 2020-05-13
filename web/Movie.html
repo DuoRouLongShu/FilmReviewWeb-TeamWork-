@@ -56,30 +56,31 @@
         }
     };
     $(function () {
-        // 请求获得相应的电影名称
+        // // 请求获得相应的电影名称
         // var name;
         // $.ajax({
-        //    url:"",
-        //    type:"post",
-        //    success:function (data) {
-        //        name = data;
-        //    } ,
-        //     dataType:"json"
-        // });
-        // var MovieName = name.name;
-        //
-        // // 电影信息,根据标签去填写内容
-        // var information;
-        // $.ajax({
-        //     url:"",
-        //     data:{"name":MovieName},
+        //     url:"http://localhost:8080/FilmReviewWeb/filmpage/getData",
         //     type:"post",
         //     success:function (data) {
-        //         information = data;
-        //     },
+        //         name = data;
+        //     } ,
         //     dataType:"json"
         // });
-        // // 评论区（json）
+
+        var MovieName = "倾国倾城";
+
+        // 电影信息,根据标签去填写内容
+        var information;
+        $.ajax({
+            url:"http://localhost:8080/FilmReviewWeb/filmpage/getData",
+            data:{"filmName":MovieName},
+            type:"get",
+            success:function (data) {
+                information = data;
+            },
+            dataType:"json"
+        });
+        // 评论区（json）
 
         // $.ajax({
         //     // 去Servlet里查询所有该电影的影评，以及总页数，返回一个json对象，包含总记录数等
@@ -92,29 +93,31 @@
         //     dataType:"json"
         // });
 
-        $("#write").click(function () {
-            alert("write")
-        });
-        $("#collect").click(function () {
-            alert("collect")
-        });
+        // $("#write").click(function () {
+        //     alert("write")
+        // });
+        // $("#collect").click(function () {
+        //     alert("collect")
+        // });
 
         // 数据获取不到会堵塞？？？
-        var totalPage = comments.totalPage;
-        var totalCount = comments.totalCount;
+        var totalPage = information.pageCount;
+        var totalCount = information.dataCount;
         var count = 1;
         // 分页
         for (var i = 1; i <= totalPage; i++) {
             // 分页的按钮
-            $("#li").append("<li><a href='javascript:void(0)' class='s' onclick=fun(this); >"+count+"</a></li>");
+            $("#li").append("<li><a href='javascript:void(0)' onclick=fun(this); >"+count+"</a></li>");
             count++;
         }
 
-        // 评论
 
 
 
-        // $("#totalCount").html(totalCount);
+
+
+        $("#totalCount").html(totalCount);
+
     });
 
 
