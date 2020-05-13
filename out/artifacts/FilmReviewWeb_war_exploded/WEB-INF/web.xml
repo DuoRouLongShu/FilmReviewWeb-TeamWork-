@@ -7,7 +7,7 @@
     <welcome-file-list>
         <welcome-file>homePage.jsp</welcome-file>
     </welcome-file-list>
-
+    <!-- 分界线
     <servlet>
     <servlet-name>GetDataOfFilmSetvlet</servlet-name>
     <servlet-class>com.FilmReviewWeb.Servlet.FilmPage.GetDataOfFilmSetvlet</servlet-class>
@@ -24,7 +24,7 @@
     <servlet-mapping>
         <servlet-name>GetReviewsOfAFilmServlet</servlet-name>
         <url-pattern>/filmpage/getReviews</url-pattern>
-    </servlet-mapping>
+    </servlet-mapping>-->
 
 
 

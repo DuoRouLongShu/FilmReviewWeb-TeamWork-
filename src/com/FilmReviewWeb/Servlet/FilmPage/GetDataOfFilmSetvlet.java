@@ -7,15 +7,18 @@ import com.FilmReviewWeb.Service.Impl.FilmPageServiceImpl;
 import com.alibaba.fastjson.JSON;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
+ * 获得电影数据Servlet
  * @author HTwo2O
  * @date 2020/5/13 15:52
  */
+@WebServlet("/filmpage/getData")
 public class GetDataOfFilmSetvlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
