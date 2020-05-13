@@ -3,9 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+
+    <script>
+           function count(obj) {
+                obj.href = obj.href + "?page=1";
+                console.log(obj.href);
+            }
+
+
+            // $(".span").prop("id",3);
+
+
+           // $(".span span:nth-child()").prop("id","dd");
+           // alert($("#dd").html());
+        window.onload = function(){
+               var p = {"name":"jack"};
+            // console.log($(".span span:eq(2)").html()*2);
+            // console.log(p);
+            // for (var i = 0; i < 3; i++) {
+            //     $("div[class='t']").append("<div style=\"float: left;\"><span id='name'>用户名</span> 看过</div>" +
+            //         "<div style=\"color: #9d9d9d\">&nbsp;&nbsp;&nbsp;(<span id='time'>时间time</span>)</div>" +
+            //         "<span style=\"float: right;margin-right: 60px;color: #2aabd2\">点赞</span>" +
+            //         "<a id=\"1\" href=\"javascript:void(0)\" onclick=count(this); style=\"float: right\" >0</a><div>评论导入</div>")
+            //
+            //     $("#name:last").html("马志鹏");
+            // }
+
+            $("#name1").html("马志鹏");
+            $("#name2").html("麦狄龙");
+            $("#name3").html("邱彬");
+            $("#name4").html("罗泉水");
+            $("#name5").html("陈鸿畅");
+
+
+
+
+
+
+           };
+           // for (var j = 0; j < 5; j++) {
+           //     alert($(".span span:gt(j)").html())
+           // }
+
+
+
+
+    </script>
 </head>
 <body>
+<div id="div">
+    <a id="a" onclick=count(this); href="javascript:void(0)">3</a>
+    <span class="span" >
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+    </span>
+    <div class="t"></div>
+    <!--onclick="window.location.href='https://www.baidu.com'-->
+    <div style="float: left;"><span id="name1"></span> 看过</div>
+    <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time1">评论时间</span>)</div>
+    <span style="float: right;margin-right: 60px;color: #2aabd2">点赞</span><a href="javascript:void(0)" onclick=count(this); style="float: right" >0</a>
+    <div id="comment1">评论导入</div>
 
-    我来了
+    <div style="float: left;"><span id="name2"></span> 看过</div>
+    <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time2">评论时间</span>)</div>
+    <span style="float: right;margin-right: 60px;color: #2aabd2">点赞</span><a href="javascript:void(0)" onclick=count(this); style="float: right" >0</a>
+    <div id="comment2">评论导入</div>
+
+    <div style="float: left;"><span id="name3">用户名字</span> 看过</div>
+    <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time3">评论时间</span>)</div>
+    <span style="float: right;margin-right: 60px;color: #2aabd2">点赞</span><a href="javascript:void(0)" onclick=count(this); style="float: right" >0</a>
+    <div id="comment3">评论导入</div>
+
+    <div style="float: left;"><span id="name4">用户名字</span> 看过</div>
+    <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time4">评论时间</span>)</div>
+    <span style="float: right;margin-right: 60px;color: #2aabd2">点赞</span><a href="javascript:void(0)" onclick=count(this); style="float: right" >0</a>
+    <div id="comment4">评论导入</div>
+
+    <div style="float: left;"><span id="name5">用户名字</span> 看过</div>
+    <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time5">评论时间</span>)</div>
+    <span style="float: right;margin-right: 60px;color: #2aabd2">点赞</span><a href="javascript:void(0)" onclick=count(this); style="float: right" >0</a>
+    <div id="comment5">评论导入</div>
+</div>
 </body>
 </html>

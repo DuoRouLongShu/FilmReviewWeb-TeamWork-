@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Movie</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <!--<script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>-->
+    <!--<script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>-->
+    <!--[endif]-->
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<script>
+    // 所有有关评论的json对象
+    var comments;
+    var page = 0;
+    function count(obj) {
+        // 改变点赞数后要记得保存到数据
+        $(obj).html(parseInt($(obj).html())+1);
+    }
+
+    window.onload = function() {
+        function fun(obj) {
+            var i = (obj.innerText-1)*5;
+            $("#name1").html(comments.list[i].UserName);
+            $("#time1").html(comments.list[i].time);
+            $("#comment1").html(comments.list[i].comment);
+            i++;
+            $("#name2").html(comments.list[i].UserName);
+            $("#time2").html(comments.list[i].time);
+            $("#comment2").html(comments.list[i].comment);
+            i++;
+            $("#name3").html(comments.list[i].UserName);
+            $("#time3").html(comments.list[i].time);
+            $("#comment3").html(comments.list[i].comment);
+            i++;
+            $("#name4").html(comments.list[i].UserName);
+            $("#time4").html(comments.list[i].time);
+            $("#comment4").html(comments.list[i].comment);
+            i++;
+            $("#name5").html(comments.list[i].UserName);
+            $("#time5").html(comments.list[i].time);
+            $("#comment5").html(comments.list[i].comment);
+        }
+    };
+    $(function () {
+        // 请求获得相应的电影名称
+        // var name;
+        // $.ajax({
+        //    url:"",
+        //    type:"post",
+        //    success:function (data) {
+        //        name = data;
+        //    } ,
+        //     dataType:"json"
+        // });
+        // var MovieName = name.name;
+        //
+        // // 电影信息,根据标签去填写内容
+        // var information;
+        // $.ajax({
+        //     url:"",
+        //     data:{"name":MovieName},
+        //     type:"post",
+        //     success:function (data) {
+        //         information = data;
+        //     },
+        //     dataType:"json"
+        // });
+        // // 评论区（json）
+
+        // $.ajax({
+        //     // 去Servlet里查询所有该电影的影评，以及总页数，返回一个json对象，包含总记录数等
+        //     url:"",
+        //     data:{"name":MovieName},
+        //     type:"post",
+        //     success:function(data){
+        //         comments = data;
+        //     },
+        //     dataType:"json"
+        // });
+
+        $("#write").click(function () {
+            alert("write")
+        });
+        $("#collect").click(function () {
+            alert("collect")
+        });
+
+        // 数据获取不到会堵塞？？？
+        var totalPage = comments.totalPage;
+        var totalCount = comments.totalCount;
+        var count = 1;
+        // 分页
+        for (var i = 1; i <= totalPage; i++) {
+            // 分页的按钮
+            $("#li").append("<li><a href='javascript:void(0)' class='s' onclick=fun(this); >"+count+"</a></li>");
+            count++;
+        }
+
+        // 评论
+
+
+
+        // $("#totalCount").html(totalCount);
+    });
+
+
+
+</script>
+<style>
+    #search{
+        margin-left: 300px;
+        width: 500px;
+    }
+    .name{
+        font-weight: 900;
+        font-size: 30px;
+    }
+    .time{
+        font-size: 30px;
+        color: #9d9d9d;
+    }
+    .information{
+        font-size: 20px;
+    }
+    .t{
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    .color{
+        color: green;
+    }
+</style>
+
+<body>
+    <!--导航条-->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">首页</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入你要搜索的电影名称" id="search">
+                    </div>
+                    <button type="submit" class="btn btn-default">搜索</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">个人中心</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <span class="name t">电影名称 </span><span class="time"> (时间)</span><br>
+    <div class="row t">
+        <div class="col-md-4"><img src="img/45d30c6591fc702987439347f480a426.jpg" alt="电影海报" height="50%" width="100%" ></div>
+        <div class="col-md-8 information">
+            导演:<span>名字</span><br>
+            编剧:<span>名字</span><br>
+            主演:<span>名字</span><br>
+            类型:<span>名字</span><br>
+            制片国家:<span>名字</span><br>
+            上映时间:<span>时间</span><br>
+        </div>
+    </div>
+    <input type="button" class="btn btn-default t" value="写影评" id="write">
+    <input type="button" class="btn btn-default t" value="收藏" id="collect">
+    <br>
+        <h3 class="t">网友影评</h3>
+        <div class="t color" style="float: left">电影名字影评</div>
+        <input type="button" class="btn btn-default" value="我要写影评" style="float: right;margin-right: 40px">
+    <br><br>
+
+     <!--评论区-->
+    <div class="t">
+        <div style="float: left;"><span id="name1">用户名字</span> 看过</div>
+        <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time1">评论时间</span>)</div>
+        <span style="float: right;margin-right: 60px;color: #2aabd2">点赞</span><a href="javascript:void(0)" onclick=count(this); style="float: right" >0</a>
+        <div id="comment1">评论导入</div>
+
+        <div style="float: left;"><span id="name2">用户名字</span> 看过</div>
+        <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time2">评论时间</span>)</div>
+        <span style="float: right;margin-right: 60px;color: #2aabd2">点赞</span><a href="javascript:void(0)" onclick=count(this); style="float: right" >0</a>
+        <div id="comment2">评论导入</div>
+
+        <div style="float: left;"><span id="name3">用户名字</span> 看过</div>
+        <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time3">评论时间</span>)</div>
+        <span style="float: right;margin-right: 60px;color: #2aabd2">点赞</span><a href="javascript:void(0)" onclick=count(this); style="float: right" >0</a>
+        <div id="comment3">评论导入</div>
+
+        <div style="float: left;"><span id="name4">用户名字</span> 看过</div>
+        <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time4">评论时间</span>)</div>
+        <span style="float: right;margin-right: 60px;color: #2aabd2">点赞</span><a href="javascript:void(0)" onclick=count(this); style="float: right" >0</a>
+        <div id="comment4">评论导入</div>
+
+        <div style="float: left;"><span id="name5">用户名字</span> 看过</div>
+        <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time5">评论时间</span>)</div>
+        <span style="float: right;margin-right: 60px;color: #2aabd2">点赞</span><a href="javascript:void(0)" onclick=count(this); style="float: right" >0</a>
+        <div id="comment5">评论导入</div>
+
+
+    </div>
+
+
+    <!--分页条-->
+    <nav aria-label="Page navigation" style="text-align: center;">
+        <ul class="pagination">
+            <li >
+                <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <!--页数-->
+            <ul class='pagination' id="li" style="margin-top:1px;"></ul>
+            <li style="float: right">
+                <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+        <!--<span style="float: right">共<span id="totalCount"></span>条记录</span>-->
+    </nav>
+
+</body>
+</html>
