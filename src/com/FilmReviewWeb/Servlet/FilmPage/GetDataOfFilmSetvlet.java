@@ -21,12 +21,14 @@ public class GetDataOfFilmSetvlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");
         resp.setContentType("text/html;charset=UTF-8");
-        resp.setHeader("Access-Control-Allow-Origin", "*");
+        //resp.setHeader("Access-Control-Allow-Origin", "*");
         Result result = new Result();
+        String filmName = req.getParameter("filmName");
+        System.out.println(filmName);
         try {
-            String filName = req.getParameter("filName");
+
             FilmPageService filmPageService = new FilmPageServiceImpl();
-            Film data = filmPageService.getFilmDataByFilmName(filName);
+            Film data = filmPageService.getFilmDataByFilmName(filmName);
             if (data == null){
                 result.setDataCount(0);
                 result.setData(null);

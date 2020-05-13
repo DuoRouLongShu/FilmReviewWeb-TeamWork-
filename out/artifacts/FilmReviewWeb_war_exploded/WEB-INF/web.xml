@@ -9,8 +9,8 @@
     </welcome-file-list>
 
     <servlet>
-        <servlet-name>GetDataOfFilmSetvlet</servlet-name>
-        <servlet-class>com.FilmReviewWeb.Servlet.FilmPage.GetDataOfFilmSetvlet</servlet-class>
+    <servlet-name>GetDataOfFilmSetvlet</servlet-name>
+    <servlet-class>com.FilmReviewWeb.Servlet.FilmPage.GetDataOfFilmSetvlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>GetDataOfFilmSetvlet</servlet-name>
