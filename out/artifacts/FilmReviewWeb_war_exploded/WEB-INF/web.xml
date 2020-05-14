@@ -5,16 +5,32 @@
          version="4.0">
 
     <welcome-file-list>
-        <welcome-file>pages/homePage.jsp</welcome-file>
+        <welcome-file>homePage.jsp</welcome-file>
     </welcome-file-list>
-
+    <!-- 分界线
     <servlet>
-        <servlet-name>first</servlet-name>
-        <servlet-class>com.servlet.LoginServlet</servlet-class>
+    <servlet-name>GetDataOfFilmSetvlet</servlet-name>
+    <servlet-class>com.FilmReviewWeb.Servlet.FilmPage.GetDataOfFilmSetvlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>first</servlet-name>
-        <url-pattern>/LoginServlet</url-pattern>
+        <servlet-name>GetDataOfFilmSetvlet</servlet-name>
+        <url-pattern>/filmpage/getData</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetReviewsOfAFilmServlet</servlet-name>
+        <servlet-class>com.FilmReviewWeb.Servlet.FilmPage.GetReviewsOfAFilmServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetReviewsOfAFilmServlet</servlet-name>
+        <url-pattern>/filmpage/getReviews</url-pattern>
+    </servlet-mapping>-->
+
+
+
+
+
+    <!-- 分界线   -->
+
 
 </web-app>

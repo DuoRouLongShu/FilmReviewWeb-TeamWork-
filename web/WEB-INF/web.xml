@@ -8,13 +8,6 @@
         <welcome-file>homePage.jsp</welcome-file>
     </welcome-file-list>
 
-    <servlet>
-        <servlet-name>first</servlet-name>
-        <servlet-class>com.servlet.LoginServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>first</servlet-name>
-        <url-pattern>/LoginServlet</url-pattern>
-    </servlet-mapping>
+
 
 </web-app>

@@ -10,9 +10,9 @@ import java.sql.Statement;
 import java.util.Properties;
 
 /**
+ * JDBC工具类
  * @author HTwo2O
  * @date 2020/5/10 21:25
- * JDBC工具类
  */
 
 
@@ -31,7 +31,11 @@ public class JDBCUtils {
     }
 
 
-
+    /**
+     * 获得数据库连接
+     * @return Connection
+     * @throws SQLException
+     */
     public static Connection getConnection() throws SQLException {//获取Connection 对象
         return dataSource.getConnection();
     }

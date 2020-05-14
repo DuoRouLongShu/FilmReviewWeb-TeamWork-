@@ -11,6 +11,6 @@
     <title>主页</title>
 </head>
 <body>
-嘻嘻嘻嘻嘻
+欢迎
 </body>
 </html>
