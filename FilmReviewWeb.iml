@@ -25,7 +25,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.0.M26" level="application_server_libraries" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Tomcat 9.0.0.M26" level="application_server_libraries" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
@@ -51,5 +51,6 @@
     <orderEntry type="library" name="fastjson-1.2.2" level="project" />
     <orderEntry type="library" name="mysql-connector-java-8.0.15" level="project" />
     <orderEntry type="library" name="servlet-api" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Tomcat 8.5.31" level="application_server_libraries" />
   </component>
 </module>
