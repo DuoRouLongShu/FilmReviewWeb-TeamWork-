@@ -14,6 +14,13 @@ import java.sql.SQLException;
  * @date 2020/5/13 15:51
  */
 public class FilmDao {
+
+    /**
+     * 通过电影名获得并返回电影相关数据
+     * @param filmName
+     * @return
+     * @throws SQLException
+     */
     public Film getFilmDataByFilmName(String filmName) throws SQLException {
         Connection connection = JDBCUtils.getConnection();
         String sql = "select * from film where film_name = ?";
@@ -38,8 +45,10 @@ public class FilmDao {
             String duration = resultSet.getString("duration");
             //概要
             String synopsis = resultSet.getString("synopsis");
-            film = new Film(filmId,  filmName, rating, director, writer, performer,  genre, area, language, duration,  synopsis);  
+            String releaseDate = resultSet.getString("release_date");
+            film = new Film(filmId,  filmName, rating, director, writer, performer,  genre, area, language, duration,  synopsis, releaseDate);
         }
+        JDBCUtils.close(connection,preparedStatement,resultSet);
         return film;
     }
 }

@@ -83,4 +83,17 @@ public class FilmPageTest {
         System.out.println(JSON.toJSONString(result));
 
     }
+
+    @Test
+    public void writeReviewTest() throws Exception {
+        FilmPageService filmPageService = new FilmPageServiceImpl();
+        Review review = new Review();
+        review.setFilmName("罗马假日");
+        review.setUserName("sb");
+        review.setRating(9.5f);
+        review.setTitle("观后感");
+        review.setText("真的好看太好看了啊啊啊啊");
+        boolean flag = filmPageService.writeAReview(review);
+        System.out.println(flag);
+    }
 }

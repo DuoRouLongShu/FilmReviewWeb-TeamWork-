@@ -38,7 +38,7 @@ public class Tester {
             preparedStatement = connection.prepareStatement("select * from user");
             resultSet = preparedStatement.executeQuery();
             resultSet.next();
-            String name = resultSet.getString("userName");
+            String name = resultSet.getString("user_name");
             JDBCUtils.close(connection,preparedStatement,resultSet);
             System.out.println(name);
         } catch (SQLException e) {
