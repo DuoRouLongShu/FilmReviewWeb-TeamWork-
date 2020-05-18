@@ -25,7 +25,6 @@ public class GetReviewsOfAFilmServlet extends HttpServlet {
         resp.setHeader("Access-Control-Allow-Origin", "*");
 
         String filmName = req.getParameter("filmName");
-
         FilmPageService filmPageService = new FilmPageServiceImpl();
         try {
             Result result = new Result();

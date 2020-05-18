@@ -23,130 +23,184 @@
     <script src="js/bootstrap.min.js"></script>
 </head>
 <script>
-    // 所有有关评论的json对象
+
+    // // 请求获得相应的电影名称
+    var MovieName = "倾国倾城";
+    // 数据获取不到会堵塞？？？
+    var totalPage;
+    var totalCount;
+    // 评论的对象、内容、点赞数
     var comments;
-    var page = 0;
     function count(obj) {
         // 改变点赞数后要记得保存到数据
-        $(obj).html(parseInt($(obj).html())+1);
+        var addLike = $(obj).html(parseInt($(obj).html())+1);
+        // comments.data[].likes = addLike;
     }
 
-    window.onload = function() {
-        function fun(obj) {
-            var i = (obj.innerText-1)*5;
-            $("#name1").html(comments.list[i].UserName);
-            $("#time1").html(comments.list[i].time);
-            $("#comment1").html(comments.list[i].comment);
-            i++;
-            $("#name2").html(comments.list[i].UserName);
-            $("#time2").html(comments.list[i].time);
-            $("#comment2").html(comments.list[i].comment);
-            i++;
-            $("#name3").html(comments.list[i].UserName);
-            $("#time3").html(comments.list[i].time);
-            $("#comment3").html(comments.list[i].comment);
-            i++;
-            $("#name4").html(comments.list[i].UserName);
-            $("#time4").html(comments.list[i].time);
-            $("#comment4").html(comments.list[i].comment);
-            i++;
-            $("#name5").html(comments.list[i].UserName);
-            $("#time5").html(comments.list[i].time);
-            $("#comment5").html(comments.list[i].comment);
+    // 添加不同分页的评论内容
+    function fun(obj) {
+        // i 的位置需要注意，可能错在这
+        var i = (obj.innerText - 1) * 5;
+        console.log(obj.innerText);
+        if (i < 0 || i == null) {
+            i = 0;
         }
-    };
-    $(function () {
-        // // 请求获得相应的电影名称
-        // var name;
-        // $.ajax({
-        //     url:"http://localhost:8080/FilmReviewWeb/filmpage/getData",
-        //     type:"post",
-        //     success:function (data) {
-        //         name = data;
-        //     } ,
-        //     dataType:"json"
-        // });
+        $("#name1").html(comments.data[i].userName);
+        $("#comment1").html(comments.data[i].text+"<br>"+comments.data[i].title);
+        $("#like1").html(comments.data[i].likes);
+        $("#time1").html(comments.data[i].creatDate);
+        $("#rate1").html(comments.data[i].rating);
+        i++;
+        if(i < comments.data.length) {
+            $("#name2").html(comments.data[i].userName);
+            $("#comment2").html(comments.data[i].text+"<br>"+comments.data[i].title);
+            $("#like2").html(comments.data[i].likes);
+            $("#time2").html(comments.data[i].creatDate);
+            $("#rate2").html(comments.data[i].rating);
+        }
+        i++;
+        if(i < comments.data.length) {
+            $("#name3").html(comments.data[i].userName);
+            $("#comment3").html(comments.data[i].text+"<br>"+comments.data[i].title);
+            $("#like3").html(comments.data[i].likes);
+            $("#time3").html(comments.data[i].creatDate);
+            $("#rate3").html(comments.data[i].rating);
+        }
+        i++;
+        if(i < comments.data.length) {
+            $("#name4").html(comments.data[i].userName);
+            $("#comment4").html(comments.data[i].text+"<br>"+comments.data[i].title);
+            $("#like4").html(comments.data[i].likes);
+            $("#time4").html(comments.data[i].creatDate);
+            $("#rate4").html(comments.data[i].rating);
+        }
+        i++;
+        if(i < comments.data.length) {
+            $("#name5").html(comments.data[i].userName);
+            $("#comment5").html(comments.data[i].text+"<br>"+comments.data[i].title);
+            $("#like5").html(comments.data[i].likes);
+            $("#time5").html(comments.data[i].creatDate);
+            $("#rate5").html(comments.data[i].rating);
+        }
+    }
 
-        var MovieName = "倾国倾城";
-
-        // 电影信息,根据标签去填写内容
-        var information;
+    $(function (){
+        // 评论区（json）
         $.ajax({
-            url:"http://localhost:8080/FilmReviewWeb/filmpage/getData",
+            // 去Servlet里查询所有该电影的影评，以及总页数，返回一个json对象，包含总记录数等
+            url:"http://localhost:8080/FilmReviewWeb/filmpage/getReviews",
             data:{"filmName":MovieName},
-            type:"get",
-            success:function (data) {
-                information = data;
+            type:"post",
+            success:function(data){
+                comments = data;
+                totalPage = data.pageCount;
+                totalCount = data.dataCount;
+                $("#totalCount").html(totalCount);
+                // 分页
+                for (var i = 1; i <= totalPage; i++) {
+                    // 分页的按钮
+                    $("#li").append("<li><a href='javascript:void(0)' onclick=fun(this); >"+i+"</a></li>");
+                }
+
+                // 刚开始的显示内容
+                $("#name1").html(comments.data[0].userName);
+                $("#comment1").html(comments.data[0].text+"<br>"+comments.data[4].title);
+                $("#like1").html(comments.data[0].likes);
+                $("#time1").html(comments.data[0].creatDate);
+                $("#rate1").html(comments.data[0].rating);
+
+                $("#name2").html(comments.data[1].userName);
+                $("#comment2").html(comments.data[1].text+"<br>"+comments.data[4].title);
+                $("#like2").html(comments.data[1].likes);
+                $("#time2").html(comments.data[1].creatDate);
+                $("#rate2").html(comments.data[1].rating);
+
+                $("#name3").html(comments.data[2].userName);
+                $("#comment3").html(comments.data[2].text+"<br>"+comments.data[4].title);
+                $("#like3").html(comments.data[2].likes);
+                $("#time3").html(comments.data[2].creatDate);
+                $("#rate3").html(comments.data[2].rating);
+
+                $("#name4").html(comments.data[3].userName);
+                $("#comment4").html(comments.data[3].text+"<br>"+comments.data[4].title);
+                $("#like4").html(comments.data[3].likes);
+                $("#time4").html(comments.data[3].creatDate);
+                $("#rate4").html(comments.data[3].rating);
+
+                $("#name5").html(comments.data[4].userName);
+                $("#comment5").html(comments.data[4].text+"<br>"+comments.data[4].title);
+                $("#like5").html(comments.data[4].likes);
+                $("#time5").html(comments.data[4].creatDate);
+                $("#rate5").html(comments.data[4].rating);
             },
             dataType:"json"
         });
-        // 评论区（json）
 
-        // $.ajax({
-        //     // 去Servlet里查询所有该电影的影评，以及总页数，返回一个json对象，包含总记录数等
-        //     url:"",
-        //     data:{"name":MovieName},
-        //     type:"post",
-        //     success:function(data){
-        //         comments = data;
-        //     },
-        //     dataType:"json"
-        // });
+        $.ajax({
+            url:"http://localhost:8080/FilmReviewWeb/filmpage/getData",
+            data:{"filmName":MovieName},
+            type:"post",
+            success:function (data) {
+                // 为页面添加真实内容
+                $(".time").html(data.data.releaseDate);
+                $(".filmName").html(data.data.filmName);
+                $("#rating").html(data.data.rating);
+                $("#area").html(data.data.area);
+                $("#director").html(data.data.director);
+                $("#writer").html(data.data.writer);
+                $("#performer").html(data.data.performer);
+                $("#genre").html(data.data.genre);
+                $("#language").html(data.data.language);
+                $("#duration").html(data.data.duration);
+                $("#synopsis").html(data.data.synopsis);
+            },
+            dataType:"json"
+        });
 
-        // $("#write").click(function () {
-        //     alert("write")
-        // });
+        $(".write").click(function () {
+            // 需要换路径啊！！！！！！
+            // window.location.href = "http://localhost:8080/FilmReviewWeb/WriteComment.html?filmName"+data.data.filmName;
+            window.location.href = "http://localhost:8080/FilmReviewWeb/WriteComment.html";
+        });
         // $("#collect").click(function () {
         //     alert("collect")
         // });
 
-        // 数据获取不到会堵塞？？？
-        var totalPage = information.pageCount;
-        var totalCount = information.dataCount;
-        var count = 1;
-        // 分页
-        for (var i = 1; i <= totalPage; i++) {
-            // 分页的按钮
-            $("#li").append("<li><a href='javascript:void(0)' onclick=fun(this); >"+count+"</a></li>");
-            count++;
-        }
-
-
-
-
-
-
-        $("#totalCount").html(totalCount);
 
     });
 
-
-
 </script>
-<style>
-    #search{
-        margin-left: 300px;
-        width: 500px;
-    }
-    .name{
-        font-weight: 900;
-        font-size: 30px;
-    }
-    .time{
-        font-size: 30px;
-        color: #9d9d9d;
-    }
-    .information{
-        font-size: 20px;
-    }
-    .t{
-        margin-top: 10px;
-        margin-left: 20px;
-    }
-    .color{
-        color: green;
-    }
-</style>
+        <style>
+            #search{
+                margin-left: 300px;
+                width: 500px;
+            }
+            .name{
+                font-weight: 900;
+                font-size: 30px;
+            }
+            .time{
+                font-size: 30px;
+                color: #9d9d9d;
+            }
+            .information{
+                font-size: 20px;
+            }
+            .t{
+                 margin-top: 10px;
+                 margin-left: 30px;
+             }
+            .color{
+                color: green;
+            }
+            .p{
+                font-size:large;
+                font-weight: bold;
+            }
+            textarea{
+                resize: none;
+            }
+        </style>
 
 <body>
     <!--导航条-->
@@ -176,52 +230,58 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
-    <span class="name t">电影名称 </span><span class="time"> (时间)</span><br>
+    <span class="name t filmName" style="margin-left: 40px">电影名称 </span>(  <span class="time">时间</span>)<br>
     <div class="row t">
         <div class="col-md-4"><img src="img/45d30c6591fc702987439347f480a426.jpg" alt="电影海报" height="50%" width="100%" ></div>
         <div class="col-md-8 information">
-            导演:<span>名字</span><br>
-            编剧:<span>名字</span><br>
-            主演:<span>名字</span><br>
-            类型:<span>名字</span><br>
-            制片国家:<span>名字</span><br>
-            上映时间:<span>时间</span><br>
+            导演:    <span id="director">名字</span><br>
+            编剧:    <span id="writer">名字</span><br>
+            主演:    <span id="performer">  名字</span><br>
+            类型:    <span id="genre">名字</span><br>
+            制片地区:    <span id="area">名字</span><br>
+            评分:    <span id="rating">分数</span><br>
+            语言:    <span id="language">语言</span><br>
+            片长:    <span id="duration">片长</span><br>
+            梗概:    <span id="synopsis">梗概</span><br>
         </div>
     </div>
-    <input type="button" class="btn btn-default t" value="写影评" id="write">
+    <input type="button" class="btn btn-default t write" value="写影评" style="margin-left: 40px">
     <input type="button" class="btn btn-default t" value="收藏" id="collect">
-    <br>
+    <input type="button" class="btn btn-default t" value="分享到" >
+    <br><br><br>
         <h3 class="t">网友影评</h3>
-        <div class="t color" style="float: left">电影名字影评</div>
-        <input type="button" class="btn btn-default" value="我要写影评" style="float: right;margin-right: 40px">
+        <div class="t color" style="float: left;font-size: medium"><span class="filmName">电影名字</span>影评</div>
+        <input type="button" class="btn btn-default write" value="我要写影评" style="float: right;margin-right: 60px">
     <br><br>
 
      <!--评论区-->
     <div class="t">
         <div style="float: left;"><span id="name1">用户名字</span> 看过</div>
-        <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time1">评论时间</span>)</div>
-        <span style="float: right;margin-right: 60px;color: #2aabd2">点赞</span><a href="javascript:void(0)" onclick=count(this); style="float: right" >0</a>
-        <div id="comment1">评论导入</div>
+        <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time1">评论时间</span>)&nbsp;&nbsp;&nbsp;<span style="color: gold;font-size: large;font-weight: 700">评分:  <span id="rate1">5.0</span></span></div>
+        <span style="float: right;margin-right: 60px;color: #2aabd2">点赞</span><a href="javascript:void(0)" onclick=count(this); style="float: right" id="like1">0</a>
+        <textarea cols="132" rows="5" id="comment1" class="p" readonly>评论导入</textarea><br><br>
 
         <div style="float: left;"><span id="name2">用户名字</span> 看过</div>
-        <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time2">评论时间</span>)</div>
-        <span style="float: right;margin-right: 60px;color: #2aabd2">点赞</span><a href="javascript:void(0)" onclick=count(this); style="float: right" >0</a>
-        <div id="comment2">评论导入</div>
+        <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time2">评论时间</span>)&nbsp;&nbsp;&nbsp;<span style="color: gold;font-size: large;font-weight: 700">评分:  <span id="rate2">5.0</span></span></div>
+        <span style="float: right;margin-right: 60px;color: #2aabd2">点赞</span><a href="javascript:void(0)" onclick=count(this); style="float: right" id="like2">0</a>
+        <textarea cols="132" rows="5" id="comment2" class="p" readonly>评论导入</textarea><br><br>
 
         <div style="float: left;"><span id="name3">用户名字</span> 看过</div>
-        <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time3">评论时间</span>)</div>
-        <span style="float: right;margin-right: 60px;color: #2aabd2">点赞</span><a href="javascript:void(0)" onclick=count(this); style="float: right" >0</a>
-        <div id="comment3">评论导入</div>
+        <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time3">评论时间</span>)&nbsp;&nbsp;&nbsp;<span style="color: gold;font-size: large;font-weight: 700">评分:  <span id="rate3">5.0</span></span></div>
+        <span style="float: right;margin-right: 60px;color: #2aabd2">点赞</span><a href="javascript:void(0)" onclick=count(this); style="float: right" id="like3">0</a>
+        <textarea cols="132" rows="5" id="comment3" class="p" readonly>评论导入</textarea><br><br>
+
 
         <div style="float: left;"><span id="name4">用户名字</span> 看过</div>
-        <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time4">评论时间</span>)</div>
-        <span style="float: right;margin-right: 60px;color: #2aabd2">点赞</span><a href="javascript:void(0)" onclick=count(this); style="float: right" >0</a>
-        <div id="comment4">评论导入</div>
+        <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time4">评论时间</span>)&nbsp;&nbsp;&nbsp;<span style="color: gold;font-size: large;font-weight: 700">评分:  <span id="rate4">5.0</span></span></div>
+        <span style="float: right;margin-right: 60px;color: #2aabd2">点赞</span><a href="javascript:void(0)" onclick=count(this); style="float: right" id="like4">0</a>
+        <textarea cols="132" rows="5" id="comment4" class="p" readonly>评论导入</textarea><br><br>
+
 
         <div style="float: left;"><span id="name5">用户名字</span> 看过</div>
-        <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time5">评论时间</span>)</div>
-        <span style="float: right;margin-right: 60px;color: #2aabd2">点赞</span><a href="javascript:void(0)" onclick=count(this); style="float: right" >0</a>
-        <div id="comment5">评论导入</div>
+        <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time5">评论时间</span>)&nbsp;&nbsp;&nbsp;<span style="color: gold;font-size: large;font-weight: 700">评分:  <span id="rate5">5.0</span></span></div>
+        <span style="float: right;margin-right: 60px;color: #2aabd2">点赞</span><a href="javascript:void(0)" onclick=count(this); style="float: right" id="like5">0</a>
+        <textarea cols="132" rows="5" id="comment5" class="p" readonly>评论导入</textarea><br><br>
 
 
     </div>
@@ -231,19 +291,18 @@
     <nav aria-label="Page navigation" style="text-align: center;">
         <ul class="pagination">
             <li >
-                <a href="#" aria-label="Previous">
+                <a href="javascript:void(0)" aria-label="Previous" onclick=fun()>
                     <span aria-hidden="true">&laquo;</span>
                 </a>
             </li>
             <!--页数-->
             <ul class='pagination' id="li" style="margin-top:1px;"></ul>
             <li style="float: right">
-                <a href="#" aria-label="Next">
+                <a href="javascript:void(0)" aria-label="Next" onclick=fun()>
                     <span aria-hidden="true">&raquo;</span>
                 </a>
             </li>
-        </ul>
-        <!--<span style="float: right">共<span id="totalCount"></span>条记录</span>-->
+        </ul><div style="vertical-align: middle;font-size: large;color: #2aabd2">共<span id="totalCount"></span>条记录</div>
     </nav>
 
 </body>

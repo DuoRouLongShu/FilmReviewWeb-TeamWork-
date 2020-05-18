@@ -7,56 +7,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a45f3d02-5d55-4185-89ac-6b3269ae0bc0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/druid_1_0_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/FilmDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/ReviewDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/DisplayFilms.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Feedback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Film.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Review.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/ShortReview.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/FilmPageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/HomePageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/Impl/FilmPageServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/SearchService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetDataOfFilmSetvlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/Search/SearchServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/FilmPageTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Utils/TimeUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/FilmPageTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Dao/FilmDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Dao/ReviewDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/DisplayFilms.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/Feedback.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/Film.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/Result.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/Review.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/ShortReview.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/FilmPageService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/HomePageService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/Impl/FilmPageServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/SearchService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/GetDataOfFilmSetvlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/Search/SearchServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Utils/TimeUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/test2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/druid_1_0_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_15.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FilmReviewWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FilmReviewWeb.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/FilmPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/FilmPageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/Tester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Utils/JDBCUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Utils/JDBCUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/druid.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/druid.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/druid.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/Movie.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/Movie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/FilmPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/FilmPageTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Tester.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Tester.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Utils/JDBCUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Utils/JDBCUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Utils/JDBCUtils.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/druid.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/druid.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/druid-1.0.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/fastjson-1.2.2-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/fastjson-1.2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-8.0.15.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test2.html" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,53 +46,58 @@
     <session id="902035398">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.3" value="1" />
+          <entry key="project.closed" value="10" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.82" value="1" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="class" value="1" />
           <entry key="css" value="1" />
-          <entry key="html" value="9" />
+          <entry key="html" value="14" />
           <entry key="iml" value="2" />
-          <entry key="java" value="17" />
+          <entry key="java" value="35" />
           <entry key="js" value="2" />
           <entry key="jsp" value="8" />
-          <entry key="properties" value="2" />
-          <entry key="xml" value="5" />
+          <entry key="properties" value="12" />
+          <entry key="xml" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="CLASS" value="1" />
           <entry key="CSS" value="1" />
-          <entry key="HTML" value="9" />
+          <entry key="HTML" value="14" />
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="17" />
+          <entry key="JAVA" value="35" />
           <entry key="JSP" value="8" />
           <entry key="JavaScript" value="2" />
-          <entry key="Properties" value="2" />
-          <entry key="XML" value="5" />
+          <entry key="Properties" value="12" />
+          <entry key="XML" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="8339" />
-          <entry key="java" value="31" />
-          <entry key="properties" value="23" />
+          <entry key="html" value="16046" />
+          <entry key="java" value="166" />
+          <entry key="properties" value="66" />
           <entry key="txt" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="8339" />
-          <entry key="JAVA" value="31" />
+          <entry key="HTML" value="16046" />
+          <entry key="JAVA" value="166" />
           <entry key="PLAIN_TEXT" value="33" />
-          <entry key="Properties" value="23" />
+          <entry key="Properties" value="66" />
         </counts>
       </usages-collector>
     </session>
@@ -131,88 +107,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#8;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#10;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#11;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#13;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#14;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/Movie.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1753">
-              <caret line="182" column="21" selection-start-line="182" selection-start-column="21" selection-end-line="182" selection-end-column="21" />
+            <state relative-caret-position="-625">
+              <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
               <folding>
                 <element signature="n#button#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#6;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#7;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#5;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#9;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#10;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#6;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#7;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#7;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#12;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#13;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#9;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#9;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#nav#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#ul#0;n#ul#0;n#nav#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#li#1;n#ul#0;n#nav#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#nav#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/test2.html">
+        <entry file="file://$PROJECT_DIR$/web/WriteComment.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Utils/JDBCUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+            <state relative-caret-position="2350">
+              <caret line="94" column="17" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
+              <folding>
+                <element signature="n#button#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#div#1;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#2;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#2;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -239,19 +195,23 @@
         <option value="$PROJECT_DIR$/src/jdbc.properties" />
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Utils/JDBCUtil.java" />
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/test.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/Tester.java" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/Movie.html" />
         <option value="$PROJECT_DIR$/web/dd.html" />
         <option value="$PROJECT_DIR$/web/t.html" />
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/test.java" />
-        <option value="$PROJECT_DIR$/web/test.html" />
         <option value="$PROJECT_DIR$/web/file.html" />
-        <option value="$PROJECT_DIR$/src/druid.properties" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetDataOfFilmSetvlet.java" />
+        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/Tester.java" />
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.java" />
+        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/FilmPageTest.java" />
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Utils/JDBCUtils.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/test3.html" />
+        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetDataOfFilmSetvlet.java" />
+        <option value="$PROJECT_DIR$/web/test3.html" />
+        <option value="$PROJECT_DIR$/web/test.html" />
         <option value="$PROJECT_DIR$/web/test2.html" />
+        <option value="$PROJECT_DIR$/src/druid.properties" />
+        <option value="$PROJECT_DIR$/web/WriteComment.html" />
         <option value="$PROJECT_DIR$/web/Movie.html" />
       </list>
     </option>
@@ -276,10 +236,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+    <option name="x" value="-1474" />
+    <option name="y" value="8" />
+    <option name="width" value="1552" />
+    <option name="height" value="840" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -297,6 +257,17 @@
               <item name="FilmReviewWeb-TeamWork-" type="b2602c69:ProjectViewProjectNode" />
               <item name="FilmReviewWeb-TeamWork-" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="FilmReviewWeb-TeamWork-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FilmReviewWeb-TeamWork-" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FilmReviewWeb-TeamWork-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FilmReviewWeb-TeamWork-" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -313,8 +284,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589381436827" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib/druid-1.0.9.jar!/" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589529488769" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -330,17 +301,18 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\develop\theme\FilmReviewWeb-TeamWork-\web\WEB-INF\lib" />
+      <recent name="E:\develop\theme\FilmReviewWeb-TeamWork-\src" />
+      <recent name="E:\develop\theme\FilmReviewWeb-TeamWork-\web" />
+      <recent name="C:\Users\64392\IdeaProjects\FilmReviewWeb\web\WEB-INF\lib" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\develop\theme\FilmReviewWeb-TeamWork-\web" />
+      <recent name="E:\develop\theme\FilmReviewWeb-TeamWork-\src" />
+      <recent name="E:\develop\theme\FilmReviewWeb-TeamWork-\web\WEB-INF\lib" />
       <recent name="E:\develop\theme\FilmReviewWeb-TeamWork-\web\img" />
       <recent name="E:\develop\theme\FilmReviewWeb-TeamWork-" />
-      <recent name="C:\Users\64392\IdeaProjects\FilmReviewWeb\src" />
-      <recent name="C:\Users\64392\IdeaProjects\FilmReviewWeb\web\WEB-INF\lib" />
-      <recent name="C:\Users\64392\IdeaProjects\FilmReviewWeb\web\pages" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\develop\theme\FilmReviewWeb-TeamWork-\web" />
-      <recent name="E:\develop\theme\FilmReviewWeb-TeamWork-\web\WEB-INF\lib" />
-      <recent name="C:\Users\64392\IdeaProjects\FilmReviewWeb\web\WEB-INF\lib" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -356,34 +328,51 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.54">
-    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.FilmReviewWeb.test" />
-      <module name="FilmReviewWeb" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.FilmReviewWeb.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tester.testDruid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FilmPageTest.getFilmDataByFilmNameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FilmReviewWeb" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Tester" />
-      <option name="METHOD_NAME" value="testDruid" />
+      <option name="MAIN_CLASS_NAME" value="FilmPageTest" />
+      <option name="METHOD_NAME" value="getFilmDataByFilmNameTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test.testFunction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FilmPageTest.getReviewByFilmNameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FilmReviewWeb" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="test" />
-      <option name="METHOD_NAME" value="testFunction" />
+      <option name="MAIN_CLASS_NAME" value="FilmPageTest" />
+      <option name="METHOD_NAME" value="getReviewByFilmNameTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tester.testDBUserId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FilmReviewWeb" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Tester" />
+      <option name="METHOD_NAME" value="testDBUserId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tester.testGetDataTimeFromMySQL" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FilmReviewWeb" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Tester" />
+      <option name="METHOD_NAME" value="testGetDataTimeFromMySQL" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tester.testMysqlDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FilmReviewWeb" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Tester" />
+      <option name="METHOD_NAME" value="testMysqlDate" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -483,15 +472,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.Tomcat 8.5.54" />
-      <item itemvalue="JUnit.Tester.testDruid" />
-      <item itemvalue="JUnit.test.testFunction" />
-      <item itemvalue="Application.test" />
+      <item itemvalue="JUnit.Tester.testMysqlDate" />
+      <item itemvalue="JUnit.Tester.testGetDataTimeFromMySQL" />
+      <item itemvalue="JUnit.Tester.testDBUserId" />
+      <item itemvalue="JUnit.FilmPageTest.getReviewByFilmNameTest" />
+      <item itemvalue="JUnit.FilmPageTest.getFilmDataByFilmNameTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.test" />
-        <item itemvalue="JUnit.Tester.testDruid" />
-        <item itemvalue="JUnit.test.testFunction" />
+        <item itemvalue="JUnit.FilmPageTest.getFilmDataByFilmNameTest" />
+        <item itemvalue="JUnit.FilmPageTest.getReviewByFilmNameTest" />
+        <item itemvalue="JUnit.Tester.testDBUserId" />
+        <item itemvalue="JUnit.Tester.testGetDataTimeFromMySQL" />
+        <item itemvalue="JUnit.Tester.testMysqlDate" />
       </list>
     </recent_temporary>
   </component>
@@ -514,6 +507,11 @@
       <workItem from="1589332644096" duration="28303000" />
       <workItem from="1589375866080" duration="222000" />
       <workItem from="1589377361277" duration="4086000" />
+      <workItem from="1589381981279" duration="2476000" />
+      <workItem from="1589428877149" duration="28181000" />
+      <workItem from="1589511153080" duration="18148000" />
+      <workItem from="1589548570972" duration="1719000" />
+      <workItem from="1589550695850" duration="519000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1589270002067</created>
@@ -533,36 +531,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="test_testFunction - 2020.05.10 at 20h 51m 19s.xml">
-      <configuration name="test.testFunction" configurationId="JUnit" />
+    <history-entry file="Tester_testMysqlDate - 2020.05.14 at 13h 30m 12s.xml">
+      <configuration name="Tester.testMysqlDate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_testFunction - 2020.05.10 at 21h 24m 52s.xml">
-      <configuration name="test.testFunction" configurationId="JUnit" />
+    <history-entry file="Tester_testGetDataTimeFromMySQL - 2020.05.14 at 13h 30m 25s.xml">
+      <configuration name="Tester.testGetDataTimeFromMySQL" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tester_testDruid - 2020.05.11 at 16h 44m 44s.xml">
-      <configuration name="Tester.testDruid" configurationId="JUnit" />
+    <history-entry file="Tester_testDBUserId - 2020.05.14 at 13h 31m 06s.xml">
+      <configuration name="Tester.testDBUserId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tester_testDruid - 2020.05.11 at 16h 52m 47s.xml">
-      <configuration name="Tester.testDruid" configurationId="JUnit" />
+    <history-entry file="FilmPageTest_getReviewByFilmNameTest - 2020.05.14 at 13h 35m 36s.xml">
+      <configuration name="FilmPageTest.getReviewByFilmNameTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tester_testDruid - 2020.05.11 at 16h 53m 55s.xml">
-      <configuration name="Tester.testDruid" configurationId="JUnit" />
+    <history-entry file="FilmPageTest_getFilmDataByFilmNameTest - 2020.05.14 at 13h 35m 45s.xml">
+      <configuration name="FilmPageTest.getFilmDataByFilmNameTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tester_testDruid - 2020.05.11 at 16h 54m 08s.xml">
-      <configuration name="Tester.testDruid" configurationId="JUnit" />
+    <history-entry file="FilmPageTest_getReviewByFilmNameTest - 2020.05.14 at 13h 56m 53s.xml">
+      <configuration name="FilmPageTest.getReviewByFilmNameTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tester_testDruid - 2020.05.11 at 16h 59m 57s.xml">
-      <configuration name="Tester.testDruid" configurationId="JUnit" />
+    <history-entry file="FilmPageTest_getFilmDataByFilmNameTest - 2020.05.14 at 13h 57m 04s.xml">
+      <configuration name="FilmPageTest.getFilmDataByFilmNameTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tester_testDruid - 2020.05.11 at 17h 00m 56s.xml">
-      <configuration name="Tester.testDruid" configurationId="JUnit" />
+    <history-entry file="FilmPageTest_getFilmDataByFilmNameTest - 2020.05.14 at 14h 05m 59s.xml">
+      <configuration name="FilmPageTest.getFilmDataByFilmNameTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tester_testDruid - 2020.05.12 at 18h 13m 40s.xml">
-      <configuration name="Tester.testDruid" configurationId="JUnit" />
+    <history-entry file="FilmPageTest_getReviewByFilmNameTest - 2020.05.14 at 14h 10m 41s.xml">
+      <configuration name="FilmPageTest.getReviewByFilmNameTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FilmPageTest_getFilmDataByFilmNameTest - 2020.05.14 at 14h 10m 46s.xml">
+      <configuration name="FilmPageTest.getFilmDataByFilmNameTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76305000" />
+    <option name="totallyTimeSpent" value="127348000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -574,9 +575,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-1448" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992908" visible="true" weight="0.23458445" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992908" visible="true" weight="0.101002865" />
       <window_info id="Structure" order="1" sideWeight="0.50070924" side_tool="true" weight="0.102546915" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -594,7 +596,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32907802" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067025" side_tool="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067025" side_tool="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Application Servers" order="11" weight="0.32907802" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32907802" />
       <window_info anchor="bottom" id="JProfiler" order="13" />
@@ -609,7 +611,7 @@
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="Maven" order="8" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
-      <window_info anchor="right" id="Run" order="10" visible="true" weight="0.2191689" />
+      <window_info anchor="right" id="Run" order="10" weight="0.24713467" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16464646" />
@@ -662,13 +664,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/web/pages/homePage.jsp" />
     <entry file="file://$PROJECT_DIR$/src/jdbc.properties" />
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Test/Tester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/lib/js/jquery-3.3.1.min.js" />
     <entry file="file://$PROJECT_DIR$/web/js/jquery-3.3.1.min.js" />
     <entry file="file://$PROJECT_DIR$/Movie.html" />
@@ -715,38 +710,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/test.java" />
-    <entry file="file://$PROJECT_DIR$/web/file.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/druid.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/web/file.html" />
     <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Film.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/ReviewDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -757,108 +725,169 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetDataOfFilmSetvlet.java">
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Review.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="26" column="51" lean-forward="true" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
+        <state relative-caret-position="825">
+          <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Utils/JDBCUtils.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/FilmDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        <state relative-caret-position="-925">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Service/Impl/FilmPageServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="22" column="61" lean-forward="true" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
+        <state relative-caret-position="250">
+          <caret line="16" column="63" lean-forward="true" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/FilmDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="21" column="63" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Test/Tester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="47" column="9" lean-forward="true" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Test/FilmPageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" column="39" lean-forward="true" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/ReviewDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetDataOfFilmSetvlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Utils/JDBCUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        <state relative-caret-position="243">
+          <caret line="27" column="22" lean-forward="true" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/test3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="40" column="26" lean-forward="true" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/test2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+        <state relative-caret-position="492">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#8;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#10;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#11;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#13;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#14;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="175">
+          <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/druid.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/Movie.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1753">
-          <caret line="182" column="21" selection-start-line="182" selection-start-column="21" selection-end-line="182" selection-end-column="21" />
+        <state relative-caret-position="-625">
+          <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
           <folding>
             <element signature="n#button#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#7;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#5;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#9;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#10;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#7;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#12;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#13;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#9;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#9;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#nav#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#ul#0;n#nav#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#li#1;n#ul#0;n#nav#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#nav#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WriteComment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2350">
+          <caret line="94" column="17" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
+          <folding>
+            <element signature="n#button#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#1;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#2;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#2;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -922,7 +951,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -930,7 +958,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>mysql-connector-java-8.0.15</last-edited>
+          <last-edited>druid-1.0.9</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

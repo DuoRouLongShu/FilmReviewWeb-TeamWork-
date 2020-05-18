@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>WriteComment</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <!--<script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>-->
+    <!--<script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>-->
+    <!--[endif]-->
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        var title;
+        var text;
+        var rating;
+        var flag;
+        var tag;
+        var json;
+        window.onload=function () {
+            function GetRequest() {
+                var url = decodeURI(location.search); //获取url中"?"符后的字串
+                var theRequest = new Object();
+                if (url.indexOf("?") != -1) {
+                    var str = url.substr(1);
+                    strs = str.split("&");
+                    for(var i = 0; i < strs.length; i ++) {
+                        theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+                    }
+                }
+                return theRequest;
+            }
+            json = GetRequest();
+            $("#title").val(json.title);
+            $("#rating").val(json.rating);
+            $("#textarea").val(json.text);
+        };
+
+        // 回显问题，没法仅在前端解决？
+        $(function () {
+            $("#textarea").blur(function () {
+                text = $("#textarea").val();
+                $("#num").html(text.length);
+                tag = text.length > 0;
+                if(!tag){
+                    $("#textResult").prop("style", "color:red;margin-left:-700px");
+                    $("#textResult").html("字数不符合要求");
+                }else{
+                    $("#textResult").prop("style", "color:green;margin-left:-700px");
+                    $("#textResult").html("正确");
+                }
+            });
+            $("#rating").blur(function () {
+                rating = $("#rating").val();
+                var reg_rating = /^[0-9].[0-9]$|^[1][0]$|^[1][0].[0]$|^[0-9]$/;
+                flag = reg_rating.test(rating);
+                if(!flag){
+                    $("#rate").prop("style", "color:red;margin-left:500px");
+                    $("#rate").html("评分不符合要求");
+                }else{
+                    $("#rate").prop("style", "color:green;margin-left:500px");
+                    $("#rate").html("正确");
+                }
+            });
+            $("#title").blur(function () {
+                title = $("#title").val();
+            });
+
+            $("#preview").click(function () {
+                if (flag && tag) {
+                    $(".btn-success").removeAttr("disabled");
+                    $(".btn-info").attr("disabled", "disabled");
+                    //  id = content 展示的内容变一下
+                    $("#content").html(
+                        "<div style=\"margin-left: 350px;margin-top: 50px\">\n" +
+                        "    <textarea style=\"font-weight: 900;font-size: medium;border-color: white;resize: none\" id='title' name='title' cols='10' rows='1' readonly></textarea>&nbsp;&nbsp;&nbsp;&nbsp;" +
+                        "    <textarea cols='4' rows='1' style=\"color: gold;font-size: large;font-weight: 700;border-color: white;resize: none\" id='rating' name='rating' readonly></textarea><br><br>\n" +
+                        "    <textarea cols=\"100\" rows=\"10\" style=\"font-size: medium;border-color: white;resize: none\" readonly id='textarea' name='text'></textarea>\n" +
+                        "</div>"+"<input id='button' type=\"button\" class=\"btn btn-default\" value=\"返回修改\" style='margin-top: 20px;margin-left: 700px;margin-bottom: 100px'>"
+                    );
+                    $("#title").html(title);
+                    $("#rating").html(rating);
+                    $("#textarea").val(text);
+                }
+                $("#button").click(function () {
+                    // 到时候改这里的地址，因为是静态页面
+                    window.location.href = "file:///E:/develop/theme/FilmReviewWeb-TeamWork-/web/WriteComment.html?title="+title+"&rating="+rating+"&text="+text;
+                });
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+<!--导航条-->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">首页</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="text-align: center">
+            <form class="navbar-form navbar-left" >
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="请输入你要搜索的电影名称" id="search" style="margin-left: 350px;width: 500px">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">个人中心</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<form action="#" method="get" id="form">
+    <button type="submit" class="btn btn-success btn-lg" style="width: 100px;float: right;margin-right: 20px" disabled="disabled" id="submit">发表</button>
+    <button type="button" class="btn btn-info btn-lg" style="width: 100px;float: right;margin-right: 10px" id="preview">预览</button>
+    <br><br><br>
+    <div style="text-align: center;margin-top: 50px;"><img src="img/45d30c6591fc702987439347f480a426.jpg" alt="电影海报" height="20%" width="40%" ></div>
+
+    <div id="content">
+        <div style="margin-top: 50px">
+            <span style="margin-left: 400px;margin-top: 7px;font-size: medium;color: #2aabd2;float: left;vertical-align: center">给个评分吧：</span>
+            <input id="rating" type="text" class="form-control" placeholder="1.0~10.0" style="width: 500px;margin-left: 300px;"><span id="rate"></span>
+        </div>
+
+        <div style="text-align: center;padding-top:20px">
+            <div class="input-group" style="margin-left: 300px">
+                <span class="input-group-addon" id="basic-addon1" >标题</span>
+                <input id="title" type="text" class="form-control" placeholder="Title" aria-describedby="basic-addon1" style="width: 770px;font-size: medium;font-weight:700" title="请输入标题">
+            </div>
+            <hr style="border-color: #2aabd2;width: 900px">
+            <div id="textResult"></div>
+            <textarea id="textarea" cols="100" rows="10" style="margin-top: 10px;font-size: medium;border-color: whitesmoke" placeholder="请输入评论，不少于100字"></textarea>
+        </div>
+        <div style="text-align: center;margin-bottom: 100px ">
+            <span style="text-align: center">共<span id="num">0</span>个字</span>
+            <span style="color: #9d9d9d">（不少于100字）</span>
+        </div>
+    </div>
+</form>
+
+
+</body>
+</html>

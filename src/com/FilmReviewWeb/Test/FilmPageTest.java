@@ -24,7 +24,7 @@ public class FilmPageTest {
     @Test
     public void getFilmDataByFilmNameTest() throws Exception{
         FilmPageService filmPageService = new FilmPageServiceImpl();
-        Film film = filmPageService.getFilmDataByFilmName("早");
+        Film film = filmPageService.getFilmDataByFilmName("倾国倾城");
         System.out.println(film);
     }
 }
