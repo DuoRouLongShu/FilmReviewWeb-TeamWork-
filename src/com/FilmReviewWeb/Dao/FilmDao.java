@@ -46,7 +46,8 @@ public class FilmDao {
             //概要
             String synopsis = resultSet.getString("synopsis");
             String releaseDate = resultSet.getString("release_date");
-            film = new Film(filmId,  filmName, rating, director, writer, performer,  genre, area, language, duration,  synopsis, releaseDate);
+            String imageSource = resultSet.getString("image_source");
+            film = new Film(filmId,  filmName, rating, director, writer, performer,  genre, area, language, duration,  synopsis, releaseDate,imageSource);
         }
         JDBCUtils.close(connection,preparedStatement,resultSet);
         return film;

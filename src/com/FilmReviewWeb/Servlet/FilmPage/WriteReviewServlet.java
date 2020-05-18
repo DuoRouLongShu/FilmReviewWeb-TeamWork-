@@ -25,13 +25,18 @@ public class WriteReviewServlet extends HttpServlet {
         req.setCharacterEncoding("utf-8");
         resp.setContentType("text/html;charset=UTF-8");
 
-        Review review = new Review();
+        /*Review review = new Review();
         review.setFilmName(req.getParameter("filmName"));
         review.setUserName(req.getParameter("userName"));
         review.setTitle(req.getParameter("title"));
         review.setText(req.getParameter("text"));
         float rating = Float.valueOf(req.getParameter("rating"));
-        review.setRating(rating);
+        review.setRating(rating);*/
+        Review review = new Review(Float.valueOf(req.getParameter("rating")),
+                req.getParameter("userName"),
+                req.getParameter("filmName"),
+                req.getParameter("text"),
+                req.getParameter("title"));
         FilmPageService filmPageService = new FilmPageServiceImpl();
         Result result = new Result();
         try {

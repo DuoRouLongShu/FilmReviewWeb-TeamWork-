@@ -1,22 +1,31 @@
 package com.FilmReviewWeb.Model;
 
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
+
 /**
  * 影评
  * @author HTwo2O
  * @date 2020/5/13 13:58
  */
+@RequiredArgsConstructor
 public class Review  {
     private int reviewId;
     private int checkout;
     private int pass;
+    @NonNull
     private float rating;
+    @NonNull
     private String userName;
     private int userId;
+    @NonNull
     private String filmName;
     private int filmId;
     private String creatDate;
+    @NonNull
     private String text;
     private int likes;
+    @NonNull
     private String title;
 
 
