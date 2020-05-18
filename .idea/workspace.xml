@@ -7,27 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a45f3d02-5d55-4185-89ac-6b3269ae0bc0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/druid_1_0_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_15.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/test3.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilmReviewWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FilmReviewWeb.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/FilmPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/FilmPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/Tester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Utils/JDBCUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Utils/JDBCUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/druid.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Movie.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/Movie.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/FilmPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/FilmPageTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Tester.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Tester.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Utils/JDBCUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/druid.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/druid.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/druid-1.0.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/fastjson-1.2.2-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/fastjson-1.2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-8.0.15.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test2.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test2.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,10 +35,11 @@
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.51" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.82" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -89,14 +73,14 @@
           <entry key="html" value="16046" />
           <entry key="java" value="166" />
           <entry key="properties" value="66" />
-          <entry key="txt" value="33" />
+          <entry key="txt" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="16046" />
           <entry key="JAVA" value="166" />
-          <entry key="PLAIN_TEXT" value="33" />
+          <entry key="PLAIN_TEXT" value="36" />
           <entry key="Properties" value="66" />
         </counts>
       </usages-collector>
@@ -107,11 +91,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/Movie.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-625">
-              <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
+            <state relative-caret-position="250">
+              <caret line="101" column="19" selection-start-line="101" selection-start-column="19" selection-end-line="101" selection-end-column="19" />
               <folding>
                 <element signature="n#button#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -149,12 +133,21 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/WriteComment.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2350">
-              <caret line="94" column="17" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
+            <state relative-caret-position="291">
+              <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
               <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#208#214#0" expanded="true" />
+                <element signature="e#214#220#0" expanded="true" />
+                <element signature="e#220#226#0" expanded="true" />
+                <element signature="e#226#232#0" expanded="true" />
+                <element signature="n#style#0;n#textarea#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
                 <element signature="n#button#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -250,6 +243,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -272,7 +266,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -284,7 +277,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589529488769" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589786819338" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -512,6 +505,7 @@
       <workItem from="1589511153080" duration="18148000" />
       <workItem from="1589548570972" duration="1719000" />
       <workItem from="1589550695850" duration="519000" />
+      <workItem from="1589786563520" duration="245000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1589270002067</created>
@@ -527,7 +521,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589376059414</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="个人电影前端页面--版本2">
+      <created>1589786665493</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589786665493</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -563,7 +564,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127348000" />
+    <option name="totallyTimeSpent" value="127593000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -578,7 +579,7 @@
     <frame x="-1448" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992908" visible="true" weight="0.101002865" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992908" visible="true" weight="0.23352435" />
       <window_info id="Structure" order="1" sideWeight="0.50070924" side_tool="true" weight="0.102546915" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -659,7 +660,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="测试" />
     <MESSAGE value="个人电影前端页面--初版1" />
-    <option name="LAST_COMMIT_MESSAGE" value="个人电影前端页面--初版1" />
+    <MESSAGE value="个人电影前端页面--版本2" />
+    <option name="LAST_COMMIT_MESSAGE" value="个人电影前端页面--版本2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/web/pages/homePage.jsp" />
@@ -832,8 +834,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/Movie.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-625">
-          <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
+        <state relative-caret-position="250">
+          <caret line="101" column="19" selection-start-line="101" selection-start-column="19" selection-end-line="101" selection-end-column="19" />
           <folding>
             <element signature="n#button#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -872,9 +874,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WriteComment.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2350">
-          <caret line="94" column="17" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
+        <state relative-caret-position="291">
+          <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
           <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#208#214#0" expanded="true" />
+            <element signature="e#214#220#0" expanded="true" />
+            <element signature="e#220#226#0" expanded="true" />
+            <element signature="e#226#232#0" expanded="true" />
+            <element signature="n#style#0;n#textarea#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
             <element signature="n#button#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />

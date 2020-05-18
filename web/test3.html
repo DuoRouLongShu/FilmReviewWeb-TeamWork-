@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+
+    <script>
+        var text = "first";
+        var person;
+        $(function(){
+            $("#span").html("name不能得到json数据啊");
+
+            $.ajax({
+                url:"http://localhost:8080/FilmReviewWeb/filmpage/getReviews",
+                data:{"filmName":"早"},
+                type:"get",
+                dataType:"json",
+                success:function (data) {
+                    // 数据不能拿出去？赋值也只这里有效
+                    console.log(data.message);
+                    console.log(data.data);
+                    console.log(data);
+                    text=data.message;
+                    person = data;
+                    console.log(person);
+                },
+                error:function(){
+                    console.log("出错");
+                }
+            });
+        });
+        console.log(text);
+        function fun(obj) {
+            $(obj).html(text);
+            console.log(person);
+        }
+        // var p = {"name":"ddl","file":"text"};
+        // var s = p;
+        // console.log(p.name);
+        // console.log(s);
+    </script>
+</head>
+<body>
+来电东西
+<a href="javascript:void(0)" onclick=fun(this)>什么鬼</a>
+<textarea id="" cols="50" rows="5"></textarea>
+</body>
+</html>

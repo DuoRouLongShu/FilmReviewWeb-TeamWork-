@@ -4,24 +4,36 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="js/jquery-3.2.1.min.js"></script>
-
     <script>
-        var name = {};
-        $.ajax({
-            url:"http://localhost:8080/FilmReviewWeb/filmpage/getData",
-            data:{filmName:"倾国倾城"},
-            type:"get",
-            success:function (data) {
-                data = name;
-            },
-            dataType:"json"
+        $(function () {
+            $("#form").submit(function () {
+                var reg_name = /^[0-9].[0-9]$|^[1][0]$|^[1][0].[0]$|^[0-9]$/;
+                var name = $("#input").val();
+                var flag = reg_name.test(name);
+                if(flag){
+                    $("#span").html("正确")
+                }else{
+                    $("#span").html("不符合要求")
+                }
+                console.log(flag);
+                return flag;
+            })
         });
-        console.log(name);
+
     </script>
 </head>
 <body>
-来电东西
 
+<form action="file:///E:/develop/theme/FilmReviewWeb-TeamWork-/web/test.html" method="get" id="form">
+    框框：<input type="text" name="text" id="input" style="border-color: white"><span id="span"></span>
+    <input type="submit" value="提交">
+</form>
 
+<div style="margin-left: 350px">
+    <textarea style="font-weight: 900;font-size: medium;;resize: none" id='title' name='title' cols='10' rows='1' readonly></textarea>&nbsp;&nbsp;&nbsp;&nbsp;
+    <textarea cols='4' rows='1' style="color: gold;font-size: large;font-weight: 700;;resize: none" id='rating' name='rating' readonly></textarea><br><br>
+    <textarea cols=\"100\" rows="10" style="font-size: medium;;resize: none" readonly id='textarea' name='text'></textarea>
+</div><input type="button" class="btn btn-default" value="返回修改">
+s
 </body>
 </html>
