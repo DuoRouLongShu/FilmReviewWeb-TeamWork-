@@ -1,27 +1,38 @@
 package com.FilmReviewWeb.Model;
 
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
+
 /**
  * 影评
  * @author HTwo2O
  * @date 2020/5/13 13:58
  */
+@RequiredArgsConstructor
 public class Review  {
     private int reviewId;
     private int checkout;
     private int pass;
+    @NonNull
     private float rating;
+    @NonNull
     private String userName;
     private int userId;
+    @NonNull
     private String filmName;
-    private String filmId;
+    private int filmId;
     private String creatDate;
+    @NonNull
     private String text;
     private int likes;
+    @NonNull
+    private String title;
+
 
     public Review() {
     }
 
-    public Review(int reviewId, int checkout, int pass, float rating, String userName, int userId, String filmName, String filmId, String creatDate, String text, int likes) {
+    public Review(int reviewId, int checkout, int pass, float rating, String userName, int userId, String filmName, int filmId, String creatDate, String text, int likes,String title) {
         this.reviewId = reviewId;
         this.checkout = checkout;
         this.pass = pass;
@@ -33,6 +44,15 @@ public class Review  {
         this.creatDate = creatDate;
         this.text = text;
         this.likes = likes;
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public int getReviewId() {
@@ -91,11 +111,11 @@ public class Review  {
         this.filmName = filmName;
     }
 
-    public String getFilmId() {
+    public int getFilmId() {
         return filmId;
     }
 
-    public void setFilmId(String filmId) {
+    public void setFilmId(int filmId) {
         this.filmId = filmId;
     }
 
@@ -137,6 +157,7 @@ public class Review  {
                 ", creatDate='" + creatDate + '\'' +
                 ", text='" + text + '\'' +
                 ", likes=" + likes +
+                ", title='" + title + '\'' +
                 '}';
     }
 }

@@ -14,6 +14,11 @@ import java.util.ArrayList;
  */
 public class FilmPageServiceImpl implements FilmPageService {
     @Override
+    public boolean writeAReview(Review review) throws Exception {
+        return new ReviewDao().insertReview(review);
+    }
+
+    @Override
     public ArrayList<Review> getReviewsByFilmName(String filmName) throws Exception{
         return new ReviewDao().getReviewsByFilmName(filmName);
     }

@@ -1,3 +1,4 @@
+import com.FilmReviewWeb.Model.Film;
 import com.FilmReviewWeb.Utils.JDBCUtils;
 import com.FilmReviewWeb.Utils.TimeUtils;
 import org.junit.Before;
@@ -38,7 +39,7 @@ public class Tester {
             preparedStatement = connection.prepareStatement("select * from user");
             resultSet = preparedStatement.executeQuery();
             resultSet.next();
-            String name = resultSet.getString("userName");
+            String name = resultSet.getString("user_name");
             JDBCUtils.close(connection,preparedStatement,resultSet);
             System.out.println(name);
         } catch (SQLException e) {
@@ -77,5 +78,10 @@ public class Tester {
         resultSet.next();
         String id = String.valueOf(resultSet.getInt("user_id"));
         System.out.println(id);
+    }
+
+    @Test
+    public void testLombok(){
+        Film film = new Film();
     }
 }

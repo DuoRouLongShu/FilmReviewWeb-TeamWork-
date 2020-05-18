@@ -19,10 +19,18 @@ public interface FilmPageService {
     public ArrayList<Review> getReviewsByFilmName(String filmName) throws Exception;
 
     /**
-     *
+     *通过电影名字获得电影数据
      * @param fileNmae
      * @return
      * @throws Exception
      */
     public Film getFilmDataByFilmName(String fileNmae)throws Exception;
+
+    /**
+     *通过Review中几个属性写评论
+     * @param review
+     * @return是否成功
+     * @throws Exception
+     */
+    public boolean writeAReview(Review review) throws Exception;
 }
