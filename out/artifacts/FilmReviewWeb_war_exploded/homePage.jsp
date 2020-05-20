@@ -11,6 +11,10 @@
     <title>主页</title>
 </head>
 <body>
+<<<<<<< HEAD
 欢迎
+=======
+嘻嘻嘻嘻嘻
+>>>>>>> dev-MDL-homepage
 </body>
 </html>
