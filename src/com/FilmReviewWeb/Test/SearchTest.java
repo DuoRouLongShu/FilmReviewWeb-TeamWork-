@@ -1,32 +1,21 @@
-package com.FilmReviewWeb.Servlet.Search;
-
 import com.FilmReviewWeb.Model.Film;
 import com.FilmReviewWeb.Model.Result;
 import com.FilmReviewWeb.Service.Impl.SearchServiceImpl;
 import com.FilmReviewWeb.Service.SearchService;
 import com.alibaba.fastjson.JSON;
-import lombok.SneakyThrows;
+import org.junit.Test;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.util.List;
 
 /**
- * 搜索Servlet
  * @author HTwo2O
- * @date 2020/5/13 14:34
+ * @date 2020/5/20 20:29
  */
-public class SearchServlet extends HttpServlet {
+public class SearchTest {
 
-    @SneakyThrows
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("utf-8");
-        resp.setContentType("text/html;charset=UTF-8");
-        String keyword = req.getParameter("keyword");
+    @Test
+    public void searchFuctionTest() throws Exception {
+        String keyword = "早";
         SearchService searchService = new SearchServiceImpl();
         List<Film> films = searchService.searchFilmByKeyword(keyword);
         Result result = new Result();
@@ -45,13 +34,6 @@ public class SearchServlet extends HttpServlet {
         }else {
             result.setPageCount(size/6);
         }
-        resp.getWriter().print(JSON.toJSONString(result));
-
+        System.out.println(JSON.toJSONString(result));
     }
-
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        this.doPost(req, resp);
-    }
-
 }

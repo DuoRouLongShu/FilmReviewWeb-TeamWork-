@@ -70,18 +70,10 @@ public class Tester {
         JDBCUtils.close(connection,preparedStatement,resultSet);
     }
 
-    @Test
-    public void testDBUserId() throws Exception{
-        sql = "select * from user";
-        preparedStatement = connection.prepareStatement(sql);
-        resultSet = preparedStatement.executeQuery();
-        resultSet.next();
-        String id = String.valueOf(resultSet.getInt("user_id"));
-        System.out.println(id);
-    }
 
     @Test
     public void testLombok(){
         Film film = new Film();
+        film.setArea("xx");
     }
 }

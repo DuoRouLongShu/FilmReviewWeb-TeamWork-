@@ -6,6 +6,7 @@ import com.FilmReviewWeb.Utils.JDBCUtils;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
@@ -14,6 +15,17 @@ import java.util.ArrayList;
  * @date 2020/5/13 15:04
  */
 public class ReviewDao {
+    private static Connection connection;
+    private PreparedStatement preparedStatement;
+
+    static {
+        try {
+            connection = JDBCUtils.getConnection();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     /**
      * 通过电影名向数据库中获得并返回相关影评
      * @param filmName
@@ -21,9 +33,8 @@ public class ReviewDao {
      * @throws Exception
      */
     public ArrayList<Review> getReviewsByFilmName(String filmName) throws Exception{
-        Connection connection = JDBCUtils.getConnection();
         String sql = "select * from review where film_name = ?";
-        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1,filmName);
         ResultSet resultSet = preparedStatement.executeQuery();
         ArrayList<Review> reviews = new ArrayList<Review>();
@@ -49,11 +60,10 @@ public class ReviewDao {
 
     public boolean insertReview(Review review) throws Exception{
         boolean hasInsert = true;
-        Connection connection = JDBCUtils.getConnection();
         String sql = "insert review " +
                 "(user_name,film_name,text,title,rating,creat_date)" +
                 "values (?,?,?,?,?,now())";
-        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1,review.getUserName());
         preparedStatement.setString(2,review.getFilmName());
         preparedStatement.setString(3,review.getText());
