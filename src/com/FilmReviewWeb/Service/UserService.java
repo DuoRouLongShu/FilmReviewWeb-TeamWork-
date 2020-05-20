@@ -12,5 +12,5 @@ public interface UserService {
      */
     boolean regist(User user) throws SQLException;
 
-    User login(User user);
+    User login(User user) throws SQLException;
 }

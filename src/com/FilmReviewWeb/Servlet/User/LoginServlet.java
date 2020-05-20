@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
+import java.sql.SQLException;
 import java.util.Map;
 
 @WebServlet("/loginServlet")
@@ -42,7 +43,12 @@ public class LoginServlet extends HttpServlet {
 
         //调用Service查询
         UserService service = new UserServiceImpl();
-        User u = service.login(user);
+        User u = null;
+        try {
+            u = service.login(user);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
         ResultInfo info = new ResultInfo();
         //判断用户对象是否为null

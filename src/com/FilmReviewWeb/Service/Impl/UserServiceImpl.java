@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
      * @return
      */
     @Override
-    public User login(User user) {
+    public User login(User user) throws SQLException {
 
 
         return userDao.findByUsernameAndPassword(user.getUserName(), user.getPassword());
