@@ -13,15 +13,17 @@ public class Review  {
     private String userName;
     private int userId;
     private String filmName;
-    private String filmId;
+    private int filmId;
     private String creatDate;
     private String text;
     private int likes;
+    private String title;
+
 
     public Review() {
     }
 
-    public Review(int reviewId, int checkout, int pass, float rating, String userName, int userId, String filmName, String filmId, String creatDate, String text, int likes) {
+    public Review(int reviewId, int checkout, int pass, float rating, String userName, int userId, String filmName, int filmId, String creatDate, String text, int likes,String title) {
         this.reviewId = reviewId;
         this.checkout = checkout;
         this.pass = pass;
@@ -33,6 +35,15 @@ public class Review  {
         this.creatDate = creatDate;
         this.text = text;
         this.likes = likes;
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public int getReviewId() {
@@ -91,11 +102,11 @@ public class Review  {
         this.filmName = filmName;
     }
 
-    public String getFilmId() {
+    public int getFilmId() {
         return filmId;
     }
 
-    public void setFilmId(String filmId) {
+    public void setFilmId(int filmId) {
         this.filmId = filmId;
     }
 
@@ -137,6 +148,7 @@ public class Review  {
                 ", creatDate='" + creatDate + '\'' +
                 ", text='" + text + '\'' +
                 ", likes=" + likes +
+                ", title='" + title + '\'' +
                 '}';
     }
 }

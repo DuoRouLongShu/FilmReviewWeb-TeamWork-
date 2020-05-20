@@ -23,11 +23,12 @@ public class Film implements Serializable {
     private String duration;
     //概要
     private String synopsis;
+    private String releaseDate;
 
     public Film() {
     }
 
-    public Film(int filmId, String filmName, float rating, String director, String writer, String performer, String genre, String area, String language, String duration, String synopsis) {
+    public Film(int filmId, String filmName, float rating, String director, String writer, String performer, String genre, String area, String language, String duration, String synopsis, String releaseDate) {
         this.filmId = filmId;
         this.filmName = filmName;
         this.rating = rating;
@@ -39,6 +40,7 @@ public class Film implements Serializable {
         this.language = language;
         this.duration = duration;
         this.synopsis = synopsis;
+        this.releaseDate = releaseDate;
     }
 
     public int getFilmId() {
@@ -129,6 +131,14 @@ public class Film implements Serializable {
         this.synopsis = synopsis;
     }
 
+    public String getReleaseDate() {
+        return releaseDate;
+    }
+
+    public void setReleaseDate(String releaseDate) {
+        this.releaseDate = releaseDate;
+    }
+
     @Override
     public String toString() {
         return "Film{" +
@@ -143,6 +153,7 @@ public class Film implements Serializable {
                 ", language='" + language + '\'' +
                 ", duration='" + duration + '\'' +
                 ", synopsis='" + synopsis + '\'' +
+                ", releaseDate='" + releaseDate + '\'' +
                 '}';
     }
 }

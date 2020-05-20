@@ -22,12 +22,9 @@ public class JDBCUtils {
     static {
         try {
             //druid 的连接池
-            Properties pro = new Properties();
-            //使用ClassLoad加载配置文件，获取字节输入流
-            pro.load(JDBCUtils.class.getClassLoader().getResourceAsStream("druid.properties"));
-            //初始化连接池对象
-            dataSource = DruidDataSourceFactory.createDataSource(pro);
-            System.out.println("初始化成功");
+            Properties pro = new Properties();//加载配置文件
+            pro.load(JDBCUtils.class.getResourceAsStream("/druid.properties"));//使用ClassLoad加载配置文件，获取字节输入流
+            dataSource = DruidDataSourceFactory.createDataSource(pro);//初始化连接池对象
         } catch (Exception e) {
             e.printStackTrace();
         }

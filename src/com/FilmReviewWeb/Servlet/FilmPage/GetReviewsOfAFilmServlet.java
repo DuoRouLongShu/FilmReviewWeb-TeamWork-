@@ -7,27 +7,29 @@ import com.FilmReviewWeb.Service.Impl.FilmPageServiceImpl;
 import com.alibaba.fastjson.JSON;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 
-/**索要影评servlet
+/**获取影评servlet
  * @author HTwo2O
  * @date 2020/5/13 14:30
  */
+@WebServlet("/filmpage/getReviews")
 public class GetReviewsOfAFilmServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");
         resp.setContentType("text/html;charset=UTF-8");
-        resp.setHeader("Access-Control-Allow-Origin", "*");
-
+        //resp.setHeader("Access-Control-Allow-Origin", "*");
         String filmName = req.getParameter("filmName");
+        Result result = new Result();
         FilmPageService filmPageService = new FilmPageServiceImpl();
         try {
-            Result result = new Result();
+
             ArrayList<Review> reviews = filmPageService.getReviewsByFilmName(filmName);
             if (reviews.isEmpty()){
                 result.setDataCount(0);
@@ -50,12 +52,12 @@ public class GetReviewsOfAFilmServlet extends HttpServlet {
 
             }
 
-            resp.getWriter().print(JSON.toJSONString(result));
+
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        //resp.getWriter().print();
+        resp.getWriter().print(JSON.toJSONString(result));
     }
 
     @Override

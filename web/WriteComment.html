@@ -19,40 +19,46 @@
 
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/markingSystem.js"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="js/bootstrap.min.js"></script>
     <script>
+        // 提交的3个额外内容
         var title;
         var text;
-        var rating;
-        var flag;
+        var rating = 0;
+        var filmName = "倾国倾城";
+        var userName = "马志鹏";
+        // 校验布尔变量
         var tag;
-        var json;
+        // 保存数据在localStorage，回显
         window.onload=function () {
-            function GetRequest() {
-                var url = decodeURI(location.search); //获取url中"?"符后的字串
-                var theRequest = new Object();
-                if (url.indexOf("?") != -1) {
-                    var str = url.substr(1);
-                    strs = str.split("&");
-                    for(var i = 0; i < strs.length; i ++) {
-                        theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
-                    }
-                }
-                return theRequest;
-            }
-            json = GetRequest();
-            $("#title").val(json.title);
-            $("#rating").val(json.rating);
-            $("#textarea").val(json.text);
+            title = localStorage["title"];
+            rating = localStorage["rating"];
+            text = localStorage["text"];
+            localStorage.clear();
+            $("#title").val(title);
+            $("#rating").val(rating);
+            $("#textarea").val(text);
+            // 星星分数
+            $("#star_grade").markingSystem({
+                num: 10,
+                havePoint: true,
+                haveGrade: true,
+                unit: '分',
+                grade: rating,
+                height: 20,
+                width: 20
+            });
         };
 
-        // 回显问题，没法仅在前端解决？
+
         $(function () {
+            $("#textarea").focus();
             $("#textarea").blur(function () {
                 text = $("#textarea").val();
                 $("#num").html(text.length);
-                tag = text.length > 0;
+                tag = text.length > 0 ;
                 if(!tag){
                     $("#textResult").prop("style", "color:red;margin-left:-700px");
                     $("#textResult").html("字数不符合要求");
@@ -61,24 +67,14 @@
                     $("#textResult").html("正确");
                 }
             });
-            $("#rating").blur(function () {
-                rating = $("#rating").val();
-                var reg_rating = /^[0-9].[0-9]$|^[1][0]$|^[1][0].[0]$|^[0-9]$/;
-                flag = reg_rating.test(rating);
-                if(!flag){
-                    $("#rate").prop("style", "color:red;margin-left:500px");
-                    $("#rate").html("评分不符合要求");
-                }else{
-                    $("#rate").prop("style", "color:green;margin-left:500px");
-                    $("#rate").html("正确");
-                }
-            });
+
             $("#title").blur(function () {
                 title = $("#title").val();
             });
 
             $("#preview").click(function () {
-                if (flag && tag) {
+
+                if (/*flag && */tag) {
                     $(".btn-success").removeAttr("disabled");
                     $(".btn-info").attr("disabled", "disabled");
                     //  id = content 展示的内容变一下
@@ -95,12 +91,58 @@
                 }
                 $("#button").click(function () {
                     // 到时候改这里的地址，因为是静态页面
-                    window.location.href = "file:///E:/develop/theme/FilmReviewWeb-TeamWork-/web/WriteComment.html?title="+title+"&rating="+rating+"&text="+text;
+                    // window.location.href = "http://localhost:8080/FilmReviewWeb/WriteComment.html?title="+title+"&rating="+rating+"&text="+text;
+                    localStorage.rating = rating;
+                    localStorage.title = title;
+                    localStorage.text = text;
+                    location.href = "http://localhost:8080/FilmReviewWeb/WriteComment.html";
                 });
+                $("#form").submit(function () {
+                    $("#form").append("<input type=\"text\" name='filmName'>");
+                    $("#form").append("<input type=\"text\" name='userName'>");
+                    $("#content").append("<input type=\"text\" name=\"rating\">");
+                    $("input[name='rating']").val(rating);
+                    $("input[name='filmName']").val(filmName);
+                    $("input[name='userName']").val(userName);
+                    $("#form").prop("action","http://localhost:8080/FilmReviewWeb/filmpage/writeReview");
+                    alert("成功提交");
+                })
             });
         });
 
     </script>
+    <style>
+        .set_image_all {
+            cursor: pointer;
+            position: relative;
+        }
+
+        .set_image_all .set_image_item {
+            position: relative;
+            display: inline-block;
+            z-index: 11;
+            visibility: visible;
+        }
+
+        .set_image_all .set_image_top {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 10;
+        }
+
+        .set_image_all .set_image_top>div {
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        .set_image_all .set_image_top>div>img {
+            height: 100%;
+        }
+        .grade {
+            vertical-align:top;
+        }
+    </style>
 </head>
 
 <body>
@@ -119,9 +161,9 @@
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="text-align: center">
-            <form class="navbar-form navbar-left" >
+            <form class="navbar-form navbar-left" action="http://localhost:8080/FilmReviewWeb/index.html" method="get">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="请输入你要搜索的电影名称" id="search" style="margin-left: 350px;width: 500px">
+                    <input type="text" class="form-control" placeholder="请输入你要搜索的电影名称" id="search" style="margin-left: 350px;width: 500px" name="content">
                 </div>
                 <button type="submit" class="btn btn-default">搜索</button>
             </form>
@@ -132,7 +174,7 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-<form action="#" method="get" id="form">
+<form action="" method="post" id="form">
     <button type="submit" class="btn btn-success btn-lg" style="width: 100px;float: right;margin-right: 20px" disabled="disabled" id="submit">发表</button>
     <button type="button" class="btn btn-info btn-lg" style="width: 100px;float: right;margin-right: 10px" id="preview">预览</button>
     <br><br><br>
@@ -140,12 +182,13 @@
 
     <div id="content">
         <div style="margin-top: 50px">
-            <span style="margin-left: 400px;margin-top: 7px;font-size: medium;color: #2aabd2;float: left;vertical-align: center">给个评分吧：</span>
-            <input id="rating" type="text" class="form-control" placeholder="1.0~10.0" style="width: 500px;margin-left: 300px;"><span id="rate"></span>
+            <span style="margin-left: 550px;font-size: medium;color: #2aabd2;float: left;vertical-align: center">给个评分吧：</span>
+            <span id="star_grade"></span>
+            <!--<input id="rating" type="text" class="form-control" placeholder="1.0~10.0" style="width: 500px;margin-left: 300px;"><span id="rate"></span>-->
         </div>
 
         <div style="text-align: center;padding-top:20px">
-            <div class="input-group" style="margin-left: 300px">
+            <div class="input-group" style="margin-left: 350px">
                 <span class="input-group-addon" id="basic-addon1" >标题</span>
                 <input id="title" type="text" class="form-control" placeholder="Title" aria-describedby="basic-addon1" style="width: 770px;font-size: medium;font-weight:700" title="请输入标题">
             </div>
