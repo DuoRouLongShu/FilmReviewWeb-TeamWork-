@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="Register.css" type="text/css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <script>
+        //表单校验
+        window.onload = function () {
+            document.getElementById("form").onsubmit = function () {
+                return checkUsername() && checkPassword() && checkConfirm() && checkCode();
+            };
+            document.getElementById("username").onblur = checkUsername;
+            document.getElementById("password").onblur = checkPassword;
+            document.getElementById("confirm").onblur = checkConfirm;
+
+        };
+
+
+        function checkUsername() {
+            const username = document.getElementById("username").value;
+            const reg_username = /^\w{6,12}$/;
+            const flag = reg_username.test(username);
+            const s_username = document.getElementById("s_username");
+
+            if (flag) {
+                s_username.innerHTML = "对";
+            } else if (username === "") s_username.innerHTML = "用户名为空";
+            else s_username.innerHTML = "用户名非法";
+            return flag;
+        }
+
+        function checkPassword() {
+            const password = document.getElementById("password").value;
+            const reg_password = /^\w{6,12}$/;
+            const flag = reg_password.test(password);
+            const s_password = document.getElementById("s_password");
+            if (flag) {
+                s_password.innerHTML = "对";
+            } else if (password === "") s_password.innerHTML = "密码为空";
+            else s_password.innerHTML = "密码非法";
+            return flag;
+        }
+
+        function checkConfirm() {
+            const password = document.getElementById("password").value;
+            const confirm = document.getElementById("confirm").value;
+            const s_confirm = document.getElementById("s_confirm");
+            let flag = false;
+            if (password !== confirm) {
+                s_confirm.innerHTML = "两次密码不同";
+            } else if (confirm === "") {
+                s_confirm.innerHTML = "输入为空";
+            } else if (password === confirm) {
+                s_confirm.innerHTML = "对";
+                flag = true;
+            }
+            return flag;
+        }
+
+        function checkCode() {
+            const string = "ab123";//测试用的验证码
+            const checkcode = document.getElementById("checkcode").value;
+            const s_checkcode = document.getElementById("s_checkcode");
+            let flag = false;
+            if (checkcode !== string) {
+                s_checkcode.innerHTML = "验证码错误";
+            } else if (checkcode === string) {
+                s_checkcode.innerHTML = "对";
+                flag = true;
+            }
+            return flag;
+        }
+
+        //获焦时隐藏提示信息
+        // $(document).ready(function () {
+        //     $("#username").focus(function () {
+        //         $("s_username").hide(1);
+        //     });
+        // });
+        //异步提交表单函数
+        $(function () {
+            $("#form").submit(function () {
+                if (checkUsername() && checkPassword() && checkConfirm() && checkCode()) {
+                    $.post("registerUserServlet", $(this).serialize(), function (data) {
+                        //处理服务器响应的数据datajason格式{flag:boolen,errormsg:"中文提示"}
+                        //         if (data.flag){
+                        //             //成功，跳转页面
+                        //             Location.href="Login.html";
+                        //         }else{
+                        //             //失败，给errormsg添加提示信息
+                        //             $("#errormsg").html(data.errormsg);
+                        //         }
+                    });
+                }
+                //不让页面跳转
+                return false;
+                //如果这个方法没有返回值，或者返回为true，则表单提交，否则不提交
+
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+
+<div id="index">放一张链接到主页的图片</div>
+<div id="div">
+    <div id="div-left">
+        <p>新用户注册</p>
+        <p>USER REGISTER</p>
+    </div>
+    <div id="div-right">
+        <p>已有账号？<a href="Login.html">立即登录</a></p>
+    </div>
+    <div id="div-center">
+        <div id="top"></div>
+        <form action="#" method="post" id="form">
+            <table>
+                <tr>
+                    <td class="left"><label for="username">用户名</label></td>
+                    <td class="right">
+                        <input type="text" name="username" id="username" placeholder="用户名(由6-12位数字和字母组成）"
+                               autofocus>
+                        <span id="s_username" class="error"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left"><label for="password">密码</label></td>
+                    <td class="right">
+                        <input type="password" name="password" id="password" placeholder="密码(由6-12位数字和字母组成）">
+                        <span id="s_password" class="error"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left"><label for="confirm">确认密码</label></td>
+                    <td class="right">
+                        <input type="password" name="repassword" id="confirm" placeholder="请再次确认密码">
+                        <span id="s_confirm" class="error"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left"><label>性别</label></td>
+                    <td class="right">
+                        <label>
+                            <input type="radio" name="gender" value="male" autocomplete="on">男
+                        </label>
+                        <label><input type="radio" name="gender" value="female">女
+                        </label>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left"><label for="checkcode">验证码</label></td>
+                    <td class="right">
+                        <input type="text" name="checkcode" id="checkcode" placeholder="验证码">
+                        <span id="s_checkcode" class="error"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="td"><input id="Submit" value="注册" name="register" type="submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
