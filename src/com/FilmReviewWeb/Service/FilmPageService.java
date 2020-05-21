@@ -1,6 +1,7 @@
 package com.FilmReviewWeb.Service;
 
 import com.FilmReviewWeb.Model.Film;
+import com.FilmReviewWeb.Model.Result;
 import com.FilmReviewWeb.Model.Review;
 
 import java.util.ArrayList;
@@ -33,4 +34,15 @@ public interface FilmPageService {
      * @throws Exception
      */
     public boolean writeAReview(Review review) throws Exception;
+
+    /**
+     * 点击点赞按钮，进行点赞或者取消点赞
+     * @param reviewId
+     * @param userName
+     * @return
+     * @throws Exception
+     */
+    public Result giveReviewLike(Integer reviewId, String userName) throws Exception;
+
+    public Result checkReviewLike(Integer reviewId, String userName) throws Exception;
 }

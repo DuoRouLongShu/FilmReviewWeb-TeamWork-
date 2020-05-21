@@ -16,7 +16,7 @@ public class FilmPageTest {
 
     @Test
     public void getReviewByFilmNameTest() throws Exception{
-        String filmName = "早";
+        String filmName = "罗马假日";
         Result result = new Result();
 
         try {
@@ -95,5 +95,19 @@ public class FilmPageTest {
         review.setText("真的好看太好看了啊啊啊啊");
         boolean flag = filmPageService.writeAReview(review);
         System.out.println(flag);
+    }
+
+    @Test
+    public void checkLikeTest() throws Exception{
+        FilmPageService filmPageService = new FilmPageServiceImpl();
+        Result result = filmPageService.checkReviewLike(2,"javk");
+        System.out.println(result);
+    }
+
+    @Test
+    public void giveReviewLikeTest() throws Exception{
+        FilmPageService filmPageService = new FilmPageServiceImpl();
+        Result result = filmPageService.giveReviewLike(2,"javk");
+        System.out.println(result);
     }
 }

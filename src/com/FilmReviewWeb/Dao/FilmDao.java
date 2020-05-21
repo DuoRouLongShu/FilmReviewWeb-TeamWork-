@@ -19,13 +19,6 @@ public class FilmDao {
     private static Connection connection;
     private PreparedStatement preparedStatement;
 
-    static {
-        try {
-            connection = JDBCUtils.getConnection();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
 
     /**
      * 通过电影名获得并返回电影相关数据
@@ -34,6 +27,7 @@ public class FilmDao {
      * @throws SQLException
      */
     public Film getFilmDataByFilmName(String filmName) throws SQLException {
+        connection = JDBCUtils.getConnection();
         String sql = "select * from film where film_name = ?";
         preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1,filmName);
@@ -71,6 +65,7 @@ public class FilmDao {
      * @throws Exception
      */
     public List<Film> getFilmsByKeyword(String keyword)throws Exception{
+        connection = JDBCUtils.getConnection();
         String sql = "SELECT * FROM film WHERE LOCATE(?,film_name) = 1 " +
                 "UNION " +
                 "SELECT * FROM film WHERE LOCATE(?,film_name) > 1 " +
@@ -81,7 +76,7 @@ public class FilmDao {
         preparedStatement.setString(2,keyword);
         preparedStatement.setString(3,keyword);
         ResultSet resultSet =preparedStatement.executeQuery();
-        Film film = new Film();
+        Film film ;
         ArrayList<Film> films = new ArrayList<Film>() ;
         while (resultSet.next()){
             int filmId = resultSet.getInt("film_id");

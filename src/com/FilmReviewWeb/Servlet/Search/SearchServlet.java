@@ -16,6 +16,7 @@ import java.util.List;
 
 /**
  * 搜索Servlet
+ *
  * @author HTwo2O
  * @date 2020/5/13 14:34
  */
@@ -31,19 +32,19 @@ public class SearchServlet extends HttpServlet {
         List<Film> films = searchService.searchFilmByKeyword(keyword);
         Result result = new Result();
         int size = films.size();
-        if(size == 0){
+        if (size == 0) {
             result.setMessage("无搜索结果");
-        }else {
+        } else {
             result.setMessage("成功返回搜索结果");
         }
         result.setDataCount(size);
         result.setData(films);
-        if(size / 6 == 0){
+        if (size / 6 == 0) {
             result.setPageCount(1);
-        }else if(size % 6 >0){
+        } else if (size % 6 > 0) {
             result.setPageCount(size / 6 + 1);
-        }else {
-            result.setPageCount(size/6);
+        } else {
+            result.setPageCount(size / 6);
         }
         resp.getWriter().print(JSON.toJSONString(result));
 

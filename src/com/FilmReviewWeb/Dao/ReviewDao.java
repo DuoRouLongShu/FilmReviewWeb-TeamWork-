@@ -6,7 +6,6 @@ import com.FilmReviewWeb.Utils.JDBCUtils;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
@@ -18,13 +17,6 @@ public class ReviewDao {
     private static Connection connection;
     private PreparedStatement preparedStatement;
 
-    static {
-        try {
-            connection = JDBCUtils.getConnection();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
 
     /**
      * 通过电影名向数据库中获得并返回相关影评
@@ -33,6 +25,7 @@ public class ReviewDao {
      * @throws Exception
      */
     public ArrayList<Review> getReviewsByFilmName(String filmName) throws Exception{
+        connection = JDBCUtils.getConnection();
         String sql = "select * from review where film_name = ?";
         preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1,filmName);
@@ -59,6 +52,7 @@ public class ReviewDao {
     }
 
     public boolean insertReview(Review review) throws Exception{
+        connection = JDBCUtils.getConnection();
         boolean hasInsert = true;
         String sql = "insert review " +
                 "(user_name,film_name,text,title,rating,creat_date)" +
@@ -76,5 +70,33 @@ public class ReviewDao {
         }
         JDBCUtils.close(connection,preparedStatement);
         return hasInsert;
+    }
+
+    /**
+     * 给影评增加点赞数
+     * @param reviewId
+     * @return
+     */
+    public int giveThumb_up(Integer reviewId) throws Exception{
+        connection = JDBCUtils.getConnection();
+        String sql = "UPDATE review SET likes = likes + 1 WHERE review_id = ?";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setInt(1,reviewId);
+        int updateCount =preparedStatement.executeUpdate();
+        return updateCount;
+    }
+
+    /**
+     * 给影评减少点赞数
+     * @param reviewId
+     * @return
+     */
+    public int cancelLike(Integer reviewId) throws Exception{
+        connection = JDBCUtils.getConnection();
+        String sql = "UPDATE review SET likes = likes - 1 WHERE review_id = ?";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setInt(1,reviewId);
+        int updateCount =preparedStatement.executeUpdate();
+        return updateCount;
     }
 }

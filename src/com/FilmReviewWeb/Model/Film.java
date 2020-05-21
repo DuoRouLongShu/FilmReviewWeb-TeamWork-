@@ -14,7 +14,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Film implements Serializable {
-    private int filmId;
+    private Integer filmId;
     private String filmName;
     //评分
     private float rating ;
