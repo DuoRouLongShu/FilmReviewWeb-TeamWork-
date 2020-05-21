@@ -18,7 +18,7 @@
 
         };
 
-
+        //校验用户名
         function checkUsername() {
             const username = document.getElementById("username").value;
             const reg_username = /^\w{6,12}$/;
@@ -31,7 +31,7 @@
             else s_username.innerHTML = "用户名非法";
             return flag;
         }
-
+        // 校验密码
         function checkPassword() {
             const password = document.getElementById("password").value;
             const reg_password = /^\w{6,12}$/;
@@ -43,7 +43,7 @@
             else s_password.innerHTML = "密码非法";
             return flag;
         }
-
+        //校验确认密码
         function checkConfirm() {
             const password = document.getElementById("password").value;
             const confirm = document.getElementById("confirm").value;
@@ -59,7 +59,7 @@
             }
             return flag;
         }
-
+        //校验验证码
         function checkCode() {
             const string = "ab123";//测试用的验证码
             const checkcode = document.getElementById("checkcode").value;
@@ -107,7 +107,11 @@
 </head>
 <body>
 
-<div id="index">放一张链接到主页的图片</div>
+<div id="index">
+    <div id="index_div">
+        <a id="index_a" href="index.jsp" target="_self"></a>
+    </div>
+</div>
 <div id="div">
     <div id="div-left">
         <p>新用户注册</p>

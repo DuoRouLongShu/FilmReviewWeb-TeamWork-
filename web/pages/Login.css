@@ -10,17 +10,33 @@ body{
     height: 100vh;
     overflow: auto;
 }
+#head{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#head_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#head_a{
+    display: block;
+    width: 138px;
+    height: 137px;
+    background: url("https://i.loli.net/2020/05/20/pizOF9JR7DBPKlx.png") no-repeat;
+}
 
 #Login-box{
     border:black solid 1px;
     border-top: #E0E0E0;
     min-height: 300px;
     width: 340px;
+    background: #fff;
+    max-width: 750px;
+
     padding: 0 30px 30px 30px;
     overflow: hidden;
     position: relative;
-    background: #fff;
-    max-width: 750px;
     margin: auto;
 
 }
@@ -153,8 +169,4 @@ a {
 }
 .input-raw,#submit,#ft,#register{
     padding-left:30px;
-}
-.Button span{
-    display: inline-flex;
-    align-items:center;
 }

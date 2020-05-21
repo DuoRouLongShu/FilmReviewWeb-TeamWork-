@@ -7,13 +7,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a45f3d02-5d55-4185-89ac-6b3269ae0bc0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetDataOfFilmSetvlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetDataOfFilmSetvlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/FilmPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/FilmPageTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/Tester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/Tester.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Dao/FilmDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Dao/FilmDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Dao/ReviewDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Dao/ReviewDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/DisplayFilms.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/DisplayFilms.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/Feedback.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/Feedback.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/Film.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/Film.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/Result.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/Review.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/ShortReview.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/ShortReview.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Service/FilmPageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Service/FilmPageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Service/HomePageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Service/HomePageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Service/Impl/FilmPageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Service/Impl/FilmPageServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Service/SearchService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Service/SearchService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/GetDataOfFilmSetvlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/GetDataOfFilmSetvlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/Search/SearchServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/Search/SearchServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Utils/JDBCUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Utils/JDBCUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Utils/TimeUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Utils/TimeUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/FilmPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/FilmPageTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Tester.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Tester.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Dao/FilmDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Dao/FilmDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Dao/ReviewDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Dao/ReviewDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/DisplayFilms.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/DisplayFilms.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/Feedback.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/Feedback.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/Film.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/Film.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/Result.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/Review.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/ShortReview.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/ShortReview.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/FilmPageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/FilmPageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/HomePageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/HomePageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/Impl/FilmPageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/Impl/FilmPageServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/SearchService.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/SearchService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/GetDataOfFilmSetvlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/GetDataOfFilmSetvlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/Search/SearchServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/Search/SearchServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Utils/JDBCUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Utils/JDBCUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Utils/TimeUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Utils/TimeUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/Login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/Register.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/Register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/jquery-3.4.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/js/jquery-3.4.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/pages/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/Login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/pages/Register.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/Register.html" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,119 +64,22 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Utils/TimeUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetDataOfFilmSetvlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Test/FilmPageTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FilmReviewWeb.iml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Service/FilmPageService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="18" column="49" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Result.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-870">
-              <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/Search/SearchServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Utils/JDBCUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -147,46 +92,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/homePage.jsp" />
-        <option value="$PROJECT_DIR$/src/jdbc.properties" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Utils/JDBCUtil.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/test.java" />
-        <option value="$PROJECT_DIR$/src/druid.properties" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Utils/JDBCUtils.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/feedback.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/displayFilms.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/DisplayFilms.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/HomePageService.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/SearchService.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPageServlet.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/SearchServlet.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Review.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/ReviewDao.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/ReviewServlet.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmSetvlet.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Film.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/Impl/FilmPageServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/FilmDao.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/GetReviewsOfAFilmServlet.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/GetDataOfFilmSetvlet.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Feedback.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/Tester.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Utils/TimeUtils.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/FilmPageService.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Result.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/ShortReview.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/User.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/FilmPageTest.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetDataOfFilmSetvlet.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-      </list>
-    </option>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -202,97 +107,11 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="783" />
-    <option name="y" value="147" />
-    <option name="width" value="1310" />
-    <option name="height" value="909" />
-  </component>
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="FilmReviewWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FilmReviewWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FilmReviewWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FilmReviewWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FilmReviewWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="Servlet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FilmReviewWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="Servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="FilmPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FilmReviewWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="Servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="Search" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FilmReviewWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="Test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FilmReviewWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FilmReviewWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectId" id="1cArn3Q30bL7FlGN4qBUmWWqSe2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
@@ -302,7 +121,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib/druid-1.0.9.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/js" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -319,29 +138,20 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\js" />
+      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\pages" />
       <recent name="C:\Users\64392\IdeaProjects\FilmReviewWeb\web\WEB-INF\lib" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.FilmReviewWeb.Model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\pages" />
+      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\pages\page" />
+      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\pages\js" />
       <recent name="C:\Users\64392\IdeaProjects\FilmReviewWeb\src" />
       <recent name="C:\Users\64392\IdeaProjects\FilmReviewWeb\web\WEB-INF\lib" />
-      <recent name="C:\Users\64392\IdeaProjects\FilmReviewWeb\web\pages" />
-      <recent name="C:\Users\64392\IdeaProjects\FilmReviewWeb\web" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.0.M26">
     <configuration name="FilmPageTest.getFilmDataByFilmNameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -394,9 +204,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 9.0.0.M26" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.0.M26" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="Tomcat 9.0.0.M26" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.34" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER" value="false" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
-      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
         <artifact name="FilmReviewWeb:war exploded">
           <settings>
@@ -485,6 +297,14 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.FilmPageTest.getFilmDataByFilmNameTest" />
+      <item itemvalue="JUnit.FilmPageTest.getReviewByFilmNameTest" />
+      <item itemvalue="JUnit.Tester.testDBUserId" />
+      <item itemvalue="JUnit.Tester.testGetDataTimeFromMySQL" />
+      <item itemvalue="JUnit.Tester.testMysqlDate" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.0.M26" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.FilmPageTest.getReviewByFilmNameTest" />
@@ -494,6 +314,28 @@
         <item itemvalue="JUnit.Tester.testMysqlDate" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="完成" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -513,6 +355,8 @@
       <workItem from="1589275380980" duration="8441000" />
       <workItem from="1589349262630" duration="27091000" />
       <workItem from="1589384451863" duration="1024000" />
+      <workItem from="1589982444522" duration="3183000" />
+      <workItem from="1590038211485" duration="1185000" />
     </task>
     <servers />
   </component>
@@ -548,9 +392,6 @@
       <configuration name="FilmPageTest.getReviewByFilmNameTest" configurationId="JUnit" />
     </history-entry>
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52671000" />
-  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -560,358 +401,74 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2580429" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Web" order="2" side_tool="true" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32991204" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2771261" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32991204" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32991204" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32991204" />
-      <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Application Servers" order="12" weight="0.32991204" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32991204" />
-      <window_info anchor="bottom" id="JProfiler" order="14" />
-      <window_info anchor="bottom" id="Messages" order="15" weight="0.36656892" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Maven" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/homePage.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/jdbc.properties" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/sql/ResultSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="693" column="4" lean-forward="true" selection-start-line="693" selection-start-column="4" selection-end-line="693" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/time/LocalDateTime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2181">
-          <caret line="501" column="12" selection-start-line="501" selection-start-column="12" selection-end-line="501" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/time/ZonedDateTime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="1039" column="20" lean-forward="true" selection-start-line="1039" selection-start-column="11" selection-end-line="1039" selection-end-column="20" />
-          <folding>
-            <element signature="e#46976#46977#0" expanded="true" />
-            <element signature="e#47021#47022#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/druid.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Review.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="23" column="171" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="171" />
-          <folding>
-            <element signature="e#430#431#0" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#506#507#0" expanded="true" />
-            <element signature="e#546#547#0" expanded="true" />
-            <element signature="e#578#579#0" expanded="true" />
-            <element signature="e#609#610#0" expanded="true" />
-            <element signature="e#654#655#0" expanded="true" />
-            <element signature="e#694#695#0" expanded="true" />
-            <element signature="e#722#723#0" expanded="true" />
-            <element signature="e#749#750#0" expanded="true" />
-            <element signature="e#786#787#0" expanded="true" />
-            <element signature="e#818#819#0" expanded="true" />
-            <element signature="e#850#851#0" expanded="true" />
-            <element signature="e#879#880#0" expanded="true" />
-            <element signature="e#922#923#0" expanded="true" />
-            <element signature="e#958#959#0" expanded="true" />
-            <element signature="e#993#994#0" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
-            <element signature="e#1072#1073#0" expanded="true" />
-            <element signature="e#1112#1113#0" expanded="true" />
-            <element signature="e#1142#1143#0" expanded="true" />
-            <element signature="e#1171#1172#0" expanded="true" />
-            <element signature="e#1212#1213#0" expanded="true" />
-            <element signature="e#1248#1249#0" expanded="true" />
-            <element signature="e#1283#1284#0" expanded="true" />
-            <element signature="e#1314#1315#0" expanded="true" />
-            <element signature="e#1362#1363#0" expanded="true" />
-            <element signature="e#1402#1403#0" expanded="true" />
-            <element signature="e#1435#1436#0" expanded="true" />
-            <element signature="e#1464#1465#0" expanded="true" />
-            <element signature="e#1508#1509#0" expanded="true" />
-            <element signature="e#1544#1545#0" expanded="true" />
-            <element signature="e#1580#1581#0" expanded="true" />
-            <element signature="e#1612#1613#0" expanded="true" />
-            <element signature="e#1662#1663#0" expanded="true" />
-            <element signature="e#1704#1705#0" expanded="true" />
-            <element signature="e#1735#1736#0" expanded="true" />
-            <element signature="e#1762#1763#0" expanded="true" />
-            <element signature="e#1802#1803#0" expanded="true" />
-            <element signature="e#1834#1835#0" expanded="true" />
-            <element signature="e#1863#1864#0" expanded="true" />
-            <element signature="e#1891#1892#0" expanded="true" />
-            <element signature="e#1930#1931#0" expanded="true" />
-            <element signature="e#1964#1965#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Model/DisplayFilms.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="46" lean-forward="true" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-          <folding>
-            <element signature="e#945#946#0" expanded="true" />
-            <element signature="e#979#980#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Service/SearchService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/ReviewDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/FilmDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="40" column="15" lean-forward="true" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Feedback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Test/Tester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="68" column="64" lean-forward="true" selection-start-line="68" selection-start-column="64" selection-end-line="68" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Service/HomePageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Service/Impl/FilmPageServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="22" column="60" lean-forward="true" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Model/ShortReview.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-168">
-          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-          <folding>
-            <element signature="e#579#580#0" expanded="true" />
-            <element signature="e#608#609#0" expanded="true" />
-            <element signature="e#649#650#0" expanded="true" />
-            <element signature="e#685#686#0" expanded="true" />
-            <element signature="e#720#721#0" expanded="true" />
-            <element signature="e#751#752#0" expanded="true" />
-            <element signature="e#799#800#0" expanded="true" />
-            <element signature="e#839#840#0" expanded="true" />
-            <element signature="e#874#875#0" expanded="true" />
-            <element signature="e#905#906#0" expanded="true" />
-            <element signature="e#953#954#0" expanded="true" />
-            <element signature="e#993#994#0" expanded="true" />
-            <element signature="e#1022#1023#0" expanded="true" />
-            <element signature="e#1050#1051#0" expanded="true" />
-            <element signature="e#1089#1090#0" expanded="true" />
-            <element signature="e#1123#1124#0" expanded="true" />
-            <element signature="e#1159#1160#0" expanded="true" />
-            <element signature="e#1191#1192#0" expanded="true" />
-            <element signature="e#1241#1242#0" expanded="true" />
-            <element signature="e#1283#1284#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Film.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-          <folding>
-            <element signature="e#1179#1180#0" expanded="true" />
-            <element signature="e#1215#1216#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/影评网站后台API接口及数据库文档.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="216">
-            <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Test/FilmPageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FilmReviewWeb.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Service/FilmPageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="49" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Result.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Utils/JDBCUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Utils/TimeUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetDataOfFilmSetvlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-870">
-          <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/Search/SearchServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state x="228" y="41" key="#Tomcat_9.0.0.M26" timestamp="1589982677249">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="228" y="41" key="#Tomcat_9.0.0.M26/0.0.1536.824@0.0.1536.824" timestamp="1589982677249" />
+    <state x="245" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589983062328">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="245" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1589983062328" />
+    <state x="399" y="355" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1589982572966">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="399" y="355" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1589982572966" />
+    <state x="398" y="113" key="#意向" timestamp="1589983531508">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="398" y="113" key="#意向/0.0.1536.824@0.0.1536.824" timestamp="1589983531508" />
+    <state width="624" height="199" key="GridCell.Tab.0.bottom" timestamp="1590043354313">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="624" height="199" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590043354313" />
+    <state width="624" height="199" key="GridCell.Tab.0.center" timestamp="1590043354313">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="624" height="199" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590043354313" />
+    <state width="624" height="199" key="GridCell.Tab.0.left" timestamp="1590043354313">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="624" height="199" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590043354313" />
+    <state width="624" height="199" key="GridCell.Tab.0.right" timestamp="1590043354313">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="624" height="199" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590043354313" />
+    <state width="624" height="199" key="GridCell.Tab.1.bottom" timestamp="1590043354133">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="624" height="199" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590043354133" />
+    <state width="624" height="199" key="GridCell.Tab.1.center" timestamp="1590043354133">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="624" height="199" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590043354133" />
+    <state width="624" height="199" key="GridCell.Tab.1.left" timestamp="1590043354133">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="624" height="199" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590043354133" />
+    <state width="624" height="199" key="GridCell.Tab.1.right" timestamp="1590043354133">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="624" height="199" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590043354133" />
+    <state width="624" height="199" key="GridCell.Tab.2.bottom" timestamp="1590043354133">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="624" height="199" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590043354133" />
+    <state width="624" height="199" key="GridCell.Tab.2.center" timestamp="1590043354133">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="624" height="199" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1590043354133" />
+    <state width="624" height="199" key="GridCell.Tab.2.left" timestamp="1590043354133">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="624" height="199" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1590043354133" />
+    <state width="624" height="199" key="GridCell.Tab.2.right" timestamp="1590043354133">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="624" height="199" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1590043354133" />
   </component>
   <component name="masterDetails">
     <states>
