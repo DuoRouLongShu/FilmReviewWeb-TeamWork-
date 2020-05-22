@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>Movie</title>
-
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
     <!--[if lt IE 9]>
@@ -35,6 +33,8 @@
     var currentPage = 1;
     // 评论的对象、内容（名字、时间、评分、评论）、点赞数
         var comments;
+    // 点赞的用户，仅用于测试。实际运行不需要
+    var userName = "马志鹏";
         //更新的数据，目前只用来处理点赞数，用一条记录多次更新，会有多次记录，有冗余，遍历是一条路。初始索引0的值是电影名
         var data = [{"fileName":MovieName}];
         // data数据的下标
@@ -52,17 +52,23 @@
             }
             return theRequest;
         }
-        // 点赞数的增加与保存
+        // 点赞数的增加与保存，要个人中心的userName、评论的reviewId，
         function count(obj) {
-            var userName = $(obj).parent().children().children().html();//对应名字
-            var creatDate = $(obj).parent().children().next().children().html();//对应时间
-            var n = $(obj).prop("id").substring(4,5); // 第1~5评论
+            var n = $(obj).prop("id").substring(4,5); // 页面上第1~5评论
             // 改变点赞数后要记得保存到数据,currentPage、div包裹的内容，先弄comment的likes，
-            var i = (currentPage - 1) * 5 + parseInt(n);     // 数据库的第i条
-            //根据一个json数据，记录 条数、likes，一次性请求
+            var i = totalCount - (currentPage - 1) * 5 - parseInt(n);     // 因为评论是逆序，数据库的第i条,和comment的下标有出入，出错就GG
+            // 同一个对象只能对同一评论点一次赞，前端保存的仅是评论的点赞数。
             var addLike = $(obj).html(parseInt($(obj).html())+1); // 这addLike是对象？
-            comments.data[i-1].likes = addLike[0].innerText;
-            data[++j] = {"userName":userName,"creatDate":creatDate,"likes":addLike[0].innerText};
+            comments.data[i].likes = addLike[0].innerText;
+            //即时请求更新数据库，不影响操作。记录的是，谁为哪条评论点了赞。
+            $.ajax({
+                url:"",
+                data:{"userName":userName,"reviewId":comments.data[i].reviewId},
+                type:"post",
+                success:function (data) {
+                    console.log("成功");
+                }
+            })
         }
         // 测试，或许能简化点赞数的html语句，不够也好不到那去
         // function countt(obj) {
@@ -180,7 +186,6 @@
         // 地址栏获取电影名？
         var json = GetRequest();
         MovieName = json.filmName;
-
         // 评论区（json）
         $.ajax({
             // 去Servlet里查询所有该电影的影评，以及总页数，返回一个json对象，包含总记录数等
@@ -366,8 +371,8 @@
         </div>
     </div>
     <input type="button" class="btn btn-default t write" value="写影评" style="margin-left: 40px">
-    <input type="button" class="btn btn-default t" value="收藏" id="collect">
-    <input type="button" class="btn btn-default t" value="分享到" >
+    <input type="button" class="btn btn-default t btn-info" value="收藏" id="collect">
+    <input type="button" class="btn btn-default t btn-warning" value="分享到" >
     <br><br><br>
     <div>
         <h2 class="t">网友影评</h2>

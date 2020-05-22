@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>WriteComment</title>
-
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
     <!--[if lt IE 9]>
@@ -29,8 +27,12 @@
         var rating = 0;
         var filmName = "倾国倾城";
         var userName = "马志鹏";
-        // 校验布尔变量
-        var tag;
+        // 校验文本字数的布尔变量
+        var tag = false;
+        // 检验文本无敏感词汇的布尔变量
+        var flag = false;
+        // 防止多次异步请求文本敏感词的疏漏,记录离焦次数。。。
+        var count = 0;
         // 保存数据在localStorage，回显
         window.onload=function () {
             title = localStorage["title"];
@@ -52,11 +54,29 @@
             });
         };
 
-
         $(function () {
+            // 可以用定时器动态监测字数
             $("#textarea").focus();
             $("#textarea").blur(function () {
+                count++;
                 text = $("#textarea").val();
+                //过滤敏感词,离焦异步请求，有缺陷啊
+                $.ajax({
+                    url:"http://localhost:8080/FilmReviewWeb/filmpage/sensitiveWordDetection",
+                    type:"post",
+                    data:{"text":text},
+                    success:function (data) {
+                        count--;
+                        console.log(data.message);
+                        text = data.data[0].text;
+                        if(count == 0) {
+                            flag = true;
+                            $("#textResult").prop("style", "color:green;margin-left:-700px");
+                            $("#textResult").html("校验通过");
+                        }
+                    },
+                    dataType:"json"
+                });
                 $("#num").html(text.length);
                 tag = text.length > 0 ;
                 if(!tag){
@@ -64,7 +84,7 @@
                     $("#textResult").html("字数不符合要求");
                 }else{
                     $("#textResult").prop("style", "color:green;margin-left:-700px");
-                    $("#textResult").html("正确");
+                    $("#textResult").html("字数符合要求");
                 }
             });
 
@@ -73,8 +93,7 @@
             });
 
             $("#preview").click(function () {
-
-                if (/*flag && */tag) {
+                if (flag && tag) {
                     $(".btn-success").removeAttr("disabled");
                     $(".btn-info").attr("disabled", "disabled");
                     //  id = content 展示的内容变一下
@@ -88,6 +107,9 @@
                     $("#title").html(title);
                     $("#rating").html(rating);
                     $("#textarea").val(text);
+                }else if(!flag){
+                    $("#textResult").prop("style", "color:red;margin-left:-700px");
+                    $("#textResult").html("等待校验");
                 }
                 $("#button").click(function () {
                     // 到时候改这里的地址，因为是静态页面
@@ -108,6 +130,13 @@
                     alert("成功提交");
                 })
             });
+            $("#formsearch").submit(function () {
+                // 顶部的搜索，提交时获取输入，存储
+                var word = $("#search").val();
+                localStorage.word = word;
+                // 去后台search资源根据参数word获得一些电影，后台重定向去Search.html资源回显
+                $("#formsearch").prop("action","./Search.html");
+            })
         });
 
     </script>
@@ -161,11 +190,11 @@
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="text-align: center">
-            <form class="navbar-form navbar-left" action="http://localhost:8080/FilmReviewWeb/index.html" method="get">
+            <form class="navbar-form navbar-left" action="" method="post" id="formsearch">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="请输入你要搜索的电影名称" id="search" style="margin-left: 350px;width: 500px" name="content">
+                    <input name="word" type="text" class="form-control" placeholder="请输入你要搜索的电影名称" id="search" style="margin-left: 350px;width: 500px">
                 </div>
-                <button type="submit" class="btn btn-default">搜索</button>
+                <button type="submit" class="btn btn-default">🔍搜索</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">个人中心</a></li>
