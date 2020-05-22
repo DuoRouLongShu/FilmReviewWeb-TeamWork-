@@ -7,6 +7,7 @@ import com.FilmReviewWeb.Model.Film;
 import com.FilmReviewWeb.Model.Result;
 import com.FilmReviewWeb.Model.Review;
 import com.FilmReviewWeb.Service.FilmPageService;
+import com.FilmReviewWeb.Utils.SensitiveWordUtils;
 
 import java.util.ArrayList;
 
@@ -50,6 +51,12 @@ public class FilmPageServiceImpl implements FilmPageService {
             result.setData(true);
         }
         return result;
+    }
+
+    @Override
+    public String replaceSensitiveWord(String text) throws Exception {
+        String processedText = SensitiveWordUtils.replaceBadWord(text, 1, "*");
+        return processedText;
     }
 
     @Override

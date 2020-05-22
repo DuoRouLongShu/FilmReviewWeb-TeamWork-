@@ -13,12 +13,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * 查看是否点赞影评Servlet
+ * 给影评点赞Servlet
  * @author HTwo2O
  * @date 2020/5/21 17:15
  */
-@WebServlet("/filmpage/checkReviewLike")
-public class checkReviewLikeServlet extends HttpServlet {
+@WebServlet("/filmpage/giveReviewLike")
+public class GiveReviewLikeServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");
         resp.setContentType("text/html;charset=UTF-8");
@@ -27,7 +27,7 @@ public class checkReviewLikeServlet extends HttpServlet {
         FilmPageService filmPageService = new FilmPageServiceImpl();
         Result result = null;
         try {
-            result = filmPageService.checkReviewLike(reviewId, userName);
+            result = filmPageService.giveReviewLike(reviewId, userName);
         } catch (Exception e) {
             e.printStackTrace();
         }
