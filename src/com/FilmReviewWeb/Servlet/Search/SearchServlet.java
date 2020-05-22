@@ -8,6 +8,7 @@ import com.alibaba.fastjson.JSON;
 import lombok.SneakyThrows;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,6 +21,7 @@ import java.util.List;
  * @author HTwo2O
  * @date 2020/5/13 14:34
  */
+@WebServlet("/search/searchFilm")
 public class SearchServlet extends HttpServlet {
 
     @SneakyThrows

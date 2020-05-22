@@ -55,7 +55,7 @@ public class FilmPageServiceImpl implements FilmPageService {
 
     @Override
     public String replaceSensitiveWord(String text) throws Exception {
-        String processedText = SensitiveWordUtils.replaceBadWord(text, 1, "*");
+        String processedText = SensitiveWordUtils.replaceBadWord(text, 2, "*");
         return processedText;
     }
 

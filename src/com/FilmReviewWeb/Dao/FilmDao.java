@@ -59,7 +59,7 @@ public class FilmDao {
     }
 
     /**
-     * 通过关键词查找电影数据库
+     * 通过关键词搜索电影数据库
      * @param keyword
      * @return
      * @throws Exception
@@ -70,7 +70,8 @@ public class FilmDao {
                 "UNION " +
                 "SELECT * FROM film WHERE LOCATE(?,film_name) > 1 " +
                 "UNION " +
-                "SELECT * FROM film WHERE LOCATE(?,CONCAT(`director`,`writer`,`performer`)) > 0; ";
+                "SELECT * FROM film WHERE LOCATE(?, CONCAT(IFNULL(`director`,''),IFNULL(`writer`,''),IFNULL(`performer`,''))) > 0; ";
+
         preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1,keyword);
         preparedStatement.setString(2,keyword);
