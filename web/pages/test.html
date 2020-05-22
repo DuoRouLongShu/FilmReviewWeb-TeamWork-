@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--        设置验证码-->
+    <script>
+        window.onload = function () {
+            const img = document.getElementById("checkcode_img");
+            img.onclick = function () {
+                img.src = "checkCodeServlet";
+            }
+
+        }
+    </script>
+    <style>
+        img{
+            border: red solid 1px;
+            width: 90px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+<img src="checkCodeServlet" alt="验证码" id="checkcode_img">
+</body>
+</html>

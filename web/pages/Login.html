@@ -23,7 +23,15 @@
         });
         //处理响应结果
     </script>
-
+    <!--    设置验证码-->
+<!--    <script>-->
+<!--        window.onload = function () {-->
+<!--            const img = document.getElementById("code_img");-->
+<!--            img.onclick = function () {-->
+<!--                img.src = "/checkCodeServlet";-->
+<!--            }-->
+<!--        }-->
+<!--    </script>-->
 </head>
 <body>
 
@@ -44,7 +52,7 @@
         <div class="errortip">
             <span class="fatal-msg hide"></span>
         </div>
-        <form id="loginForm" method="post" action="#">
+        <form id="loginForm" method="post">
             <div class="input-raw">
                 <div class="input-field">
                     <label class="input-label">用户名：</label>
@@ -59,16 +67,19 @@
             <div class="input-raw">
                 <label class="input-label">密码：</label>
                 <div class="input-field">
-                    <label for="password"></label><input id="password" class="form-input password" name="password"
-                                                         type="password" placeholder="密码" value="" tabindex="2">
+                    <label for="password"></label>
+                    <input id="password" class="form-input password" name="password"
+                           type="password" placeholder="密码" value="" tabindex="2" autocomplete="off">
 
                 </div>
             </div>
             <div class="input-raw">
                 <div class="input-field">
-                    <label for="code"></label><input id="code" class="form-input" name="code" type="text"
+                    <label for="code"></label>
+                    <input id="code" class="form-input" name="code" type="text"
                                                      placeholder="验证码" value="" tabindex="3" autocomplete="off"
                                                      maxlength="4">
+                    <img src="checkCodeServlet" id="code_img" alt="111">
                 </div>
             </div>
             <div id="submit">

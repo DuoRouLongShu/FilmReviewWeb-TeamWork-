@@ -7,53 +7,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a45f3d02-5d55-4185-89ac-6b3269ae0bc0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/CategoryDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/ResultInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/Impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/User/CheckCodeServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/User/ExitServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/User/FindUserServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/User/LoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/User/RegistUserServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-beanutils-1.9.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-logging-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/jsp-api.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/lombok.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/pages/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/FilmPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/FilmPageTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/Tester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/Tester.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Dao/FilmDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Dao/FilmDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilmReviewWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FilmReviewWeb.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/FilmPageTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/META-INF/FilmReviewWeb.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/META-INF/FilmReviewWeb.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/Tester.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Dao/FilmDao.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Dao/ReviewDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Dao/ReviewDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/DisplayFilms.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/DisplayFilms.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/Feedback.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/Feedback.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/Film.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/Film.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/Result.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/Review.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/ShortReview.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/ShortReview.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Service/FilmPageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Service/FilmPageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Service/HomePageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Service/HomePageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Service/Impl/FilmPageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Service/Impl/FilmPageServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Service/SearchService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Service/SearchService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/GetDataOfFilmSetvlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/GetDataOfFilmSetvlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/Search/SearchServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/Search/SearchServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Utils/JDBCUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Utils/JDBCUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Utils/TimeUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Utils/TimeUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/FilmPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/FilmPageTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Tester.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Tester.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Dao/FilmDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Dao/FilmDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Service/FilmPageService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Service/Impl/FilmPageServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/GetDataOfFilmSetvlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/FilmDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/FilmDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/ReviewDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/ReviewDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/DisplayFilms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/DisplayFilms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Film.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/FilmPageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/FilmPageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/Impl/FilmPageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/Impl/FilmPageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetDataOfFilmSetvlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetDataOfFilmSetvlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/FilmPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/FilmPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/Tester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/FilmPageTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Tester.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Dao/FilmDao.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Dao/ReviewDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Dao/ReviewDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/DisplayFilms.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/DisplayFilms.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/Feedback.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/Feedback.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/Film.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/Film.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/Result.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/Review.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/ShortReview.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/ShortReview.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/FilmPageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/FilmPageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/HomePageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/HomePageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/Impl/FilmPageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/Impl/FilmPageServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/SearchService.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/SearchService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/GetDataOfFilmSetvlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/GetDataOfFilmSetvlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/Search/SearchServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/Search/SearchServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Utils/JDBCUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Utils/JDBCUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Utils/TimeUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Utils/TimeUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/Login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/Register.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/Register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/jquery-3.4.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/js/jquery-3.4.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/FilmPageService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/Impl/FilmPageServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/GetDataOfFilmSetvlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/pages/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/Login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/pages/Register.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/Register.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/pages/Register.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/Register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +94,9 @@
       <list>
         <option value="Jsp File" />
         <option value="Interface" />
+        <option value="JavaFXApplication" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -95,7 +105,7 @@
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
-    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_WARNINGS" value="true" />
     <option name="FILTER_INFO" value="true" />
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
@@ -108,12 +118,18 @@
     </option>
   </component>
   <component name="ProjectId" id="1cArn3Q30bL7FlGN4qBUmWWqSe2" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="添加" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -121,7 +137,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/User" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -134,10 +150,12 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\src\com\FilmReviewWeb\Servlet\User" />
+      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\WEB-INF" />
       <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\js" />
       <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\pages" />
       <recent name="C:\Users\64392\IdeaProjects\FilmReviewWeb\web\WEB-INF\lib" />
@@ -319,6 +337,7 @@
     <option name="viewStates">
       <list>
         <serviceView>
+          <option name="contentProportion" value="0.13046448" />
           <treeState>
             <expand>
               <path>
@@ -328,7 +347,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="完成" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="运行" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -356,119 +375,116 @@
       <workItem from="1589349262630" duration="27091000" />
       <workItem from="1589384451863" duration="1024000" />
       <workItem from="1589982444522" duration="3183000" />
-      <workItem from="1590038211485" duration="1185000" />
+      <workItem from="1590038211485" duration="20798000" />
+      <workItem from="1590131490784" duration="27000" />
+      <workItem from="1590132414539" duration="14188000" />
+      <workItem from="1590149278267" duration="1872000" />
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="FilmPageTest_getFilmDataByFilmNameTest - 2020.05.13 at 21h 39m 53s.xml">
-      <configuration name="FilmPageTest.getFilmDataByFilmNameTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FilmPageTest_getFilmDataByFilmNameTest - 2020.05.13 at 21h 49m 19s.xml">
-      <configuration name="FilmPageTest.getFilmDataByFilmNameTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FilmPageTest_getReviewByFilmNameTest - 2020.05.13 at 22h 02m 43s.xml">
-      <configuration name="FilmPageTest.getReviewByFilmNameTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FilmPageTest_getReviewByFilmNameTest - 2020.05.13 at 22h 05m 22s.xml">
-      <configuration name="FilmPageTest.getReviewByFilmNameTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FilmPageTest_getReviewByFilmNameTest - 2020.05.13 at 22h 07m 34s.xml">
-      <configuration name="FilmPageTest.getReviewByFilmNameTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FilmPageTest_getReviewByFilmNameTest - 2020.05.13 at 22h 08m 51s.xml">
-      <configuration name="FilmPageTest.getReviewByFilmNameTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FilmPageTest_getReviewByFilmNameTest - 2020.05.13 at 22h 09m 28s.xml">
-      <configuration name="FilmPageTest.getReviewByFilmNameTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FilmPageTest_getReviewByFilmNameTest - 2020.05.13 at 22h 09m 53s.xml">
-      <configuration name="FilmPageTest.getReviewByFilmNameTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FilmPageTest_getReviewByFilmNameTest - 2020.05.13 at 22h 10m 34s.xml">
-      <configuration name="FilmPageTest.getReviewByFilmNameTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FilmPageTest_getReviewByFilmNameTest - 2020.05.13 at 22h 11m 42s.xml">
-      <configuration name="FilmPageTest.getReviewByFilmNameTest" configurationId="JUnit" />
-    </history-entry>
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="228" y="41" key="#Tomcat_9.0.0.M26" timestamp="1589982677249">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="228" y="41" key="#Tomcat_9.0.0.M26/0.0.1536.824@0.0.1536.824" timestamp="1589982677249" />
-    <state x="245" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589983062328">
+    <state x="245" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590150266210">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="245" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1589983062328" />
+    <state x="245" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1590150266210" />
     <state x="399" y="355" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1589982572966">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="399" y="355" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1589982572966" />
+    <state x="0" y="355" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1590054440370">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="355" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1590054440370" />
+    <state x="605" y="213" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590079663500">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="605" y="213" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1590079663500" />
     <state x="398" y="113" key="#意向" timestamp="1589983531508">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="398" y="113" key="#意向/0.0.1536.824@0.0.1536.824" timestamp="1589983531508" />
-    <state width="624" height="199" key="GridCell.Tab.0.bottom" timestamp="1590043354313">
+    <state x="328" y="282" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1590075303637">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="624" height="199" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590043354313" />
-    <state width="624" height="199" key="GridCell.Tab.0.center" timestamp="1590043354313">
+    <state x="328" y="282" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1590075303637" />
+    <state width="1272" height="371" key="GridCell.Tab.0.bottom" timestamp="1590150855274">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="624" height="199" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590043354313" />
-    <state width="624" height="199" key="GridCell.Tab.0.left" timestamp="1590043354313">
+    <state width="1272" height="371" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590150855274" />
+    <state width="1272" height="371" key="GridCell.Tab.0.center" timestamp="1590150855274">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="624" height="199" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590043354313" />
-    <state width="624" height="199" key="GridCell.Tab.0.right" timestamp="1590043354313">
+    <state width="1272" height="371" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590150855274" />
+    <state width="1272" height="371" key="GridCell.Tab.0.left" timestamp="1590150855274">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="624" height="199" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590043354313" />
-    <state width="624" height="199" key="GridCell.Tab.1.bottom" timestamp="1590043354133">
+    <state width="1272" height="371" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590150855274" />
+    <state width="1272" height="371" key="GridCell.Tab.0.right" timestamp="1590150855274">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="624" height="199" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590043354133" />
-    <state width="624" height="199" key="GridCell.Tab.1.center" timestamp="1590043354133">
+    <state width="1272" height="371" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590150855274" />
+    <state width="1272" height="371" key="GridCell.Tab.1.bottom" timestamp="1590150855275">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="624" height="199" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590043354133" />
-    <state width="624" height="199" key="GridCell.Tab.1.left" timestamp="1590043354133">
+    <state width="1272" height="371" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590150855275" />
+    <state width="1272" height="371" key="GridCell.Tab.1.center" timestamp="1590150855274">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="624" height="199" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590043354133" />
-    <state width="624" height="199" key="GridCell.Tab.1.right" timestamp="1590043354133">
+    <state width="1272" height="371" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590150855274" />
+    <state width="1272" height="371" key="GridCell.Tab.1.left" timestamp="1590150855274">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="624" height="199" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590043354133" />
-    <state width="624" height="199" key="GridCell.Tab.2.bottom" timestamp="1590043354133">
+    <state width="1272" height="371" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590150855274" />
+    <state width="1272" height="371" key="GridCell.Tab.1.right" timestamp="1590150855274">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="624" height="199" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590043354133" />
-    <state width="624" height="199" key="GridCell.Tab.2.center" timestamp="1590043354133">
+    <state width="1272" height="371" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590150855274" />
+    <state width="1272" height="371" key="GridCell.Tab.2.bottom" timestamp="1590150855275">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="624" height="199" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1590043354133" />
-    <state width="624" height="199" key="GridCell.Tab.2.left" timestamp="1590043354133">
+    <state width="1272" height="371" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590150855275" />
+    <state width="1272" height="371" key="GridCell.Tab.2.center" timestamp="1590150855275">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="624" height="199" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1590043354133" />
-    <state width="624" height="199" key="GridCell.Tab.2.right" timestamp="1590043354133">
+    <state width="1272" height="371" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1590150855275" />
+    <state width="1272" height="371" key="GridCell.Tab.2.left" timestamp="1590150855275">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="624" height="199" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1590043354133" />
+    <state width="1272" height="371" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1590150855275" />
+    <state width="1272" height="371" key="GridCell.Tab.2.right" timestamp="1590150855275">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1272" height="371" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1590150855275" />
+    <state width="1286" height="371" key="GridCell.Tab.3.bottom" timestamp="1590150831839">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1286" height="371" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590150831839" />
+    <state width="1286" height="371" key="GridCell.Tab.3.center" timestamp="1590150831838">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1286" height="371" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1590150831838" />
+    <state width="1286" height="371" key="GridCell.Tab.3.left" timestamp="1590150831838">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1286" height="371" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1590150831838" />
+    <state width="1286" height="371" key="GridCell.Tab.3.right" timestamp="1590150831838">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1286" height="371" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1590150831838" />
+    <state x="0" y="72" key="SettingsEditor" timestamp="1590080202904">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="72" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1590080202904" />
   </component>
   <component name="masterDetails">
     <states>

@@ -10,7 +10,7 @@
         //表单校验
         window.onload = function () {
             document.getElementById("form").onsubmit = function () {
-                return checkUsername() && checkPassword() && checkConfirm() && checkCode();
+                return checkUsername() && checkPassword() && checkConfirm();
             };
             document.getElementById("username").onblur = checkUsername;
             document.getElementById("password").onblur = checkPassword;
@@ -31,6 +31,7 @@
             else s_username.innerHTML = "用户名非法";
             return flag;
         }
+
         // 校验密码
         function checkPassword() {
             const password = document.getElementById("password").value;
@@ -43,6 +44,7 @@
             else s_password.innerHTML = "密码非法";
             return flag;
         }
+
         //校验确认密码
         function checkConfirm() {
             const password = document.getElementById("password").value;
@@ -59,20 +61,7 @@
             }
             return flag;
         }
-        //校验验证码
-        function checkCode() {
-            const string = "ab123";//测试用的验证码
-            const checkcode = document.getElementById("checkcode").value;
-            const s_checkcode = document.getElementById("s_checkcode");
-            let flag = false;
-            if (checkcode !== string) {
-                s_checkcode.innerHTML = "验证码错误";
-            } else if (checkcode === string) {
-                s_checkcode.innerHTML = "对";
-                flag = true;
-            }
-            return flag;
-        }
+
 
         //获焦时隐藏提示信息
         // $(document).ready(function () {
@@ -80,11 +69,12 @@
         //         $("s_username").hide(1);
         //     });
         // });
+
         //异步提交表单函数
         $(function () {
             $("#form").submit(function () {
-                if (checkUsername() && checkPassword() && checkConfirm() && checkCode()) {
-                    $.post("registerUserServlet", $(this).serialize(), function (data) {
+                if (checkUsername() && checkPassword() && checkConfirm()) {
+                    $.post("registUserServlet", $(this).serialize(), function (data) {
                         //处理服务器响应的数据datajason格式{flag:boolen,errormsg:"中文提示"}
                         //         if (data.flag){
                         //             //成功，跳转页面
@@ -100,16 +90,25 @@
                 //如果这个方法没有返回值，或者返回为true，则表单提交，否则不提交
 
             });
-
         });
 
+    </script>
+<!--    设置验证码-->
+    <script>
+        window.onload = function () {
+            const img = document.getElementById("checkcode_img");
+            img.onclick = function () {
+                img.src = "checkCodeServlet";
+            }
+
+        }
     </script>
 </head>
 <body>
 
 <div id="index">
     <div id="index_div">
-        <a id="index_a" href="index.jsp" target="_self"></a>
+        <a id="index_a" href="#" target="_self"></a>
     </div>
 </div>
 <div id="div">
@@ -122,7 +121,7 @@
     </div>
     <div id="div-center">
         <div id="top"></div>
-        <form action="#" method="post" id="form">
+        <form method="post" id="form">
             <table>
                 <tr>
                     <td class="left"><label for="username">用户名</label></td>
@@ -135,14 +134,15 @@
                 <tr>
                     <td class="left"><label for="password">密码</label></td>
                     <td class="right">
-                        <input type="password" name="password" id="password" placeholder="密码(由6-12位数字和字母组成）">
+                        <input type="password" name="password" id="password" placeholder="密码(由6-12位数字和字母组成）"
+                               autocomplete="off">
                         <span id="s_password" class="error"></span>
                     </td>
                 </tr>
                 <tr>
                     <td class="left"><label for="confirm">确认密码</label></td>
                     <td class="right">
-                        <input type="password" name="repassword" id="confirm" placeholder="请再次确认密码">
+                        <input type="password" name="repassword" id="confirm" placeholder="请再次确认密码" autocomplete="off">
                         <span id="s_confirm" class="error"></span>
                     </td>
                 </tr>
@@ -161,7 +161,7 @@
                     <td class="left"><label for="checkcode">验证码</label></td>
                     <td class="right">
                         <input type="text" name="checkcode" id="checkcode" placeholder="验证码">
-                        <span id="s_checkcode" class="error"></span>
+                        <img id="checkcode_img" src="checkCodeServlet" alt="111">
                     </td>
                 </tr>
                 <tr>

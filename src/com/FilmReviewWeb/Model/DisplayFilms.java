@@ -8,26 +8,28 @@ import java.io.Serializable;
  * @date 2020/5/12 20:52
  */
 public class DisplayFilms implements Serializable {
-    private int displayId;
-    private int filmId;
+    //判断标志，1为轮播图，0为非轮播图
+    private int rotation;
     private String filmName;
     private String content;
     private String imageSource;
 
-    public int getDisplayId() {
-        return displayId;
+    public DisplayFilms() {
     }
 
-    public void setDisplayId(int displayId) {
-        this.displayId = displayId;
+    public DisplayFilms(int rotation, String filmName, String content, String imageSource) {
+        this.rotation = rotation;
+        this.filmName = filmName;
+        this.content = content;
+        this.imageSource = imageSource;
     }
 
-    public int getFilmId() {
-        return filmId;
+    public int getRotation() {
+        return rotation;
     }
 
-    public void setFilmId(int filmId) {
-        this.filmId = filmId;
+    public void setRotation(int rotation) {
+        this.rotation = rotation;
     }
 
     public String getFilmName() {
@@ -56,9 +58,8 @@ public class DisplayFilms implements Serializable {
 
     @Override
     public String toString() {
-        return "displayFilms{" +
-                "displayId=" + displayId +
-                ", filmId=" + filmId +
+        return "DisplayFilms{" +
+                "rotation=" + rotation +
                 ", filmName='" + filmName + '\'' +
                 ", content='" + content + '\'' +
                 ", imageSource='" + imageSource + '\'' +
