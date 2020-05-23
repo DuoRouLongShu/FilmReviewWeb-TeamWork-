@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Search</title>
+
+    <!-- Bootstrap -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <!--<script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>-->
+    <!--<script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>-->
+    <!--[endif]-->
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script>
+        var films;
+        var currentPage = 1;
+        var totalCount;
+        var totalPage;
+        $(function () {
+            $("#search").val(localStorage["keyword"]);
+            localStorage.clear();
+            // 顶部搜索框，进来就去加载信息去
+            search();
+        });
+function special(obj) {
+    if($(obj).prop("id") == "next"){
+        currentPage = parseInt(currentPage) + 1;
+    }else{
+        currentPage -= 1;
+    }
+    if (currentPage <= 1) {
+        currentPage = 1;
+        $("#previous").parent().prop("class", "disabled");
+    }else if(currentPage >= totalPage) {
+        currentPage = totalPage;
+        $("#next").parent().prop("class", "disabled");
+    }
+    filmeach(currentPage);
+}
+// 罗列每一页电影的信息。
+function filmeach(page) {
+    // 页码的激活效果
+    $("li[class='active']").prop("class","");
+    var lis = $("#li li");
+    lis.each(function (index, element) {
+        // 例子：第4页对应下标3的li
+        if(index == page - 1){
+            $(element).prop("class","active");
+            // 结束循环
+            return false;
+        }
+    });
+    // 更新页码
+    currentPage = page;
+    // 前后页的状态
+    if (currentPage <= 1) {
+        currentPage = 1;
+        $("#previous").parent().prop("class", "disabled");
+    }else if(currentPage >= totalPage) {
+        currentPage = totalPage;
+        $("#next").parent().prop("class", "disabled");
+    }else{
+        $("#previous").parent().prop("class", "");
+        $("#next").parent().prop("class", "");
+    }
+    // 栅格系统，append改变内容
+    $("#content").html("");
+    $("#content").append("<div class='container'>" +
+        "<div class=\"row\">\n" +
+        "</div>");
+    // 添加电影,这个i注意
+    for (var i = (page-1)*8 ; i < films.data.length; i++) {
+        $("div[class='row']").append(
+            "        <div class=\"col-lg-3\">\n" +
+            "            <a href=\"javascript:;\" onclick=select(this)>\n" +
+            "                <img src=\"./img/1590053103(1).jpg\"  class=\"img-thumbnail\"><br>\n" +
+            "                <span>"+ films.data[i].filmName +"</span>\n" +
+            "            </a>\n" +
+            "            <p style='text-align: center;color: gold;font-weight: bolder;font-size: large'>" + films.data[i].rating + "</p>\n" +
+            "        </div>\n"
+        );
+        // 对应test4
+        // $("div[class='row'] img:nth-child(n)")[i].src = films.data[i].src;
+        $($("div[class='row'] img:nth-child(n)")[i]).prop("src",films.data[i].src);
+    };
+}
+function search() {
+    var keyword = $("#search").val();
+    $("#li").html("");
+    if(keyword != "") {
+        $("#content").html("页面加载中.....等到ajax响应回来后替换页面");
+        $.ajax({
+            url: "./search/searchFilm",
+            data: {"keyword": keyword},
+            type: "post",
+            success: function (data) {
+                films = data;
+                console.log(data.message);
+                totalCount = data.dataCount;
+                totalPage = data.pageCount;
+                // 增加页码
+                for (var i = 1; i <= totalPage; i++) {
+                    $("#li").append("<li><a href='javascript:void(0)' onclick=fun(this.innerHTML); >"+i+"</a></li>");
+                }
+                // 激活第一页
+                $("#li li:first").prop("class","active");
+                // 成功后，展示第一页的电影信息，定死每页最多8个
+                filmeach(1);
+            },
+            dataType: "json"
+        });
+    }else{
+        // 页面内容代替为空，让用户去搜索去,"空空如也"
+        $("#content").html("空空如也，快去搜索吧");
+    }
+}
+function select(obj) {
+    //获取电影名
+    var filmName = $(obj).children(":last").html();
+    //跳转特定页面
+    window.location.href = "http://localhost:8080/FilmReviewWeb/Movie.html?filmName="+filmName;
+}
+
+    </script>
+    <style>
+        img{
+            margin-left: 50px;
+            margin-right: 60px;
+        }
+        div[class='row'] a span{
+            margin-left: 100px;
+            margin-right: 60px;
+        }
+    </style>
+</head>
+<body>
+<!--搜索框-->
+<div class="container-fluid" style="margin-left: 350px;margin-top: 100px;">
+    <a class="navbar-brand" href="#" >
+        <blockquote style="border-color: #2aabd2;">
+            <span style="font-weight: 700;font-size: 28px;color: #fff;text-shadow: 0 0 10px #1E9FFF">知影</span>
+        </blockquote>
+    </a>
+    <input id="search" type="text" class="form-control" placeholder="请输入你要搜索的电影名称或喜欢的演员和导演"
+           style="width: 500px;height: 45px;margin-top: 10px;float: left">
+    <input type="button" class="btn btn-primary btn-lg form-group" style="float: left;margin-top: 10px;margin-left: 5px" value="🔍搜索" onclick=search()>
+</div><!-- /.container-fluid -->
+<!--分割线-->
+<br><hr style="border-color: #b92c28; width: 1000px;"><br>
+<!--搜索内容-->
+<div id="content"></div>
+<!--分页条-->
+<nav aria-label="Page navigation" style="text-align: center;margin-bottom: 80px">
+    <ul class="pagination">
+        <li>
+            <a href="javascript:void(0)" aria-label="Previous" id="previous" onclick=special(this)>
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <!--页数-->
+        <ul class='pagination' id="li" style="margin-top:1px;"></ul>
+        <li style="float: right;">
+            <a href="javascript:void(0)" aria-label="Next" id="next" onclick=special(this) >
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+</body>
+</html>
