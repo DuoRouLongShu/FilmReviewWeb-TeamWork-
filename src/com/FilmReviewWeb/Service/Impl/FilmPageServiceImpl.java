@@ -60,17 +60,18 @@ public class FilmPageServiceImpl implements FilmPageService {
     }
 
     @Override
-    public Result checkReviewLike(Integer reviewId, String userName) throws Exception {
+    public Result checkReviewLike(Integer[] reviewIds, String userName) throws Exception {
         Result result = new Result();
         ReviewLikeDao reviewLikeDao = new ReviewLikeDao();
-        boolean hasLike = reviewLikeDao.selectLike(reviewId, userName);
-        if (hasLike == true){
-            result.setMessage("已经点赞");
-            result.setData(true);
-        }else {
-            result.setMessage("未点赞");
-            result.setData(false);
+        int length = reviewIds.length;
+        boolean[] check = new boolean[length];
+        boolean hasLike;
+        for(int i = 0; i < length; i++){
+             hasLike = reviewLikeDao.selectLike(reviewIds[i], userName);
+             check[i] = hasLike;
         }
+        result.setMessage("成功查询");
+        result.setData(check);
         return result;
     }
 }

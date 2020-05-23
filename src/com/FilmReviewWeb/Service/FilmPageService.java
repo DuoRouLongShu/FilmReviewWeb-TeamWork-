@@ -46,12 +46,12 @@ public interface FilmPageService {
 
     /**
      * 检查是用户是否点赞过对应的影评
-     * @param reviewId
+     * @param reviewIds
      * @param userName
      * @return true表示点赞过，flase表示未点赞过
      * @throws Exception
      */
-    public Result checkReviewLike(Integer reviewId, String userName) throws Exception;
+    public Result checkReviewLike(Integer[] reviewIds, String userName) throws Exception;
 
     /**
      * 替换文本中敏感词
