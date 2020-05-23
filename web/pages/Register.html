@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <title>Register</title>
     <link rel="stylesheet" href="Register.css" type="text/css">
-    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-1.11.0.min.js"></script>
 
     <script>
         //表单校验
         window.onload = function () {
             document.getElementById("form").onsubmit = function () {
+                //点击切换验证码
+                const img = document.getElementById("checkcode_img");
+                img.onclick = function () {
+                    const date = new Date().getTime();
+                    img.src = "user/checkCode?" + date;
+                };
+                //都为true则验证通过，才能提交表单
                 return checkUsername() && checkPassword() && checkConfirm();
             };
             document.getElementById("username").onblur = checkUsername;
@@ -27,8 +34,9 @@
 
             if (flag) {
                 s_username.innerHTML = "对";
-            } else if (username === "") s_username.innerHTML = "用户名为空";
-            else s_username.innerHTML = "用户名非法";
+                s_username.style.color = "green";
+            } else if (username === "") s_username.innerHTML = "用户名为空!";
+            else s_username.innerHTML = "用户名非法!";
             return flag;
         }
 
@@ -40,8 +48,9 @@
             const s_password = document.getElementById("s_password");
             if (flag) {
                 s_password.innerHTML = "对";
-            } else if (password === "") s_password.innerHTML = "密码为空";
-            else s_password.innerHTML = "密码非法";
+                s_password.style.color = "green";
+            } else if (password === "") s_password.innerHTML = "密码为空!";
+            else s_password.innerHTML = "密码非法!";
             return flag;
         }
 
@@ -52,56 +61,62 @@
             const s_confirm = document.getElementById("s_confirm");
             let flag = false;
             if (password !== confirm) {
-                s_confirm.innerHTML = "两次密码不同";
+                s_confirm.innerHTML = "两次密码不同!";
             } else if (confirm === "") {
-                s_confirm.innerHTML = "输入为空";
+                s_confirm.innerHTML = "输入为空!";
             } else if (password === confirm) {
                 s_confirm.innerHTML = "对";
+                s_confirm.style.color = "green";
                 flag = true;
             }
             return flag;
         }
 
-
-        //获焦时隐藏提示信息
+        //获焦时隐藏提示信息,失焦时显示
         // $(document).ready(function () {
         //     $("#username").focus(function () {
-        //         $("s_username").hide(1);
+        //         $("#s_username").css("display", "none");
+        //     }).blur(function () {
+        //         $("#s_username").css("display", "inline");
+        //     });
+        //     $("#password").focus(function () {
+        //         $("#s_password").css("display", "none");
+        //     }).blur(function () {
+        //         $("#s_password").css("display", "inline");
+        //     });
+        //     $("#confirm").focus(function () {
+        //         $("#s_confirm").css("display", "none");
+        //     }).blur(function () {
+        //         $("#s_confirm").css("display", "inline");
+        //     });
+        //     $("#checkcode").focus(function () {
+        //         $("#errorMsg").css("display", "none");
+        //     }).blur(function () {
+        //         $("#s_errortips").css("display", "inline");
         //     });
         // });
-
+    </script>
+    <script>
         //异步提交表单函数
         $(function () {
             $("#form").submit(function () {
                 if (checkUsername() && checkPassword() && checkConfirm()) {
-                    $.post("registUserServlet", $(this).serialize(), function (data) {
-                        //处理服务器响应的数据datajason格式{flag:boolen,errormsg:"中文提示"}
-                        //         if (data.flag){
-                        //             //成功，跳转页面
-                        //             Location.href="Login.html";
-                        //         }else{
-                        //             //失败，给errormsg添加提示信息
-                        //             $("#errormsg").html(data.errormsg);
-                        //         }
+                    $.post("user/registUser", $(this).serialize(), function (data) {
+                        //处理服务器响应的数据data,jason格式{flag:boolean,errorMsg:"中文提示"}
+                        if (data.fla) {
+                            //成功，跳转页面
+                            Location.href = "pages/Login.html";
+                        } else {
+                            //失败，给errormsg添加提示信息
+                            $("#errorMsg").html(data.errorMsg);
+                        }
                     });
                 }
                 //不让页面跳转
                 return false;
                 //如果这个方法没有返回值，或者返回为true，则表单提交，否则不提交
-
             });
         });
-
-    </script>
-<!--    设置验证码-->
-    <script>
-        window.onload = function () {
-            const img = document.getElementById("checkcode_img");
-            img.onclick = function () {
-                img.src = "checkCodeServlet";
-            }
-
-        }
     </script>
 </head>
 <body>
@@ -126,8 +141,7 @@
                 <tr>
                     <td class="left"><label for="username">用户名</label></td>
                     <td class="right">
-                        <input type="text" name="username" id="username" placeholder="用户名(由6-12位数字和字母组成）"
-                               autofocus>
+                        <input type="text" name="userName" id="username" placeholder="用户名(由6-12位数字和字母组成）">
                         <span id="s_username" class="error"></span>
                     </td>
                 </tr>
@@ -150,7 +164,7 @@
                     <td class="left"><label>性别</label></td>
                     <td class="right">
                         <label>
-                            <input type="radio" name="gender" value="male" autocomplete="on">男
+                            <input type="radio" name="gender" value="male">男
                         </label>
                         <label><input type="radio" name="gender" value="female">女
                         </label>
@@ -161,7 +175,8 @@
                     <td class="left"><label for="checkcode">验证码</label></td>
                     <td class="right">
                         <input type="text" name="checkcode" id="checkcode" placeholder="验证码">
-                        <img id="checkcode_img" src="checkCodeServlet" alt="111">
+                        <img id="checkcode_img" src="user/checkCode" alt="图片验证码">
+                        <span id="errorMsg" class="error"></span>
                     </td>
                 </tr>
                 <tr>
