@@ -1,15 +1,21 @@
 package com.FilmReviewWeb.Servlet.User;
 
+import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
+import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.util.Random;
-@WebServlet("checkCodeServlet")
-public class CheckCodeServlet {
-    public void doGet(HttpServletRequest req, HttpServletResponse response) throws ServletException{
+
+
+@WebServlet("/user/checkCode")
+public class CheckCodeServlet extends HttpServlet {
+    public void dopost(HttpServletRequest req, HttpServletResponse response) throws ServletException{
         //服务器通知浏览器不要缓存
         response.setHeader("pragma", "no-cache");
         response.setHeader("cache-control", "no-cache");
@@ -33,7 +39,7 @@ public class CheckCodeServlet {
         //产生4个随机验证码，12Ey
         String checkCode = getCheckCode();
         //将验证码放入HttpSession中
-        req.getSession().setAttribute("CHECKCODE SERVER", checkCode);
+        req.getSession().setAttribute("CHECKCODE_SERVER", checkCode);
 
         //设置画笔颜色为黄色
         g.setColor(Color.YELLOW);
@@ -46,7 +52,27 @@ public class CheckCodeServlet {
         //参数一：图片对象
         //参数二：图片的格式，如PNG,JPG,GIF
         //参数三：图片输出到哪里去
+        ServletOutputStream sos = null;
+        try {
+            sos = response.getOutputStream();
+            ImageIO.write(image,"PNG",sos);
+        } catch (IOException e) {
+            e.printStackTrace();
+            try {
+                if(sos!=null){
+                    sos.close();
+                }
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+        g.dispose();
 
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        dopost(req,resp);
     }
 
     public String getCheckCode(){
@@ -65,4 +91,6 @@ public class CheckCodeServlet {
         }
         return code;
     }
+
+
 }

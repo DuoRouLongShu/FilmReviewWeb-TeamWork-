@@ -2,17 +2,41 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="FilmReviewWeb:war exploded" />
+      <artifact name="FilmReviewWeb" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a45f3d02-5d55-4185-89ac-6b3269ae0bc0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/lib/jsp-api.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/Login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/Register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/jsp-api.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/FilmReviewWeb_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/tttt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/tttt.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/FilmPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/FilmPageTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Tester.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Tester.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/Film.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/Film.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/Review.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/CheckCodeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/CheckCodeServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/ExitServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/ExitServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/FindUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/FindUserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/LoginServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/RegistUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/RegistUserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/Impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/Impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/User/CheckCodeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/User/CheckCodeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/User/ExitServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/User/ExitServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/User/FindUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/User/FindUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/User/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/User/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/User/RegistUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/User/RegistUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/CheckCodeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/CheckCodeServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/ExitServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/ExitServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/FindUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/FindUserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/LoginServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/RegistUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/RegistUserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +46,25 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="filmweb" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -40,8 +81,8 @@
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="true" />
-    <option name="FILTER_DEBUG" value="true" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
@@ -61,6 +102,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -68,7 +110,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib/lombok.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -77,27 +119,32 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\64392\IdeaProjects\FilmReviewWeb\src" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\filmweb\web\WEB-INF\lib" />
+      <recent name="D:\filmweb\web" />
+      <recent name="D:\filmweb\web\pages\js" />
+      <recent name="D:\filmweb\web\pages" />
       <recent name="C:\Users\64392\IdeaProjects\FilmReviewWeb\web\WEB-INF\lib" />
-      <recent name="C:\Users\64392\IdeaProjects\FilmReviewWeb\web\pages" />
-      <recent name="C:\Users\64392\IdeaProjects\FilmReviewWeb\web" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.FilmReviewWeb.Model" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\filmweb\web" />
+      <recent name="D:\filmweb\web\js" />
+      <recent name="C:\Users\64392\IdeaProjects\FilmReviewWeb\src" />
       <recent name="C:\Users\64392\IdeaProjects\FilmReviewWeb\web\WEB-INF\lib" />
+      <recent name="C:\Users\64392\IdeaProjects\FilmReviewWeb\web\pages" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.0.M26">
+  <component name="RunManager" selected="Tomcat Server.Tomcat_filmweb">
     <configuration name="FilmPageTest.getFilmDataByFilmNameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FilmReviewWeb" />
       <option name="PACKAGE_NAME" value="" />
@@ -128,31 +175,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tester.testDBUserId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FilmReviewWeb" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Tester" />
-      <option name="METHOD_NAME" value="testDBUserId" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="jquery-1.10.2.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/web/pages/js/jquery-1.10.2.js" working-dir="$PROJECT_DIR$/web/pages/js">
+      <method v="2" />
     </configuration>
-    <configuration name="Tester.testGetDataTimeFromMySQL" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FilmReviewWeb" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Tester" />
-      <option name="METHOD_NAME" value="testGetDataTimeFromMySQL" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="jquery-3.4.1.min.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/web/js/jquery-3.4.1.min.js" working-dir="$PROJECT_DIR$/web/pages/js">
+      <method v="2" />
     </configuration>
-    <configuration name="Tomcat 9.0.0.M26" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.0.M26" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="Tomcat 9.0.0.M26" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.0.M26" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="$PROJECT_DIR$/../Program Files/Java/jdk-12.0.1">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
-        <artifact name="FilmReviewWeb:war exploded">
+        <artifact name="FilmReviewWeb">
           <settings>
             <option name="CONTEXT_PATH" value="/FilmReviewWeb" />
           </settings>
@@ -160,7 +193,6 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Tomcat_9_0_0_M26_FilmReviewWeb" />
-        <option name="HTTP_PORT" value="8080" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -236,16 +268,21 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="FilmReviewWeb:war exploded" />
+          <artifact name="FilmReviewWeb" />
         </option>
       </method>
     </configuration>
-    <configuration name="Tomcat 9.0.34" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.34" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat_filmweb" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.34" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment />
+      <deployment>
+        <artifact name="FilmReviewWeb">
+          <settings>
+            <option name="CONTEXT_PATH" value="/FilmReviewWeb" />
+          </settings>
+        </artifact>
+      </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_filmweb" />
-        <option name="HTTP_PORT" value="8080" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -253,7 +290,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="60671" />
+        <option name="DEBUG_PORT" value="57993" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -302,24 +339,27 @@
       </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="FilmReviewWeb" />
+        </option>
       </method>
     </configuration>
     <list>
       <item itemvalue="JUnit.FilmPageTest.getFilmDataByFilmNameTest" />
       <item itemvalue="JUnit.FilmPageTest.getReviewByFilmNameTest" />
       <item itemvalue="JUnit.FilmPageTest.writeReviewTest" />
-      <item itemvalue="JUnit.Tester.testDBUserId" />
-      <item itemvalue="JUnit.Tester.testGetDataTimeFromMySQL" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.34" />
+      <item itemvalue="Node.js.jquery-3.4.1.min.js" />
+      <item itemvalue="Node.js.jquery-1.10.2.js" />
+      <item itemvalue="Tomcat Server.Tomcat_filmweb" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.0.M26" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.jquery-3.4.1.min.js" />
+        <item itemvalue="Node.js.jquery-1.10.2.js" />
         <item itemvalue="JUnit.FilmPageTest.getFilmDataByFilmNameTest" />
         <item itemvalue="JUnit.FilmPageTest.writeReviewTest" />
         <item itemvalue="JUnit.FilmPageTest.getReviewByFilmNameTest" />
-        <item itemvalue="JUnit.Tester.testDBUserId" />
-        <item itemvalue="JUnit.Tester.testGetDataTimeFromMySQL" />
       </list>
     </recent_temporary>
   </component>
@@ -327,6 +367,7 @@
     <option name="viewStates">
       <list>
         <serviceView>
+          <option name="contentProportion" value="0.10513245" />
           <treeState>
             <expand>
               <path>
@@ -336,7 +377,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -373,6 +414,31 @@
       <workItem from="1589782973031" duration="4239000" />
       <workItem from="1590036148852" duration="183000" />
       <workItem from="1590036348823" duration="1650000" />
+      <workItem from="1590038684167" duration="58000" />
+      <workItem from="1590049316497" duration="3287000" />
+      <workItem from="1590056657785" duration="31000" />
+      <workItem from="1590056702504" duration="13000" />
+      <workItem from="1590056763417" duration="25000" />
+      <workItem from="1590057232620" duration="1145000" />
+      <workItem from="1590058706714" duration="193000" />
+      <workItem from="1590063391843" duration="16000" />
+      <workItem from="1590064076715" duration="179000" />
+      <workItem from="1590066180165" duration="3680000" />
+      <workItem from="1590112033712" duration="13503000" />
+      <workItem from="1590127330496" duration="466000" />
+      <workItem from="1590127817435" duration="545000" />
+      <workItem from="1590128384716" duration="1097000" />
+      <workItem from="1590135180325" duration="3005000" />
+      <workItem from="1590138266114" duration="973000" />
+      <workItem from="1590139554109" duration="1950000" />
+      <workItem from="1590143907024" duration="987000" />
+      <workItem from="1590144919421" duration="1536000" />
+      <workItem from="1590146681850" duration="968000" />
+      <workItem from="1590148494556" duration="1047000" />
+      <workItem from="1590149565826" duration="381000" />
+      <workItem from="1590150074302" duration="676000" />
+      <workItem from="1590161768423" duration="3486000" />
+      <workItem from="1590165663449" duration="5609000" />
     </task>
     <servers />
   </component>
@@ -421,138 +487,117 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590037122433">
+    <state x="233" y="2" key="#Project_Structure" timestamp="1590140404911">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1590037122433" />
+    <state x="233" y="2" key="#Project_Structure/0.0.1280.680@0.0.1280.680" timestamp="1590140404911" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590141238931">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1590141238931" />
+    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1590147001179">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1590147001179" />
+    <state x="371" y="130" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1590138052288">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="130" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1280.680@0.0.1280.680" timestamp="1590138052288" />
     <state x="488" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1590036174888">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="488" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.680@0.0.1280.680" timestamp="1590036174888" />
-    <state width="845" height="395" key="GridCell.Tab.0.bottom" timestamp="1590038000207">
+    <state x="233" y="0" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1590050455800">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="395" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590038000207" />
-    <state width="845" height="395" key="GridCell.Tab.0.center" timestamp="1590038000207">
+    <state x="233" y="0" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1280.680@0.0.1280.680" timestamp="1590050455800" />
+    <state x="371" y="90" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590122620752">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="395" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1590038000207" />
-    <state width="845" height="395" key="GridCell.Tab.0.left" timestamp="1590038000206">
+    <state x="371" y="90" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1590122620752" />
+    <state x="389" y="198" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1590138705582">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="395" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1590038000206" />
-    <state width="845" height="395" key="GridCell.Tab.0.right" timestamp="1590038000207">
+    <state x="389" y="198" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1590138705582" />
+    <state x="262" y="0" key="CommitChangelistDialog2" timestamp="1590126324393">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="395" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1590038000207" />
-    <state width="845" height="395" key="GridCell.Tab.1.bottom" timestamp="1590038000207">
+    <state x="262" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1590126324393" />
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1590050483809">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="395" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590038000207" />
-    <state width="845" height="395" key="GridCell.Tab.1.center" timestamp="1590038000207">
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1590050483809" />
+    <state width="1080" height="217" key="GridCell.Tab.0.bottom" timestamp="1590171280972">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="395" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1590038000207" />
-    <state width="845" height="395" key="GridCell.Tab.1.left" timestamp="1590038000207">
+    <state width="1080" height="217" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590171280972" />
+    <state width="1080" height="217" key="GridCell.Tab.0.center" timestamp="1590171280972">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="395" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1590038000207" />
-    <state width="845" height="395" key="GridCell.Tab.1.right" timestamp="1590038000207">
+    <state width="1080" height="217" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1590171280972" />
+    <state width="1080" height="217" key="GridCell.Tab.0.left" timestamp="1590171280972">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="395" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1590038000207" />
-    <state width="845" height="395" key="GridCell.Tab.2.bottom" timestamp="1590038000207">
+    <state width="1080" height="217" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1590171280972" />
+    <state width="1080" height="217" key="GridCell.Tab.0.right" timestamp="1590171280972">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="395" key="GridCell.Tab.2.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590038000207" />
-    <state width="845" height="395" key="GridCell.Tab.2.center" timestamp="1590038000207">
+    <state width="1080" height="217" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1590171280972" />
+    <state width="1080" height="217" key="GridCell.Tab.1.bottom" timestamp="1590171280972">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="395" key="GridCell.Tab.2.center/0.0.1280.680@0.0.1280.680" timestamp="1590038000207" />
-    <state width="845" height="395" key="GridCell.Tab.2.left" timestamp="1590038000207">
+    <state width="1080" height="217" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590171280972" />
+    <state width="1080" height="217" key="GridCell.Tab.1.center" timestamp="1590171280972">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="395" key="GridCell.Tab.2.left/0.0.1280.680@0.0.1280.680" timestamp="1590038000207" />
-    <state width="845" height="395" key="GridCell.Tab.2.right" timestamp="1590038000207">
+    <state width="1080" height="217" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1590171280972" />
+    <state width="1080" height="217" key="GridCell.Tab.1.left" timestamp="1590171280972">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="395" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1590038000207" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <last-edited>tttt</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.5" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Web</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>FilmReviewWeb</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>lombok</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <state width="1080" height="217" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1590171280972" />
+    <state width="1080" height="217" key="GridCell.Tab.1.right" timestamp="1590171280972">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1080" height="217" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1590171280972" />
+    <state width="1080" height="217" key="GridCell.Tab.2.bottom" timestamp="1590171280972">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1080" height="217" key="GridCell.Tab.2.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590171280972" />
+    <state width="1080" height="217" key="GridCell.Tab.2.center" timestamp="1590171280972">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1080" height="217" key="GridCell.Tab.2.center/0.0.1280.680@0.0.1280.680" timestamp="1590171280972" />
+    <state width="1080" height="217" key="GridCell.Tab.2.left" timestamp="1590171280972">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1080" height="217" key="GridCell.Tab.2.left/0.0.1280.680@0.0.1280.680" timestamp="1590171280972" />
+    <state width="1080" height="217" key="GridCell.Tab.2.right" timestamp="1590171280972">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1080" height="217" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1590171280972" />
+    <state width="1103" height="247" key="GridCell.Tab.3.bottom" timestamp="1590122399154">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1103" height="247" key="GridCell.Tab.3.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590122399154" />
+    <state width="1103" height="247" key="GridCell.Tab.3.center" timestamp="1590122399154">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1103" height="247" key="GridCell.Tab.3.center/0.0.1280.680@0.0.1280.680" timestamp="1590122399154" />
+    <state width="1103" height="247" key="GridCell.Tab.3.left" timestamp="1590122399154">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1103" height="247" key="GridCell.Tab.3.left/0.0.1280.680@0.0.1280.680" timestamp="1590122399154" />
+    <state width="1103" height="247" key="GridCell.Tab.3.right" timestamp="1590122399154">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1103" height="247" key="GridCell.Tab.3.right/0.0.1280.680@0.0.1280.680" timestamp="1590122399154" />
+    <state x="297" y="151" key="run.anything.popup" timestamp="1590052542359">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1590052542359" />
+    <state x="293" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1590113180397">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="293" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1590113180397" />
   </component>
 </project>

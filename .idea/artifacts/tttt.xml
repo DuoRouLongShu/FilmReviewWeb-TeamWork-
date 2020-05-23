@@ -2,7 +2,7 @@
   <artifact type="war" name="tttt">
     <output-path>$PROJECT_DIR$/out/artifacts/tttt</output-path>
     <root id="archive" name="tttt.war">
-      <element id="artifact" artifact-name="FilmReviewWeb:war exploded" />
+      <element id="artifact" artifact-name="FilmReviewWeb" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="lib">
           <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/druid-1.0.9.jar" />

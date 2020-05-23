@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Register</title>
+		<link rel="stylesheet" href="../Register.css" type="text/css">
+		<!--导入jquery-->
+		<script src="../js/jquery-3.4.1.min.js"></script>
+		<script>
+			/*
+			
+				表单校验： 
+			
+			*/
+			//校验用户名
+			function checkUsername(){
+				alert("校验用户名");
+				return true;
+			}
+			
+			$(function(){
+
+				//当表单提交时，调用所有的校验方法
+				$("#registerForm").submit(function(){
+					return checkUsername();
+					$.post("registUserServlet", $("this").serialize(), function (data) {
+						//处理服务器响应的数据datajason格式{flag:boolen,errormsg:"中文提示"}
+						//         if (data.flag){
+						//             //成功，跳转页面
+						//             Location.href="Login.html";
+						//         }else{
+						//             //失败，给errormsg添加提示信息
+						//             $("#errormsg").html(data.errormsg);
+						//         }
+					});
+
+
+
+					return false;
+					//如果这个方法没有返回值，或者返回为true，则表单提交，如果返回false,则表单不提交
+				});
+				
+				//当某一个组件失去焦点时，调用对应的校验方法
+			});
+		
+		</script>
+	<head>
+	<body>
+	<!--引入头部-->
+	<div id="header"></div>
+		<!--头部end-->
+		<div class="rg_layout">
+			<div class="rg_form_left">
+				<p>新用户注册</p>
+				<p>USER REGIESTER</p>
+			</div>
+			<div class="rg_form_center">
+				<!--注册表单-->
+				<form id="registerForm" action="user">
+					<!--提交处理请求的标识符-->
+					<input type="hidden" name="action" value="register">
+					<table styple="...">
+						<tr>
+							<td class="td_left">
+								<label for="username">用户名</label>
+							</td>
+							<td class="td_right">
+								<input type="text" id="username" name="username" placeholder="请输入账号">
+							</td>
+						</tr>
+						<tr>
+							<td class="td_left">
+								<label for="password">密码</label>
+							</td>
+							<td class="td_right">
+								<input type="text" id="password" name="password" placeholder="请输入密码">
+							</td>
+						</tr>
+						<tr>
+							<td class="td_left">
+								<label for="check">验证码</label>
+							</td>
+							<td class="td_rignt check">
+								<input type="text" id="check" name="check" class="check">
+								<img src="checkCode" height="32px" alt="" onclick="changeCheckCode(this)">
+								<script type="text/javascript">
+									//图片点击事件
+									function changeCheckCode(img){
+										img.src="checkCode?"+new Date().getTime();
+									}
+								</script>
+							</td>
+						</tr>
+						<tr>
+							<td class="td_left">
+							</td>
+							<td class="td_right check">
+								<input type="submit" class="submit" value="注册">
+								<span id="msg" style="..."></span>
+							</td>
+						</tr>
+									
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
+						
+							

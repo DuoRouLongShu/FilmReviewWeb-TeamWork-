@@ -12,16 +12,17 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
 import java.util.Map;
 
-@WebServlet("/loginServlet")
+@WebServlet("/user/login")
 public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doGet(req, resp);
+        super.doPost(req, resp);
     }
 
     @Override
@@ -29,6 +30,22 @@ public class LoginServlet extends HttpServlet {
         super.doPost(req, resp);
         req.setCharacterEncoding("utf-8");
         resp.setContentType("text/html;charset=UTF-8");
+        //验证校验
+        String check = req.getParameter("check");
+        //从session中获取验证码
+        HttpSession session = req.getSession();
+        String checkcode_server = (String)session.getAttribute("CHECKCODE_SERVER");
+        session.removeAttribute("CHECKCODE_SERVER");//保证验证码只使用一次
+
+        //比较
+        if(checkcode_server==null||!checkcode_server.equalsIgnoreCase(check)){
+            //验证码错误
+            ResultInfo info = new ResultInfo();
+            info.setFlag(false);
+            info.setErrorMsg("验证码错误");
+            resp.getWriter().print(JSON.toJSONString(info));
+            return;
+        }
         //获取用户名和密码数据
         Map<String, String[]> map = req.getParameterMap();
         //封装User对象
