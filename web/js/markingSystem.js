@@ -40,13 +40,13 @@
                     'line-height': This.options.height + 'px',
                 })
             }
-            console.log( This.options.height)
+            // console.log( This.options.height)
             that.find('.set_image_item').css({
                 'height': This.options.height + 'px',
                 'width': This.options.width + 'px',
             })
             var htmlTop = '';
-            console.log(Math.ceil(grade))
+            // console.log(Math.ceil(grade))
             for (var i = 0; i <Math.ceil(grade); i++) {
                 htmlTop = htmlTop + '<div><img style="height:100%;" src="' + This.options.backgroundImageOver + '" alt=""></div>';
             }
@@ -83,7 +83,7 @@
                     // 判断需要小数
                     if (This.options.havePoint) {
                         var X1 = e.pageX - $(this).offset().left;
-                        console.log(X1)
+                        // console.log(X1)
                         that.find('.set_image_top>div').last().css({
                             'width': X1 + 'px',
                         })

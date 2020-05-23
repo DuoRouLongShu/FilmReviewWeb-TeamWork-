@@ -8,7 +8,7 @@
     <title>Search</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
 
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
@@ -18,16 +18,16 @@
     <!--[endif]-->
 
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
-    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="./js/jquery-3.2.1.min.js"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
     <script>
         var films;
         var currentPage = 1;
         var totalCount;
         var totalPage;
         $(function () {
-            $("#search").val(localStorage["word"]);
+            $("#search").val(localStorage["keyword"]);
             localStorage.clear();
             // 顶部搜索框，进来就去加载信息去
             search();
@@ -78,39 +78,43 @@ function filmeach(page) {
     $("#content").append("<div class='container'>" +
         "<div class=\"row\">\n" +
         "</div>");
-    // 添加电影
+    // 添加电影,这个i注意
     for (var i = (page-1)*8 ; i < films.data.length; i++) {
         $("div[class='row']").append(
             "        <div class=\"col-lg-3\">\n" +
             "            <a href=\"javascript:;\" onclick=select(this)>\n" +
-            "                <img src=\"img/1590053103(1).jpg\"  class=\"img-thumbnail\"><br>\n" +
+            "                <img src=\"./img/1590053103(1).jpg\"  class=\"img-thumbnail\"><br>\n" +
             "                <span>"+ films.data[i].filmName +"</span>\n" +
             "            </a>\n" +
-            "            <p style=\"text-align: center\">" + films.data[i].rating + "</p>\n" +
+            "            <p style='text-align: center;color: gold;font-weight: bolder;font-size: large'>" + films.data[i].rating + "</p>\n" +
             "        </div>\n"
         );
         // 对应test4
-        $("div[class='row'] img:nth-child(n)")[i].src = films.data[i].src;
+        // $("div[class='row'] img:nth-child(n)")[i].src = films.data[i].src;
+        $($("div[class='row'] img:nth-child(n)")[i]).prop("src",films.data[i].src);
     };
 }
 function search() {
-    var word = $("#search").val();
-    if(word != "") {
+    var keyword = $("#search").val();
+    $("#li").html("");
+    if(keyword != "") {
         $("#content").html("页面加载中.....等到ajax响应回来后替换页面");
         $.ajax({
             url: "./search/searchFilm",
-            data: {"word": word},
+            data: {"keyword": keyword},
             type: "post",
             success: function (data) {
                 films = data;
                 console.log(data.message);
+                totalCount = data.dataCount;
+                totalPage = data.pageCount;
                 // 增加页码
                 for (var i = 1; i <= totalPage; i++) {
                     $("#li").append("<li><a href='javascript:void(0)' onclick=fun(this.innerHTML); >"+i+"</a></li>");
                 }
                 // 激活第一页
                 $("#li li:first").prop("class","active");
-                // 成功后，展示第一页的电影信息，定死每页8个
+                // 成功后，展示第一页的电影信息，定死每页最多8个
                 filmeach(1);
             },
             dataType: "json"
@@ -120,12 +124,12 @@ function search() {
         $("#content").html("空空如也，快去搜索吧");
     }
 }
-        function select(obj) {
-            //获取电影名
-            var filmName = $(obj).children().next().html();
-            //跳转特定页面
-            window.location.href = "http://localhost:8080/FilmReviewWeb/Movie.html?filmName="+filmName;
-        }
+function select(obj) {
+    //获取电影名
+    var filmName = $(obj).children(":last").html();
+    //跳转特定页面
+    window.location.href = "http://localhost:8080/FilmReviewWeb/Movie.html?filmName="+filmName;
+}
 
     </script>
     <style>
@@ -147,11 +151,12 @@ function search() {
             <span style="font-weight: 700;font-size: 28px;color: #fff;text-shadow: 0 0 10px #1E9FFF">知影</span>
         </blockquote>
     </a>
-    <input id="search" type="text" class="form-control" placeholder="请输入你要搜索的电影名称或喜欢的演员和导演" style="width: 500px;height: 45px;margin-top: 10px;float: left">
+    <input id="search" type="text" class="form-control" placeholder="请输入你要搜索的电影名称或喜欢的演员和导演"
+           style="width: 500px;height: 45px;margin-top: 10px;float: left">
     <input type="button" class="btn btn-primary btn-lg form-group" style="float: left;margin-top: 10px;margin-left: 5px" value="🔍搜索" onclick=search()>
 </div><!-- /.container-fluid -->
 <!--分割线-->
-<br><hr style="border-color: #1E9FFF; width: 1000px;"><br>
+<br><hr style="border-color: #b92c28; width: 1000px;"><br>
 <!--搜索内容-->
 <div id="content"></div>
 <!--分页条-->

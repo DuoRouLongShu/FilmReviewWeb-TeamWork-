@@ -14,6 +14,10 @@ import java.util.ArrayList;
  * @date 2020/5/13 15:04
  */
 public class ReviewDao {
+    private static Connection connection;
+    private PreparedStatement preparedStatement;
+
+
     /**
      * 通过电影名向数据库中获得并返回相关影评
      * @param filmName
@@ -21,9 +25,9 @@ public class ReviewDao {
      * @throws Exception
      */
     public ArrayList<Review> getReviewsByFilmName(String filmName) throws Exception{
-        Connection connection = JDBCUtils.getConnection();
+        connection = JDBCUtils.getConnection();
         String sql = "select * from review where film_name = ?";
-        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1,filmName);
         ResultSet resultSet = preparedStatement.executeQuery();
         ArrayList<Review> reviews = new ArrayList<Review>();
@@ -48,12 +52,12 @@ public class ReviewDao {
     }
 
     public boolean insertReview(Review review) throws Exception{
+        connection = JDBCUtils.getConnection();
         boolean hasInsert = true;
-        Connection connection = JDBCUtils.getConnection();
         String sql = "insert review " +
                 "(user_name,film_name,text,title,rating,creat_date)" +
                 "values (?,?,?,?,?,now())";
-        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1,review.getUserName());
         preparedStatement.setString(2,review.getFilmName());
         preparedStatement.setString(3,review.getText());
@@ -66,5 +70,33 @@ public class ReviewDao {
         }
         JDBCUtils.close(connection,preparedStatement);
         return hasInsert;
+    }
+
+    /**
+     * 给影评增加点赞数
+     * @param reviewId
+     * @return
+     */
+    public int giveThumb_up(Integer reviewId) throws Exception{
+        connection = JDBCUtils.getConnection();
+        String sql = "UPDATE review SET likes = likes + 1 WHERE review_id = ?";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setInt(1,reviewId);
+        int updateCount =preparedStatement.executeUpdate();
+        return updateCount;
+    }
+
+    /**
+     * 给影评减少点赞数
+     * @param reviewId
+     * @return
+     */
+    public int cancelLike(Integer reviewId) throws Exception{
+        connection = JDBCUtils.getConnection();
+        String sql = "UPDATE review SET likes = likes - 1 WHERE review_id = ?";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setInt(1,reviewId);
+        int updateCount =preparedStatement.executeUpdate();
+        return updateCount;
     }
 }
