@@ -114,25 +114,27 @@
         var reviewId = new Array();
         // j循环5次，代表当页5条评论的Id，index代替i作为中间变量,倒数5条的reviewId。
         for (var j = 0; j < 5; j++) {
+            if (index >= 0) {
                 // 添加元素
                 reviewId.push(comments.data[index--].reviewId);
+            }
         }
         // 检查登录的该用户是否点赞过该信息。每一页5条，先请求看有没有点赞过这5条，用1个ajax实现
         $.ajax({
             url: "./filmpage/checkReviewLike",
             type: "post",
-            data: {"userName": userName, "reviewId": reviewId},
+            data: {"userName": userName, reviewId: reviewId},
             success: function (data) {
                 // console.log("这是检查点赞");
                 console.log(data.data);
                 for (var j = 0; j < data.data.length; j++) {
                     // 根据data的true、false，改变“点赞”字样，“已点赞”，
                     if (data.data[j]) {
-                        // 返回true，表示该用户已经点赞过该评论，变红
+                        // 返回true，表示该用户已经点赞过该评论，先变红
                         $($("div[id='comment'] div:nth-child(n)")[j]).children(":eq(6)").children(":first").prop("style", "color:red");
                     } else {
-                        // 返回false，表示该用户还未点赞过该评论，变灰
-                        $($("div[id='comment'] div:nth-child(n)")[j]).children(":eq(6)").children(":first").prop("style", "color:grey");
+                        // 返回false，表示该用户还未点赞过该评论，先变灰。或许不用，因为body里本来就灰
+                        // $($("div[id='comment'] div:nth-child(n)")[j]).children(":eq(6)").children(":first").prop("style", "color:grey");
                     }
                 }
             },

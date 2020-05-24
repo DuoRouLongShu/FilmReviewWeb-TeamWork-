@@ -99,9 +99,22 @@ public class FilmPageTest {
 
     @Test
     public void checkLikeTest() throws Exception{
+        String userName = "javk";
+        String reviewId = "2,3,4,5";
+        String[] rr = reviewId.split(",");
+        Integer[] reviewIds = new Integer[rr.length];
+        for(int i=0; i<rr.length; i++){
+            System.out.println(i+" "+rr[i]);
+            reviewIds[i] = Integer.valueOf(rr[i]);
+        }
         FilmPageService filmPageService = new FilmPageServiceImpl();
-        Result result = filmPageService.checkReviewLike(2,"javk");
-        System.out.println(result);
+        Result result = null;
+        try {
+            result = filmPageService.checkReviewLike(reviewIds, userName);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println(JSON.toJSONString(result));
     }
 
     @Test

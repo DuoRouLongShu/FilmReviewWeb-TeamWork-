@@ -14,15 +14,172 @@
     <!--<script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>-->
     <!--<script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>-->
     <!--[endif]-->
-
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="./js/jquery-3.2.1.min.js"></script>
     <!--星星打分js插件-->
     <script type="text/javascript" src="./js/markingSystem.js"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="./js/bootstrap.min.js"></script>
+    <script>
+        var petName;
+        var gender;
+        var birthday;
+        var hobby;
+        var email;
+        var result = [];
+        $(function () {
+            $("form").submit(function () {
+                $("img").prop("src",img);
+                $("form").prop("action","#information");
+            });
+            for (var i = 1; i <= 5; i++) {
+                console.log($($("div[class='col-lg-8'] span:nth-child(n)")[i]).html());
+                result[i-1] = $($("div[class='col-lg-8'] span:nth-child(n)")[i]).html()
+            }
+            petName = result[0];
+            gender = result[1];
+            birthday = result[2];
+            hobby = result[3];
+            email = result[4];
+            $("#petName").val(petName);
+            if(gender == "女"){
+                $("input[type='radio'][checked='checked']").prop("checked","");
+                $("input[type='radio'][checked='']").prop("checked","checked");
+            }
+            $("#birthday").val(birthday);
+            $("#hobby").val(hobby);
+            $("#email").val(email);
+        });
+
+
+    </script>
+    <style>
+        ul[role='tablist']{
+            background-color: #3c3c3c;
+        }
+        ul li a{
+            color: aqua;
+        }
+        li[class='active'] a{
+            color: #b92c28;
+        }
+        .font{
+            font-size: 20px;
+        }
+        textarea{
+            resize: none;
+        }
+    </style>
 </head>
 <body>
+<!--导航条-->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">首页</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="text-align: center">
+            <form class="navbar-form navbar-left" action="" method="post" id="formsearch">
+                <div class="form-group">
+                    <input name="word" type="text" class="form-control" placeholder="请输入你要搜索的电影名称" id="search" style="margin-left: 350px;width: 500px">
+                </div>
+                <button type="submit" class="btn btn-default">🔍搜索</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">个人中心</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
 
+
+<div style="margin-left: 300px;margin-right: 300px;margin-bottom: 200px">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <!-- a标签的href属性必须和下面内容的id对应-->
+        <!-- data-toggle是切换内容 role不清楚 -->
+        <li role="presentation" class="active"><a href="#information" role="tab" data-toggle="tab">个人信息</a></li>
+        <li role="presentation"><a href="#filmReview" role="tab" data-toggle="tab">我的影评</a></li>
+        <li role="presentation"><a href="#collect" role="tab" data-toggle="tab">我的收藏</a></li>
+        <li role="presentation"><a href="#likes" role="tab" data-toggle="tab">我的点赞</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content" >
+        <!--个人信息页面-->
+        <div role="tabpanel" class="tab-pane active" id="information">
+            <div class="row" style="margin-top: 30px;">
+                <div class="col-lg-4">
+                    <form method="get">
+                        <img src="img/表情包-1.png" alt="头像" class="img-thumbnail">
+                        <input type="file" name="img" style="width: 75px;margin-left: 100px;margin-top: 10px">
+                        <!--<input type="submit" value="提交" style="float: left">-->
+                    </form>
+                </div>
+                <div class="col-lg-8">
+                    <label class="font" id="userName">用户名:</label>&emsp;<span class="font">登录名字</span>&emsp;
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">点击修改个人信息</button><br>
+                    <label class="font">昵称:</label>&emsp;<span class="font">马志鹏</span><br>
+                    <label class="font">性别:</label>&emsp;<span class="font">男</span><br>
+                    <label class="font">生日:</label>&emsp;<span class="font">1999-12-29</span><br>
+                    <label class="font">爱好:</label>&emsp;<span class="font">乒乓、日</span><br>
+                    <label class="font">邮箱:</label>&emsp;<span class="font">1285543153@qq.com</span><br>
+                </div>
+            </div>
+            <br><br>
+            <label style="font-size: 20px;">⭐个性签名⭐</label><br>
+            <textarea cols="100" rows="4" class='form-control' >兄弟间那叫爱情</textarea>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">个人信息修改</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!--主要内容-->
+                        <label for="petName" class="font">昵称</label>
+                        <input type="text" class="form-control form-group" id="petName" placeholder="昵称">
+                        <label class="font">性别</label>&emsp;
+                        <input type="radio"  name="gender" checked>男&emsp;
+                        <input type="radio"  name="gender">女  <br><br>
+                        <label class="font" for="birthday">生日</label>
+                        <input type="date" id="birthday">      <br><br>
+                        <label for="hobby" class="font">爱好</label>
+                        <input type="text" class="form-control form-group" id="hobby" placeholder="爱好">
+                        <label for="email" class="font">邮箱</label>
+                        <input type="email" class="form-control form-group" id="email" placeholder="邮箱">
+                        <label for="signature" class="font">⭐个性签名⭐</label>
+                        <textarea class="form-control form-group" id="signature" placeholder="个性签名" rows="5"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary">保存修改</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--影评页面-->
+        <div role="tabpanel" class="tab-pane" id="filmReview">
+
+        </div>
+        <!--收藏页面-->
+        <div role="tabpanel" class="tab-pane" id="collect">
+
+
+
+        </div>
+        <!--点赞评论-->
+        <div role="tabpanel" class="tab-pane" id="likes">
+
+
+        </div>
+    </div>
+</div>
 </body>
 </html>

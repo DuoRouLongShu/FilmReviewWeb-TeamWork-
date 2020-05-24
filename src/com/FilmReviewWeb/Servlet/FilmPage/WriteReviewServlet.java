@@ -4,6 +4,7 @@ import com.FilmReviewWeb.Model.Result;
 import com.FilmReviewWeb.Model.Review;
 import com.FilmReviewWeb.Service.FilmPageService;
 import com.FilmReviewWeb.Service.Impl.FilmPageServiceImpl;
+import com.alibaba.fastjson.JSON;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -49,7 +50,7 @@ public class WriteReviewServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        resp.sendRedirect("../Movie.html");
+        resp.getWriter().print(JSON.toJSONString(result));
     }
 
     @Override

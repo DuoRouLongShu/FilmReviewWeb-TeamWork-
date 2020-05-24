@@ -27,6 +27,7 @@ public class GetDataOfFilmSetvlet extends HttpServlet {
         //resp.setHeader("Access-Control-Allow-Origin", "*");
         Result result = new Result();
         String filmName = req.getParameter("filmName");
+        System.out.println(filmName);
         try {
 
             FilmPageService filmPageService = new FilmPageServiceImpl();

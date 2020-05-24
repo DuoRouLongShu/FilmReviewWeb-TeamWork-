@@ -22,4 +22,5 @@ public class Result implements Serializable {
     //需要分页时的页数
     private Integer pageCount;
 
+
 }
