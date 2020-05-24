@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style type="text/css"></style>
+    <link href="css/Login.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <!--    异步提交表单-->
+    <script>
+        $(function () {
+            $("#loginForm").submit(function () {
+                $.post("user/login", $(this).serialize(), function (data) {
+                    if (data.flag) {
+                        //成功，跳转页面
+                        location.href = "http://localhost:8080/FilmReviewWeb/index.html";
+                    } else {
+                        //失败，给出提示信息
+                        $("#s_errortips").html(data.errorMsg);
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
+    <!-- 单击切换验证码-->
+    <script>
+        window.onload = function () {
+            const img = document.getElementById("code_img");
+            img.onclick = function () {
+                const date = new Date().getTime();
+                img.src = "user/checkCode" + date;
+            }
+        }
+    </script>
+    <!-- 获焦时隐藏提示信息，失焦时显示-->
+    <script>
+        $(document).ready(function () {
+            $("input").focus(function () {
+                $("#s_errortips").css("display", "none");
+            }).blur(function () {
+                $("#s_errortips").css("display","inline");
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div id="head">
+    <div id="head_div">
+        <a id="head_a" href="#" target="_self"></a>
+    </div>
+
+</div>
+<div id="right">
+    <div id="welcome">
+        <h1>
+            欢迎登录
+        </h1>
+    </div>
+    <div id="Login-box">
+        <div id="blank"></div>
+        <div id="form">
+            <div id="errortips">
+                <span id="s_errortips"></span>
+            </div>
+            <form id="loginForm" method="post">
+                <div class="input-raw">
+                    <div class="input-field">
+                        <label class="input-label">用户名：</label>
+                    </div>
+                    <div class="input-field">
+                        <label for="username"></label>
+                        <input id="username" class="form-input" name="userName" type="text" placeholder="用户名" value=""
+                               tabindex="1">
+                    </div>
+                </div>
+                <div class="input-raw">
+                    <label class="input-label">密码：</label>
+                    <div class="input-field">
+                        <label for="password"></label>
+                        <input id="password" class="form-input password" name="password"
+                               type="password" placeholder="密码" value="" tabindex="2" autocomplete="off">
+                    </div>
+                </div>
+                <div class="input-raw">
+                    <div class="input-field">
+                        <label for="code"></label>
+                        <input id="code" class="form-input" name="code" type="text"
+                               placeholder="验证码" value="" tabindex="3" maxlength="4">
+                        <div id="img_div"><img src="user/checkCode" id="code_img" alt="图片验证码"></div>
+
+                    </div>
+                </div>
+                <div id="submit_div">
+                    <input type="submit" class="btn-account" id="bt_sub" value="登录">
+                </div>
+                <div id="ft">
+                    <p class="Login-remember">
+                        <input name="remember" type="checkbox" id="Login-remember" tabindex="4">
+                        <label for="Login-remember">下次自动登录</label>
+                    </p>
+                    <p class="ft-link">
+                        <a target="_blank" href="#">忘记密码？</a>
+                    </p>
+
+                </div>
+            </form>
+        </div>
+
+        <div id="register">
+            <div class="register">
+                没有账号？
+                <a href="Register.html">立即注册</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

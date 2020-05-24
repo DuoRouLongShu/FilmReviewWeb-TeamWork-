@@ -66,7 +66,6 @@ body{
     font-size: 12px;
 }
 #div-center{
-    width: 400px;
     float: left;
     margin-right: 10px;
 }
@@ -79,6 +78,7 @@ body{
 .right{
     padding: 10px 0 10px 15px;
     overflow: visible;
+    width: 380px;
 
 }
 #username,#password,#confirm{
@@ -120,7 +120,18 @@ body{
 }
 .error{
     color: red;
-    font-size: 10px;
-    overflow: visible;
-
+    font-size: 14px;
+    position: absolute;
+    padding-left: 3px;
+}
+#img{
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+}
+#checkcode_img{
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 5px;
 }

@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.Random;
 
 
-@WebServlet("/checkCodeServlet")
+@WebServlet("/user/checkCode")
 public class CheckCodeServlet extends HttpServlet {
     public void dopost(HttpServletRequest req, HttpServletResponse response) throws ServletException{
         //服务器通知浏览器不要缓存
