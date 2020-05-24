@@ -13,16 +13,12 @@ public class DisplayFilms implements Serializable {
     private String filmName;
     private String content;
     private String imageSource;
+    private int cid;
 
     public DisplayFilms() {
     }
 
-    public DisplayFilms(int rotation, String filmName, String content, String imageSource) {
-        this.rotation = rotation;
-        this.filmName = filmName;
-        this.content = content;
-        this.imageSource = imageSource;
-    }
+
 
     public int getRotation() {
         return rotation;
@@ -56,6 +52,22 @@ public class DisplayFilms implements Serializable {
         this.imageSource = imageSource;
     }
 
+    public int getCid() {
+        return cid;
+    }
+
+    public void setCid(int cid) {
+        this.cid = cid;
+    }
+
+    public DisplayFilms(int rotation, String filmName, String content, String imageSource, int cid) {
+        this.rotation = rotation;
+        this.filmName = filmName;
+        this.content = content;
+        this.imageSource = imageSource;
+        this.cid = cid;
+    }
+
     @Override
     public String toString() {
         return "DisplayFilms{" +
@@ -63,6 +75,7 @@ public class DisplayFilms implements Serializable {
                 ", filmName='" + filmName + '\'' +
                 ", content='" + content + '\'' +
                 ", imageSource='" + imageSource + '\'' +
+                ", cid=" + cid +
                 '}';
     }
 }

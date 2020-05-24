@@ -47,6 +47,7 @@ public class UserDao {
             }
         }else{
             user=null;
+
         }
 
         return user;
@@ -84,11 +85,25 @@ public class UserDao {
      */
     public User findByUsernameAndPassword(String userName, String password) throws SQLException {
         Connection connection = JDBCUtils.getConnection();
-        String sql = "select * from user where user_name = ? and password = ?";
+        User user = new User();
+        String sql = "select * from user where user_name = ? and password = LEFT(MD5(?),8)";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1,userName);
-        User user = (User) preparedStatement.executeQuery();
+        preparedStatement.setString(2,password);
+        ResultSet resultSet =  preparedStatement.executeQuery();
+        if(resultSet.next()){
+            while(resultSet.next()){
+                user.setUserId(resultSet.getInt("user_id"));
+                user.setUserName(resultSet.getString("user_name"));
+                user.setPassword(resultSet.getString("password"));
+                user.setPower(resultSet.getInt("power"));
+                user.setCreatDate(resultSet.getString("regist_date"));
 
+            }
+        }else{
+            user=null;
+        }
+        System.out.println("Dao" + user);
         return user;
     }
 }

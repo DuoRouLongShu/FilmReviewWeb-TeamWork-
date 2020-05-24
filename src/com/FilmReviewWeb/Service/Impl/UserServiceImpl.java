@@ -50,8 +50,6 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public User login(User user) throws SQLException {
-
-
         return userDao.findByUsernameAndPassword(user.getUserName(), user.getPassword());
     }
 }

@@ -22,30 +22,33 @@ import java.util.Map;
 public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+        this.doPost(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
         req.setCharacterEncoding("utf-8");
-        resp.setContentType("text/html;charset=UTF-8");
+        resp.setContentType("application/json;charset=UTF-8");
         //验证校验
-        String check = req.getParameter("check");
+        String check = req.getParameter("checkcode");
+
         //从session中获取验证码
         HttpSession session = req.getSession();
         String checkcode_server = (String)session.getAttribute("CHECKCODE_SERVER");
         session.removeAttribute("CHECKCODE_SERVER");//保证验证码只使用一次
 
+        System.out.println("---1--");
         //比较
-        if(checkcode_server==null||!checkcode_server.equalsIgnoreCase(check)){
-            //验证码错误
-            ResultInfo info = new ResultInfo();
-            info.setFlag(false);
-            info.setErrorMsg("验证码错误");
-            resp.getWriter().print(JSON.toJSONString(info));
-            return;
-        }
+//        if(checkcode_server==null||!checkcode_server.equalsIgnoreCase(check)){
+//            //验证码错误
+//            ResultInfo info = new ResultInfo();
+//            info.setFlag(false);
+//            info.setErrorMsg("验证码错误");
+//            resp.getWriter().print(JSON.toJSONString(info));
+//            System.out.println(checkcode_server+"---"+check);
+//            return;
+//        }
+        System.out.println("---2--");
         //获取用户名和密码数据
         Map<String, String[]> map = req.getParameterMap();
         //封装User对象
@@ -57,6 +60,7 @@ public class LoginServlet extends HttpServlet {
         } catch (InvocationTargetException e) {
             e.printStackTrace();
         }
+        System.out.println(user);
 
         //调用Service查询
         UserService service = new UserServiceImpl();
@@ -67,10 +71,12 @@ public class LoginServlet extends HttpServlet {
             e.printStackTrace();
         }
 
+        System.out.println(u);
         ResultInfo info = new ResultInfo();
         //判断用户对象是否为null
         if(u==null){
             //用户名或密码错误
+            System.out.println("登录失败");
             info.setFlag(false);
             info.setErrorMsg("用户名或密码错误");
 
@@ -79,7 +85,10 @@ public class LoginServlet extends HttpServlet {
         //判断登录成功
         if(u!=null){
             //登录成功
+            System.out.println("登录成功");
             info.setFlag(true);
+            // 将用户名保存在session中
+            session.setAttribute("userName", user.getUserName());
         }
         //响应数据
         resp.getWriter().print(JSON.toJSONString(info));

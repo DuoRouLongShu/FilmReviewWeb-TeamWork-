@@ -22,7 +22,7 @@ public class RegistUserServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");
-        resp.setContentType("text/html;charset=UTF-8");
+        resp.setContentType("application/json;charset=UTF-8");
         //验证校验
         String check = req.getParameter("checkcode");
         //从session中获取验证码
@@ -50,6 +50,7 @@ public class RegistUserServlet extends HttpServlet {
         } catch (InvocationTargetException e) {
             e.printStackTrace();
         }
+        System.out.println(user);
         //调用service完成注册
         UserService service = new UserServiceImpl();
         boolean flag = false;
@@ -66,7 +67,7 @@ public class RegistUserServlet extends HttpServlet {
         }else{
             //注册失败
             info.setFlag(false);
-            info.setErrorMsg("注册失败!");
+            info.setErrorMsg("用户已存在，注册失败!");
         }
 /*        //将info对象序列化为json
         ObjectMapper mapper = new ObjectMapper();
