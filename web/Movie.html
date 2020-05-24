@@ -91,7 +91,8 @@
             if (currentPage <= 1) {
                 currentPage = 1;
                 $("#previous").parent().prop("class", "disabled");
-            }else if(currentPage >= totalPage) {
+            }
+            if(currentPage >= totalPage) {
                 currentPage = totalPage;
                 $("#next").parent().prop("class", "disabled");
             }

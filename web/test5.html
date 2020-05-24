@@ -26,7 +26,11 @@
             $("img").prop("src",img);
             $("form").prop("action","#information");
         });
-        $("div[class='col-lg-8'] label:")
+        function special(obj) {
+            console.log($(obj).attr("aria-label"));
+            $(obj).append("<div class=\"row\">");
+            console.log($(obj).html());
+        }
     </script>
     <style>
         ul[role='tablist']{
@@ -69,92 +73,38 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-
-<div style="margin-left: 300px;margin-right: 300px;margin-bottom: 200px">
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs" role="tablist">
-        <!-- a标签的href属性必须和下面内容的id对应-->
-        <!-- data-toggle是切换内容 role不清楚 -->
-        <li role="presentation" class="active"><a href="#information" role="tab" data-toggle="tab">个人信息</a></li>
-        <li role="presentation"><a href="#filmReview" role="tab" data-toggle="tab">我的影评</a></li>
-        <li role="presentation"><a href="#collect" role="tab" data-toggle="tab">我的收藏</a></li>
-        <li role="presentation"><a href="#likes" role="tab" data-toggle="tab">我的点赞</a></li>
-    </ul>
-
-    <!-- Tab panes -->
-    <div class="tab-content" >
-        <!--个人信息页面-->
-        <div role="tabpanel" class="tab-pane active" id="information">
-            <div class="row" style="margin-top: 30px;">
-                <div class="col-lg-4">
-                    <form method="get">
-                        <img src="img/表情包-1.png" alt="头像" class="img-thumbnail">
-                        <input type="file" name="img" style="width: 75px;margin-left: 100px;margin-top: 10px">
-                        <!--<input type="submit" value="提交" style="float: left">-->
-                    </form>
-                </div>
-                <div class="col-lg-8">
-                    <label class="font" id="userName">用户名:</label>&emsp;<span class="font">登录名字</span>&emsp;
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">点击修改个人信息</button><br>
-                    <label class="font">昵称:</label>&emsp;<span class="font">马志鹏</span><br>
-                    <label class="font">性别:</label>&emsp;<span class="font">男</span><br>
-                    <label class="font">生日:</label>&emsp;<span class="font">1999-12-29</span><br>
-                    <label class="font">爱好:</label>&emsp;<span class="font">乒乓、日</span><br>
-                    <label class="font">邮箱:</label>&emsp;<span class="font">1285543153@qq.com</span><br>
-                </div>
-            </div>
-            <br><br>
-            <label style="font-size: 20px;">⭐个性签名⭐</label><br>
-            <textarea cols="100" rows="4" class='form-control' >兄弟间那叫爱情</textarea>
-        </div>
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">个人信息修改</h4>
-                    </div>
-                    <div class="modal-body">
-                        <!--主要内容-->
-                        <label for="petName" class="font">昵称</label>
-                        <input type="text" class="form-control form-group" id="petName" placeholder="昵称">
-                        <label class="font">性别</label>&emsp;
-                        <input type="radio"  name="gender">男&emsp;
-                        <input type="radio"  name="gender">女  <br><br>
-                        <label class="font" for="birthday">生日</label>
-                        <input type="date" id="birthday">      <br><br>
-                        <label for="hobby" class="font">爱好</label>
-                        <input type="text" class="form-control form-group" id="hobby" placeholder="爱好">
-                        <label for="email" class="font">邮箱</label>
-                        <input type="email" class="form-control form-group" id="email" placeholder="邮箱">
-                        <label for="signature" class="font">⭐个性签名⭐</label>
-                        <textarea class="form-control form-group" id="signature" placeholder="个性签名" rows="5"></textarea>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                        <button type="button" class="btn btn-primary">保存修改</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--影评页面-->
-        <div role="tabpanel" class="tab-pane" id="filmReview">
-            
-        </div>
-        <!--收藏页面-->
-        <div role="tabpanel" class="tab-pane" id="collect">
-
-
-
-        </div>
-        <!--点赞评论-->
-        <div role="tabpanel" class="tab-pane" id="likes">
-
-
-        </div>
-    </div>
+<!--<a href="javascript:void(0)" aria-label="Next" name="next" onclick=special(this) >-->
+    <!--<span aria-hidden="true">&raquo;</span>-->
+<!--</a>-->
+<div style="margin-bottom: 100px">
+<div style="margin-left: 40px">
+    <a href="javascript:;" onclick=select(this)>
+        <img src="./img/1590053103(1).jpg"  class="img-thumbnail"><br>
+        <span>filmName</span>
+    </a>
+    <div style='color: gold;font-weight: bolder;font-size: large'>评分</div>
+    <a href="javascript:;" onclick=select(this)>
+        <img src="./img/1590053103(1).jpg"  class="img-thumbnail"><br>
+        <span>filmName</span>
+    </a>
+    <div style='color: gold;font-weight: bolder;font-size: large'>评分</div>
+</div>
+    <br>
+<span style="margin-left: 40px">
+    <a href="javascript:;" onclick=select(this)>
+        <img src="./img/1590053103(1).jpg"  class="img-thumbnail"><br>
+        <span>filmName</span>
+    </a>
+    <span style='color: gold;font-weight: bolder;font-size: large'>评分</span>
+</span>
+<br>
+<span style="margin-left: 40px">
+    <a href="javascript:;" onclick=select(this)>
+        <img src="./img/1590053103(1).jpg"  class="img-thumbnail"><br>
+        <span>filmName</span>
+    </a>
+    <span style='color: gold;font-weight: bolder;font-size: large'>评分</span>
+</span>
 </div>
 </body>
 </html>

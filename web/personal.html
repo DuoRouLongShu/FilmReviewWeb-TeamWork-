@@ -21,21 +21,115 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="./js/bootstrap.min.js"></script>
     <script>
-        var petName;
-        var gender;
-        var birthday;
-        var hobby;
-        var email;
-        var result = [];
+        var userName = "马志鹏";
+        // 个人的影评
+        var filmComments;
+        // 个人的收藏电影
+        var collectFilms;
+        // 个人的点赞评论信息
+        var likesComments;
+        // 现在的页码，共用
+        var currentPage = 1;
+        var totalPage;
+
+        // 其实也就3个请求，一次性做了把
         $(function () {
+            // 按用户名请求影评资源
+            // $.ajax({
+            //     url:"",
+            //     data:{"userName":userName},
+            //     type:"post",
+            //     success:function (data) {
+            //         filmComments = data;
+            //         console.log(data);
+            //     },
+            //     dataType:"json"
+            // });
+            // 按用户名请求收藏资源
+            // $.ajax({
+            //     url:"",
+            //     data:{"userName":userName},
+            //     type:"post",
+            //     success:function (data) {
+            //         console.log(data);
+            //         collectFilms = data;
+            //     },
+            //     dataType:"json"
+            // });
             $("form").submit(function () {
                 $("img").prop("src",img);
-                $("form").prop("action","#information");
+                // $("form").prop("action","#information");
             });
+        });
+        // 图片的提交有问题，怎么弄路径?
+
+        // 影评
+        function filmReview(){
+            currentPage = 1;
+            totalPage = filmComments.PageCount;
+
+        }
+
+        // 收藏
+        function collect() {
+            currentPage = 1;
+            totalPage = collectFilms.PageCount;
+            // 增加页码
+            for (var i = 1; i <= totalPage; i++) {
+                $("#li").append("<li><a href='javascript:void(0)' onclick=fun(this.innerHTML); >"+i+"</a></li>");
+            }
+            // 激活第一页
+            $("#li li:first").prop("class","active");
+            // 成功后，展示第一页的电影信息，定死每页最多8个
+            collectShow(1);
+        }
+
+        // 点赞
+        function likes() {
+            // 按用户名请求点赞资源
+            // $.ajax({
+            //     url:"",
+            //     data:{"userName":userName},
+            //     type:"post",
+            //     success:function (data) {
+            //         console.log(data);
+            //     },
+            //     dataType:"json"
+            // });
+            currentPage = 1;
+        }
+
+        // 上一页和下一页的操作：翻页操作
+        function special(obj) {
+            if($(obj).attr("aria-label") == "Next"){
+                currentPage = parseInt(currentPage) + 1;
+            }else{
+                currentPage -= 1;
+            }
+            if (currentPage <= 1) {
+                currentPage = 1;
+                $(obj).parent().prop("class", "disabled");
+            }
+            if(currentPage >= totalPage) {
+                currentPage = totalPage;
+                $(obj).parent().prop("class", "disabled");
+            }
+            collectFilms(currentPage);
+        }
+
+        // 修改个人信息回显
+        function modify(){
+            var petName;
+            var gender;
+            var birthday;
+            var hobby;
+            var email;
+            var result = [];
             for (var i = 1; i <= 5; i++) {
-                console.log($($("div[class='col-lg-8'] span:nth-child(n)")[i]).html());
+                // console.log($($("div[class='col-lg-8'] span:nth-child(n)")[i]).html());
                 result[i-1] = $($("div[class='col-lg-8'] span:nth-child(n)")[i]).html()
             }
+            // 回显
             petName = result[0];
             gender = result[1];
             birthday = result[2];
@@ -43,15 +137,73 @@
             email = result[4];
             $("#petName").val(petName);
             if(gender == "女"){
-                $("input[type='radio'][value='男']").prop("checked","");
-                $("input[type='radio'][value='女']").prop("checked","checked");
+                $("input[value='male']").attr("checked","");
+                $("input[value='female']").attr("checked","checked");
             }
             $("#birthday").val(birthday);
             $("#hobby").val(hobby);
             $("#email").val(email);
-        });
+            $("#signature").val($("textarea[name='textarea']").val());
+        }
+        // 保存修改的个人信息
+        function save(){
+            // true 和 fasle 代表单选框是否被选中
+            // console.log($("input[value='male']").prop("checked"));
+            // console.log($("#birthday").val());
+            // 获取元素的修改值
+            $($("div[class='col-lg-8'] span:nth-child(n)")[1]).html($("#petName").val());
+            $($("div[class='col-lg-8'] span:nth-child(n)")[3]).html($("#birthday").val());
+            $($("div[class='col-lg-8'] span:nth-child(n)")[4]).html($("#hobby").val());
+            $($("div[class='col-lg-8'] span:nth-child(n)")[5]).html($("#email").val());
+            $("textarea[name='textarea']").val($("#signature").val());
+            if($("input[value='male']").prop("checked")){
+                // 性别选择  男
+                $($("div[class='col-lg-8'] span:nth-child(n)")[2]).html("男");
+            }else{
+                // 性别选择  女
+                $($("div[class='col-lg-8'] span:nth-child(n)")[2]).html("女");
+            }
+        }
 
+        // 收藏的电影跳转
+        function select(obj) {
+            //获取电影名
+            var filmName = $(obj).children(":last").html();
+            //跳转特定页面
+            window.location.href = "http://localhost:8080/FilmReviewWeb/Movie.html?filmName="+filmName;
+        }
+        // 收藏页面的电影每页展示
+        function collectShow(page) {
+            $("div[class='row']").html("");
+            // 每页添加6个
+            var start = (page - 1) * 6;
+            for (var i = start; i < start + 6 && i < collectFilms.data.length; i++) {
+                $("div[class='row']").append(
+                    "<div class=\"col-lg-2\">\n" +
+                    "     <a href=\"javascript:;\" onclick=select(this)>\n" +
+                    "        <img src=\"./img/1590053103(1).jpg\"  class=\"img-thumbnail\"><br>\n" +
+                    "        <span>"+collectFilms.data[i].filmName+"</span>\n" +
+                    "     </a>\n" +
+                    "     <p style='text-align: center;color: gold;font-weight: bolder;font-size: large'>"+collectFilms.data[i].rating+"</p>\n" +
+                    " </div>"
+                );
+            }
+        }
 
+        // 个人的电影评论的每页展示
+        function filmCommentShow(page) {
+            $("#content").html("");
+            for (var i = 0; i < 5; i++) {
+                $("#content").append(
+                    "<div style=\"margin-top:30px;\">\n" +
+                    "                    <label class='font'>用户名</label>&emsp;点评&emsp;<a href=\"#\">电影名字</a>&emsp;<span style=\"color: darkgray;\">(<span>时间</span>)</span>&emsp;\n" +
+                    "                    <span class=\"font\" style=\"color: gold;\">评分：<span>0</span></span>\n" +
+                    "                    <h4 style=\"color: darkred;font-weight: 400;\">标题</h4>\n" +
+                    "                    <p>评论导入</p>\n" +
+                    "                </div>"
+                );
+            }
+        }
     </script>
     <style>
         ul[role='tablist']{
@@ -94,16 +246,15 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-
 <div style="margin-left: 300px;margin-right: 300px;margin-bottom: 200px">
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
         <!-- a标签的href属性必须和下面内容的id对应-->
         <!-- data-toggle是切换内容 role不清楚 -->
         <li role="presentation" class="active"><a href="#information" role="tab" data-toggle="tab">个人信息</a></li>
-        <li role="presentation"><a href="#filmReview" role="tab" data-toggle="tab">我的影评</a></li>
-        <li role="presentation"><a href="#collect" role="tab" data-toggle="tab">我的收藏</a></li>
-        <li role="presentation"><a href="#likes" role="tab" data-toggle="tab">我的点赞</a></li>
+        <li role="presentation"><a href="#filmReview" role="tab" data-toggle="tab"> <!--onclick=filmReview()-->&emsp;影评&emsp;</a></li>
+        <li role="presentation"><a href="#collect" role="tab" data-toggle="tab"> <!--onclick=collect()-->&emsp;收藏&emsp;</a></li>
+        <li role="presentation"><a href="#likes" role="tab" data-toggle="tab"> <!--onclick=likes()-->&emsp;点赞&emsp;</a></li>
     </ul>
 
     <!-- Tab panes -->
@@ -115,15 +266,15 @@
                     <form method="get">
                         <img src="img/表情包-1.png" alt="头像" class="img-thumbnail">
                         <input type="file" name="img" style="width: 75px;margin-left: 100px;margin-top: 10px">
-                        <!--<input type="submit" value="提交" style="float: left">-->
+                        <input type="submit" value="提交" onclick=fun()>
                     </form>
                 </div>
                 <div class="col-lg-8">
                     <label class="font" id="userName">用户名:</label>&emsp;<span class="font">登录名字</span>&emsp;
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">点击修改个人信息</button><br>
+                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" onclick=modify()>点击修改个人信息</button><br>
                     <label class="font">昵称:</label>&emsp;<span class="font">马志鹏</span><br>
-                    <label class="font">性别:</label>&emsp;<span class="font">男</span><br>
+                    <label class="font">性别:</label>&emsp;<span class="font">女</span><br>
                     <label class="font">生日:</label>&emsp;<span class="font">1999-12-29</span><br>
                     <label class="font">爱好:</label>&emsp;<span class="font">乒乓、日</span><br>
                     <label class="font">邮箱:</label>&emsp;<span class="font">1285543153@qq.com</span><br>
@@ -133,7 +284,7 @@
             <label style="font-size: 20px;">⭐个性签名⭐</label><br>
             <textarea cols="100" rows="4" class='form-control' name="textarea">兄弟间那叫爱情</textarea>
         </div>
-        <!-- Modal -->
+        <!-- Modal 活页-->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -146,7 +297,7 @@
                         <label for="petName" class="font">昵称</label>
                         <input type="text" class="form-control form-group" id="petName" placeholder="昵称">
                         <label class="font">性别</label>&emsp;
-                        <input type="radio"  name="gender" checked value="male">男&emsp;
+                        <input type="radio"  name="gender" checked="checked" value="male">男&emsp;
                         <input type="radio"  name="gender" value="female">女  <br><br>
                         <label class="font" for="birthday">生日</label>
                         <input type="date" id="birthday">      <br><br>
@@ -155,31 +306,101 @@
                         <label for="email" class="font">邮箱</label>
                         <input type="email" class="form-control form-group" id="email" placeholder="邮箱">
                         <label for="signature" class="font">⭐个性签名⭐</label>
-                        <textarea class="form-control form-group" id="signature" placeholder="个性签名" rows="5"></textarea>
+                        <textarea class="form-control form-group" id="signature" placeholder="个性签名" rows="5">我TM是假的？</textarea>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                        <button type="button" class="btn btn-primary">保存修改</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick=save(this)>保存修改</button>
                     </div>
                 </div>
             </div>
         </div>
-        <!--影评页面-->
-        <div role="tabpanel" class="tab-pane" id="filmReview">
 
+        <!--影评页面 class的active是内容体 默认。设为默认仅为了方便看页面，最好默认个人信息，有点小bug这里。-->
+        <div role="tabpanel" class="tab-pane" id="filmReview">
+            <div id="content">
+                <!-- 评论重复格式，主要是导入和分页 -->
+                <!--<div style="margin-top:30px;">-->
+                <!--<label class=‘font’>用户名</label>&emsp;点评&emsp;<a href="#"">电影名字</a>&emsp;<span style="color: darkgray;">(<span>时间</span>)</span>&emsp;-->
+                <!--<span class="font" style="color: gold;">评分：<span>0</span></span>-->
+                <!--<h4 style="color: darkred;font-weight: 400;">标题</h4>-->
+                <!--<p>评论导入</p>-->
+                <!--</div>-->
+            </div>
+            <!--分页条-->
+            <nav aria-label="Page navigation" style="text-align: left;margin-bottom: 80px">
+                <ul class="pagination">
+                    <li>
+                        <a href="javascript:void(0)" aria-label="Previous" onclick=special(this)>
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <!--页数-->
+                    <ul class='pagination' id="li_films" style="margin-top:1px;"></ul>
+                    <li style="float: right;">
+                        <a href="javascript:void(0)" aria-label="Next" onclick=special(this) >
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
+
         <!--收藏页面-->
         <div role="tabpanel" class="tab-pane" id="collect">
+            <!--收藏的是电影，那么，就跟搜索到的玩意一样, 这里是定义每行6个,每页6个-->
+            <div class="container" style="margin-top: 30px">
+                <div class="row" style=";margin-right: 200px">
 
+                </div>   <!-- row -->
+            </div>     <!-- container -->
+            <!--分页条-->
+            <nav aria-label="Page navigation" style="text-align: left;margin-bottom: 80px">
+                <ul class="pagination">
+                    <li>
+                        <a href="javascript:void(0)" aria-label="Previous" onclick=special(this)>
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <!--页数-->
+                    <ul class='pagination' id="li_collect" style="margin-top:1px;"></ul>
+                    <li style="float: right;">
+                        <a href="javascript:void(0)" aria-label="Next" onclick=special(this) >
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>  <!-- 收藏页面 -->
 
-
-        </div>
         <!--点赞评论-->
         <div role="tabpanel" class="tab-pane" id="likes">
+            <div style="margin-top:30px;">
+                <label class='font'>用户名</label>&emsp;点评&emsp;<a href="#">电影名字</a>&emsp;<span style="color: darkgray;">(<span>时间</span>)</span>&emsp;
+                <span class="font" style="color: gold;">评分：<span>0</span></span>
+                <h4 style="color: darkred;font-weight: 400;">标题</h4>
+                <p>评论导入</p>
+            </div>
 
-
-        </div>
-    </div>
-</div>
+            <!--分页条-->
+            <nav aria-label="Page navigation" style="text-align: left;margin-bottom: 80px">
+                <ul class="pagination">
+                    <li>
+                        <a href="javascript:void(0)" aria-label="Previous" onclick=special(this)>
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <!--页数-->
+                    <ul class='pagination' style="margin-top:1px;" id="li_likes"></ul>
+                    <li style="float: right;">
+                        <a href="javascript:void(0)" aria-label="Next" onclick=special(this) >
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>  <!-- 点赞页面 -->
+    </div>  <!-- 4个页面 -->
+</div> <!-- 整个页面 -->
 </body>
 </html>
