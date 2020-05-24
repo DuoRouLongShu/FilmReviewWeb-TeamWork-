@@ -43,8 +43,8 @@
             email = result[4];
             $("#petName").val(petName);
             if(gender == "女"){
-                $("input[type='radio'][checked='checked']").prop("checked","");
-                $("input[type='radio'][checked='']").prop("checked","checked");
+                $("input[type='radio'][value='男']").prop("checked","");
+                $("input[type='radio'][value='女']").prop("checked","checked");
             }
             $("#birthday").val(birthday);
             $("#hobby").val(hobby);
@@ -131,7 +131,7 @@
             </div>
             <br><br>
             <label style="font-size: 20px;">⭐个性签名⭐</label><br>
-            <textarea cols="100" rows="4" class='form-control' >兄弟间那叫爱情</textarea>
+            <textarea cols="100" rows="4" class='form-control' name="textarea">兄弟间那叫爱情</textarea>
         </div>
         <!-- Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -146,8 +146,8 @@
                         <label for="petName" class="font">昵称</label>
                         <input type="text" class="form-control form-group" id="petName" placeholder="昵称">
                         <label class="font">性别</label>&emsp;
-                        <input type="radio"  name="gender" checked>男&emsp;
-                        <input type="radio"  name="gender">女  <br><br>
+                        <input type="radio"  name="gender" checked value="male">男&emsp;
+                        <input type="radio"  name="gender" value="female">女  <br><br>
                         <label class="font" for="birthday">生日</label>
                         <input type="date" id="birthday">      <br><br>
                         <label for="hobby" class="font">爱好</label>

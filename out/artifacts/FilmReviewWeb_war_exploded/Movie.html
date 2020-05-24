@@ -126,15 +126,16 @@
             data: {"userName": userName, reviewId: reviewId},
             success: function (data) {
                 // console.log("这是检查点赞");
-                console.log(data.data);
-                for (var j = 0; j < data.data.length; j++) {
+                // console.log(data.data);
+                for (var k = 0; k < data.data.length; k++) {
                     // 根据data的true、false，改变“点赞”字样，“已点赞”，
-                    if (data.data[j]) {
+                    if (data.data[k]) {
+                        // console.log($($("div[id='comment'] div:nth-child(n)")[j]).children(":eq(6)").children(":last").html());
                         // 返回true，表示该用户已经点赞过该评论，先变红
-                        $($("div[id='comment'] div:nth-child(n)")[j]).children(":eq(6)").children(":first").prop("style", "color:red");
+                        $($("div[id='comment'] > div:nth-child(n)")[k]).children(":eq(6)").children(":first").prop("style","color:red");
                     } else {
                         // 返回false，表示该用户还未点赞过该评论，先变灰。或许不用，因为body里本来就灰
-                        // $($("div[id='comment'] div:nth-child(n)")[j]).children(":eq(6)").children(":first").prop("style", "color:grey");
+                        $($("div[id='comment'] > div:nth-child(n)")[k]).children(":eq(6)").children(":first").prop("style","color:grey");
                     }
                 }
             },
@@ -466,7 +467,7 @@
             <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time4">评论时间</span>)&nbsp;&nbsp;&nbsp;<span style="color: gold;font-size: large;font-weight: 700">评分:  <span id="rate4">5.0</span></span>
             </div>
             <span id="title4" class="p">标题</span><br>
-            <textarea cols="132" rows="5" id="comment4"  readonly>评论导入</textarea><br>
+            <textarea cols="132" rows="5" id="comment4"  readonly>评论</textarea><br>
             <!--<span class="lan">点赞</span><a href="javascript:void(0)" onclick=count(this); id="like4">0</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
             <a href="javascript:void(0)" onclick=count(this); id="like4"><span style="color: grey">❤</span><span>0</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a class="lan" href="javascript:;" onclick=reply(this)>全部回复<span>0</span></a>
