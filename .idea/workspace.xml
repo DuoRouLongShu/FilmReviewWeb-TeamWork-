@@ -12,12 +12,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a45f3d02-5d55-4185-89ac-6b3269ae0bc0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/checkReviewLikeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/checkReviewLikeServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/FilmPageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/FilmPageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/Impl/FilmPageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/Impl/FilmPageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/HomePageService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/CheckReviewLikeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/CheckReviewLikeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/FilmPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/FilmPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/checkReviewLikeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/FilmPage/checkReviewLikeServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/HomePageService.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,10 +33,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Result.java">
+        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckAllUserServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="195">
+              <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -47,45 +45,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Review.java">
+        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GiveReviewLikeServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="216">
+              <caret line="19" column="23" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Model/ShortReview.java">
+        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+            <state relative-caret-position="15">
+              <caret line="28" column="18" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Model/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/ReviewSensitiveWordDetectionServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#845#851#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,17 +69,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/CheckReviewLikeServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="35" column="48" lean-forward="true" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
+            <state relative-caret-position="264">
+              <caret line="27" column="37" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Test/FilmPageTest.java">
+        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Model/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="103" column="34" selection-start-line="103" selection-start-column="34" selection-end-line="103" selection-end-column="34" />
+            <state relative-caret-position="480">
+              <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,10 +88,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Service/FilmPageService.java">
+        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Service/AdminPageService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="53" column="49" lean-forward="true" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="49" />
+            <state relative-caret-position="244">
+              <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,10 +100,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Service/Impl/FilmPageServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Test/AdminPageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="74" column="22" lean-forward="true" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
+            <state relative-caret-position="264">
+              <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -139,8 +114,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/ReviewLikeDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
+            <state relative-caret-position="-720">
+              <caret line="15" selection-start-line="15" selection-end-line="16" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -202,7 +177,6 @@
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Result.java" />
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Review.java" />
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/ShortReview.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/User.java" />
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/checkReviewLikeServlet.java" />
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/giveReviewLikeServlet.java" />
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Utils/SensitiveWordUtils.java" />
@@ -214,6 +188,12 @@
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/FilmPageService.java" />
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/Impl/FilmPageServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/FilmPageTest.java" />
+        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/AdminPageService.java" />
+        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/Impl/AdminPageServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/AdminPageTest.java" />
+        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/User.java" />
+        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckAllUserServlet.java" />
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/CheckReviewLikeServlet.java" />
       </list>
     </option>
@@ -233,8 +213,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-120" />
-    <option name="y" value="75" />
+    <option name="x" value="573" />
+    <option name="y" value="56" />
     <option name="width" value="1035" />
     <option name="height" value="960" />
   </component>
@@ -285,6 +265,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FilmReviewWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
               <item name="Service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -311,6 +299,15 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
               <item name="Servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="AdminPage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FilmReviewWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="Servlet" type="462c0819:PsiDirectoryNode" />
               <item name="FilmPage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -325,8 +322,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -394,21 +391,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FilmPageTest.checkLikeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AdminPageTest.checkAllUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FilmReviewWeb" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FilmPageTest" />
-      <option name="METHOD_NAME" value="checkLikeTest" />
+      <option name="MAIN_CLASS_NAME" value="AdminPageTest" />
+      <option name="METHOD_NAME" value="checkAllUserTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FilmPageTest.getReviewByFilmNameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FilmPageTest.checkLikeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FilmReviewWeb" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FilmPageTest" />
-      <option name="METHOD_NAME" value="getReviewByFilmNameTest" />
+      <option name="METHOD_NAME" value="checkLikeTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -527,11 +524,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AdminPageTest.checkAllUserTest" />
         <item itemvalue="JUnit.FilmPageTest.checkLikeTest" />
         <item itemvalue="JUnit.Tester.sensetiveWordUtilsTest" />
         <item itemvalue="Application.SensitiveWordUtils" />
         <item itemvalue="JUnit.FilmPageTest.giveReviewLikeTest" />
-        <item itemvalue="JUnit.FilmPageTest.getReviewByFilmNameTest" />
       </list>
     </recent_temporary>
   </component>
@@ -571,31 +568,11 @@
       <workItem from="1590143688039" duration="284000" />
       <workItem from="1590205684162" duration="5584000" />
       <workItem from="1590247292168" duration="2560000" />
+      <workItem from="1590286097086" duration="5421000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Tester_sensetiveWordUtilsTest - 2020.05.22 at 14h 21m 39s.xml">
-      <configuration name="Tester.sensetiveWordUtilsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tester_sensetiveWordUtilsTest - 2020.05.22 at 14h 21m 52s.xml">
-      <configuration name="Tester.sensetiveWordUtilsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tester_sensetiveWordUtilsTest - 2020.05.22 at 14h 21m 57s.xml">
-      <configuration name="Tester.sensetiveWordUtilsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tester_sensetiveWordUtilsTest - 2020.05.22 at 14h 22m 09s.xml">
-      <configuration name="Tester.sensetiveWordUtilsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tester_sensetiveWordUtilsTest - 2020.05.22 at 14h 22m 15s.xml">
-      <configuration name="Tester.sensetiveWordUtilsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tester_sensetiveWordUtilsTest - 2020.05.22 at 14h 24m 18s.xml">
-      <configuration name="Tester.sensetiveWordUtilsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tester_sensetiveWordUtilsTest - 2020.05.22 at 14h 24m 44s.xml">
-      <configuration name="Tester.sensetiveWordUtilsTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="FilmPageTest_checkLikeTest - 2020.05.23 at 23h 41m 13s.xml">
       <configuration name="FilmPageTest.checkLikeTest" configurationId="JUnit" />
     </history-entry>
@@ -605,9 +582,30 @@
     <history-entry file="FilmPageTest_checkLikeTest - 2020.05.23 at 23h 44m 08s.xml">
       <configuration name="FilmPageTest.checkLikeTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AdminPageTest_checkAllUserTest - 2020.05.24 at 10h 32m 38s.xml">
+      <configuration name="AdminPageTest.checkAllUserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdminPageTest_checkAllUserTest - 2020.05.24 at 10h 34m 41s.xml">
+      <configuration name="AdminPageTest.checkAllUserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdminPageTest_checkAllUserTest - 2020.05.24 at 10h 35m 51s.xml">
+      <configuration name="AdminPageTest.checkAllUserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdminPageTest_checkAllUserTest - 2020.05.24 at 10h 36m 17s.xml">
+      <configuration name="AdminPageTest.checkAllUserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdminPageTest_checkAllUserTest - 2020.05.24 at 10h 40m 12s.xml">
+      <configuration name="AdminPageTest.checkAllUserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdminPageTest_checkAllUserTest - 2020.05.24 at 10h 41m 53s.xml">
+      <configuration name="AdminPageTest.checkAllUserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdminPageTest_checkAllUserTest - 2020.05.24 at 11h 00m 19s.xml">
+      <configuration name="AdminPageTest.checkAllUserTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129750000" />
+    <option name="totallyTimeSpent" value="135171000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -621,15 +619,15 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.75513196" visible="true" weight="0.23726542" />
-      <window_info id="Structure" order="1" sideWeight="0.24486804" side_tool="true" visible="true" weight="0.23726542" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.75327104" visible="true" weight="0.24061662" />
+      <window_info id="Structure" order="1" sideWeight="0.24672897" side_tool="true" visible="true" weight="0.24061662" />
       <window_info id="Web" order="2" sideWeight="0.2173913" side_tool="true" weight="0.27211797" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.2346041" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3328446" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21554253" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.398827" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -798,16 +796,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/ReviewDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1800">
@@ -846,33 +834,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GiveReviewLikeServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetDataOfFilmSetvlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="20" column="30" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1007,30 +968,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Model/User.java">
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/ReviewSensitiveWordDetectionServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Service/Impl/FilmPageServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="74" column="22" lean-forward="true" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/ReviewLikeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
+        <state relative-caret-position="264">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1039,18 +980,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Service/FilmPageService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="53" column="49" lean-forward="true" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="49" />
+        <state relative-caret-position="1176">
+          <caret line="53" column="49" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/ReviewSensitiveWordDetectionServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/ReviewDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        <state relative-caret-position="193">
+          <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1059,8 +1000,116 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Test/FilmPageTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
+        <state relative-caret-position="1680">
           <caret line="103" column="34" selection-start-line="103" selection-start-column="34" selection-end-line="103" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="28" column="18" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#845#851#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Service/Impl/AdminPageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Service/Impl/FilmPageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="73" column="30" lean-forward="true" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/ReviewLikeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-720">
+          <caret line="15" selection-start-line="15" selection-end-line="16" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Test/AdminPageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Service/AdminPageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckAllUserServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GiveReviewLikeServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetReviewsOfAFilmServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="44" selection-start-line="44" selection-end-line="51" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/GetDataOfFilmSetvlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1069,8 +1118,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/FilmPage/CheckReviewLikeServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="35" column="48" lean-forward="true" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
+        <state relative-caret-position="264">
+          <caret line="27" column="37" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
         </state>
       </provider>
     </entry>

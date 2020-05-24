@@ -23,12 +23,12 @@ public class CheckReviewLikeServlet extends HttpServlet {
         req.setCharacterEncoding("utf-8");
         resp.setContentType("text/html;charset=UTF-8");
         String userName = req.getParameter("userName");
-        String reviewId = req.getParameter("reviewId");
-        String[] rr = reviewId.split(",");
-        Integer[] reviewIds = new Integer[rr.length];
-        for(int i=0; i<rr.length; i++){
-            System.out.println(i+" "+rr[i]);
-            reviewIds[i] = Integer.valueOf(rr[i]);
+        String[] reviewId = req.getParameterValues("reviewId[]");
+        /*String[] rr = reviewId.split(",");*/
+        Integer[] reviewIds = new Integer[reviewId.length];
+        for(int i=0; i<reviewId.length; i++){
+            System.out.println(i+" "+reviewId[i]);
+            reviewIds[i] = Integer.valueOf(reviewId[i]);
         }
         FilmPageService filmPageService = new FilmPageServiceImpl();
         Result result = null;
