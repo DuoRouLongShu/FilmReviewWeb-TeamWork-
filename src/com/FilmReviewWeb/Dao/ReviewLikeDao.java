@@ -13,7 +13,7 @@ import java.sql.SQLException;
  * @date 2020/5/21 17:18
  */
 public class ReviewLikeDao {
-    private static Connection connection;
+    private Connection connection;
     private PreparedStatement preparedStatement;
 
 
@@ -32,6 +32,7 @@ public class ReviewLikeDao {
         preparedStatement.setString(2, userName);
         resultSet = preparedStatement.executeQuery();
         hasLike = resultSet.next();
+        JDBCUtils.close(connection,preparedStatement,resultSet);
          return hasLike;
     }
 
@@ -42,6 +43,7 @@ public class ReviewLikeDao {
         preparedStatement.setInt(1, reviewId);
         preparedStatement.setString(2,userName);
         int updateCount = preparedStatement.executeUpdate();
+        JDBCUtils.close(connection,preparedStatement);
         return updateCount;
     }
 
@@ -52,6 +54,7 @@ public class ReviewLikeDao {
         preparedStatement.setInt(1, reviewId);
         preparedStatement.setString(2,userName);
         int updateCount = preparedStatement.executeUpdate();
+        JDBCUtils.close(connection,preparedStatement);
         return updateCount;
     }
 }

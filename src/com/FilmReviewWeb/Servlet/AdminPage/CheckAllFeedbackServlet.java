@@ -1,7 +1,7 @@
 package com.FilmReviewWeb.Servlet.AdminPage;
 
+import com.FilmReviewWeb.Model.Feedback;
 import com.FilmReviewWeb.Model.Result;
-import com.FilmReviewWeb.Model.User;
 import com.FilmReviewWeb.Service.Impl.AdminPageServiceImpl;
 import com.alibaba.fastjson.JSON;
 
@@ -19,24 +19,24 @@ import java.util.ArrayList;
  * @author HTwo2O
  * @date 2020/5/24 10:10
  */
-@WebServlet("/adminPage/checkAllUser")
-public class CheckAllUserServlet extends HttpServlet {
+@WebServlet("/adminPage/checkAllFeedback")
+public class CheckAllFeedbackServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");//告诉输出流
         resp.setContentType("text/html;charset=UTF-8");//告诉浏览器
         Result result = new Result();
         AdminPageServiceImpl adminPageService = new AdminPageServiceImpl();
-        ArrayList<User> users = null;
+        ArrayList<Feedback> feedbacks = null;
         try {
-            users = adminPageService.checkAllUser();
-            System.out.println(users);
+            feedbacks = adminPageService.checkAllFeedback();
+            System.out.println(feedbacks);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        result.setData(users);
-        result.setMessage("成功查询用户信息");
-        int dataCount = users.size();
+        result.setData(feedbacks);
+        result.setMessage("成功查询用户反馈");
+        int dataCount = feedbacks.size();
         result.setDataCount(dataCount);
         if (dataCount / 8 == 0) {
             result.setPageCount(1);

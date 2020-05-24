@@ -14,7 +14,7 @@ import java.util.ArrayList;
  * @date 2020/5/24 10:12
  */
 public class UserDao {
-    private static Connection connection;
+    private Connection connection;
     private PreparedStatement preparedStatement;
 
     /**
@@ -24,7 +24,7 @@ public class UserDao {
      */
     public ArrayList<User> seletAllUser()throws Exception{
         connection = JDBCUtils.getConnection();
-        String sql = "SELECT user_id,user_name,regist_date,last_online_date FROM USER WHERE POWER=0";
+        String sql = "SELECT user_id,user_name,regist_date,last_online_date FROM USER WHERE POWER=0 ORDER BY user_name";
         preparedStatement = connection.prepareStatement(sql);
         ResultSet resultSet = preparedStatement.executeQuery();
         ArrayList<User> users = new ArrayList<User>();
@@ -36,6 +36,7 @@ public class UserDao {
             user.setLastOnlineDate(resultSet.getString("last_online_date"));
             users.add(user);
         }
+        JDBCUtils.close(connection,preparedStatement,resultSet);
         return users;
     }
 }

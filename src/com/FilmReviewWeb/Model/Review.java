@@ -14,7 +14,7 @@ import lombok.*;
 @RequiredArgsConstructor
 public class Review {
     private Integer reviewId;
-    private Integer checkout;
+    private Integer check;
     private Integer pass;
     @NonNull
     private float rating;

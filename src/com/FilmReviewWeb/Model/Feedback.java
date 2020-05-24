@@ -19,7 +19,7 @@ public class Feedback implements Serializable {
     private Integer feedbackId;
     private Integer userId;
     private String userName;
-    private String creatTime;
+    private String creatDate;
     private String text;
 
 

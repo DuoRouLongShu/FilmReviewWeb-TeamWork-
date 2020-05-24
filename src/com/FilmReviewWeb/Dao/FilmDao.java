@@ -16,7 +16,7 @@ import java.util.List;
  * @date 2020/5/13 15:51
  */
 public class FilmDao {
-    private static Connection connection;
+    private Connection connection;
     private PreparedStatement preparedStatement;
 
 

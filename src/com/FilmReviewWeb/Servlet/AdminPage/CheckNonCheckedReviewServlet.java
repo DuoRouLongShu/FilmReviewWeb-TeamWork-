@@ -1,7 +1,7 @@
 package com.FilmReviewWeb.Servlet.AdminPage;
 
 import com.FilmReviewWeb.Model.Result;
-import com.FilmReviewWeb.Model.User;
+import com.FilmReviewWeb.Model.Review;
 import com.FilmReviewWeb.Service.Impl.AdminPageServiceImpl;
 import com.alibaba.fastjson.JSON;
 
@@ -14,29 +14,29 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- * 查看所有用户数据Servlet
+ * 查看未审核影评Servlet
  *
  * @author HTwo2O
  * @date 2020/5/24 10:10
  */
-@WebServlet("/adminPage/checkAllUser")
-public class CheckAllUserServlet extends HttpServlet {
+@WebServlet("/adminPage/checkNonCheckedReview")
+public class CheckNonCheckedReviewServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");//告诉输出流
         resp.setContentType("text/html;charset=UTF-8");//告诉浏览器
         Result result = new Result();
         AdminPageServiceImpl adminPageService = new AdminPageServiceImpl();
-        ArrayList<User> users = null;
+        ArrayList<Review> reviews = null;
         try {
-            users = adminPageService.checkAllUser();
-            System.out.println(users);
+            reviews = adminPageService.checkNonCheckedReview();
+            System.out.println(reviews);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        result.setData(users);
-        result.setMessage("成功查询用户信息");
-        int dataCount = users.size();
+        result.setData(reviews);
+        result.setMessage("成功查询未审核影评");
+        int dataCount = reviews.size();
         result.setDataCount(dataCount);
         if (dataCount / 8 == 0) {
             result.setPageCount(1);

@@ -1,5 +1,7 @@
 package com.FilmReviewWeb.Service;
 
+import com.FilmReviewWeb.Model.Feedback;
+import com.FilmReviewWeb.Model.Review;
 import com.FilmReviewWeb.Model.User;
 
 import java.util.ArrayList;
@@ -16,4 +18,27 @@ public interface AdminPageService {
      * @throws Exception
      */
     public ArrayList<User> checkAllUser() throws Exception;
+
+    /**
+     * 查看所有反馈
+     * @return
+     * @throws Exception
+     */
+    public ArrayList<Feedback> checkAllFeedback() throws Exception;
+
+    /**
+     * 查看为审核影评
+     * @return
+     * @throws Exception
+     */
+    public ArrayList<Review> checkNonCheckedReview() throws Exception;
+
+    /**
+     * 审核影评
+     * @param reviewId
+     * @param pass
+     * @return 是否审核成功
+     * @throws Exception
+     */
+    public boolean auditReview(Integer reviewId, Integer pass) throws Exception;
 }

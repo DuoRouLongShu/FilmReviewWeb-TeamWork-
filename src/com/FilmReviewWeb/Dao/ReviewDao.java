@@ -14,7 +14,7 @@ import java.util.ArrayList;
  * @date 2020/5/13 15:04
  */
 public class ReviewDao {
-    private static Connection connection;
+    private Connection connection;
     private PreparedStatement preparedStatement;
 
 
@@ -26,14 +26,14 @@ public class ReviewDao {
      */
     public ArrayList<Review> getReviewsByFilmName(String filmName) throws Exception{
         connection = JDBCUtils.getConnection();
-        String sql = "select * from review where film_name = ?";
+        String sql = "select * from review where film_name = ? AND (`check` =0 OR pass=1)";
         preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1,filmName);
         ResultSet resultSet = preparedStatement.executeQuery();
         ArrayList<Review> reviews = new ArrayList<Review>();
         while (resultSet.next()){
             int reviewId = resultSet.getInt("review_id");
-            int checkout = resultSet.getInt("check");
+            int check = resultSet.getInt("check");
             int pass = resultSet.getInt("pass");
             float rating = resultSet.getFloat("rating");
             String userName = resultSet.getString("user_name");
@@ -44,7 +44,7 @@ public class ReviewDao {
             String text = resultSet.getString("text");
             int likes = resultSet.getInt("likes");
             String title = resultSet.getString("title");
-            Review review = new Review( reviewId, checkout,  pass,  rating, userName, userId,  filmName,  filmId,  creatDate,  text, likes,title);
+            Review review = new Review( reviewId, check,  pass,  rating, userName, userId,  filmName,  filmId,  creatDate,  text, likes,title);
             reviews.add(review);
         }
         JDBCUtils.close(connection,preparedStatement,resultSet);
@@ -83,6 +83,7 @@ public class ReviewDao {
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setInt(1,reviewId);
         int updateCount =preparedStatement.executeUpdate();
+        JDBCUtils.close(connection,preparedStatement);
         return updateCount;
     }
 
@@ -97,6 +98,65 @@ public class ReviewDao {
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setInt(1,reviewId);
         int updateCount =preparedStatement.executeUpdate();
+        JDBCUtils.close(connection,preparedStatement);
         return updateCount;
+    }
+
+    /**
+     * 查看未审核的影评
+     * @return
+     * @throws Exception
+     */
+    public ArrayList<Review> getNonCheckedReviews() throws Exception{
+        connection = JDBCUtils.getConnection();
+        String sql = "select * from review where `check`=0";
+        preparedStatement = connection.prepareStatement(sql);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        ArrayList<Review> reviews = new ArrayList<Review>();
+        while (resultSet.next()){
+            Review review = new Review();
+            int reviewId = resultSet.getInt("review_id");
+            float rating = resultSet.getFloat("rating");
+            String userName = resultSet.getString("user_name");
+            int userId = resultSet.getInt("user_id");
+            int filmId = resultSet.getInt("film_id");
+            String filmName = resultSet.getString("film_name");
+            String creatDate = resultSet.getString("creat_date");
+            String text = resultSet.getString("text");
+            int likes = resultSet.getInt("likes");
+            String title = resultSet.getString("title");
+
+            review.setRating(rating);
+            review.setText(text);
+            review.setTitle(title);
+            review.setUserName(userName);
+            review.setFilmName(filmName);
+            review.setFilmId(filmId);
+            review.setCreatDate(creatDate);
+            review.setLikes(likes);
+            review.setReviewId(reviewId);
+            review.setUserId(userId);
+
+            reviews.add(review);
+        }
+        JDBCUtils.close(connection,preparedStatement,resultSet);
+        return reviews;
+    }
+
+    /**
+     * 审核并更新影评的通过情况
+     * @param reviewId
+     * @param pass
+     * @return
+     * @throws Exception
+     */
+    public boolean updateReviewPass(Integer reviewId, Integer pass) throws Exception {
+        connection = JDBCUtils.getConnection();
+        String sql = "update review set `check`=1,pass=? where review_id=?";
+        preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setInt(1, pass);
+        preparedStatement.setInt(2, reviewId);
+        int update = preparedStatement.executeUpdate();
+        return (update == 0? false: true);
     }
 }

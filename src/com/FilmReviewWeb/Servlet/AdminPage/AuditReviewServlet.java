@@ -1,7 +1,6 @@
 package com.FilmReviewWeb.Servlet.AdminPage;
 
 import com.FilmReviewWeb.Model.Result;
-import com.FilmReviewWeb.Model.User;
 import com.FilmReviewWeb.Service.Impl.AdminPageServiceImpl;
 import com.alibaba.fastjson.JSON;
 
@@ -11,7 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
 
 /**
  * 查看所有用户数据Servlet
@@ -19,32 +17,28 @@ import java.util.ArrayList;
  * @author HTwo2O
  * @date 2020/5/24 10:10
  */
-@WebServlet("/adminPage/checkAllUser")
-public class CheckAllUserServlet extends HttpServlet {
+@WebServlet("/adminPage/auditReview")
+public class AuditReviewServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");//告诉输出流
         resp.setContentType("text/html;charset=UTF-8");//告诉浏览器
+        Integer reviewId = Integer.valueOf(req.getParameter("reviewId"));
+        Integer pass = Integer.valueOf(req.getParameter("pass"));
         Result result = new Result();
         AdminPageServiceImpl adminPageService = new AdminPageServiceImpl();
-        ArrayList<User> users = null;
         try {
-            users = adminPageService.checkAllUser();
-            System.out.println(users);
+            boolean hasAudit = adminPageService.auditReview(reviewId, pass);
+            result.setMessage("审核成功");
+            if(pass == 0){
+                result.setData("不通过");
+            }else {
+                result.setData("通过");
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        result.setData(users);
-        result.setMessage("成功查询用户信息");
-        int dataCount = users.size();
-        result.setDataCount(dataCount);
-        if (dataCount / 8 == 0) {
-            result.setPageCount(1);
-        } else if (dataCount % 8 > 0) {
-            result.setPageCount(dataCount / 8 + 1);
-        } else {
-            result.setPageCount(dataCount / 8);
-        }
+
         resp.getWriter().print(JSON.toJSONString(result));
     }
 
