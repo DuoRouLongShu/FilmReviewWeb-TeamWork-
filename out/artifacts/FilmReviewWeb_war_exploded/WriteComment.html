@@ -70,6 +70,7 @@
                         count--;
                         // console.log(data);
                         text = data.data;
+                        console.log("过滤获取:"+text);
                         // console.log(text);
                         if(count == 0) {
                             flag = true;
@@ -95,7 +96,7 @@
             });
 
             $("#preview").click(function () {
-                $("#textarea").blur();
+                // $("#textarea").blur();
                 if (flag && tag) {
                     $(".btn-success").removeAttr("disabled");
                     $(".btn-info").attr("disabled", "disabled");
@@ -109,6 +110,7 @@
                     );
                     $("#title").html(title);
                     $("#rating").html(rating);
+                    console.log("我要写入的："+text);
                     $("#textarea").val(text);
                 }else if(!flag){
                     $("#textResult").prop("style", "color:red;margin-left:-700px");
@@ -224,7 +226,7 @@
         </div>
         <div style="text-align: center;margin-bottom: 100px ">
             <span style="text-align: center">共<span id="num">0</span>个字</span>
-            <span style="color: #9d9d9d">（不少于100字）</span>
+            <span style="color: #9d9d9d">（不少于20字）</span>
         </div>
     </div>
 </form>

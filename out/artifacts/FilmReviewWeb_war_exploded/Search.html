@@ -78,10 +78,11 @@ function filmeach(page) {
     $("#content").append("<div class='container'>" +
         "<div class=\"row\">\n" +
         "</div>");
-    // 添加电影,这个i注意
-    for (var i = (page-1)*8 ; i < films.data.length; i++) {
+    var start = (page - 1) * 6;
+    // 添加电影,这个i注意 。 每页6个，一行或两行，改变栅格
+    for (var i = start ; i < start + 6 && i < films.data.length; i++) {
         $("div[class='row']").append(
-            "        <div class=\"col-lg-3\">\n" +
+            "        <div class='col-lg-2'>\n" +
             "            <a href=\"javascript:;\" onclick=select(this)>\n" +
             "                <img src=\"./img/1590053103(1).jpg\"  class=\"img-thumbnail\"><br>\n" +
             "                <span>"+ films.data[i].filmName +"</span>\n" +
@@ -91,7 +92,7 @@ function filmeach(page) {
         );
         // 对应test4
         // $("div[class='row'] img:nth-child(n)")[i].src = films.data[i].src;
-        $($("div[class='row'] img:nth-child(n)")[i]).prop("src",films.data[i].src);
+        $($("div[class='row'] img:nth-child(n)")[i]).prop("src",films.data[i].imageResource);
     };
 }
 function search() {
@@ -110,7 +111,7 @@ function search() {
                 totalPage = data.pageCount;
                 // 增加页码
                 for (var i = 1; i <= totalPage; i++) {
-                    $("#li").append("<li><a href='javascript:void(0)' onclick=fun(this.innerHTML); >"+i+"</a></li>");
+                    $("#li").append("<li><a href='javascript:void(0)' onclick=filmeach(this.innerHTML); >"+i+"</a></li>");
                 }
                 // 激活第一页
                 $("#li li:first").prop("class","active");
@@ -128,7 +129,7 @@ function select(obj) {
     //获取电影名
     var filmName = $(obj).children(":last").html();
     //跳转特定页面
-    window.location.href = "http://localhost:8080/FilmReviewWeb/Movie.html?filmName="+filmName;
+    window.location.href = "http://localhost:8080/FilmReviewWeb/Movie.html?filmName=" + filmName;
 }
 
     </script>

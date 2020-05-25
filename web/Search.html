@@ -111,7 +111,7 @@ function search() {
                 totalPage = data.pageCount;
                 // 增加页码
                 for (var i = 1; i <= totalPage; i++) {
-                    $("#li").append("<li><a href='javascript:void(0)' onclick=fun(this.innerHTML); >"+i+"</a></li>");
+                    $("#li").append("<li><a href='javascript:void(0)' onclick=filmeach(this.innerHTML); >"+i+"</a></li>");
                 }
                 // 激活第一页
                 $("#li li:first").prop("class","active");
@@ -129,7 +129,7 @@ function select(obj) {
     //获取电影名
     var filmName = $(obj).children(":last").html();
     //跳转特定页面
-    window.location.href = "http://localhost:8080/FilmReviewWeb/Movie.html?filmName="+filmName;
+    window.location.href = "http://localhost:8080/FilmReviewWeb/Movie.html?filmName=" + filmName;
 }
 
     </script>

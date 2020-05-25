@@ -286,14 +286,31 @@
             // window.location.href = "http://localhost:8080/FilmReviewWeb/WriteComment.html?filmName"+data.data.filmName;
             window.location.href = "http://localhost:8080/FilmReviewWeb/WriteComment.html";
         });
-        // $("#collect").click(function () {
-        //     alert("collect")
-        // });
+        $("#collect").click(function () {
+            // 根据收藏的关系，动态改变的数据
+            var isCollect;
+            if($("#collect").prop("value") == "收藏☆") {
+                $($("#collect").prop("value", "已收藏★"));
+                isCollect = true;
+            }else if($("#collect").prop("value") == "已收藏★"){
+                $($("#collect").prop("value", "收藏☆"));
+                isCollect = false;
+            }
+            $.ajax({
+                url:"",
+                type:"post",
+                data:{"userName":userName,"filmName": MovieName,"isCollect":isCollect},
+                success:function (data) {
+                    console.log(data)
+                },
+                dataType:"json"
+            })
+        });
 
 
     });
 </script>
-        <style>
+<style>
             body{
 
             }
@@ -395,6 +412,7 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
+
 <div id="myMargin">
     <span class="name t filmName" style="margin-left: 40px">电影名称 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="time">时间</span>)<br>
     <div class="row t">
@@ -411,9 +429,9 @@
             梗概:    <span id="synopsis">梗概</span><br>
         </div>
     </div>
-    <input type="button" class="btn btn-default t write" value="写影评" style="margin-left: 40px">
-    <input type="button" class="btn btn-default t btn-info" value="收藏" id="collect">
-    <input type="button" class="btn btn-default t btn-warning" value="分享到" >
+    <input type="button" class="btn btn-default t write" value="写影评" style="margin-left: 40px;font-size: medium">
+    <input type="button" class="btn btn-default t btn-info" value="收藏☆" id="collect" style="font-size: medium">
+    <input type="button" class="btn btn-default t btn-warning" value="分享到" style="font-size: medium" >
     <br><br><br>
     <div>
         <h2 class="t">网友影评</h2>
@@ -428,10 +446,11 @@
      <!--评论区-->
     <div class="t" id="comment">
         <div id="1">
-            <div style="float: left;margin-top: 4px"><span id="name1" style="color: #2aabd2">用户名字</span> 看过</div>
+            <img src="./img/1590053103(1).jpg" style="height: 30px;width: 30px;float: left">
+            <div style="float: left;margin-top: 4px"><a id="name1" href="javascript:;">用户名字</a> 看过</div>
             <div style="color: #9d9d9d;">&nbsp;&nbsp;&nbsp;(<span id="time1">评论时间</span>)&nbsp;&nbsp;&nbsp;<span style="color: gold;font-size: large;font-weight: 700">评分:  <!--<span id="rate1">5.0</span>-->
                 <span id="star_grade1"></span></span>
-            </div>
+            </div><br>
             <span id="title1" class="p">标题</span><br>
             <textarea cols="132" rows="5" id="comment1"  readonly>评论导入</textarea><br>
             <!--<span class="lan">点赞</span><a href="javascript:void(0)" onclick=count(this); id="like1">0</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
@@ -440,9 +459,10 @@
         </div>
         <br><br>
         <div id="2">
-            <div style="float: left;;margin-top: 4px"><span id="name2" style="color: #2aabd2">用户名字</span> 看过</div>
+            <img src="./img/1590053103(1).jpg" style="height: 30px;width: 30px;float: left">
+            <div style="float: left;;margin-top: 4px"><a id="name2" href="javascript:;">用户名字</a> 看过</div>
             <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time2">评论时间</span>)&nbsp;&nbsp;&nbsp;<span style="color: gold;font-size: large;font-weight: 700">评分:  <span id="rate2">5.0</span></span>
-            </div>
+            </div><br>
             <span id="title2" class="p">标题</span><br>
             <textarea cols="132" rows="5" id="comment2"  readonly>评论导入</textarea><br>
             <!--<span class="lan">点赞</span><a href="javascript:void(0)" onclick=count(this); id="like2">0</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
@@ -452,9 +472,10 @@
         <br><br>
 
         <div id="3">
-            <div style="float: left;;margin-top: 4px"><span id="name3" style="color: #2aabd2">用户名字</span> 看过</div>
+            <img src="./img/1590053103(1).jpg" style="height: 30px;width: 30px;float: left">
+            <div style="float: left;;margin-top: 4px"><a id="name3" href="javascript:;">用户名字</a> 看过</div>
             <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time3">评论时间</span>)&nbsp;&nbsp;&nbsp;<span style="color: gold;font-size: large;font-weight: 700">评分:  <span id="rate3">5.0</span></span>
-            </div>
+            </div><br>
             <span id="title3" class="p">标题</span><br>
             <textarea cols="132" rows="5" id="comment3"  readonly>评论导入</textarea><br>
             <!--<span class="lan">点赞</span><a href="javascript:void(0)" onclick=count(this); id="like3">0</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
@@ -464,9 +485,10 @@
         <br><br>
 
         <div id="4">
-            <div style="float: left;;margin-top: 4px"><span id="name4" style="color: #2aabd2">用户名字</span> 看过</div>
+            <img src="./img/1590053103(1).jpg" style="height: 30px;width: 30px;float: left">
+            <div style="float: left;;margin-top: 4px"><a id="name4" href="javascript:;">用户名字</a> 看过</div>
             <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time4">评论时间</span>)&nbsp;&nbsp;&nbsp;<span style="color: gold;font-size: large;font-weight: 700">评分:  <span id="rate4">5.0</span></span>
-            </div>
+            </div><br>
             <span id="title4" class="p">标题</span><br>
             <textarea cols="132" rows="5" id="comment4"  readonly>评论</textarea><br>
             <!--<span class="lan">点赞</span><a href="javascript:void(0)" onclick=count(this); id="like4">0</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
@@ -476,9 +498,10 @@
         <br><br>
 
         <div id="5">
-            <div style="float: left;;margin-top: 4px"><span id="name5" style="color: #2aabd2">用户名字</span> 看过</div>
+            <img src="./img/1590053103(1).jpg" style="height: 30px;width: 30px;float: left">
+            <div style="float: left;;margin-top: 4px"><a id="name5" href="javascript:;">用户名字</a> 看过</div>
             <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time5">评论时间</span>)&nbsp;&nbsp;&nbsp;<span style="color: gold;font-size: large;font-weight: 700">评分:  <span id="rate5">5.0</span></span>
-            </div>
+            </div><br>
             <span id="title5" class="p">标题</span><br>
             <textarea cols="132" rows="5" id="comment5" readonly>评论导入</textarea><br>
             <!--<span class="lan">点赞</span><a href="javascript:void(0)" onclick=count(this); id="like5">0</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
