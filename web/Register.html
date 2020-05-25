@@ -5,15 +5,34 @@
     <title>Register</title>
     <link rel="stylesheet" href="css/Register.css" type="text/css">
     <script src="js/jquery-1.11.0.min.js"></script>
-
+    <!--    敏感词校验-->
     <script>
-        //表单校验
+        $(function () {
+            $("#username").blur(function () {
+                $.post("filmpage/RegistUserNameDetection",$(this).serialize(),function (result) {
+                    result = eval('('+ result +')');
+                    if(result.data){
+                        $("#s_username").empty();
+                        $("#message").html(result.message);
+                    }else {
+                        $("#message").empty();
+                    }
+                });
+            });
+        });
+    </script>
+    <!--    表单校验和验证码刷新-->
+    <script>
         window.onload = function () {
             document.getElementById("form").onsubmit = function () {
-                //点击切换验证码
+                //点击图片或注册按钮切换验证码
                 const img = document.getElementById("checkcode_img");
+                const date = new Date().getTime();
+                const sub = document.getElementById("Submit");
                 img.onclick = function () {
-                    const date = new Date().getTime();
+                    img.src = "user/checkCode?" + Math.random();
+                };
+                sub.onclick = function () {
                     img.src = "user/checkCode?" + date;
                 };
                 //都为true则验证通过，才能提交表单
@@ -22,11 +41,13 @@
             document.getElementById("username").onblur = checkUsername;
             document.getElementById("password").onblur = checkPassword;
             document.getElementById("confirm").onblur = checkConfirm;
-
         };
 
         //校验用户名
         function checkUsername() {
+            // const flag = false;
+            //
+            // if(flag){}
             const username = document.getElementById("username").value;
             const reg_username = /^[\u4E00-\u9FA5A-Za-z0-9]{4,10}$/;
             const flag = reg_username.test(username);
@@ -73,40 +94,9 @@
             }
             return flag;
         }
-
-        //获焦时隐藏提示信息,失焦时显示
-        // $(document).ready(function () {
-        //     $("#username").focus(function () {
-        //         $("#s_username").css("display", "none");
-        //     }).blur(function () {
-        //         $("#s_username").css("display", "inline");
-        //     });
-        //     $("#password").focus(function () {
-        //         $("#s_password").css("display", "none");
-        //     }).blur(function () {
-        //         $("#s_password").css("display", "inline");
-        //     });
-        //     $("#confirm").focus(function () {
-        //         $("#s_confirm").css("display", "none");
-        //     }).blur(function () {
-        //         $("#s_confirm").css("display", "inline");
-        //     });
-        //     $("#checkcode").focus(function () {
-        //         $("#errorMsg").css("display", "none");
-        //     }).blur(function () {
-        //         $("#s_errortips").css("display", "inline");
-        //     });
-        // });
-        $(document).ready(function () {
-            $("#checkcode").focus(function () {
-                $("#errorMsg").css("display", "none");
-            }).blur(function () {
-                $("#errorMsg").css("display","inline");
-            });
-        });
     </script>
+    <!--    异步提交表单函数-->
     <script>
-        //异步提交表单函数
         $(function () {
             $("#form").submit(function () {
                 if (checkUsername() && checkPassword() && checkConfirm()) {
@@ -125,6 +115,15 @@
                 return false;
                 //如果这个方法没有返回值，或者返回为true，则表单提交，否则不提交
             });
+        });
+    </script>
+    <!--    获焦时清空提示信息-->
+    <script>
+        $(function() {
+            $("#username").focus(function () {$("#s_username").empty();});
+            $("#password").focus(function () {$("#s_password").empty();});
+            $("#confirm").focus(function () {$("#s_confirm").empty();})
+            $("#checkcode").focus(function () {$("#errorMsg").empty();});
         });
     </script>
 </head>
@@ -152,6 +151,7 @@
                     <td class="right">
                         <input type="text" name="userName" id="username" placeholder="用户名(4-10位汉字、数字或字母）">
                         <span id="s_username" class="error"></span>
+                        <span id="message" class="error"></span>
                     </td>
                 </tr>
                 <tr>

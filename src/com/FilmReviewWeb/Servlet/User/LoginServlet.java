@@ -39,15 +39,15 @@ public class LoginServlet extends HttpServlet {
 
         System.out.println("---1--");
         //比较
-//        if(checkcode_server==null||!checkcode_server.equalsIgnoreCase(check)){
-//            //验证码错误
-//            ResultInfo info = new ResultInfo();
-//            info.setFlag(false);
-//            info.setErrorMsg("验证码错误");
-//            resp.getWriter().print(JSON.toJSONString(info));
-//            System.out.println(checkcode_server+"---"+check);
-//            return;
-//        }
+        if(checkcode_server==null||!checkcode_server.equalsIgnoreCase(check)){
+            //验证码错误
+            ResultInfo info = new ResultInfo();
+            info.setFlag(false);
+            info.setErrorMsg("验证码错误");
+            resp.getWriter().print(JSON.toJSONString(info));
+            System.out.println(checkcode_server+"---"+check);
+            return;
+        }
         System.out.println("---2--");
         //获取用户名和密码数据
         Map<String, String[]> map = req.getParameterMap();
