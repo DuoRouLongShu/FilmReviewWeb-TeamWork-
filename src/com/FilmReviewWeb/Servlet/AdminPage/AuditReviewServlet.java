@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * 查看所有用户数据Servlet
+ * 审核影评Servlet
  *
  * @author HTwo2O
  * @date 2020/5/24 10:10

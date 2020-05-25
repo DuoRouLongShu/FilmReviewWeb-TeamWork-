@@ -27,7 +27,7 @@ public class CheckNonCheckedReviewServlet extends HttpServlet {
         resp.setContentType("text/html;charset=UTF-8");//告诉浏览器
         Result result = new Result();
         AdminPageServiceImpl adminPageService = new AdminPageServiceImpl();
-        ArrayList<Review> reviews = null;
+        ArrayList<Review> reviews = new ArrayList<Review>();
         try {
             reviews = adminPageService.checkNonCheckedReview();
             System.out.println(reviews);

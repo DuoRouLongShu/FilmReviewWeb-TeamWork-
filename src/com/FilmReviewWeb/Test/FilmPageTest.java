@@ -3,6 +3,7 @@ import com.FilmReviewWeb.Model.Result;
 import com.FilmReviewWeb.Model.Review;
 import com.FilmReviewWeb.Service.FilmPageService;
 import com.FilmReviewWeb.Service.Impl.FilmPageServiceImpl;
+import com.FilmReviewWeb.Utils.SensitiveWordUtils;
 import com.alibaba.fastjson.JSON;
 import org.junit.Test;
 
@@ -122,5 +123,27 @@ public class FilmPageTest {
         FilmPageService filmPageService = new FilmPageServiceImpl();
         Result result = filmPageService.giveReviewLike(2,"javk");
         System.out.println(result);
+    }
+
+    @Test
+    public void registWordTest(){
+        String text =  "傻逼";
+
+        Result result = new Result();
+        try {
+            boolean isViolation ;
+            isViolation = SensitiveWordUtils.isContaintBadWord(text,1);
+            System.out.println(isViolation);
+            if(isViolation == true){
+                result.setMessage("文本违规");
+            }else {
+                result.setMessage("文本未违规");
+            }
+            result.setData(isViolation);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(JSON.toJSONString(result));
     }
 }

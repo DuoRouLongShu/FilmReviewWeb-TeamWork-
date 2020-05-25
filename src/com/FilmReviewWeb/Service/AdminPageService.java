@@ -1,6 +1,7 @@
 package com.FilmReviewWeb.Service;
 
 import com.FilmReviewWeb.Model.Feedback;
+import com.FilmReviewWeb.Model.Film;
 import com.FilmReviewWeb.Model.Review;
 import com.FilmReviewWeb.Model.User;
 
@@ -41,4 +42,12 @@ public interface AdminPageService {
      * @throws Exception
      */
     public boolean auditReview(Integer reviewId, Integer pass) throws Exception;
+
+    /**
+     * 添加电影
+     * @param film
+     * @return 是否添加成功
+     * @throws Exception
+     */
+    public boolean addFilm(Film film) throws Exception;
 }

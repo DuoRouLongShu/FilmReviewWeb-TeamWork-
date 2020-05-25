@@ -17,7 +17,7 @@ public class Film implements Serializable {
     private Integer filmId;
     private String filmName;
     //评分
-    private float rating ;
+    private Float rating ;
     //导演
     private String director;
     private String writer;
@@ -33,7 +33,6 @@ public class Film implements Serializable {
     //发布日期
     private String releaseDate;
     //海报图片地址
-    private String imageResource;
-
+    private String imageSource;
 
 }

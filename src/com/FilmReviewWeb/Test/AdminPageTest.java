@@ -1,7 +1,5 @@
-import com.FilmReviewWeb.Model.Feedback;
-import com.FilmReviewWeb.Model.Result;
-import com.FilmReviewWeb.Model.Review;
-import com.FilmReviewWeb.Model.User;
+import com.FilmReviewWeb.Model.*;
+import com.FilmReviewWeb.Service.AdminPageService;
 import com.FilmReviewWeb.Service.Impl.AdminPageServiceImpl;
 import com.alibaba.fastjson.JSON;
 import org.junit.Test;
@@ -87,6 +85,38 @@ public class AdminPageTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        System.out.println(JSON.toJSONString(result));
+    }
+    @Test
+    public void addFilmTest()throws Exception{
+        Film film = new Film();
+        film.setFilmName("阿凡达");
+        film.setWriter("卡梅隆");
+        /*film.setPerformer("鹿晗、舒淇");
+        film.setArea("中国");
+        film.setDuration("120min");
+        film.setSynopsis("很多年以后，外星入侵了地区...");
+        film.setLanguage("中文/英文");
+        boolean b = new AdminPageServiceImpl().addFilm(film);
+        System.out.println(b);*/
+
+
+
+        Result result = new Result();
+        try {
+            AdminPageService adminPageService = new AdminPageServiceImpl();
+            boolean hasAdd = adminPageService.addFilm(film);
+            if(hasAdd == true){
+                result.setData(true);
+                result.setMessage("添加电影成功");
+            }else {
+                result.setData(false);
+                result.setMessage("添加电影失败");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         System.out.println(JSON.toJSONString(result));
     }
 }

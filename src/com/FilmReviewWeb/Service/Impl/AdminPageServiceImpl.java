@@ -1,9 +1,11 @@
 package com.FilmReviewWeb.Service.Impl;
 
 import com.FilmReviewWeb.Dao.FeedbackDao;
+import com.FilmReviewWeb.Dao.FilmDao;
 import com.FilmReviewWeb.Dao.ReviewDao;
 import com.FilmReviewWeb.Dao.UserDao;
 import com.FilmReviewWeb.Model.Feedback;
+import com.FilmReviewWeb.Model.Film;
 import com.FilmReviewWeb.Model.Review;
 import com.FilmReviewWeb.Model.User;
 import com.FilmReviewWeb.Service.AdminPageService;
@@ -35,5 +37,8 @@ public class AdminPageServiceImpl implements AdminPageService {
         return new ReviewDao().updateReviewPass(reviewId, pass);
     }
 
-
+    @Override
+    public boolean addFilm(Film film) throws Exception {
+        return new FilmDao().insertFilm(film);
+    }
 }
