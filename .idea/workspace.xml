@@ -96,22 +96,23 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\src" />
-      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\js" />
-      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\pages\js" />
-      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\src\com\FilmReviewWeb\Servlet\User" />
-      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\WEB-INF" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.FilmReviewWeb.Model" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web" />
       <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\css" />
       <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\js" />
       <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\pages" />
       <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\pages\page" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.FilmReviewWeb.Servlet.sensitiveWord" />
+      <recent name="com.FilmReviewWeb.Model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\src" />
+      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\js" />
+      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\pages\js" />
+      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\src\com\FilmReviewWeb\Servlet\User" />
+      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\WEB-INF" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.0.M26">
@@ -287,11 +288,6 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="完成" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
             </expand>
             <select />
           </treeState>
@@ -325,6 +321,7 @@
       <workItem from="1590209516334" duration="18244000" />
       <workItem from="1590239245387" duration="12539000" />
       <workItem from="1590292932939" duration="15463000" />
+      <workItem from="1590400800718" duration="2786000" />
     </task>
     <servers />
   </component>

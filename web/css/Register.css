@@ -123,6 +123,11 @@ body{
     font-size: 14px;
     position: absolute;
     padding-left: 3px;
+    display: inline-block;
+
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
 }
 #img{
     text-align: center;

@@ -54,8 +54,7 @@
             const s_username = document.getElementById("s_username");
 
             if (flag) {
-                s_username.innerHTML = "对";
-                s_username.style.color = "green";
+                s_username.innerHTML = "<img src='images/timg2.jpg' height='26' width='30' style='display: inline;padding-bottom: 5px;vertical-align: middle;' alt=''>"
             } else if (username === "") {s_username.innerHTML = "用户名为空!";s_username.style.color = "red";}
             else {s_username.innerHTML = "用户名非法!";s_username.style.color = "red";}
             return flag;
@@ -68,8 +67,7 @@
             const flag = reg_password.test(password);
             const s_password = document.getElementById("s_password");
             if (flag) {
-                s_password.innerHTML = "对";
-                s_password.style.color = "green";
+                s_password.innerHTML = "<img src='images/timg2.jpg' height='26' width='30' style='display: inline;padding-bottom: 5px;vertical-align: middle;' alt=''>"
             } else if (password === "") {s_password.innerHTML = "密码为空!";s_password.style.color = "red";}
             else {s_password.innerHTML = "密码非法!";s_password.style.color = "red";}
             return flag;
@@ -88,8 +86,7 @@
                 s_confirm.innerHTML = "输入为空!";
                 s_confirm.style.color = "red";
             } else if (password === confirm) {
-                s_confirm.innerHTML = "对";
-                s_confirm.style.color = "green";
+                s_confirm.innerHTML = "<img src='images/timg2.jpg' height='26' width='30' style='display: inline;padding-bottom: 5px;vertical-align: middle;' alt=''>"
                 flag = true;
             }
             return flag;
@@ -122,7 +119,7 @@
         $(function() {
             $("#username").focus(function () {$("#s_username").empty();});
             $("#password").focus(function () {$("#s_password").empty();});
-            $("#confirm").focus(function () {$("#s_confirm").empty();})
+            $("#confirm").focus(function () {$("#s_confirm").empty();});
             $("#checkcode").focus(function () {$("#errorMsg").empty();});
         });
     </script>
