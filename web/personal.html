@@ -21,7 +21,7 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="./js/bootstrap.min.js"></script>
     <script>
-        var userName = "马志鹏";
+        var userName = "javk";
         // 个人的信息
         var informations;
         // 个人的影评
@@ -82,22 +82,24 @@
 
             // 请求用户个人信息
             $.ajax({
-                url:"",
+                url:"./information/getInformation",
                 data:{"userName":userName},
                 type:"post",
                 success:function (data) {
                     informations = data;
-                    console.log(data);
-                    // $($("div[class='col-lg-8'] span:nth-child(n)")[0]).html(informations.data.userName);  //登录名
-                    // $($("div[class='col-lg-8'] span:nth-child(n)")[1]).html(informations.data.petName);
-                    // $($("div[class='col-lg-8'] span:nth-child(n)")[2]).html(informations.data.gender);
-                    // $($("div[class='col-lg-8'] span:nth-child(n)")[3]).html(informations.data.birthday);
-                    // $($("div[class='col-lg-8'] span:nth-child(n)")[4]).html(informations.data.hobby);
-                    // $($("div[class='col-lg-8'] span:nth-child(n)")[5]).html(informations.data.email);
+                    console.log(informations);
+                    console.log("请求信息成功");
+                    $($("div[class='col-lg-8'] span:nth-child(n)")[0]).html(informations.userName);  //登录名
+                    $($("div[class='col-lg-8'] span:nth-child(n)")[1]).html(informations.petName);
+                    $($("div[class='col-lg-8'] span:nth-child(n)")[2]).html(informations.gender);
+                    $($("div[class='col-lg-8'] span:nth-child(n)")[3]).html(informations.birthday);
+                    $($("div[class='col-lg-8'] span:nth-child(n)")[4]).html(informations.hobby);
+                    $($("div[class='col-lg-8'] span:nth-child(n)")[5]).html(informations.email);
+                    $("textarea[name='textarea']").val(informations.signature);
                 },
                 dataType:"json",
                 error:function () {
-                    console.log("失败")
+                    console.log("请求信息失败");
                 }
             });
 
@@ -258,15 +260,19 @@
             }
             // 更新数据库的内容
             $.ajax({
-                url:"",
+                url:"./information/saveInformation",
                 type:"post",
                 data:{"userName":userName,"petName":$(spans[1]).html(),"birthday":$(spans[3]).html(), "hobby":$(spans[4]).html(),
-                    "email":$(spans[5]).html(),"signature":$("textarea[name='textarea']").val()
+                    "gender":$(spans[2]).html(),"email":$(spans[5]).html(),"signature":$("textarea[name='textarea']").val(),"imageReSource":""
                 },
                 success:function (data) {
                     console.log(data);
+                    console.log("保存信息成功")
                 },
-                dataType:"json"
+                dataType:"json",
+                error:function () {
+                    console.log("保存信息失败")
+                }
             })
         }
 
