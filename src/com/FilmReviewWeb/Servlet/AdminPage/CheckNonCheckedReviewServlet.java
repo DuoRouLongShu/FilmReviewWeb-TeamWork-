@@ -1,6 +1,6 @@
 package com.FilmReviewWeb.Servlet.AdminPage;
 
-import com.FilmReviewWeb.Model.Result;
+import com.FilmReviewWeb.Model.PageResult;
 import com.FilmReviewWeb.Model.Review;
 import com.FilmReviewWeb.Service.Impl.AdminPageServiceImpl;
 import com.alibaba.fastjson.JSON;
@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * 查看未审核影评Servlet
@@ -25,27 +26,39 @@ public class CheckNonCheckedReviewServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");//告诉输出流
         resp.setContentType("text/html;charset=UTF-8");//告诉浏览器
-        Result result = new Result();
+
+        Integer currentPageNumber = Integer.valueOf(req.getParameter("pageNumber"));
+
+        PageResult pageResult = new PageResult();
         AdminPageServiceImpl adminPageService = new AdminPageServiceImpl();
+
+        HashMap<String, Object> map = new HashMap<>();
         ArrayList<Review> reviews = new ArrayList<Review>();
+        int totalDataCount = 0;
+
         try {
-            reviews = adminPageService.checkNonCheckedReview();
-            System.out.println(reviews);
+            map = adminPageService.checkNonCheckedReview(currentPageNumber, 8);
+            reviews = (ArrayList<Review>) map.get("reviews");
+            totalDataCount = (int) map.get("totalDataCount");
         } catch (Exception e) {
             e.printStackTrace();
         }
-        result.setData(reviews);
-        result.setMessage("成功查询未审核影评");
+
+        pageResult.setMessage("成功查询未审核影评");
+        pageResult.setData(reviews);
         int dataCount = reviews.size();
-        result.setDataCount(dataCount);
+        pageResult.setCurrentDataCount(dataCount);
+        pageResult.setTotalDataCount(totalDataCount);
+        pageResult.setCurrentPageNumber(currentPageNumber);
         if (dataCount / 8 == 0) {
-            result.setPageCount(1);
+            pageResult.setTotalPageCount(1);
         } else if (dataCount % 8 > 0) {
-            result.setPageCount(dataCount / 8 + 1);
+            pageResult.setTotalPageCount(dataCount / 8 + 1);
         } else {
-            result.setPageCount(dataCount / 8);
+            pageResult.setTotalPageCount(dataCount / 8);
         }
-        resp.getWriter().print(JSON.toJSONString(result));
+
+        resp.getWriter().print(JSON.toJSONString(pageResult));
     }
 
     @Override

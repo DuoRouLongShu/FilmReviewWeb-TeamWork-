@@ -17,7 +17,7 @@ public class User {
     private String password;
     //权限 普通用户为0，管理员为1
     private Integer power;
-    private String creatDate;
+    private String registDate;
     //最后在线日期
     private String lastOnlineDate;
 

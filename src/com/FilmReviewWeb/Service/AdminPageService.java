@@ -1,11 +1,8 @@
 package com.FilmReviewWeb.Service;
 
-import com.FilmReviewWeb.Model.Feedback;
 import com.FilmReviewWeb.Model.Film;
-import com.FilmReviewWeb.Model.Review;
-import com.FilmReviewWeb.Model.User;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * 管理员中心Service
@@ -18,21 +15,21 @@ public interface AdminPageService {
      * @return
      * @throws Exception
      */
-    public ArrayList<User> checkAllUser() throws Exception;
+    public HashMap<String, Object> checkAllUser(Integer currentPageNumber, Integer pageSize) throws Exception;
 
     /**
      * 查看所有反馈
      * @return
      * @throws Exception
      */
-    public ArrayList<Feedback> checkAllFeedback() throws Exception;
+    public HashMap<String, Object> checkAllFeedback(Integer currentPageNumber, Integer pageSize) throws Exception;
 
     /**
-     * 查看为审核影评
-     * @return
+     * 分页查看为审核影评
+     * @return 存放reviews和totalDataCount的Map
      * @throws Exception
      */
-    public ArrayList<Review> checkNonCheckedReview() throws Exception;
+    public HashMap<String, Object> checkNonCheckedReview(Integer currentPageNumber, Integer pageSize) throws Exception;
 
     /**
      * 审核影评
@@ -50,4 +47,36 @@ public interface AdminPageService {
      * @throws Exception
      */
     public boolean addFilm(Film film) throws Exception;
+
+    /**
+     * 处理反馈
+     * @return
+     * @throws Exception
+     */
+    public boolean dealFeedback(Integer feedbackId, Integer deal) throws Exception;
+
+    /**
+     * 查看所有电影
+     * @param currentPageNumber
+     * @param pageSize
+     * @return
+     * @throws Exception
+     */
+    public HashMap<String, Object> checkAllFilm(Integer currentPageNumber, Integer pageSize) throws Exception;
+
+    /**
+     * 根据filmId删除film
+     * @param filmId
+     * @return
+     * @throws Exception
+     */
+    public boolean deleteFilmById(Integer filmId) throws Exception;
+
+    /**
+     * 根据id修改film
+     * @param film
+     * @return
+     * @throws Exception
+     */
+    public boolean updateFilm(Film film) throws Exception;
 }

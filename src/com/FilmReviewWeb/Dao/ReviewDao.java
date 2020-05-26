@@ -7,6 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * 影评数据库
@@ -103,14 +104,16 @@ public class ReviewDao {
     }
 
     /**
-     * 查看未审核的影评
-     * @return
+     * 分页查看未审核的影评
+     * @return reviews和totalDataCount的Map
      * @throws Exception
      */
-    public ArrayList<Review> getNonCheckedReviews() throws Exception{
+    public HashMap<String, Object> getNonCheckedReviews(Integer currentPageNumber, Integer pageSize) throws Exception{
         connection = JDBCUtils.getConnection();
-        String sql = "select * from review where `check`=0";
+        String sql = "SELECT * FROM review WHERE `check`=0 LIMIT ?,?;";
         preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setInt(1, (currentPageNumber-1)*pageSize);
+        preparedStatement.setInt(2, pageSize);
         ResultSet resultSet = preparedStatement.executeQuery();
         ArrayList<Review> reviews = new ArrayList<Review>();
         while (resultSet.next()){
@@ -138,9 +141,18 @@ public class ReviewDao {
             review.setUserId(userId);
 
             reviews.add(review);
+            System.out.println(review);
         }
-        JDBCUtils.close(connection,preparedStatement,resultSet);
-        return reviews;
+        sql = "SELECT COUNT(*) FROM review  WHERE `check`=0";
+         preparedStatement = connection.prepareStatement(sql);
+         resultSet = preparedStatement.executeQuery();
+         resultSet.next();
+         int totalDataCount = resultSet.getInt(1);
+        JDBCUtils.close(connection, this.preparedStatement,resultSet);
+        HashMap<String, Object> map = new HashMap();
+        map.put("reviews", reviews);
+        map.put("totalDataCount",totalDataCount);
+        return map;
     }
 
     /**

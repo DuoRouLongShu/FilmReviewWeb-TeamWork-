@@ -1,7 +1,7 @@
 package com.FilmReviewWeb.Servlet.AdminPage;
 
 import com.FilmReviewWeb.Model.Feedback;
-import com.FilmReviewWeb.Model.Result;
+import com.FilmReviewWeb.Model.PageResult;
 import com.FilmReviewWeb.Service.Impl.AdminPageServiceImpl;
 import com.alibaba.fastjson.JSON;
 
@@ -12,9 +12,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
- * 查看所有用户数据Servlet
+ * 查看所有反馈Servlet
  *
  * @author HTwo2O
  * @date 2020/5/24 10:10
@@ -25,27 +26,36 @@ public class CheckAllFeedbackServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");//告诉输出流
         resp.setContentType("text/html;charset=UTF-8");//告诉浏览器
-        Result result = new Result();
+        int currentPageNumber = Integer.valueOf(req.getParameter("pageNumber"));
+
+        PageResult pageResult = new PageResult();
         AdminPageServiceImpl adminPageService = new AdminPageServiceImpl();
-        ArrayList<Feedback> feedbacks = null;
+
+        HashMap<String, Object> map = new HashMap<>();
+        ArrayList<Feedback> feedbacks = new ArrayList<Feedback>();
+        int totalDataCount = 0;
         try {
-            feedbacks = adminPageService.checkAllFeedback();
-            System.out.println(feedbacks);
+            map = adminPageService.checkAllFeedback(currentPageNumber, 8);
+            feedbacks = (ArrayList<Feedback>) map.get("feedbacks");
+            totalDataCount = (int) map.get("totalDataCount");
         } catch (Exception e) {
             e.printStackTrace();
         }
-        result.setData(feedbacks);
-        result.setMessage("成功查询用户反馈");
+        pageResult.setMessage("成功查询未审核影评");
+        pageResult.setData(feedbacks);
         int dataCount = feedbacks.size();
-        result.setDataCount(dataCount);
+        pageResult.setCurrentDataCount(dataCount);
+        pageResult.setTotalDataCount(totalDataCount);
+        pageResult.setCurrentPageNumber(currentPageNumber);
         if (dataCount / 8 == 0) {
-            result.setPageCount(1);
+            pageResult.setTotalPageCount(1);
         } else if (dataCount % 8 > 0) {
-            result.setPageCount(dataCount / 8 + 1);
+            pageResult.setTotalPageCount(dataCount / 8 + 1);
         } else {
-            result.setPageCount(dataCount / 8);
+            pageResult.setTotalPageCount(dataCount / 8);
         }
-        resp.getWriter().print(JSON.toJSONString(result));
+
+        resp.getWriter().print(JSON.toJSONString(pageResult));
     }
 
     @Override

@@ -4,13 +4,10 @@ import com.FilmReviewWeb.Dao.FeedbackDao;
 import com.FilmReviewWeb.Dao.FilmDao;
 import com.FilmReviewWeb.Dao.ReviewDao;
 import com.FilmReviewWeb.Dao.UserDao;
-import com.FilmReviewWeb.Model.Feedback;
 import com.FilmReviewWeb.Model.Film;
-import com.FilmReviewWeb.Model.Review;
-import com.FilmReviewWeb.Model.User;
 import com.FilmReviewWeb.Service.AdminPageService;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * @author HTwo2O
@@ -18,18 +15,18 @@ import java.util.ArrayList;
  */
 public class AdminPageServiceImpl implements AdminPageService {
     @Override
-    public ArrayList<User> checkAllUser() throws Exception {
-        return new UserDao().seletAllUser();
+    public HashMap<String, Object> checkAllUser(Integer currentPageNumber, Integer pageSize) throws Exception {
+        return new UserDao().seletAllUser(currentPageNumber, pageSize);
     }
 
     @Override
-    public ArrayList<Feedback> checkAllFeedback() throws Exception {
-        return new FeedbackDao().selectAllFeedback();
+    public HashMap<String, Object> checkAllFeedback(Integer currentPageNumber, Integer pageSize) throws Exception {
+        return new FeedbackDao().selectAllFeedback(currentPageNumber, pageSize);
     }
 
     @Override
-    public ArrayList<Review> checkNonCheckedReview() throws Exception {
-        return new ReviewDao().getNonCheckedReviews();
+    public HashMap<String, Object> checkNonCheckedReview(Integer currentPageNumber, Integer pageSize) throws Exception {
+        return new ReviewDao().getNonCheckedReviews(currentPageNumber,  pageSize);
     }
 
     @Override
@@ -40,5 +37,34 @@ public class AdminPageServiceImpl implements AdminPageService {
     @Override
     public boolean addFilm(Film film) throws Exception {
         return new FilmDao().insertFilm(film);
+    }
+
+    @Override
+    public boolean dealFeedback(Integer feedbackId, Integer deal) throws Exception {
+        if(deal.equals(0)){
+            FeedbackDao feedbackDao = new FeedbackDao();
+            boolean hasDelete = feedbackDao.deleteFeedback(feedbackId);
+            return hasDelete;
+        }else {
+            FeedbackDao feedbackDao = new FeedbackDao();
+            boolean hasRead = feedbackDao.readFeedback(feedbackId);
+            return hasRead;
+        }
+
+    }
+
+    @Override
+    public HashMap<String, Object> checkAllFilm(Integer currentPageNumber, Integer pageSize) throws Exception {
+        return new FilmDao().seletAllFilm(currentPageNumber, pageSize);
+    }
+
+    @Override
+    public boolean deleteFilmById(Integer filmId) throws Exception {
+        return new FilmDao().deleteFilmById(filmId);
+    }
+
+    @Override
+    public boolean updateFilm(Film film) throws Exception {
+        return new FilmDao().updateFilm(film);
     }
 }
