@@ -11,20 +11,6 @@ public class UserServiceImpl implements UserService {
     private UserDao userDao = new UserDao();
 
     /**
-     * 用户名注册校验
-     * @param username
-     * @return
-     */
-    public boolean validateUsername(String username){
-
-        try {
-            return userDao.validateUsername(username);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return false;
-    }
-    /**
      * 注册用户
      * @param user
      * @return

@@ -25,6 +25,7 @@ public class GetDetailsDao {
            i = resultSet.getInt(1);
 
         }
+        JDBCUtils.close(connection,preparedStatement,resultSet);
         return i;
     }
 
@@ -33,6 +34,7 @@ public class GetDetailsDao {
      */
     public List<DisplayFilms> findByPage(int cid, int start, int pageSize) throws SQLException {
         Connection connection = JDBCUtils.getConnection();
+        System.out.println(start+"---"+pageSize);
         String sql = "select * from display_films where cid = ? limit ?, ?";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setInt(1,cid);
@@ -40,17 +42,17 @@ public class GetDetailsDao {
         preparedStatement.setInt(3,pageSize);
         ResultSet resultSet =  preparedStatement.executeQuery();
         List<DisplayFilms> displayFilmsList= new ArrayList<DisplayFilms>();
-        if(resultSet.next()){
-            while(resultSet.next()){
-                DisplayFilms displayFilms = new DisplayFilms();
-                displayFilms.setCid(resultSet.getInt("cid"));
-                displayFilms.setRotation(resultSet.getInt("rotation"));
-                displayFilms.setContent(resultSet.getString("content"));
-                displayFilms.setFilmName(resultSet.getString("film_name"));
-                displayFilms.setImageSource(resultSet.getString("img_src"));
-                displayFilmsList.add(displayFilms);
-            }
+
+        while(resultSet.next()){
+            DisplayFilms displayFilms = new DisplayFilms();
+            displayFilms.setCid(resultSet.getInt("cid"));
+            displayFilms.setFilmName(resultSet.getString("film_name"));
+            displayFilms.setImageSource(resultSet.getString("img_src"));
+            displayFilms.setRating(resultSet.getFloat("rating"));
+            displayFilmsList.add(displayFilms);
         }
+
+        JDBCUtils.close(connection,preparedStatement,resultSet);
         return displayFilmsList;
     };
 }

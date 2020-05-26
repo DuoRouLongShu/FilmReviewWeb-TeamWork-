@@ -76,6 +76,7 @@ public class RegistUserServlet extends HttpServlet {
         //设置content-type
         resp.setContentType("application/json; charset=utf-8");
         resp.getWriter().write(json);*/
+        System.out.println(flag);
         resp.getWriter().print(JSON.toJSONString(info));
     }
 

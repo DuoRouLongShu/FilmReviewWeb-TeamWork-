@@ -38,7 +38,7 @@ public class GetDetailsServlet extends HttpServlet {
         if(pageSizeStr != null && pageSizeStr.length() > 0){
             pageSize = Integer.parseInt(pageSizeStr);
         }else{
-            pageSize=1;
+            pageSize=5;
         }
 
         int currentPage = 0;//当前页码，如果不传递，则默认为第一页

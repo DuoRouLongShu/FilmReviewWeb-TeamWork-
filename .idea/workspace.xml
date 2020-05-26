@@ -11,41 +11,40 @@
       <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/Login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/Register.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/Register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Dao/CategoryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Dao/CategoryDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Dao/GetDetailsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Dao/GetDetailsDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Model/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Model/Category.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Model/DisplayFilms.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Model/DisplayFilms.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Model/ResultInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Model/ResultInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Model/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Service/Impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Service/Impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/ExitServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/ExitServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/FindUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/FindUserServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/LoginServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/RegistUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/RegistUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/pages/zhuce.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Servlet/homepage/GetDetailsServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Servlet/homepage/GetDetailsServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/css/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/css/Login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/css/Register.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/css/Register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/homePage.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/CategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/CategoryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/GetDetailsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/GetDetailsDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Category.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/DisplayFilms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/DisplayFilms.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/ResultInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/ResultInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/Impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/Impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/User/ExitServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/User/ExitServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/User/FindUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/User/FindUserServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/User/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/User/LoginServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/User/RegistUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/User/RegistUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/homepage/GetDetailsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/homepage/GetDetailsServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/Login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/Register.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/Register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Dao/CategoryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Dao/CategoryDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Dao/GetDetailsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Dao/GetDetailsDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/Category.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/DisplayFilms.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/DisplayFilms.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/ResultInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/ResultInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Model/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/Impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/Impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/ExitServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/ExitServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/FindUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/FindUserServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/LoginServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/RegistUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/RegistUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/zhuce.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/homepage/GetDetailsServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/homepage/GetDetailsServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/Login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/Register.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/Register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/homePage.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -453,6 +452,14 @@
       <workItem from="1590293028548" duration="436000" />
       <workItem from="1590293575844" duration="1370000" />
       <workItem from="1590302226636" duration="5045000" />
+      <workItem from="1590308159383" duration="4540000" />
+      <workItem from="1590315438732" duration="1907000" />
+      <workItem from="1590320952771" duration="1214000" />
+      <workItem from="1590330058131" duration="425000" />
+      <workItem from="1590331841383" duration="396000" />
+      <workItem from="1590392388858" duration="7027000" />
+      <workItem from="1590399503284" duration="760000" />
+      <workItem from="1590405986465" duration="14785000" />
     </task>
     <servers />
   </component>
@@ -500,10 +507,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1590287379952" />
-    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1590284948175">
+    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1590420652253">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1590284948175" />
+    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1590420652253" />
     <state x="371" y="130" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1590287585103">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -536,54 +543,54 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1590050483809" />
-    <state width="1080" height="165" key="GridCell.Tab.0.bottom" timestamp="1590307290519">
+    <state width="1080" height="186" key="GridCell.Tab.0.bottom" timestamp="1590425329533">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1080" height="165" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590307290519" />
-    <state width="1080" height="165" key="GridCell.Tab.0.center" timestamp="1590307290519">
+    <state width="1080" height="186" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590425329533" />
+    <state width="1080" height="186" key="GridCell.Tab.0.center" timestamp="1590425329533">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1080" height="165" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1590307290519" />
-    <state width="1080" height="165" key="GridCell.Tab.0.left" timestamp="1590307290518">
+    <state width="1080" height="186" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1590425329533" />
+    <state width="1080" height="186" key="GridCell.Tab.0.left" timestamp="1590425329532">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1080" height="165" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1590307290518" />
-    <state width="1080" height="165" key="GridCell.Tab.0.right" timestamp="1590307290519">
+    <state width="1080" height="186" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1590425329532" />
+    <state width="1080" height="186" key="GridCell.Tab.0.right" timestamp="1590425329533">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1080" height="165" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1590307290519" />
-    <state width="1080" height="165" key="GridCell.Tab.1.bottom" timestamp="1590307290519">
+    <state width="1080" height="186" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1590425329533" />
+    <state width="1080" height="186" key="GridCell.Tab.1.bottom" timestamp="1590425329533">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1080" height="165" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590307290519" />
-    <state width="1080" height="165" key="GridCell.Tab.1.center" timestamp="1590307290519">
+    <state width="1080" height="186" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590425329533" />
+    <state width="1080" height="186" key="GridCell.Tab.1.center" timestamp="1590425329533">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1080" height="165" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1590307290519" />
-    <state width="1080" height="165" key="GridCell.Tab.1.left" timestamp="1590307290519">
+    <state width="1080" height="186" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1590425329533" />
+    <state width="1080" height="186" key="GridCell.Tab.1.left" timestamp="1590425329533">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1080" height="165" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1590307290519" />
-    <state width="1080" height="165" key="GridCell.Tab.1.right" timestamp="1590307290519">
+    <state width="1080" height="186" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1590425329533" />
+    <state width="1080" height="186" key="GridCell.Tab.1.right" timestamp="1590425329533">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1080" height="165" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1590307290519" />
-    <state width="1080" height="165" key="GridCell.Tab.2.bottom" timestamp="1590307290519">
+    <state width="1080" height="186" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1590425329533" />
+    <state width="1080" height="186" key="GridCell.Tab.2.bottom" timestamp="1590425329533">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1080" height="165" key="GridCell.Tab.2.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590307290519" />
-    <state width="1080" height="165" key="GridCell.Tab.2.center" timestamp="1590307290519">
+    <state width="1080" height="186" key="GridCell.Tab.2.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590425329533" />
+    <state width="1080" height="186" key="GridCell.Tab.2.center" timestamp="1590425329533">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1080" height="165" key="GridCell.Tab.2.center/0.0.1280.680@0.0.1280.680" timestamp="1590307290519" />
-    <state width="1080" height="165" key="GridCell.Tab.2.left" timestamp="1590307290519">
+    <state width="1080" height="186" key="GridCell.Tab.2.center/0.0.1280.680@0.0.1280.680" timestamp="1590425329533" />
+    <state width="1080" height="186" key="GridCell.Tab.2.left" timestamp="1590425329533">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1080" height="165" key="GridCell.Tab.2.left/0.0.1280.680@0.0.1280.680" timestamp="1590307290519" />
-    <state width="1080" height="165" key="GridCell.Tab.2.right" timestamp="1590307290519">
+    <state width="1080" height="186" key="GridCell.Tab.2.left/0.0.1280.680@0.0.1280.680" timestamp="1590425329533" />
+    <state width="1080" height="186" key="GridCell.Tab.2.right" timestamp="1590425329533">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1080" height="165" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1590307290519" />
+    <state width="1080" height="186" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1590425329533" />
     <state width="1103" height="247" key="GridCell.Tab.3.bottom" timestamp="1590122399154">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -608,9 +615,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1590052542359" />
-    <state x="293" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1590286255565">
+    <state x="293" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1590410134887">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="293" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1590286255565" />
+    <state x="293" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1590410134887" />
   </component>
 </project>

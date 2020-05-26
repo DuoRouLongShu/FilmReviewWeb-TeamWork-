@@ -9,21 +9,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class UserDao {
-
-    /**
-     * 检验用户名是否注册
-     * @param username
-     * @return
-     * @throws SQLException
-     */
-    public boolean validateUsername(String username) throws SQLException{
-        Connection connection = JDBCUtils.getConnection();
-        String sql = "select count(1) from user where user_name = ?";
-        PreparedStatement preparedStatement = connection.prepareStatement(sql);
-        preparedStatement.setString(1,username);
-        Number number = (Number) preparedStatement.executeQuery();
-        return number.intValue() == 0;
-    }
     /**
      * 根据用户名查询用户信息
      * @param username
@@ -37,19 +22,16 @@ public class UserDao {
         preparedStatement.setString(1,username);
         ResultSet resultSet =  preparedStatement.executeQuery();
         if(resultSet.next()){
-            while(resultSet.next()){
                 user.setUserId(resultSet.getInt("user_id"));
                 user.setUserName(resultSet.getString("user_name"));
                 user.setPassword(resultSet.getString("password"));
                 user.setPower(resultSet.getInt("power"));
                 user.setCreatDate(resultSet.getString("regist_date"));
-
-            }
         }else{
             user=null;
 
         }
-
+        JDBCUtils.close(connection,preparedStatement);
         return user;
     };
 
@@ -61,18 +43,27 @@ public class UserDao {
         boolean hasInsert = true;
         Connection connection = JDBCUtils.getConnection();
         String sql = "insert user " +
-                "(user_id,user_name,password,power,regist_date)" +
-                "values (?,?,LEFT(MD5(?),8),?,now())";
+                "(user_name,password,power,regist_date)" +
+                "values (?,LEFT(MD5(?),8),?,now())";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
-        preparedStatement.setInt(1,user.getUserId());
-        preparedStatement.setString(2,user.getUserName());
-        preparedStatement.setString(3,user.getPassword());
-        preparedStatement.setInt(4,user.getPower());
+        preparedStatement.setString(1,user.getUserName());
+        preparedStatement.setString(2,user.getPassword());
+        preparedStatement.setInt(3,user.getPower());
         //数据库更新的条数
         int i = preparedStatement.executeUpdate();
         if (i == 0){
             hasInsert = false;
+            return hasInsert;
         }
+        String sql1 = "insert information " +
+                "(user_name,gender)" +
+                "values (?,?)";
+        PreparedStatement preparedStatement1 = connection.prepareStatement(sql1);
+        preparedStatement1.setString(1,user.getUserName());
+        preparedStatement1.setString(2,user.getGender());
+
+        preparedStatement1.executeUpdate();
+
         JDBCUtils.close(connection,preparedStatement);
         return hasInsert;
     }
@@ -98,12 +89,11 @@ public class UserDao {
                 user.setPassword(resultSet.getString("password"));
                 user.setPower(resultSet.getInt("power"));
                 user.setCreatDate(resultSet.getString("regist_date"));
-
             }
         }else{
             user=null;
         }
-        System.out.println("Dao" + user);
+        JDBCUtils.close(connection,preparedStatement);
         return user;
     }
 }

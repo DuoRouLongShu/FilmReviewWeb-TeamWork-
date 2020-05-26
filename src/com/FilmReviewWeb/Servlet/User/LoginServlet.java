@@ -37,18 +37,17 @@ public class LoginServlet extends HttpServlet {
         String checkcode_server = (String)session.getAttribute("CHECKCODE_SERVER");
         session.removeAttribute("CHECKCODE_SERVER");//保证验证码只使用一次
 
-        System.out.println("---1--");
         //比较
-//        if(checkcode_server==null||!checkcode_server.equalsIgnoreCase(check)){
-//            //验证码错误
-//            ResultInfo info = new ResultInfo();
-//            info.setFlag(false);
-//            info.setErrorMsg("验证码错误");
-//            resp.getWriter().print(JSON.toJSONString(info));
-//            System.out.println(checkcode_server+"---"+check);
-//            return;
-//        }
-        System.out.println("---2--");
+        if(checkcode_server==null||!checkcode_server.equalsIgnoreCase(check)){
+            //验证码错误
+            ResultInfo info = new ResultInfo();
+            info.setFlag(false);
+            info.setErrorMsg("验证码错误");
+            resp.getWriter().print(JSON.toJSONString(info));
+            System.out.println(checkcode_server+"---"+check);
+            return;
+        }
+
         //获取用户名和密码数据
         Map<String, String[]> map = req.getParameterMap();
         //封装User对象

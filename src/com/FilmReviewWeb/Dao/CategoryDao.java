@@ -22,15 +22,16 @@ public class CategoryDao {
         String sql = "select * from category";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         ResultSet resultSet =  preparedStatement.executeQuery();
-        if(resultSet.next()){
-            while(resultSet.next()){
-                Category category = new Category();
-                category.setCid(resultSet.getInt("cid"));
-                category.setCname(resultSet.getString("cname"));
-                categoryList.add(category);
-            }
+
+        while(resultSet.next()){
+            Category category = new Category();
+            category.setCid(resultSet.getInt("cid"));
+            category.setCname(resultSet.getString("cname"));
+            categoryList.add(category);
         }
 
+
+        JDBCUtils.close(connection,preparedStatement,resultSet);
         return categoryList;
     }
 }
