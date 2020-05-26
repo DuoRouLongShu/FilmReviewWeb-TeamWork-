@@ -77,7 +77,7 @@ public class LoginServlet extends HttpServlet {
             //用户名或密码错误
             System.out.println("登录失败");
             info.setFlag(false);
-            info.setErrorMsg("用户名或密码错误");
+            info.setErrorMsg("用户名不存在或密码错误");
 
         }
 
@@ -86,8 +86,9 @@ public class LoginServlet extends HttpServlet {
             //登录成功
             System.out.println("登录成功");
             info.setFlag(true);
-            // 将用户名保存在session中
+            // 将用户名,id保存在session中
             session.setAttribute("userName", user.getUserName());
+            session.setAttribute("userId",user.getUserId());
         }
         //响应数据
         resp.getWriter().print(JSON.toJSONString(info));

@@ -17,7 +17,7 @@ public class InformationDao {
     public Information findByUsername(String username) throws SQLException {
         Connection connection = JDBCUtils.getConnection();
         Information information = new Information();
-        String sql = "select  user.user_name, petName, gender, birthday, hobby, email,signature,imageResource from user LEFT OUTER JOIN information on (user.user_name=information.user_name) and user.user_name=?";
+        String sql = "select  user.user_name, petName, gender, birthday, hobby, email,signature,imageResource from information LEFT OUTER JOIN user on (user.user_name=information.user_name) and user.user_name=?";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, username);
         ResultSet resultSet = preparedStatement.executeQuery();
@@ -46,18 +46,17 @@ public class InformationDao {
     public boolean saveInformation(Information information) throws SQLException{
         boolean hasInsert = true;
         Connection connection = JDBCUtils.getConnection();
-        String sql = "insert information " +
-                "(user_name,petName,birthday,hobby,email,signature,imageResource,gender)" +
-                "values (?,?,?,?,?,?,?,?)";
+        String sql = "update information " +
+                "set petName=?,birthday=?,hobby=?,email=?,signature=?,imageResource=?,gender=? where user_name = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
-        preparedStatement.setString(1,information.getUserName());
-        preparedStatement.setString(2,information.getPetName());
-        preparedStatement.setString(3,information.getBirthday());
-        preparedStatement.setString(4,information.getHobby());
-        preparedStatement.setString(5,information.getEmail());
-        preparedStatement.setString(6,information.getSignature());
-        preparedStatement.setString(7,information.getImageResource());
-        preparedStatement.setString(8,information.getGender());
+        preparedStatement.setString(1,information.getPetName());
+        preparedStatement.setString(2,information.getBirthday());
+        preparedStatement.setString(3,information.getHobby());
+        preparedStatement.setString(4,information.getEmail());
+        preparedStatement.setString(5,information.getSignature());
+        preparedStatement.setString(6,information.getImageResource());
+        preparedStatement.setString(7,information.getGender());
+        preparedStatement.setString(8,information.getUserName());
         //数据库更新的条数
         int i = preparedStatement.executeUpdate();
         if (i == 0){
