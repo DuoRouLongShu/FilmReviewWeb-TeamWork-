@@ -35,8 +35,8 @@
     var comments;
     // 点赞的用户，仅用于测试。实际运行不需要
     var userName = "马志鹏";
-        // 地址栏获取参数的方法
-        function GetRequest() {
+    // 地址栏获取参数的方法
+    function GetRequest() {
             var url = decodeURI(location.search); //获取url中"?"符后的字串
             var theRequest = new Object();
             if (url.indexOf("?") != -1) {
@@ -48,8 +48,9 @@
             }
             return theRequest;
         }
-        // 点赞数的增加与保存，要个人中心的userName、评论的reviewId，
-        function count(obj) {
+
+    // 点赞数的增加与保存，要个人中心的userName、评论的reviewId，
+    function count(obj) {
             var n = $(obj).prop("id").substring(4,5); // 页面上第1~5评论
             // 改变点赞数后要记得保存到数据,currentPage、div包裹的内容，先弄comment的likes，
             var i = totalCount - (currentPage - 1) * 5 - parseInt(n);     // 因为评论是逆序，数据库的第i条,和comment的下标有出入，出错就GG
@@ -67,7 +68,8 @@
                 addLike = $(obj).children(":eq(1)").html(parseInt($(obj).children(":eq(1)").html())+1);
                 $(obj).children(":first").prop("style","color:red");
             }
-            comments.data[i].likes = addLike[0].innerText;
+            console.log(addLike[0].innerText);
+            comments.data[i].likes = parseInt(addLike[0].innerText);
             //前端保存好后，即时请求更新数据库，不影响操作。记录的是，谁为哪条评论点了赞。或者，谁为哪条评论取消了点赞
             $.ajax({
                 url:"./filmpage/giveReviewLike",
@@ -81,23 +83,25 @@
                 }
             })
         }
-        // 上一页和下一页的操作：翻页操作
-        function special(obj) {
-            if($(obj).prop("id") == "next"){
-                currentPage = parseInt(currentPage) + 1;
-            }else{
-                currentPage -= 1;
-            }
-            if (currentPage <= 1) {
-                currentPage = 1;
-                $("#previous").parent().prop("class", "disabled");
-            }
-            if(currentPage >= totalPage) {
-                currentPage = totalPage;
-                $("#next").parent().prop("class", "disabled");
-            }
-            fun(currentPage);
+
+    // 上一页和下一页的操作：翻页操作
+    function special(obj) {
+        if($(obj).prop("id") == "next"){
+            currentPage = parseInt(currentPage) + 1;
+        }else{
+            currentPage -= 1;
         }
+        if (currentPage <= 1) {
+            currentPage = 1;
+            $("#previous").parent().prop("class", "disabled");
+        }
+        if(currentPage >= totalPage) {
+            currentPage = totalPage;
+            $("#next").parent().prop("class", "disabled");
+        }
+        fun(currentPage);
+    }
+
     // 添加不同分页的评论内容
     function fun(page) {
         $("li[class='active']").prop("class","");
@@ -118,8 +122,94 @@
             if (index >= 0) {
                 // 添加元素
                 reviewId.push(comments.data[index--].reviewId);
+            }else{
+                break;
             }
         }
+        // 前后页的样式
+        if (currentPage <= 1) {
+            currentPage = 1;
+            $("#previous").parent().prop("class", "disabled");
+        }else if(currentPage >= totalPage) {
+            currentPage = totalPage;
+            $("#next").parent().prop("class", "disabled");
+        }else{
+            $("#previous").parent().prop("class", "");
+            $("#next").parent().prop("class", "");
+        }
+
+        // 用于点赞的id
+        var id = 1;
+        $("#comment").html("");
+        // // 下标i在方法的上面。为了ajax
+        // $("#name1").html(comments.data[i].userName);
+        // $("#comment1").html(comments.data[i].text);
+        // $("#title1").html(comments.data[i].title);
+        // $("#like1").children(":last").html(comments.data[i].likes); // 点赞做了点改变，注意一下！！
+        // $("#time1").html(comments.data[i].creatDate);
+        // // $("#rate1").html(comments.data[i].rating);
+        // $("#star_grade1").html("");
+        // $("#star_grade1").markingSystem({
+        //     num: 10,
+        //     havePoint: true,
+        //     haveGrade: true,
+        //     unit: '分',
+        //     grade: comments.data[i].rating,
+        //     height: 20,
+        //     width: 20
+        // });
+        // i--;
+        // if(i >= 0) {
+        //     $("#name2").html(comments.data[i].userName);
+        //     $("#comment2").html(comments.data[i].text);
+        //     $("#title2").html(comments.data[i].title);
+        //     $("#like2").children(":last").html(comments.data[i].likes);
+        //     $("#time2").html(comments.data[i].creatDate);
+        //     $("#rate2").html(comments.data[i].rating);
+        // }
+        // i--;
+        // if(i >= 0) {
+        //     $("#name3").html(comments.data[i].userName);
+        //     $("#comment3").html(comments.data[i].text);
+        //     $("#title3").html(comments.data[i].title);
+        //     $("#like3").children(":last").html(comments.data[i].likes);
+        //     $("#time3").html(comments.data[i].creatDate);
+        //     $("#rate3").html(comments.data[i].rating);
+        // }
+        // i--;
+        // if(i >= 0) {
+        //     $("#name4").html(comments.data[i].userName);
+        //     $("#comment4").html(comments.data[i].text);
+        //     $("#title4").html(comments.data[i].title);
+        //     $("#like4").children(":last").html(comments.data[i].likes);
+        //     $("#time4").html(comments.data[i].creatDate);
+        //     $("#rate4").html(comments.data[i].rating);
+        // }
+        // i--;
+        // if(i >= 0) {
+        //     $("#name5").html(comments.data[i].userName);
+        //     $("#comment5").html(comments.data[i].text);
+        //     $("#title5").html(comments.data[i].title);
+        //     $("#like5").children(":last").html(comments.data[i].likes);
+        //     $("#time5").html(comments.data[i].creatDate);
+        //     $("#rate5").html(comments.data[i].rating);
+        // }
+        // $("#content").html("");
+        for (var t = i;t > i - 5 && t >= 0 ; t--) {
+            $("#comment").append("<div>\n" +
+                "            <img src=\"./img/1590053103(1).jpg\" style=\"height: 30px;width: 30px;float: left\">\n" +
+                "            <div style=\"float: left;margin-top: 4px\"><a  href=\"javascript:;\">"+comments.data[t].userName+"</a> 看过</div>\n" +
+                "            <div style=\"color: #9d9d9d;\">&nbsp;&nbsp;&nbsp;(<span id=\"time1\">"+comments.data[t].creatDate+"</span>)&nbsp;&nbsp;&nbsp;<span style=\"color: gold;font-size: large;font-weight: 700\">评分:  <span>"+comments.data[t].rating+"</span>\n" +
+                "            </div><br>\n" +
+                "            <span  class=\"p\">"+comments.data[t].title+"</span><br>\n" +
+                "            <textarea cols=\"132\" rows=\"5\" readonly>"+comments.data[t].text+"</textarea><br>\n" +
+                "            <!--<span class=\"lan\">点赞</span><a href=\"javascript:void(0)\" onclick=count(this); id=\"like1\">0</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->\n" +
+                "            <a href=\"javascript:void(0)\" onclick=count(this); id=like"+(id++)+"><span style=\"color: grey\">❤</span><span>"+comments.data[t].likes+"</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "            <a class=\"lan\" href=\"javascript:;\" onclick=reply(this)>全部回复<span>0</span></a>\n" +
+                "        </div>\n" +
+                "        <br><br>")
+        }
+
         // 检查登录的该用户是否点赞过该信息。每一页5条，先请求看有没有点赞过这5条，用1个ajax实现
         $.ajax({
             url: "./filmpage/checkReviewLike",
@@ -133,78 +223,15 @@
                     if (data.data[k]) {
                         // console.log($($("div[id='comment'] div:nth-child(n)")[j]).children(":eq(6)").children(":last").html());
                         // 返回true，表示该用户已经点赞过该评论，先变红
-                        $($("div[id='comment'] > div:nth-child(n)")[k]).children(":eq(6)").children(":first").prop("style","color:red");
+                        $($("div[id='comment'] > div:nth-child(n)")[k]).children(":eq(8)").children(":first").prop("style","color:red");
                     } else {
                         // 返回false，表示该用户还未点赞过该评论，先变灰。或许不用，因为body里本来就灰
-                        $($("div[id='comment'] > div:nth-child(n)")[k]).children(":eq(6)").children(":first").prop("style","color:grey");
+                        $($("div[id='comment'] > div:nth-child(n)")[k]).children(":eq(8)").children(":first").prop("style","color:grey");
                     }
                 }
             },
             dataType: "json"
         });
-        if (currentPage <= 1) {
-            currentPage = 1;
-            $("#previous").parent().prop("class", "disabled");
-        }else if(currentPage >= totalPage) {
-            currentPage = totalPage;
-            $("#next").parent().prop("class", "disabled");
-        }else{
-            $("#previous").parent().prop("class", "");
-            $("#next").parent().prop("class", "");
-        }
-        // 下标i在方法的上面。为了ajax
-        $("#name1").html(comments.data[i].userName);
-        $("#comment1").html(comments.data[i].text);
-        $("#title1").html(comments.data[i].title);
-        $("#like1").children(":last").html(comments.data[i].likes); // 点赞做了点改变，注意一下！！
-        $("#time1").html(comments.data[i].creatDate);
-        // $("#rate1").html(comments.data[i].rating);
-        $("#star_grade1").html("");
-        $("#star_grade1").markingSystem({
-            num: 10,
-            havePoint: true,
-            haveGrade: true,
-            unit: '分',
-            grade: comments.data[i].rating,
-            height: 20,
-            width: 20
-        });
-        i--;
-        if(i >= 0) {
-            $("#name2").html(comments.data[i].userName);
-            $("#comment2").html(comments.data[i].text);
-            $("#title2").html(comments.data[i].title);
-            $("#like2").children(":last").html(comments.data[i].likes);
-            $("#time2").html(comments.data[i].creatDate);
-            $("#rate2").html(comments.data[i].rating);
-        }
-        i--;
-        if(i >= 0) {
-            $("#name3").html(comments.data[i].userName);
-            $("#comment3").html(comments.data[i].text);
-            $("#title3").html(comments.data[i].title);
-            $("#like3").children(":last").html(comments.data[i].likes);
-            $("#time3").html(comments.data[i].creatDate);
-            $("#rate3").html(comments.data[i].rating);
-        }
-        i--;
-        if(i >= 0) {
-            $("#name4").html(comments.data[i].userName);
-            $("#comment4").html(comments.data[i].text);
-            $("#title4").html(comments.data[i].title);
-            $("#like4").children(":last").html(comments.data[i].likes);
-            $("#time4").html(comments.data[i].creatDate);
-            $("#rate4").html(comments.data[i].rating);
-        }
-        i--;
-        if(i >= 0) {
-            $("#name5").html(comments.data[i].userName);
-            $("#comment5").html(comments.data[i].text);
-            $("#title5").html(comments.data[i].title);
-            $("#like5").children(":last").html(comments.data[i].likes);
-            $("#time5").html(comments.data[i].creatDate);
-            $("#rate5").html(comments.data[i].rating);
-        }
     }
 
     // 回复页面，跳转到另一个资源
@@ -220,8 +247,9 @@
         localStorage.rating = rating;
         localStorage.title = title;
         localStorage.comment = comment;
-        location.href = 'http://localhost:8080/FilmReviewWeb/CommentArea.html';
+        window.open('http://localhost:8080/FilmReviewWeb/CommentArea.html');
     }
+
     $(function (){
         // 地址栏获取电影名？
         var json = GetRequest();
@@ -286,14 +314,32 @@
             // window.location.href = "http://localhost:8080/FilmReviewWeb/WriteComment.html?filmName"+data.data.filmName;
             window.location.href = "http://localhost:8080/FilmReviewWeb/WriteComment.html";
         });
-        // $("#collect").click(function () {
-        //     alert("collect")
-        // });
+
+        $("#collect").click(function () {
+            // 根据收藏的关系，动态改变的数据
+            var isCollect;
+            if($("#collect").prop("value") == "收藏☆") {
+                $($("#collect").prop("value", "已收藏★"));
+                isCollect = true;
+            }else if($("#collect").prop("value") == "已收藏★"){
+                $($("#collect").prop("value", "收藏☆"));
+                isCollect = false;
+            }
+            $.ajax({
+                url:"",
+                type:"post",
+                data:{"userName":userName,"filmName": MovieName,"isCollect":isCollect},
+                success:function (data) {
+                    console.log(data)
+                },
+                dataType:"json"
+            })
+        });
 
 
     });
 </script>
-        <style>
+<style>
             body{
 
             }
@@ -395,6 +441,7 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
+
 <div id="myMargin">
     <span class="name t filmName" style="margin-left: 40px">电影名称 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="time">时间</span>)<br>
     <div class="row t">
@@ -411,9 +458,9 @@
             梗概:    <span id="synopsis">梗概</span><br>
         </div>
     </div>
-    <input type="button" class="btn btn-default t write" value="写影评" style="margin-left: 40px">
-    <input type="button" class="btn btn-default t btn-info" value="收藏" id="collect">
-    <input type="button" class="btn btn-default t btn-warning" value="分享到" >
+    <input type="button" class="btn btn-default t write" value="写影评" style="margin-left: 40px;font-size: medium">
+    <input type="button" class="btn btn-default t btn-info" value="收藏☆" id="collect" style="font-size: medium">
+    <input type="button" class="btn btn-default t btn-warning" value="分享到" style="font-size: medium" >
     <br><br><br>
     <div>
         <h2 class="t">网友影评</h2>
@@ -427,65 +474,71 @@
 
      <!--评论区-->
     <div class="t" id="comment">
-        <div id="1">
-            <div style="float: left;margin-top: 4px"><span id="name1" style="color: #2aabd2">用户名字</span> 看过</div>
-            <div style="color: #9d9d9d;">&nbsp;&nbsp;&nbsp;(<span id="time1">评论时间</span>)&nbsp;&nbsp;&nbsp;<span style="color: gold;font-size: large;font-weight: 700">评分:  <!--<span id="rate1">5.0</span>-->
-                <span id="star_grade1"></span></span>
-            </div>
-            <span id="title1" class="p">标题</span><br>
-            <textarea cols="132" rows="5" id="comment1"  readonly>评论导入</textarea><br>
-            <!--<span class="lan">点赞</span><a href="javascript:void(0)" onclick=count(this); id="like1">0</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
-            <a href="javascript:void(0)" onclick=count(this); id="like1"><span style="color: grey">❤</span><span>0</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="lan" href="javascript:;" onclick=reply(this)>全部回复<span>0</span></a>
-        </div>
-        <br><br>
-        <div id="2">
-            <div style="float: left;;margin-top: 4px"><span id="name2" style="color: #2aabd2">用户名字</span> 看过</div>
-            <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time2">评论时间</span>)&nbsp;&nbsp;&nbsp;<span style="color: gold;font-size: large;font-weight: 700">评分:  <span id="rate2">5.0</span></span>
-            </div>
-            <span id="title2" class="p">标题</span><br>
-            <textarea cols="132" rows="5" id="comment2"  readonly>评论导入</textarea><br>
-            <!--<span class="lan">点赞</span><a href="javascript:void(0)" onclick=count(this); id="like2">0</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
-            <a href="javascript:void(0)" onclick=count(this); id="like2"><span style="color: grey">❤</span><span>0</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="lan" href="javascript:;" onclick=reply(this)>全部回复<span>0</span></a>
-        </div>
-        <br><br>
+        <!--在上面修改了 爱心形状的 儿子位置，因为添加了img-->
+        <!--<div id="1">-->
+            <!--<img src="./img/1590053103(1).jpg" style="height: 30px;width: 30px;float: left">-->
+            <!--<div style="float: left;margin-top: 4px"><a id="name1" href="javascript:;">用户名字</a> 看过</div>-->
+            <!--<div style="color: #9d9d9d;">&nbsp;&nbsp;&nbsp;(<span id="time1">评论时间</span>)&nbsp;&nbsp;&nbsp;<span style="color: gold;font-size: large;font-weight: 700">评分:  &lt;!&ndash;<span id="rate1">5.0</span>&ndash;&gt;-->
+                <!--<span id="star_grade1"></span></span>-->
+            <!--</div><br>-->
+            <!--<span id="title1" class="p">标题</span><br>-->
+            <!--<textarea cols="132" rows="5" id="comment1"  readonly>评论导入</textarea><br>-->
+            <!--&lt;!&ndash;<span class="lan">点赞</span><a href="javascript:void(0)" onclick=count(this); id="like1">0</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ndash;&gt;-->
+            <!--<a href="javascript:void(0)" onclick=count(this); id="like1"><span style="color: grey">❤</span><span>0</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+            <!--<a class="lan" href="javascript:;" onclick=reply(this)>全部回复<span>0</span></a>-->
+        <!--</div>-->
+        <!--<br><br>-->
+        <!--<div id="2">-->
+            <!--<img src="./img/1590053103(1).jpg" style="height: 30px;width: 30px;float: left">-->
+            <!--<div style="float: left;;margin-top: 4px"><a id="name2" href="javascript:;">用户名字</a> 看过</div>-->
+            <!--<div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time2">评论时间</span>)&nbsp;&nbsp;&nbsp;<span style="color: gold;font-size: large;font-weight: 700">评分:  <span id="rate2">5.0</span></span>-->
+            <!--</div><br>-->
+            <!--<span id="title2" class="p">标题</span><br>-->
+            <!--<textarea cols="132" rows="5" id="comment2"  readonly>评论导入</textarea><br>-->
+            <!--&lt;!&ndash;<span class="lan">点赞</span><a href="javascript:void(0)" onclick=count(this); id="like2">0</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ndash;&gt;-->
+            <!--<a href="javascript:void(0)" onclick=count(this); id="like2"><span style="color: grey">❤</span><span>0</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+            <!--<a class="lan" href="javascript:;" onclick=reply(this)>全部回复<span>0</span></a>-->
+        <!--</div>-->
+        <!--<br><br>-->
 
-        <div id="3">
-            <div style="float: left;;margin-top: 4px"><span id="name3" style="color: #2aabd2">用户名字</span> 看过</div>
-            <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time3">评论时间</span>)&nbsp;&nbsp;&nbsp;<span style="color: gold;font-size: large;font-weight: 700">评分:  <span id="rate3">5.0</span></span>
-            </div>
-            <span id="title3" class="p">标题</span><br>
-            <textarea cols="132" rows="5" id="comment3"  readonly>评论导入</textarea><br>
-            <!--<span class="lan">点赞</span><a href="javascript:void(0)" onclick=count(this); id="like3">0</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
-            <a href="javascript:void(0)" onclick=count(this); id="like3"><span style="color: grey">❤</span><span>0</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="lan" href="javascript:;" onclick=reply(this)>全部回复<span>0</span></a>
-        </div>
-        <br><br>
+        <!--<div id="3">-->
+            <!--<img src="./img/1590053103(1).jpg" style="height: 30px;width: 30px;float: left">-->
+            <!--<div style="float: left;;margin-top: 4px"><a id="name3" href="javascript:;">用户名字</a> 看过</div>-->
+            <!--<div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time3">评论时间</span>)&nbsp;&nbsp;&nbsp;<span style="color: gold;font-size: large;font-weight: 700">评分:  <span id="rate3">5.0</span></span>-->
+            <!--</div><br>-->
+            <!--<span id="title3" class="p">标题</span><br>-->
+            <!--<textarea cols="132" rows="5" id="comment3"  readonly>评论导入</textarea><br>-->
+            <!--&lt;!&ndash;<span class="lan">点赞</span><a href="javascript:void(0)" onclick=count(this); id="like3">0</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ndash;&gt;-->
+            <!--<a href="javascript:void(0)" onclick=count(this); id="like3"><span style="color: grey">❤</span><span>0</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+            <!--<a class="lan" href="javascript:;" onclick=reply(this)>全部回复<span>0</span></a>-->
+        <!--</div>-->
+        <!--<br><br>-->
 
-        <div id="4">
-            <div style="float: left;;margin-top: 4px"><span id="name4" style="color: #2aabd2">用户名字</span> 看过</div>
-            <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time4">评论时间</span>)&nbsp;&nbsp;&nbsp;<span style="color: gold;font-size: large;font-weight: 700">评分:  <span id="rate4">5.0</span></span>
-            </div>
-            <span id="title4" class="p">标题</span><br>
-            <textarea cols="132" rows="5" id="comment4"  readonly>评论</textarea><br>
-            <!--<span class="lan">点赞</span><a href="javascript:void(0)" onclick=count(this); id="like4">0</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
-            <a href="javascript:void(0)" onclick=count(this); id="like4"><span style="color: grey">❤</span><span>0</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="lan" href="javascript:;" onclick=reply(this)>全部回复<span>0</span></a>
-        </div>
-        <br><br>
+        <!--<div id="4">-->
+            <!--<img src="./img/1590053103(1).jpg" style="height: 30px;width: 30px;float: left">-->
+            <!--<div style="float: left;;margin-top: 4px"><a id="name4" href="javascript:;">用户名字</a> 看过</div>-->
+            <!--<div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time4">评论时间</span>)&nbsp;&nbsp;&nbsp;<span style="color: gold;font-size: large;font-weight: 700">评分:  <span id="rate4">5.0</span></span>-->
+            <!--</div><br>-->
+            <!--<span id="title4" class="p">标题</span><br>-->
+            <!--<textarea cols="132" rows="5" id="comment4"  readonly>评论</textarea><br>-->
+            <!--&lt;!&ndash;<span class="lan">点赞</span><a href="javascript:void(0)" onclick=count(this); id="like4">0</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ndash;&gt;-->
+            <!--<a href="javascript:void(0)" onclick=count(this); id="like4"><span style="color: grey">❤</span><span>0</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+            <!--<a class="lan" href="javascript:;" onclick=reply(this)>全部回复<span>0</span></a>-->
+        <!--</div>-->
+        <!--<br><br>-->
 
-        <div id="5">
-            <div style="float: left;;margin-top: 4px"><span id="name5" style="color: #2aabd2">用户名字</span> 看过</div>
-            <div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time5">评论时间</span>)&nbsp;&nbsp;&nbsp;<span style="color: gold;font-size: large;font-weight: 700">评分:  <span id="rate5">5.0</span></span>
-            </div>
-            <span id="title5" class="p">标题</span><br>
-            <textarea cols="132" rows="5" id="comment5" readonly>评论导入</textarea><br>
-            <!--<span class="lan">点赞</span><a href="javascript:void(0)" onclick=count(this); id="like5">0</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
-            <a href="javascript:void(0)" onclick=count(this); id="like5"><span style="color: grey">❤</span><span>0</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="lan" href="javascript:;" onclick=reply(this)>全部回复<span>0</span></a>
-        </div>
-        <br><br>
+        <!--<div id="5">-->
+            <!--<img src="./img/1590053103(1).jpg" style="height: 30px;width: 30px;float: left">-->
+            <!--<div style="float: left;;margin-top: 4px"><a id="name5" href="javascript:;">用户名字</a> 看过</div>-->
+            <!--<div style="color: #9d9d9d">&nbsp;&nbsp;&nbsp;(<span id="time5">评论时间</span>)&nbsp;&nbsp;&nbsp;<span style="color: gold;font-size: large;font-weight: 700">评分:  <span id="rate5">5.0</span></span>-->
+            <!--</div><br>-->
+            <!--<span id="title5" class="p">标题</span><br>-->
+            <!--<textarea cols="132" rows="5" id="comment5" readonly>评论导入</textarea><br>-->
+            <!--&lt;!&ndash;<span class="lan">点赞</span><a href="javascript:void(0)" onclick=count(this); id="like5">0</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ndash;&gt;-->
+            <!--<a href="javascript:void(0)" onclick=count(this); id="like5"><span style="color: grey">❤</span><span>0</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+            <!--<a class="lan" href="javascript:;" onclick=reply(this)>全部回复<span>0</span></a>-->
+        <!--</div>-->
+        <!--<br><br>-->
     </div>
 
 </div>

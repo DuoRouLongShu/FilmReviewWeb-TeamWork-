@@ -22,6 +22,8 @@
     <script src="./js/bootstrap.min.js"></script>
     <script>
         var userName = "马志鹏";
+        // 个人的信息
+        var informations;
         // 个人的影评
         var filmComments;
         // 个人的收藏电影
@@ -33,9 +35,14 @@
         var totalPage;
         // 专用于 影评，因为需要逆序
         var totalCount;
-
+        var image;
         // 3个请求，一次性
         $(function () {
+            // 将登录的userName和点击人物头像（查看信息）的名字做比较，决定要不要有"修改"按钮
+            if(false) {
+                $("#modal").prop("style", "display:none");
+                $("input[type='file']").prop("style", "display:none");
+            }
             // 按用户名请求影评资源
             // $.ajax({
             //     url:"",
@@ -48,6 +55,7 @@
             //     },
             //     dataType:"json"
             // });
+
             // 按用户名请求收藏资源
             // $.ajax({
             //     url:"",
@@ -59,6 +67,7 @@
             //     },
             //     dataType:"json"
             // });
+
             // 按用户名请求点赞资源
             // $.ajax({
             //     url:"",
@@ -70,26 +79,40 @@
             //     },
             //     dataType:"json"
             // });
+
+            // 请求用户个人信息
             $.ajax({
                 url:"",
-                data:{},
+                data:{"userName":userName},
                 type:"post",
                 success:function (data) {
-
+                    informations = data;
+                    console.log(data);
+                    // $($("div[class='col-lg-8'] span:nth-child(n)")[0]).html(informations.data.userName);  //登录名
+                    // $($("div[class='col-lg-8'] span:nth-child(n)")[1]).html(informations.data.petName);
+                    // $($("div[class='col-lg-8'] span:nth-child(n)")[2]).html(informations.data.gender);
+                    // $($("div[class='col-lg-8'] span:nth-child(n)")[3]).html(informations.data.birthday);
+                    // $($("div[class='col-lg-8'] span:nth-child(n)")[4]).html(informations.data.hobby);
+                    // $($("div[class='col-lg-8'] span:nth-child(n)")[5]).html(informations.data.email);
                 },
-                dataType:"json"
+                dataType:"json",
+                error:function () {
+                    console.log("失败")
+                }
             });
+
             // 图片的提交
-            var
-                fileInput = document.getElementById('test-image-file'),
-                info = document.getElementById('test-file-info'),
-                preview = document.getElementById('test-image-preview');
-            // 监听change事件:
-            fileInput.addEventListener('change', function() {
+            {
+                var
+                    fileInput = document.getElementById('test-image-file'),
+                    info = document.getElementById('test-file-info'),
+                    preview = document.getElementById('test-image-preview');
+                // 监听change事件:
+                fileInput.addEventListener('change', function () {
                     // 清除背景图片:
                     preview.style.backgroundImage = "";
                     // 检查文件是否选择:
-                    if(!fileInput.value) {
+                    if (!fileInput.value) {
                         info.innerHTML = '没有选择文件';
                         return;
                     }
@@ -97,31 +120,33 @@
                     var file = fileInput.files[0];
                     //判断文件大小
                     var size = file.size;
-                    // if(size >= 1*1024*1024){
-                    //     alert('文件大于1兆不行!');
-                    //     return false;
-                    // }
+                    if(size >= 3*1024*1024){
+                        alert('文件大于3M，请重新选择!');
+                        return false;
+                    }
                     // 获取File信息:
                     // info.innerHTML = '文件: ' + file.name + '<br>' +
                     //     '大小: ' + file.size + 'B<br>' +
                     //     '修改: ' + file.lastModifiedDate;
-                    if(file.type !== 'image/jpeg' && file.type !== 'image/png' && file.type !== 'image/gif') {
+                    if (file.type !== 'image/jpeg' && file.type !== 'image/png' && file.type !== 'image/gif') {
                         alert('不是有效的图片文件!');
                         return;
                     }
                     // 读取文件:
                     var reader = new FileReader();
-                    reader.onload = function(e) {
-                        var
-                            data = e.target.result; // 'data:image/jpeg;base64,/9j/4AAQSk...(base64编码)...}'
+                    reader.onload = function (e) {
+                        console.log(e.target.result)
+                        var data = e.target.result; // 'data:image/jpeg;base64,/9j/4AAQSk...(base64编码)...}'
+                        image = data;
                         preview.style.backgroundImage = 'url(' + data + ')';
                     };
                     // 以DataURL的形式读取文件:
                     reader.readAsDataURL(file);
                     console.log(file);
                     $(preview).html("");
-                    $(preview).prop("style","");
+                    $(preview).prop("style", "");
                 });
+            }
         });
 
         // 影评
@@ -217,27 +242,40 @@
             // true 和 fasle 代表单选框是否被选中
             // console.log($("input[value='male']").prop("checked"));
             // console.log($("#birthday").val());
+            var spans = $("div[class='col-lg-8'] span:nth-child(n)");
             // 获取元素的修改值
-            $($("div[class='col-lg-8'] span:nth-child(n)")[1]).html($("#petName").val());
-            $($("div[class='col-lg-8'] span:nth-child(n)")[3]).html($("#birthday").val());
-            $($("div[class='col-lg-8'] span:nth-child(n)")[4]).html($("#hobby").val());
-            $($("div[class='col-lg-8'] span:nth-child(n)")[5]).html($("#email").val());
+            $(spans[1]).html($("#petName").val());
+            $(spans[3]).html($("#birthday").val());
+            $(spans[4]).html($("#hobby").val());
+            $(spans[5]).html($("#email").val());
             $("textarea[name='textarea']").val($("#signature").val());
             if($("input[value='male']").prop("checked")){
                 // 性别选择  男
-                $($("div[class='col-lg-8'] span:nth-child(n)")[2]).html("男");
+                $(spans[2]).html("男");
             }else{
                 // 性别选择  女
-                $($("div[class='col-lg-8'] span:nth-child(n)")[2]).html("女");
+                $(spans[2]).html("女");
             }
+            // 更新数据库的内容
+            $.ajax({
+                url:"",
+                type:"post",
+                data:{"userName":userName,"petName":$(spans[1]).html(),"birthday":$(spans[3]).html(), "hobby":$(spans[4]).html(),
+                    "email":$(spans[5]).html(),"signature":$("textarea[name='textarea']").val()
+                },
+                success:function (data) {
+                    console.log(data);
+                },
+                dataType:"json"
+            })
         }
 
         // 收藏的电影跳转
         function select(obj) {
             //获取电影名
             var filmName = $(obj).children(":last").html();
-            //跳转特定页面
-            window.location.href = "http://localhost:8080/FilmReviewWeb/Movie.html?filmName="+filmName;
+            //打开特定页面
+            window.open("http://localhost:8080/FilmReviewWeb/Movie.html?filmName="+filmName);
         }
         // 个人的收藏的电影信息每页展示
         function collectShow(page) {
@@ -248,7 +286,7 @@
                 $("div[class='row']").append(
                     "<div class=\"col-lg-2\">\n" +
                     "     <a href=\"javascript:;\" onclick=select(this)>\n" +
-                    "        <img src=\"./img/1590053103(1).jpg\"  class=\"img-thumbnail\"><br>\n" +
+                    "        <img src="+collectFilms.data[i].imageResource+"class='img-thumbnail'><br>\n" +
                     "        <span>"+collectFilms.data[i].filmName+"</span>\n" +
                     "     </a>\n" +
                     "     <p style='text-align: center;color: gold;font-weight: bolder;font-size: large'>"+collectFilms.data[i].rating+"</p>\n" +
@@ -262,15 +300,15 @@
             $("#content").html("");
             // 逆序
             var start = (totalCount - 1) - (page - 1) * 5;
-            // 5条评论
+            // 5条评论,下面的userName是登录的用户，有且仅有一个值！！！
             for (var i = start; i > start - 5 && i >= 0; i--) {
                 $("#content").append(
                     "<div style=\"margin-top:30px;\">\n" +
-                    "                    <label class='font'>用户名</label>&emsp;点评&emsp;<a href=\"#\">电影名字</a>&emsp;<span style=\"color: darkgray;\">(<span>时间</span>)</span>&emsp;\n" +
-                    "                    <span class=\"font\" style=\"color: gold;\">评分：<span>0</span></span>\n" +
-                    "                    <h4 style=\"color: darkred;font-weight: 400;\">标题</h4>\n" +
-                    "                    <p>评论导入</p>\n" +
-                    "                </div>"
+                    "     <label class='font'>"+ userName +"</label>&emsp;点评&emsp;<a href=\"#\">"+filmComments.data[i].filmName+"</a>&emsp;<span style=\"color: darkgray;\">(<span>"+filmComments.data[i].creatDate+"</span>)</span>&emsp;\n" +
+                    "     <span class=\"font\" style=\"color: gold;\">评分：<span>"+filmComments.data[i].rating+"</span></span>\n" +
+                    "     <h4 style=\"color: darkred;font-weight: 400;\">"+filmComments.data[i].title+"</h4>\n" +
+                    "     <p>"+filmComments.data[i].text+"</p>\n" +
+                    "</div>"
                 );
             }
         }
@@ -283,21 +321,50 @@
             for (var i = start; i < start + 5 && i < likesComments.data.length; i++) {
                 $("#content2").append(
                     "<div style=\"margin-top:30px;\">\n" +
-                    "                    <label class='font'>用户名</label>&emsp;点评&emsp;<a href=\"#\">电影名字</a>&emsp;<span style=\"color: darkgray;\">(<span>时间</span>)</span>&emsp;\n" +
-                    "                    <span class=\"font\" style=\"color: gold;\">评分：<span>0</span></span>\n" +
-                    "                    <h4 style=\"color: darkred;font-weight: 400;\">标题</h4>\n" +
-                    "                    <p>评论导入</p>\n" +
-                    "                </div>"
+                    "     <label class='font'>"+likesComments.data[i].userName+"</label>&emsp;点评&emsp;<a href=\"#\">"+likesComments.data[i].filmName+"</a>&emsp;<span style=\"color: darkgray;\">(<span>"+likesComments.data[i].creatDate+"</span>)</span>&emsp;\n" +
+                    "     <span class=\"font\" style=\"color: gold;\">评分：<span>"+likesComments.data[i].rating+"</span></span>\n" +
+                    "     <h4 style=\"color: darkred;font-weight: 400;\">"+likesComments.data[i].title+"</h4>\n" +
+                    "     <p>"+likesComments.data[i].text+"</p>\n" +
+                    "</div>"
                 );
             }
+        }
+
+        // 用户反馈
+        function feedback() {
+            var val = $("#text").val();
+            $.ajax({
+                url:"",
+                data:{"text":val},
+                type:"post",
+                success:function (data) {
+                    console.log(data)
+                }
+            });
+            $("#text").val("");
+            alert("提交成功！感谢您的反馈！")
         }
     </script>
     <style>
         ul[role='tablist']{
-            background-color: #3c3c3c;
+            background-color: #8affc3
+        }
+        #information{
+            background-color: #f7f3ff;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-bottom: 50px;
+        }
+        #body{
+            border: solid 2px #70ffe4;
+            padding-top: 20px;
+            padding-left: 100px;
+            padding-right: 100px;
+            padding-bottom: 100px;
+            background: url("img/45d30c6591fc702987439347f480a426.jpg") no-repeat center;
         }
         ul li a{
-            color: aqua;
+            color: cornflowerblue;
         }
         li[class='active'] a{
             color: #b92c28;
@@ -341,7 +408,7 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-<div style="margin-left: 300px;margin-right: 300px;margin-bottom: 200px">
+<div style="margin-left: 300px;margin-right: 300px;margin-bottom: 200px" id="body">
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
         <!-- a标签的href属性必须和下面内容的id对应-->
@@ -350,6 +417,7 @@
         <li role="presentation"><a href="#filmReview" role="tab" data-toggle="tab"> <!--onclick=filmReview()-->&emsp;影评&emsp;</a></li>
         <li role="presentation"><a href="#collect" role="tab" data-toggle="tab"> <!--onclick=collect()-->&emsp;收藏&emsp;</a></li>
         <li role="presentation"><a href="#likes" role="tab" data-toggle="tab"> <!--onclick=likes()-->&emsp;点赞&emsp;</a></li>
+        <li role="presentation"><a href="#feedback" role="tab" data-toggle="tab"> <!--onclick=feedback()-->&emsp;用户反馈&emsp;</a></li>
     </ul>
 
     <!-- Tab panes -->
@@ -360,14 +428,14 @@
             <div class="row" style="margin-top: 30px;">
                 <div class="col-lg-4">
                     <form method="post" enctype="multipart/form-data" id="file_upload">
-                        　　<div id="test-image-preview"  style="border: solid 1px">快来上传你的头像把</div>
+                        　　<div id="test-image-preview"  style="border: solid 1px;color: blue">快来上传你的头像把</div>
                     　　　　<input style="width: 72px;background-color: #2aabd2" type="file" id="test-image-file" name="test" accept="image/gif, image/jpeg, image/png, image/jpg">
                     </form>
                 </div>
                 <div class="col-lg-8" style="margin-top: 30px">
                     <label class="font" id="userName">用户名:</label>&emsp;<span class="font">登录名字</span>&emsp;
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" onclick=modify()>点击修改个人信息</button><br>
+                    <button type="button" id="modal" class="btn btn-primary btn-sm" data-toggle="modal" hidden data-target="#myModal" onclick=modify()>点击修改个人信息</button><br>
                     <label class="font">昵称:</label>&emsp;<span class="font">马志鹏</span><br>
                     <label class="font">性别:</label>&emsp;<span class="font">女</span><br>
                     <label class="font">生日:</label>&emsp;<span class="font">1999-12-29</span><br>
@@ -377,7 +445,7 @@
             </div>
             <br><br>
             <label style="font-size: 20px;">⭐个性签名⭐</label><br>
-            <textarea cols="100" rows="4" class='form-control' name="textarea">兄弟间那叫爱情</textarea>
+            <textarea cols="100" rows="4" class='form-control' name="textarea" readonly>兄弟间那叫爱情</textarea>
         </div>
         <!-- Modal 活页-->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -385,7 +453,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">个人信息修改</h4>
+                        <h4 class="modal-title" id="myModalLabel" style="color: cornflowerblue">个人信息修改</h4>
                     </div>
                     <div class="modal-body">
                         <!--主要内容-->
@@ -401,7 +469,7 @@
                         <label for="email" class="font">邮箱</label>
                         <input type="email" class="form-control form-group" id="email" placeholder="邮箱">
                         <label for="signature" class="font">⭐个性签名⭐</label>
-                        <textarea class="form-control form-group" id="signature" placeholder="个性签名" rows="5">我TM是假的？</textarea>
+                        <textarea class="form-control form-group" id="signature" placeholder="个性签名" rows="5"></textarea>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
@@ -496,7 +564,13 @@
             </nav>
         </div>  <!-- 点赞页面 -->
 
-    </div>  <!-- 4个页面 -->
+        <!-- 5. 反馈页面-->
+        <div role="tabpanel" class="tab-pane" id="feedback">
+            <textarea class="form-control" id="text" cols="99" rows="5" style="resize: none;margin-top: 30px" placeholder="反馈信息"></textarea>
+            <input type="button" class="btn btn-info" value="提交反馈" style="margin-top: 20px" onclick=feedback()>
+        </div>
+    </div>  <!-- 5个页面 -->
 </div> <!-- 整个页面 -->
+
 </body>
 </html>

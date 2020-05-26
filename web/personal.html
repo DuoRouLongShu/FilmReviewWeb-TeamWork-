@@ -35,7 +35,7 @@
         var totalPage;
         // 专用于 影评，因为需要逆序
         var totalCount;
-
+        var image;
         // 3个请求，一次性
         $(function () {
             // 将登录的userName和点击人物头像（查看信息）的名字做比较，决定要不要有"修改"按钮
@@ -88,14 +88,17 @@
                 success:function (data) {
                     informations = data;
                     console.log(data);
-                    $($("div[class='col-lg-8'] span:nth-child(n)")[0]).html(informations.data.userName);  //登录名
-                    $($("div[class='col-lg-8'] span:nth-child(n)")[1]).html(informations.data.petName);
-                    $($("div[class='col-lg-8'] span:nth-child(n)")[2]).html(informations.data.gender);
-                    $($("div[class='col-lg-8'] span:nth-child(n)")[3]).html(informations.data.birthday);
-                    $($("div[class='col-lg-8'] span:nth-child(n)")[4]).html(informations.data.hobby);
-                    $($("div[class='col-lg-8'] span:nth-child(n)")[5]).html(informations.data.email);
+                    // $($("div[class='col-lg-8'] span:nth-child(n)")[0]).html(informations.data.userName);  //登录名
+                    // $($("div[class='col-lg-8'] span:nth-child(n)")[1]).html(informations.data.petName);
+                    // $($("div[class='col-lg-8'] span:nth-child(n)")[2]).html(informations.data.gender);
+                    // $($("div[class='col-lg-8'] span:nth-child(n)")[3]).html(informations.data.birthday);
+                    // $($("div[class='col-lg-8'] span:nth-child(n)")[4]).html(informations.data.hobby);
+                    // $($("div[class='col-lg-8'] span:nth-child(n)")[5]).html(informations.data.email);
                 },
-                dataType:"json"
+                dataType:"json",
+                error:function () {
+                    console.log("失败")
+                }
             });
 
             // 图片的提交
@@ -117,10 +120,10 @@
                     var file = fileInput.files[0];
                     //判断文件大小
                     var size = file.size;
-                    // if(size >= 1*1024*1024){
-                    //     alert('文件大于1兆不行!');
-                    //     return false;
-                    // }
+                    if(size >= 3*1024*1024){
+                        alert('文件大于3M，请重新选择!');
+                        return false;
+                    }
                     // 获取File信息:
                     // info.innerHTML = '文件: ' + file.name + '<br>' +
                     //     '大小: ' + file.size + 'B<br>' +
@@ -132,8 +135,9 @@
                     // 读取文件:
                     var reader = new FileReader();
                     reader.onload = function (e) {
-                        var
-                            data = e.target.result; // 'data:image/jpeg;base64,/9j/4AAQSk...(base64编码)...}'
+                        console.log(e.target.result)
+                        var data = e.target.result; // 'data:image/jpeg;base64,/9j/4AAQSk...(base64编码)...}'
+                        image = data;
                         preview.style.backgroundImage = 'url(' + data + ')';
                     };
                     // 以DataURL的形式读取文件:
@@ -325,6 +329,21 @@
                 );
             }
         }
+
+        // 用户反馈
+        function feedback() {
+            var val = $("#text").val();
+            $.ajax({
+                url:"",
+                data:{"text":val},
+                type:"post",
+                success:function (data) {
+                    console.log(data)
+                }
+            });
+            $("#text").val("");
+            alert("提交成功！感谢您的反馈！")
+        }
     </script>
     <style>
         ul[role='tablist']{
@@ -398,6 +417,7 @@
         <li role="presentation"><a href="#filmReview" role="tab" data-toggle="tab"> <!--onclick=filmReview()-->&emsp;影评&emsp;</a></li>
         <li role="presentation"><a href="#collect" role="tab" data-toggle="tab"> <!--onclick=collect()-->&emsp;收藏&emsp;</a></li>
         <li role="presentation"><a href="#likes" role="tab" data-toggle="tab"> <!--onclick=likes()-->&emsp;点赞&emsp;</a></li>
+        <li role="presentation"><a href="#feedback" role="tab" data-toggle="tab"> <!--onclick=feedback()-->&emsp;用户反馈&emsp;</a></li>
     </ul>
 
     <!-- Tab panes -->
@@ -544,7 +564,12 @@
             </nav>
         </div>  <!-- 点赞页面 -->
 
-    </div>  <!-- 4个页面 -->
+        <!-- 5. 反馈页面-->
+        <div role="tabpanel" class="tab-pane" id="feedback">
+            <textarea class="form-control" id="text" cols="99" rows="5" style="resize: none;margin-top: 30px" placeholder="反馈信息"></textarea>
+            <input type="button" class="btn btn-info" value="提交反馈" style="margin-top: 20px" onclick=feedback()>
+        </div>
+    </div>  <!-- 5个页面 -->
 </div> <!-- 整个页面 -->
 
 </body>
