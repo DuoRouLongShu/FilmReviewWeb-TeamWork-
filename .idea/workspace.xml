@@ -14,32 +14,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a45f3d02-5d55-4185-89ac-6b3269ae0bc0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/AdminPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/AdminPageTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Dao/ReviewDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Dao/ReviewDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Service/AdminPageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Service/AdminPageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Service/Impl/AdminPageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Service/Impl/AdminPageServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/AdminPage/CheckNonCheckedReviewServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb_war_exploded/WEB-INF/classes/com/FilmReviewWeb/Servlet/AdminPage/CheckNonCheckedReviewServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/FeedbackDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/FeedbackDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/FilmDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/FilmDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/ReviewDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/ReviewDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Feedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Feedback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/AdminPageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/AdminPageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/Impl/AdminPageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/Impl/AdminPageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/FilmReviewWeb.war" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckAllFeedbackServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckAllFeedbackServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckAllFilmServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckAllFilmServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckAllUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckAllUserServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckNonCheckedReviewServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckNonCheckedReviewServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/AdminPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/AdminPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/AdminPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/AdminPageTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Dao/FilmDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Dao/FilmDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Dao/ReviewDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Dao/ReviewDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/AdminPageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/AdminPageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/Impl/AdminPageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Service/Impl/AdminPageServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/AdminPage/CheckAllUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/AdminPage/CheckAllUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/AdminPage/CheckNonCheckedReviewServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/AdminPage/CheckNonCheckedReviewServlet.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,10 +36,41 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Service/AdminPageService.java">
+        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/DealFeedbackServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="80" column="19" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="19" />
+            <state relative-caret-position="216">
+              <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/DeleteFilmServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/ReviewDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#985#993#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckAllUserServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="48" selection-start-line="48" selection-end-line="56" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,22 +79,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/FilmDao.java">
+        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckNonCheckedReviewServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2442">
-              <caret line="336" column="9" lean-forward="true" selection-start-line="336" selection-start-column="9" selection-end-line="336" selection-end-column="9" />
+            <state relative-caret-position="437">
+              <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1265#1273#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/UpdateFilmServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="20" column="34" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -92,71 +93,50 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckAllFilmServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="28" column="76" lean-forward="true" selection-start-line="28" selection-start-column="66" selection-end-line="28" selection-end-column="76" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckAllFeedbackServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/FeedbackDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-613">
-              <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Feedback.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Service/Impl/AdminPageServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/DealFeedbackServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="27" column="37" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+            <state relative-caret-position="384">
+              <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/DeleteFilmServlet.java">
+        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckAllFeedbackServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+            <state relative-caret-position="408">
+              <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Model/PageResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="20" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Review.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="70">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/ReviewLikeDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="287">
+              <caret line="56" column="52" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -175,6 +155,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>逼</find>
+      <find>qb</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -218,13 +199,9 @@
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Film.java" />
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/AddFilmServlet.java" />
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/PageResult.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckNonCheckedReviewServlet.java" />
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/ReviewDao.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckAllUserServlet.java" />
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Model/User.java" />
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckAllFilmServlet.java" />
-        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckAllFeedbackServlet.java" />
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/AdminPageService.java" />
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Service/Impl/AdminPageServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Test/AdminPageTest.java" />
@@ -234,6 +211,10 @@
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/FeedbackDao.java" />
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/DealFeedbackServlet.java" />
         <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/DeleteFilmServlet.java" />
+        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckAllUserServlet.java" />
+        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckNonCheckedReviewServlet.java" />
+        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckAllFilmServlet.java" />
+        <option value="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckAllFeedbackServlet.java" />
       </list>
     </option>
   </component>
@@ -252,8 +233,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-463" />
-    <option name="y" value="102" />
+    <option name="x" value="722" />
+    <option name="y" value="77" />
     <option name="width" value="1035" />
     <option name="height" value="960" />
   </component>
@@ -297,31 +278,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="Dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FilmReviewWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="Service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FilmReviewWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="Service" type="462c0819:PsiDirectoryNode" />
-              <item name="Impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FilmReviewWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
               <item name="Servlet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -332,6 +288,11 @@
               <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
               <item name="Servlet" type="462c0819:PsiDirectoryNode" />
               <item name="AdminPage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FilmReviewWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FilmReviewWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -585,7 +546,7 @@
       <workItem from="1590327661247" duration="803000" />
       <workItem from="1590406716214" duration="7798000" />
       <workItem from="1590417061617" duration="5458000" />
-      <workItem from="1590460156504" duration="22694000" />
+      <workItem from="1590460156504" duration="27368000" />
     </task>
     <servers />
   </component>
@@ -622,7 +583,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185941000" />
+    <option name="totallyTimeSpent" value="190615000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -637,15 +598,15 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5883777" visible="true" weight="0.2613941" />
-      <window_info id="Structure" order="1" sideWeight="0.4116223" side_tool="true" visible="true" weight="0.2613941" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5879765" visible="true" weight="0.2613941" />
+      <window_info id="Structure" order="1" sideWeight="0.41202345" side_tool="true" visible="true" weight="0.2613941" />
       <window_info id="Web" order="2" sideWeight="0.26" side_tool="true" weight="0.2613941" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.2346041" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39442816" />
+      <window_info anchor="bottom" auto_hide="true" id="Run" order="2" weight="0.12316716" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.398827" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -742,13 +703,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sensitiveword.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -932,58 +886,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Model/PageResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="16" selection-start-line="16" selection-end-line="29" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Review.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Model/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/ReviewDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="164" selection-start-line="164" selection-end-line="172" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#985#993#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckNonCheckedReviewServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="41" column="61" selection-start-line="40" selection-start-column="12" selection-end-line="41" selection-end-column="61" />
-          <folding>
-            <element signature="e#1265#1273#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckAllUserServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1001,16 +907,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="36" column="22" lean-forward="true" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/ReviewLikeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="56" column="52" lean-forward="true" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1071,20 +967,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckAllFilmServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="28" column="76" lean-forward="true" selection-start-line="28" selection-start-column="66" selection-end-line="28" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckAllFeedbackServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Feedback.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -1118,14 +1000,93 @@
     <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/DealFeedbackServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="27" column="37" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/DeleteFilmServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        <state relative-caret-position="336">
+          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/ReviewLikeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="56" column="52" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sensitiveword.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="2" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Model/Review.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/ReviewDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#985#993#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Model/PageResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="20" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckAllUserServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="48" selection-start-line="48" selection-end-line="56" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckNonCheckedReviewServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+          <folding>
+            <element signature="e#1265#1273#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckAllFilmServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/AdminPage/CheckAllFeedbackServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
         </state>
       </provider>
     </entry>

@@ -47,12 +47,12 @@ public class CheckAllFeedbackServlet extends HttpServlet {
         pageResult.setCurrentDataCount(dataCount);
         pageResult.setTotalDataCount(totalDataCount);
         pageResult.setCurrentPageNumber(currentPageNumber);
-        if (dataCount / 8 == 0) {
+        if (totalDataCount / 8 == 0) {
             pageResult.setTotalPageCount(1);
-        } else if (dataCount % 8 > 0) {
-            pageResult.setTotalPageCount(dataCount / 8 + 1);
+        } else if (totalDataCount % 8 > 0) {
+            pageResult.setTotalPageCount(totalDataCount / 8 + 1);
         } else {
-            pageResult.setTotalPageCount(dataCount / 8);
+            pageResult.setTotalPageCount(totalDataCount / 8);
         }
 
         resp.getWriter().print(JSON.toJSONString(pageResult));
