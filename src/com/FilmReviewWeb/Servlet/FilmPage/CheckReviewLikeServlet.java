@@ -19,10 +19,11 @@ import java.io.IOException;
  */
 @WebServlet("/filmpage/checkReviewLike")
 public class CheckReviewLikeServlet extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");
         resp.setContentType("text/html;charset=UTF-8");
-        String userName = req.getParameter("userName");
+        String userName = (String) req.getSession().getAttribute("userName");
         String[] reviewId = req.getParameterValues("reviewId[]");
         /*String[] rr = reviewId.split(",");*/
         Integer[] reviewIds = new Integer[reviewId.length];
@@ -40,6 +41,7 @@ public class CheckReviewLikeServlet extends HttpServlet {
         resp.getWriter().print(JSON.toJSONString(result));
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doPost(request,response);
     }

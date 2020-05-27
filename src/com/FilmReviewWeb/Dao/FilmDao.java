@@ -348,7 +348,7 @@ public class FilmDao {
             String filmName = resultSet.getString("film_name");
             //String filmName;
             //评分
-            Float rating = null;
+            float rating = resultSet.getFloat("rating");
             //导演
             String director = resultSet.getString("director");
             String writer = resultSet.getString("writer");

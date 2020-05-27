@@ -87,10 +87,17 @@ public class LoginServlet extends HttpServlet {
             System.out.println("登录成功");
             info.setFlag(true);
             // 将用户名保存在session中
+            session.setAttribute("power", u.getPower());
             session.setAttribute("userName", user.getUserName());
         }
+        String returnUri = (String) session.getAttribute("returnUri");
         //响应数据
-        resp.getWriter().print(JSON.toJSONString(info));
+        if(returnUri != null){
+            session.removeAttribute("returnUri");
+            resp.sendRedirect(returnUri);
+        }else {
+            resp.getWriter().print(JSON.toJSONString(info));
+        }
 
     }
 }

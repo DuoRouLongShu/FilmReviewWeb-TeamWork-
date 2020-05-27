@@ -12,6 +12,7 @@ import java.util.List;
 public class GetDetailsServiceImpl implements GetDetailsService {
 
     private GetDetailsDao getDetailsDao = new GetDetailsDao();
+    @Override
     public Page pageQuery(int cid, int currentPage, int pageSize){
         //封装Page
         Page page = new Page();

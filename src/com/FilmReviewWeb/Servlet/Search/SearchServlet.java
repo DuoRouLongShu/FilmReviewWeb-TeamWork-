@@ -5,7 +5,6 @@ import com.FilmReviewWeb.Model.Result;
 import com.FilmReviewWeb.Service.Impl.SearchServiceImpl;
 import com.FilmReviewWeb.Service.SearchService;
 import com.alibaba.fastjson.JSON;
-import lombok.SneakyThrows;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,14 +23,19 @@ import java.util.List;
 @WebServlet("/search/searchFilm")
 public class SearchServlet extends HttpServlet {
 
-    @SneakyThrows
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");
         resp.setContentType("text/html;charset=UTF-8");
         String keyword = req.getParameter("keyword");
         SearchService searchService = new SearchServiceImpl();
-        List<Film> films = searchService.searchFilmByKeyword(keyword);
+        List<Film> films = null;
+        try {
+            films = searchService.searchFilmByKeyword(keyword);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         Result result = new Result();
         int size = films.size();
         if (size == 0) {

@@ -1,12 +1,13 @@
 package com.FilmReviewWeb.Dao;
 
+
 import com.FilmReviewWeb.Model.User;
 import com.FilmReviewWeb.Utils.JDBCUtils;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-<<<<<<< HEAD
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -24,15 +25,15 @@ public class UserDao {
      * @return 用户数据List
      * @throws Exception
      */
-    public HashMap<String, Object> seletAllUser(Integer currentPageNumber, Integer pageSize)throws Exception{
+    public HashMap<String, Object> seletAllUser(Integer currentPageNumber, Integer pageSize)throws Exception {
         connection = JDBCUtils.getConnection();
         String sql = "SELECT user_id,user_name,regist_date,last_online_date FROM USER WHERE power=0  ORDER BY user_name LIMIT ?,?";
         preparedStatement = connection.prepareStatement(sql);
-        preparedStatement.setInt(1, (currentPageNumber-1)*pageSize);
+        preparedStatement.setInt(1, (currentPageNumber - 1) * pageSize);
         preparedStatement.setInt(2, pageSize);
         ResultSet resultSet = preparedStatement.executeQuery();
         ArrayList<User> users = new ArrayList<User>();
-        while (resultSet.next()){
+        while (resultSet.next()) {
             User user = new User();
             user.setUserId(resultSet.getInt("user_id"));
             user.setUserName(resultSet.getString("user_name"));
@@ -45,15 +46,12 @@ public class UserDao {
         resultSet = preparedStatement.executeQuery();
         resultSet.next();
         int totalDataCount = resultSet.getInt(1);
-        JDBCUtils.close(connection, this.preparedStatement,resultSet);
+        JDBCUtils.close(connection, this.preparedStatement, resultSet);
         HashMap<String, Object> map = new HashMap();
         map.put("users", users);
-        map.put("totalDataCount",totalDataCount);
+        map.put("totalDataCount", totalDataCount);
         return map;
-=======
-import java.sql.SQLException;
-
-public class UserDao {
+    }
     /**
      * 根据用户名查询用户信息
      * @param username
@@ -71,14 +69,14 @@ public class UserDao {
                 user.setUserName(resultSet.getString("user_name"));
                 user.setPassword(resultSet.getString("password"));
                 user.setPower(resultSet.getInt("power"));
-                user.setCreatDate(resultSet.getString("regist_date"));
+                user.setRegistDate(resultSet.getString("regist_date"));
         }else{
             user=null;
 
         }
         JDBCUtils.close(connection,preparedStatement);
         return user;
-    };
+    }
 
     /**
      * 用户保存
@@ -93,8 +91,9 @@ public class UserDao {
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1,user.getUserName());
         preparedStatement.setString(2,user.getPassword());
-        preparedStatement.setInt(3,user.getPower());
+        preparedStatement.setInt(3,0);
         //数据库更新的条数
+
         int i = preparedStatement.executeUpdate();
         if (i == 0){
             hasInsert = false;
@@ -108,7 +107,7 @@ public class UserDao {
         preparedStatement1.setString(2,user.getGender());
 
         preparedStatement1.executeUpdate();
-
+        System.out.println("hasinset"+hasInsert);
         JDBCUtils.close(connection,preparedStatement);
         return hasInsert;
     }
@@ -133,13 +132,13 @@ public class UserDao {
                 user.setUserName(resultSet.getString("user_name"));
                 user.setPassword(resultSet.getString("password"));
                 user.setPower(resultSet.getInt("power"));
-                user.setCreatDate(resultSet.getString("regist_date"));
+                user.setRegistDate(resultSet.getString("regist_date"));
             }
         }else{
             user=null;
         }
         JDBCUtils.close(connection,preparedStatement);
+        System.out.println("dao:"+user);
         return user;
->>>>>>> 6c24ce9592384285b9088bd1b4dc05e07c6fb256
     }
 }

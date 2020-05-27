@@ -12,11 +12,12 @@ import java.io.IOException;
  */
 @WebFilter(urlPatterns = "/*")
 public class CrossOriginFilter implements Filter {
+    @Override
     public void destroy() {
     }
 
+    @Override
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
-        System.out.println("Filter 过滤器 执行 了");
         HttpServletRequest request = (HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) resp;
 
@@ -39,6 +40,7 @@ public class CrossOriginFilter implements Filter {
 
     }
 
+    @Override
     public void init(FilterConfig config) throws ServletException {
 
     }

@@ -33,7 +33,7 @@ public class WriteReviewServlet extends HttpServlet {
         float rating = Float.valueOf(req.getParameter("rating"));
         review.setRating(rating);*/
         Review review = new Review(Float.valueOf(req.getParameter("rating")),
-                req.getParameter("userName"),
+                (String) req.getSession().getAttribute("userName"),
                 req.getParameter("filmName"),
                 req.getParameter("text"),
                 req.getParameter("title"));

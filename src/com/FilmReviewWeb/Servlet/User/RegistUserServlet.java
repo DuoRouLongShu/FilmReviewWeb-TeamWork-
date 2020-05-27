@@ -29,10 +29,11 @@ public class RegistUserServlet extends HttpServlet {
         HttpSession session = req.getSession();
         String checkcode_server = (String)session.getAttribute("CHECKCODE_SERVER");
         session.removeAttribute("CHECKCODE_SERVER");//保证验证码只使用一次
-
+        System.out.println(checkcode_server);
         //比较
         if(checkcode_server==null||!checkcode_server.equalsIgnoreCase(check)){
             //验证码错误
+            System.out.println("验证码错");
             ResultInfo info = new ResultInfo();
             info.setFlag(false);
             info.setErrorMsg("验证码错误");
@@ -56,11 +57,13 @@ public class RegistUserServlet extends HttpServlet {
         boolean flag = false;
         try {
             flag = service.regist(user);
+            System.out.println("flag:"+flag);
         } catch (SQLException e) {
             e.printStackTrace();
         }
         ResultInfo info = new ResultInfo();
         //4响应结果
+        System.out.println("看结果");
         if(flag){
             //注册成功
             info.setFlag(true);

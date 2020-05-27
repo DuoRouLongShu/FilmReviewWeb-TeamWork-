@@ -25,6 +25,7 @@ public class UserServiceImpl implements UserService {
             return false;
         }
         //2.保存用户信息
+        System.out.println("registService:"+user);
         userDao.save(user);
         return true;
     }

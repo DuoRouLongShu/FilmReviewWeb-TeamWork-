@@ -1,0 +1,92 @@
+/*头部*/
+
+.ourHeader{background: #333;height: 60px;}
+.ourHeader .box1200,.ourHeader .box1200>div{height: 100%;}
+.ourHeader .box1200>div{height: 100%;background: -pink;}
+.ourHeader .tit1{font-weight: 700;font-size: 24px;color: #fff;text-shadow: 0 0 10px #1E9FFF;}
+.ourHeader .tit3 div{height: 100%;}
+.ourHeader .tit3 .d1 img{width: 40px;height: 40px;border-radius: 100%;overflow: hidden;}
+.ourHeader .tit3 .d2 a{padding: 0 10px;max-width: 130px;color: #fff;font-weight: 700;}
+.ourHeader .tit3 .d2 a:hover{color: #1E9FFF;}
+.ourHeader .tit2 .d1 input{height: 30px;text-align: center;}
+.ourHeader .tit2 .d2 input{height: 30px;text-align: center;background: #ddd;}
+.ourHeader .tit2 .d2 input:hover{background: #1E9FFF;color: #fff;}
+.ourHeader .tit2 div input{-webkit-box-sizing: border-box;box-sizing: border-box;outline: none;border: none;padding: 0 40px;}
+.ourHeader .tit4 a{color: #fff;font-weight: 700;border: 1px solid #fff;padding: 5px 20px;}
+.ourHeader .tit4 a:hover{border: 1px solid #fff;background: #1E9FFF;color: #fff;}
+
+/*底部*/
+
+.ourFooter{background: #333;color: #fff;text-align: center;padding: 20px 0;}
+.ourFooter p{padding: 10px 0;}
+.ourFooter p a{color: #fff;margin: 0 5px;}
+.ourFooter p a:hover{color: #1E9FFF;}
+
+/*导航*/
+
+.ourNaver a{padding: 30px 0;text-align: center;-webkit-box-sizing: border-box;box-sizing: border-box;border-right: 1px solid #fff;font-size: 16px;font-weight: 700;letter-spacing: 2px;}
+.ourNaver a:last-child{border-right: none;}
+.ourNaver a:hover,.ourNaver a.on{background: #1E9FFF;color: #fff;}
+
+/*轮播公共类*/
+
+.swiper-button-prev,.swiper-button-next{border: none !important;outline: none !important;}
+
+/*轮播1*/
+
+#indexBanner .swiper-wrapper .swiper-slide{width: 100%;height: 500px;}
+#indexBanner .swiper-wrapper .swiper-slide img{display: block;width: 100%;height: 100%;}
+
+/*轮播2*/
+
+#indexBanner2{padding-bottom: 40px;}
+#indexBanner2 .swiper-wrapper .swiper-slide{width: 100%;height: auto;}
+#indexBanner2 .swiper-button-next,#indexBanner2 .swiper-button-prev{bottom: 0;top: inherit;}
+#indexBanner2 .swiper-pagination-bullets{bottom: 15px;}
+#indexBanner2 .swiper-button-next{right: 40%;}
+#indexBanner2 .swiper-button-prev{left: 40%;}
+
+/*轮播2-去掉默认的箭头*/
+
+#indexBanner2 .nar1:after, #indexBanner2 .nar2:after{content: "";display: none !important;}
+
+/*轮播2-新增自己的箭头*/
+
+#indexBanner2 .nar1,#indexBanner2 .nar2{background-size: 100% 100% !important;width: 40px;height: 39px;}
+
+/*左侧热门电影右侧排行列表大盒子*/
+
+.ourContainer .ourContainerFl{width: 70%;background: -pink;}
+.ourContainer .ourContainerFr{width: 30%;-webkit-box-sizing: border-box;box-sizing: border-box;padding-left: 3%;background: -orange;}
+
+/*左侧热门电影-头部*/
+
+.ourContainerFl .heads{height: 50px;border-bottom: 1px solid #eee;}
+.ourContainerFl .heads .d1{font-size: 20px;font-weight: 700;padding-right: 20px;}
+.ourContainerFl .heads .d2 a{margin-right: 5px;}
+.ourContainerFl .heads a:hover{color: #1E9FFF;}
+
+/*右侧排行列表-头部*/
+
+.ourContainerFr .heads{height: 50px;border-bottom: 1px solid #eee;}
+.ourContainerFr .heads .d1{font-size: 20px;font-weight: 700;padding-right: 20px;}
+.ourContainerFr .heads .d2 a{margin-right: 5px;}
+.ourContainerFr .heads .d2 a:hover{color: #1E9FFF;}
+
+/*左侧热门电影-轮播*/
+
+.OurNewMv .libox{width: 20%;}
+.OurNewMv .libox p{text-align: center;}
+.OurNewMv .libox p.p2{padding-top: 20px;padding-bottom: 10px;}
+.OurNewMv .libox p:last-child{padding-bottom: 20px;}
+.OurNewMv .libox .p1{height: 240px;overflow: hidden;-webkit-box-sizing: border-box;box-sizing: border-box;}
+.OurNewMv .libox .p1 img{width: 100%;height: 100%;}
+.OurNewMv .libox:hover p{color: #1E9FFF;}
+
+/*左侧热门电影-列表*/
+
+.TopBandBox a,.TopBandBox a span{display: block;width: 100%;}
+.TopBandBox a{padding: 18px 0;border-bottom: 1px solid #ddd;}
+.TopBandBox a:hover span,.TopBandBox a:hover span:before{color: #1E9FFF;}
+.TopBandBox a{counter-increment: mycounters1;}
+.TopBandBox span:before{content: counter(mycounters1)'、';color: #333;}

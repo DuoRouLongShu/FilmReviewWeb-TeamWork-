@@ -1,7 +1,6 @@
 package com.FilmReviewWeb.Service.Impl;
 
 import com.FilmReviewWeb.Dao.SlideshowDao;
-import com.FilmReviewWeb.Model.Category;
 import com.FilmReviewWeb.Model.Slideshow;
 import com.FilmReviewWeb.Service.SlideshowService;
 
@@ -15,6 +14,7 @@ public class SlideshowServiceImpl implements SlideshowService {
      * 查询所有
      * @return
      */
+    @Override
     public List<Slideshow> findAll() throws SQLException{
         return slideshowDao.findAll();
     };
