@@ -8,25 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a45f3d02-5d55-4185-89ac-6b3269ae0bc0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Dao/InformationDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Dao/InformationDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/com/FilmReviewWeb/Utils/JedisPoolUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/classes/jedis.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/lib/commons-pool2-2.8.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/lib/jedis-3.3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmReviewWeb/WEB-INF/lib/jsp-api.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/InformationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Dao/InformationDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/User/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/FilmReviewWeb/Servlet/User/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/FilmReviewWeb/Utils/JedisPoolUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jedis.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Dao/InformationDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Dao/InformationDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Servlet/User/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/FilmReviewWeb/Utils/JedisPoolUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/jedis.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/commons-pool2-2.8.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/jedis-3.3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/jsp-api.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -351,11 +332,6 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
             </expand>
             <select />
           </treeState>
@@ -440,6 +416,7 @@
       <workItem from="1590471322889" duration="2772000" />
       <workItem from="1590506403622" duration="2062000" />
       <workItem from="1590508490316" duration="749000" />
+      <workItem from="1590510547050" duration="869000" />
     </task>
     <servers />
   </component>
