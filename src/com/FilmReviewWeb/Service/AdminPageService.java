@@ -79,4 +79,12 @@ public interface AdminPageService {
      * @throws Exception
      */
     public boolean updateFilm(Film film) throws Exception;
+
+    /**
+     * 通过filmId查看电影
+     * @param filmId
+     * @return
+     * @throws Exception
+     */
+    public Film checkFilmByFilmId(Integer filmId) throws Exception;
 }

@@ -336,4 +336,36 @@ public class FilmDao {
             return false;
         }
     }
+
+    public Film getFilmDataByFilmId(Integer filmId) throws Exception {
+        connection = JDBCUtils.getConnection();
+        String sql = "select * from film where film_id = ?";
+        preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setInt(1,filmId);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        Film film = null;
+        while (resultSet.next()){
+            String filmName = resultSet.getString("film_name");
+            //String filmName;
+            //评分
+            Float rating = null;
+            //导演
+            String director = resultSet.getString("director");
+            String writer = resultSet.getString("writer");
+            String performer = resultSet.getString("performer");
+            //题材
+            String genre = resultSet.getString("genre");
+            String area = resultSet.getString("area");
+            String language = resultSet.getString("language");
+            //片长
+            String duration = resultSet.getString("duration");
+            //概要
+            String synopsis = resultSet.getString("synopsis");
+            String releaseDate = resultSet.getString("release_date");
+            String imageSource = resultSet.getString("image_source");
+            film = new Film(filmId,  filmName, rating, director, writer, performer,  genre, area, language, duration,  synopsis, releaseDate,imageSource);
+        }
+        JDBCUtils.close(connection,preparedStatement,resultSet);
+        return film;
+    }
 }

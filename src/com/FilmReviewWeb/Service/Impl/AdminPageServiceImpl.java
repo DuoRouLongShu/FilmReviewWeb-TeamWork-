@@ -67,4 +67,9 @@ public class AdminPageServiceImpl implements AdminPageService {
     public boolean updateFilm(Film film) throws Exception {
         return new FilmDao().updateFilm(film);
     }
+
+    @Override
+    public Film checkFilmByFilmId(Integer filmId) throws Exception {
+        return new FilmDao().getFilmDataByFilmId(filmId);
+    }
 }

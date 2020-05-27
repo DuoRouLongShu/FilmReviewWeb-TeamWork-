@@ -275,4 +275,25 @@ public class AdminPageTest {
 
         System.out.println(JSON.toJSONString(result));
     }
+
+    @Test
+    public void selectFilmById(){
+        Result result = new Result();
+        Integer filmId = 3;
+        System.out.println(filmId);
+        try {
+
+            AdminPageService adminPageService = new AdminPageServiceImpl();
+            Film film = adminPageService.checkFilmByFilmId(filmId);
+            if (film == null){
+                result.setMessage("无电影数据");
+            }else {
+                result.setData(film);
+                result.setMessage("成功返回电影数据");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println(JSON.toJSONString(result));
+    }
 }
