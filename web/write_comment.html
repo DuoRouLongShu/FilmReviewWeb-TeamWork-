@@ -33,7 +33,7 @@
         var flag = false;
         // 防止多次异步请求文本敏感词的疏漏,记录离焦次数。。。
         var count = 0;
-        // 保存数据在localStorage，回显
+        // 写评论，保存数据在localStorage，回显
         window.onload=function () {
             title = localStorage["title"];
             rating = localStorage["rating"];
@@ -57,6 +57,7 @@
         $(function () {
             // 可以用定时器动态监测字数
             // $("#textarea").focus();
+            // 过滤校验、字数校验影评
             $("#textarea").blur(function () {
                 count++;
                 text = $("#textarea").val();
@@ -91,10 +92,12 @@
                 }
             });
 
+            // 离焦获取标题值
             $("#title").blur(function () {
                 title = $("#title").val();
             });
 
+            //预览评论效果
             $("#preview").click(function () {
                 // $("#textarea").blur();
                 if (flag && tag) {
@@ -116,14 +119,16 @@
                     $("#textResult").prop("style", "color:red;margin-left:-700px");
                     $("#textResult").html("等待校验");
                 }
+                // 返回修改评论
                 $("#button").click(function () {
                     // 到时候改这里的地址，因为是静态页面
                     // window.location.href = "http://localhost:8080/FilmReviewWeb/WriteComment.html?title="+title+"&rating="+rating+"&text="+text;
                     localStorage.rating = rating;
                     localStorage.title = title;
                     localStorage.text = text;
-                    location.href = "http://localhost:8080/FilmReviewWeb/WriteComment.html";
+                    location.href = "http://localhost:8080/FilmReviewWeb/write_comment.html";
                 });
+                // 评论提交
                 $("#form").submit(function () {
                     $("#form").append("<input type=\"text\" name='filmName'>");
                     $("#form").append("<input type=\"text\" name='userName'>");
@@ -135,12 +140,13 @@
                     alert("成功提交");
                 })
             });
+            // 顶部搜索框
             $("#formsearch").submit(function () {
                 // 顶部的搜索，提交时获取输入，存储
                 var keyword = $("#search").val();
                 localStorage.keyword = keyword;
                 // 去后台search资源根据参数word获得一些电影，后台重定向去Search.html资源回显
-                $("#formsearch").prop("action","./Search.html");
+                $("#formsearch").prop("action","./search.html");
             })
         });
 
@@ -196,7 +202,7 @@
                 <button type="submit" class="btn btn-default">🔍搜索</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">个人中心</a></li>
+                <li><a href="./personal.html">个人中心</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

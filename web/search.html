@@ -22,16 +22,17 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="./js/bootstrap.min.js"></script>
     <script>
-        var films;
-        var currentPage = 1;
-        var totalCount;
-        var totalPage;
+        var films,
+            currentPage = 1,
+            totalCount,
+            totalPage;
         $(function () {
             $("#search").val(localStorage["keyword"]);
             localStorage.clear();
             // 顶部搜索框，进来就去加载信息去
             search();
         });
+// 翻页
 function special(obj) {
     if($(obj).prop("id") == "next"){
         currentPage = parseInt(currentPage) + 1;
@@ -84,10 +85,10 @@ function filmeach(page) {
         $("div[class='row']").append(
             "        <div class='col-lg-2'>\n" +
             "            <a href=\"javascript:;\" onclick=select(this)>\n" +
-            "                <img src=\"./img/1590053103(1).jpg\"  class=\"img-thumbnail\"><br>\n" +
-            "                <span>"+ films.data[i].filmName +"</span>\n" +
+            "                <img class=\"img-thumbnail\"><br>\n" +
+            "                <p>"+ films.data[i].filmName +"</p>\n" +
             "            </a>\n" +
-            "            <p style='text-align: center;color: gold;font-weight: bolder;font-size: large'>" + films.data[i].rating + "</p>\n" +
+            "            <p style='text-align: center;float: bottom;color: gold;font-weight: bolder;font-size: large'>" + films.data[i].rating + "</p>\n" +
             "        </div>\n"
         );
         // 对应test4
@@ -95,6 +96,8 @@ function filmeach(page) {
         $($("div[class='row'] img:nth-child(n)")[i]).prop("src",films.data[i].imageResource);
     };
 }
+
+// 搜索结果
 function search() {
     var keyword = $("#search").val();
     $("#li").html("");
@@ -106,7 +109,7 @@ function search() {
             type: "post",
             success: function (data) {
                 films = data;
-                console.log(data.message);
+                console.log(data);
                 totalCount = data.dataCount;
                 totalPage = data.pageCount;
                 // 增加页码
@@ -125,22 +128,19 @@ function search() {
         $("#content").html("空空如也，快去搜索吧");
     }
 }
+
+
 function select(obj) {
     //获取电影名
     var filmName = $(obj).children(":last").html();
     //跳转特定页面
-    window.location.href = "http://localhost:8080/FilmReviewWeb/Movie.html?filmName=" + filmName;
+    window.location.href = "http://localhost:8080/FilmReviewWeb/movie.html?filmName=" + filmName;
 }
 
     </script>
     <style>
-        img{
-            margin-left: 50px;
-            margin-right: 60px;
-        }
-        div[class='row'] a span{
-            margin-left: 100px;
-            margin-right: 60px;
+        div[class='row'] a p{
+            text-align: center;
         }
     </style>
 </head>

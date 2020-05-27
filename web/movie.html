@@ -24,17 +24,18 @@
 </head>
 <script>
 
-    // 请求获得相应的电影名称,地址栏获得
-    var MovieName;
-    // 特定电影评论的总页数和总条数，每页固定5条
-    var totalPage;
-    var totalCount;
-    // 当前页码数，初始第一页
-    var currentPage = 1;
-    // 评论的对象、内容（名字、时间、评分、评论）、点赞数
-    var comments;
-    // 点赞的用户，仅用于测试。实际运行不需要
-    var userName = "马志鹏";
+    // 请求获得相应的电影ID,地址栏获得,命名奇怪了
+    var movieName = "倾国倾城",
+        // 特定电影评论的总页数和总条数，每页固定5条
+        totalPage,
+        totalCount,
+        // 当前页码数，初始第一页
+        currentPage = 1,
+        // 评论的对象、内容（名字、时间、评分、评论）、点赞数
+        comments,
+        // 点赞的用户，仅用于测试。实际运行不需要
+        userName = "马志鹏";
+
     // 地址栏获取参数的方法
     function GetRequest() {
             var url = decodeURI(location.search); //获取url中"?"符后的字串
@@ -73,7 +74,7 @@
             //前端保存好后，即时请求更新数据库，不影响操作。记录的是，谁为哪条评论点了赞。或者，谁为哪条评论取消了点赞
             $.ajax({
                 url:"./filmpage/giveReviewLike",
-                data:{"userName":userName,"reviewId":comments.data[i].reviewId},
+                data:{"reviewId":comments.data[i].reviewId},
                 type:"post",
                 success:function (data) {
                     //虽然返回的结果是true，false。 true表示未点赞变成了点赞，false表示点赞变成了未点赞。
@@ -197,8 +198,7 @@
         // $("#content").html("");
         for (var t = i;t > i - 5 && t >= 0 ; t--) {
             $("#comment").append("<div>\n" +
-                "            <img src=\"./img/1590053103(1).jpg\" style=\"height: 30px;width: 30px;float: left\">\n" +
-                "            <div style=\"float: left;margin-top: 4px\"><a  href=\"javascript:;\">"+comments.data[t].userName+"</a> 看过</div>\n" +
+                "            <div style=\"float: left;margin-top: 4px\"><a  href=\"javascript:;\"><img src=\"./img/1590053103(1).jpg\" style=\"height: 30px;width: 30px;\">"+comments.data[t].userName+"</a> 看过</div>\n" +
                 "            <div style=\"color: #9d9d9d;\">&nbsp;&nbsp;&nbsp;(<span id=\"time1\">"+comments.data[t].creatDate+"</span>)&nbsp;&nbsp;&nbsp;<span style=\"color: gold;font-size: large;font-weight: 700\">评分:  <span>"+comments.data[t].rating+"</span>\n" +
                 "            </div><br>\n" +
                 "            <span  class=\"p\">"+comments.data[t].title+"</span><br>\n" +
@@ -214,7 +214,7 @@
         $.ajax({
             url: "./filmpage/checkReviewLike",
             type: "post",
-            data: {"userName": userName, reviewId: reviewId},
+            data: {reviewId: reviewId},
             success: function (data) {
                 // console.log("这是检查点赞");
                 // console.log(data.data);
@@ -236,30 +236,30 @@
 
     // 回复页面，跳转到另一个资源
     function reply(obj) {
-        var userName = $(obj).parent().children().children().html();//对应名字
-        var creatDate = $(obj).parent().children().next().children().html();//对应时间
-        var rating = $(obj).parent().children().next().children().next().children().html();//对应评分
-        var title = $(obj).parent().children().next().next().html();//对应标题
-        var comment = $(obj).parent().children().next().next().next().next().html();//对应评论
+        var userName = $(obj).parent().children().children().html(),//对应名字
+            creatDate = $(obj).parent().children().next().children().html(),//对应时间
+            rating = $(obj).parent().children().next().children().next().children().html(),//对应评分
+            title = $(obj).parent().children().next().next().html(),//对应标题
+            comment = $(obj).parent().children().next().next().next().next().html();//对应评论
         //存储变量的值
         localStorage.userName = userName;
         localStorage.creatDate = creatDate;
         localStorage.rating = rating;
         localStorage.title = title;
         localStorage.comment = comment;
-        window.open('http://localhost:8080/FilmReviewWeb/CommentArea.html');
+        window.open('http://localhost:8080/FilmReviewWeb/comment_area.html');
     }
 
     $(function (){
-        // 地址栏获取电影名？
+        // 地址栏获取电影id？
         var json = GetRequest();
-        MovieName = json.filmName;
+        movieName = json.filmName;
         // 评论区（json）
         $.ajax({
             // 去Servlet里查询所有该电影的影评，以及总页数，返回一个json对象，包含总记录数等
             url:"http://localhost:8080/FilmReviewWeb/filmpage/getReviews",
             // 包括电影名以及需要更新的点赞数
-            data:{"filmName":MovieName},
+            data:{"filmName":movieName},
             type:"post",
             success:function(data){
                 comments = data;
@@ -280,7 +280,7 @@
 
         $.ajax({
             url:"http://localhost:8080/FilmReviewWeb/filmpage/getData",
-            data:{"filmName":MovieName},
+            data:{"filmName":movieName},
             type:"post",
             success:function (data) {
                 // 为页面添加真实内容
@@ -296,7 +296,7 @@
                     grade:data.data.rating,
                     height: 20,
                     width: 20
-                })
+                });
                 $("#area").html(data.data.area);
                 $("#director").html(data.data.director);
                 $("#writer").html(data.data.writer);
@@ -312,7 +312,7 @@
         $(".write").click(function () {
             // 需要换路径啊！！！！！！
             // window.location.href = "http://localhost:8080/FilmReviewWeb/WriteComment.html?filmName"+data.data.filmName;
-            window.location.href = "http://localhost:8080/FilmReviewWeb/WriteComment.html";
+            window.location.href = "./write_comment.html";
         });
 
         $("#collect").click(function () {
@@ -328,15 +328,21 @@
             $.ajax({
                 url:"",
                 type:"post",
-                data:{"userName":userName,"filmName": MovieName,"isCollect":isCollect},
+                data:{"filmName": movieName,"isCollect":isCollect},
                 success:function (data) {
                     console.log(data)
                 },
                 dataType:"json"
             })
         });
-
-
+        // 顶部搜索框
+        $("#formsearch").submit(function () {
+            // 顶部的搜索，提交时获取输入，存储
+            var keyword = $("#search").val();
+            localStorage.keyword = keyword;
+            // 去后台search资源根据参数word获得一些电影，后台重定向去Search.html资源回显
+            $("#formsearch").prop("action","./search.html");
+        })
     });
 </script>
 <style>
@@ -414,33 +420,27 @@
         </style>
 
 <body>
-    <!--导航条-->
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">首页</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <form class="navbar-form navbar-left">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="请输入你要搜索的电影名称" id="search">
-                    </div>
-                    <button type="submit" class="btn btn-default">搜索</button>
-                </form>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">个人中心</a></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
+<!--导航条-->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">首页</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="text-align: center">
+            <form class="navbar-form navbar-left" action="" method="post" id="formsearch">
+                <div class="form-group">
+                    <input name="word" type="text" class="form-control" placeholder="请输入你要搜索的电影名称" id="search" style="margin-left: 350px;width: 500px">
+                </div>
+                <button type="submit" class="btn btn-default">🔍搜索</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="./personal.html">个人中心</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
 
 <div id="myMargin">
     <span class="name t filmName" style="margin-left: 40px">电影名称 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="time">时间</span>)<br>

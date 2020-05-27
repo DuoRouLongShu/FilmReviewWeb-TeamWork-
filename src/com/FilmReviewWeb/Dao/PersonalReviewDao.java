@@ -1,0 +1,103 @@
+package com.FilmReviewWeb.Dao;
+
+import com.FilmReviewWeb.Model.Review;
+import com.FilmReviewWeb.Utils.JDBCUtils;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+
+/**
+ * 影评数据库
+ * @author HTwo2O
+ * @date 2020/5/13 15:04
+ */
+public class PersonalReviewDao {
+    /**
+     * 通过用户名向数据库中获得并返回相关影评
+     * @param filmName
+     * @return
+     * @throws Exception
+     */
+    public ArrayList<Review> getReviewsByFilmName(String filmName) throws Exception{
+        Connection connection = JDBCUtils.getConnection();
+        String sql = "select * from review where user_name = ?";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setString(1,filmName);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        ArrayList<Review> reviews = new ArrayList<Review>();
+        while (resultSet.next()){
+            int reviewId = resultSet.getInt("review_id");
+            int checkout = resultSet.getInt("check");
+            int pass = resultSet.getInt("pass");
+            float rating = resultSet.getFloat("rating");
+            String userName = resultSet.getString("user_name");
+            int userId = resultSet.getInt("user_id");
+            //String filmName;
+            int filmId = resultSet.getInt("film_id");
+            String creatDate = resultSet.getString("creat_date");
+            String text = resultSet.getString("text");
+            int likes = resultSet.getInt("likes");
+            String title = resultSet.getString("title");
+            Review review = new Review( reviewId, checkout,  pass,  rating, filmName, userId,  filmName,  filmId,  creatDate,  text, likes,title);
+            reviews.add(review);
+        }
+        JDBCUtils.close(connection,preparedStatement,resultSet);
+        return reviews;
+    }
+
+    public boolean insertReview(Review review) throws Exception{
+        boolean hasInsert = true;
+        Connection connection = JDBCUtils.getConnection();
+        String sql = "insert review " +
+                "(user_name,film_name,text,title,rating,creat_date)" +
+                "values (?,?,?,?,?,now())";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setString(1,review.getUserName());
+        preparedStatement.setString(2,review.getFilmName());
+        preparedStatement.setString(3,review.getText());
+        preparedStatement.setString(4,review.getTitle());
+        preparedStatement.setFloat(5,review.getRating());
+        //数据库更新的条数
+        int i = preparedStatement.executeUpdate();
+        if (i == 0){
+            hasInsert = false;
+        }
+        JDBCUtils.close(connection,preparedStatement);
+        return hasInsert;
+    }
+
+    /**
+     * 通过用户名查找影评
+     * @param userName
+     * @return
+     * @throws Exception
+     */
+    public ArrayList<Review> getReviewsByUserName(String userName) throws Exception{
+        Connection connection = JDBCUtils.getConnection();
+        String sql = "select * from review where user_name = ?";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setString(1,userName);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        ArrayList<Review> reviews = new ArrayList<Review>();
+        while (resultSet.next()){
+            int reviewId = resultSet.getInt("review_id");
+            int checkout = resultSet.getInt("check");
+            int pass = resultSet.getInt("pass");
+            float rating = resultSet.getFloat("rating");
+            String filmName = resultSet.getString("film_name");
+            int userId = resultSet.getInt("user_id");
+            //String filmName;
+            int filmId = resultSet.getInt("film_id");
+            String creatDate = resultSet.getString("creat_date");
+            String text = resultSet.getString("text");
+            int likes = resultSet.getInt("likes");
+            String title = resultSet.getString("title");
+            Review review = new Review( reviewId, checkout,  pass,  rating, userName, userId,  filmName,  filmId,  creatDate,  text, likes,title);
+            reviews.add(review);
+        }
+        JDBCUtils.close(connection,preparedStatement,resultSet);
+        return reviews;
+    }
+}

@@ -21,21 +21,21 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="./js/bootstrap.min.js"></script>
     <script>
-        var userName = "javk";
-        // 个人的信息
-        var informations;
-        // 个人的影评
-        var filmComments;
-        // 个人的收藏电影
-        var collectFilms;
-        // 个人的点赞评论信息
-        var likesComments;
-        // 现在的页码、总页码，共用
-        var currentPage = 1;
-        var totalPage;
-        // 专用于 影评，因为需要逆序
-        var totalCount;
-        var image;
+        var userName = "javk",
+            // 个人的信息
+            informations,
+            // 个人的影评
+            filmComments,
+            // 个人的收藏电影
+            collectFilms,
+            // 个人的点赞评论信息
+            likesComments,
+            // 现在的页码、总页码，共用
+            currentPage = 1,
+            totalPage,
+            // 专用于 影评，因为需要逆序
+            totalCount,
+            image;
         // 3个请求，一次性
         $(function () {
             // 将登录的userName和点击人物头像（查看信息）的名字做比较，决定要不要有"修改"按钮
@@ -44,17 +44,18 @@
                 $("input[type='file']").prop("style", "display:none");
             }
             // 按用户名请求影评资源
-            // $.ajax({
-            //     url:"",
-            //     data:{"userName":userName},
-            //     type:"post",
-            //     success:function (data) {
-            //         filmComments = data;
-            //         totalCount = filmComments.dataCount;
-            //         console.log(data);
-            //     },
-            //     dataType:"json"
-            // });
+            $.ajax({
+                url:"./getPersonalReview",
+                data:{},
+                type:"post",
+                success:function (data) {
+                    filmComments = data;
+                    totalCount = filmComments.dataCount;
+                    totalPage = filmComments.PageCount;
+                    console.log(data);
+                },
+                dataType:"json"
+            });
 
             // 按用户名请求收藏资源
             // $.ajax({
@@ -83,7 +84,7 @@
             // 请求用户个人信息
             $.ajax({
                 url:"./information/getInformation",
-                data:{"userName":userName},
+                data:{},
                 type:"post",
                 success:function (data) {
                     informations = data;
@@ -137,9 +138,9 @@
                     // 读取文件:
                     var reader = new FileReader();
                     reader.onload = function (e) {
-                        console.log(e.target.result)
                         var data = e.target.result; // 'data:image/jpeg;base64,/9j/4AAQSk...(base64编码)...}'
-                        image = data;
+                        // var fd=new FormData();
+                        // fd.append("multipartFile",imgFile);
                         preview.style.backgroundImage = 'url(' + data + ')';
                     };
                     // 以DataURL的形式读取文件:
@@ -154,13 +155,12 @@
         // 影评
         function filmReview(){
             currentPage = 1;
-            totalPage = filmComments.PageCount;
             // 增加页码
             for (var i = 1; i <= totalPage; i++) {
-                $("#li").append("<li><a href='javascript:void(0)' onclick=filmCommentsShow(this.innerHTML); >"+i+"</a></li>");
+                $("#li_films").append("<li><a href='javascript:void(0)' onclick=filmCommentsShow(this.innerHTML); >"+i+"</a></li>");
             }
             // 激活第一页
-            $("#li li:first").prop("class","active");
+            $("#li_films li:first").prop("class","active");
             // 成功后，展示第一页的电影信息，定死每页最多5个
             filmCommentsShow(1);
         }
@@ -212,13 +212,13 @@
         }
 
         // 修改个人信息回显
-        function modify(){
-            var petName;
-            var gender;
-            var birthday;
-            var hobby;
-            var email;
-            var result = [];
+        function modifyInformation(){
+            var petName,
+                gender,
+                birthday,
+                hobby,
+                email,
+                result = [];
             for (var i = 1; i <= 5; i++) {
                 // console.log($($("div[class='col-lg-8'] span:nth-child(n)")[i]).html());
                 result[i-1] = $($("div[class='col-lg-8'] span:nth-child(n)")[i]).html()
@@ -263,7 +263,7 @@
                 url:"./information/saveInformation",
                 type:"post",
                 data:{"userName":userName,"petName":$(spans[1]).html(),"birthday":$(spans[3]).html(), "hobby":$(spans[4]).html(),
-                    "gender":$(spans[2]).html(),"email":$(spans[5]).html(),"signature":$("textarea[name='textarea']").val(),"imageReSource":""
+                    "gender":$(spans[2]).html(),"email":$(spans[5]).html(),"signature":$("textarea[name='textarea']").val(),"imageResource":image
                 },
                 success:function (data) {
                     console.log(data);
@@ -283,6 +283,7 @@
             //打开特定页面
             window.open("http://localhost:8080/FilmReviewWeb/Movie.html?filmName="+filmName);
         }
+
         // 个人的收藏的电影信息每页展示
         function collectShow(page) {
             $("div[class='row']").html("");
@@ -314,7 +315,8 @@
                     "     <span class=\"font\" style=\"color: gold;\">评分：<span>"+filmComments.data[i].rating+"</span></span>\n" +
                     "     <h4 style=\"color: darkred;font-weight: 400;\">"+filmComments.data[i].title+"</h4>\n" +
                     "     <p>"+filmComments.data[i].text+"</p>\n" +
-                    "</div>"
+                    "</div>"+
+                    "<button class=\"btn btn-primary btn-sm\" type='button' data-toggle=\"modal\" data-target=\"#myModal2\" onclick=modifyReview()>点击修改影评</button><br>\n"
                 );
             }
         }
@@ -336,19 +338,28 @@
             }
         }
 
+        // 修改影评
+        function modifyReview() {
+
+        }
+
         // 用户反馈
         function feedback() {
             var val = $("#text").val();
-            $.ajax({
-                url:"",
-                data:{"text":val},
-                type:"post",
-                success:function (data) {
-                    console.log(data)
-                }
-            });
-            $("#text").val("");
-            alert("提交成功！感谢您的反馈！")
+            if(val != "") {
+                $.ajax({
+                    url: "",
+                    data: {"text": val},
+                    type: "post",
+                    success: function (data) {
+                        console.log(data)
+                    }
+                });
+                $("#text").val("");
+                alert("提交成功！感谢您的反馈！")
+            }else{
+                alert("请输入反馈信息!")
+            }
         }
     </script>
     <style>
@@ -420,7 +431,7 @@
         <!-- a标签的href属性必须和下面内容的id对应-->
         <!-- data-toggle是切换内容 role不清楚 -->
         <li role="presentation" class="active"><a href="#information" role="tab" data-toggle="tab">个人信息</a></li>
-        <li role="presentation"><a href="#filmReview" role="tab" data-toggle="tab"> <!--onclick=filmReview()-->&emsp;影评&emsp;</a></li>
+        <li role="presentation"><a href="#filmReview" role="tab" data-toggle="tab" onclick=filmReview()>&emsp;影评&emsp;</a></li>
         <li role="presentation"><a href="#collect" role="tab" data-toggle="tab"> <!--onclick=collect()-->&emsp;收藏&emsp;</a></li>
         <li role="presentation"><a href="#likes" role="tab" data-toggle="tab"> <!--onclick=likes()-->&emsp;点赞&emsp;</a></li>
         <li role="presentation"><a href="#feedback" role="tab" data-toggle="tab"> <!--onclick=feedback()-->&emsp;用户反馈&emsp;</a></li>
@@ -441,7 +452,7 @@
                 <div class="col-lg-8" style="margin-top: 30px">
                     <label class="font" id="userName">用户名:</label>&emsp;<span class="font">登录名字</span>&emsp;
                     <!-- Button trigger modal -->
-                    <button type="button" id="modal" class="btn btn-primary btn-sm" data-toggle="modal" hidden data-target="#myModal" onclick=modify()>点击修改个人信息</button><br>
+                    <button type="button" id="modal" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" onclick=modifyInformation()>点击修改个人信息</button><br>
                     <label class="font">昵称:</label>&emsp;<span class="font">马志鹏</span><br>
                     <label class="font">性别:</label>&emsp;<span class="font">女</span><br>
                     <label class="font">生日:</label>&emsp;<span class="font">1999-12-29</span><br>
@@ -453,7 +464,7 @@
             <label style="font-size: 20px;">⭐个性签名⭐</label><br>
             <textarea cols="100" rows="4" class='form-control' name="textarea" readonly>兄弟间那叫爱情</textarea>
         </div>
-        <!-- Modal 活页-->
+        <!-- Modal 活页:修改个人信息-->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -514,6 +525,25 @@
                 </ul>
             </nav>
         </div>
+        <!-- Modal 活页:修改影评-->
+        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" style="color: cornflowerblue">影评修改</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!--主要内容-->
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick=save(this)>保存修改</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- 3. 收藏页面-->
         <div role="tabpanel" class="tab-pane" id="collect">
@@ -573,7 +603,7 @@
         <!-- 5. 反馈页面-->
         <div role="tabpanel" class="tab-pane" id="feedback">
             <textarea class="form-control" id="text" cols="99" rows="5" style="resize: none;margin-top: 30px" placeholder="反馈信息"></textarea>
-            <input type="button" class="btn btn-info" value="提交反馈" style="margin-top: 20px" onclick=feedback()>
+            <input class="btn btn-info" type="button" value="提交反馈" style="margin-top: 20px" onclick=feedback()>
         </div>
     </div>  <!-- 5个页面 -->
 </div> <!-- 整个页面 -->
