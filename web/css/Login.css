@@ -3,7 +3,7 @@
     padding:0;
 }
 body{
-    background-image: url("https://i.loli.net/2020/05/17/L4wmRuHiWIYbBP1.jpg ");
+    background-image: url("https://i.loli.net/2020/05/28/2avteJfuCyzc9Ul.jpg ");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -11,8 +11,8 @@ body{
     overflow: auto;
 }
 #head{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 57px;
+    margin-bottom: 20px;
 }
 #head_div{
     display: flex;
@@ -21,9 +21,9 @@ body{
 }
 #head_a{
     display: block;
-    width: 138px;
-    height: 137px;
-    background: url("https://i.loli.net/2020/05/20/pizOF9JR7DBPKlx.png") no-repeat;
+    width: 170px;
+    height: 86px;
+    background: url("https://i.loli.net/2020/05/28/BmWz9382kph6HbD.png") no-repeat;
 }
 
 #Login-box{
@@ -55,7 +55,7 @@ body{
 #welcome h1{
     text-align:center;
     padding:10px;
-    color: #2F2F2F ;
+    color: #ffffff ;
 }
 #blank{
     width:300px;
@@ -132,6 +132,7 @@ body{
     font-weight: 600;
     font-size: 18px;
     border: #0084ff solid 1px;
+    cursor: pointer;
 }
 a {
     text-decoration: none;
@@ -182,6 +183,7 @@ a {
     display: inline-block;
     vertical-align: middle;
     padding-bottom: 5px;
+    cursor: pointer;
 }
 /*#right{*/
 /*    float: right;*/

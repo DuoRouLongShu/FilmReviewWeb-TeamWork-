@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
-    <link rel="stylesheet" href="css/Register.css" type="text/css">
+    <link href="css/Register.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.11.0.min.js"></script>
     <!--    敏感词校验-->
     <script>
@@ -28,11 +28,7 @@
                 //点击图片或注册按钮切换验证码
                 const img = document.getElementById("checkcode_img");
                 const date = new Date().getTime();
-                const sub = document.getElementById("Submit");
                 img.onclick = function () {
-                    img.src = "user/checkCode?" + Math.random();
-                };
-                sub.onclick = function () {
                     img.src = "user/checkCode?" + date;
                 };
                 //都为true则验证通过，才能提交表单
@@ -45,16 +41,13 @@
 
         //校验用户名
         function checkUsername() {
-            // const flag = false;
-            //
-            // if(flag){}
             const username = document.getElementById("username").value;
             const reg_username = /^[\u4E00-\u9FA5A-Za-z0-9]{4,10}$/;
             const flag = reg_username.test(username);
             const s_username = document.getElementById("s_username");
 
             if (flag) {
-                s_username.innerHTML = "<img src='images/timg2.jpg' height='26' width='30' style='display: inline;padding-bottom: 5px;vertical-align: middle;' alt=''>"
+                s_username.innerHTML = "<img src='https://i.loli.net/2020/05/27/6HsZmSxEYXKlU8i.jpg' height='26' width='30' style='display: inline;padding-bottom: 5px;vertical-align: middle;' alt=''>";
             } else if (username === "") {s_username.innerHTML = "用户名为空!";s_username.style.color = "red";}
             else {s_username.innerHTML = "用户名非法!";s_username.style.color = "red";}
             return flag;
@@ -67,7 +60,7 @@
             const flag = reg_password.test(password);
             const s_password = document.getElementById("s_password");
             if (flag) {
-                s_password.innerHTML = "<img src='images/timg2.jpg' height='26' width='30' style='display: inline;padding-bottom: 5px;vertical-align: middle;' alt=''>"
+                s_password.innerHTML = "<img src='https://i.loli.net/2020/05/27/6HsZmSxEYXKlU8i.jpg' height='26' width='30' style='display: inline;padding-bottom: 5px;vertical-align: middle;' alt=''>";
             } else if (password === "") {s_password.innerHTML = "密码为空!";s_password.style.color = "red";}
             else {s_password.innerHTML = "密码非法!";s_password.style.color = "red";}
             return flag;
@@ -86,7 +79,7 @@
                 s_confirm.innerHTML = "输入为空!";
                 s_confirm.style.color = "red";
             } else if (password === confirm) {
-                s_confirm.innerHTML = "<img src='images/timg2.jpg' height='26' width='30' style='display: inline;padding-bottom: 5px;vertical-align: middle;' alt=''>"
+                s_confirm.innerHTML = "<img src='https://i.loli.net/2020/05/27/6HsZmSxEYXKlU8i.jpg' height='26' width='30' style='display: inline;padding-bottom: 5px;vertical-align: middle;' alt=''>";
                 flag = true;
             }
             return flag;
@@ -101,8 +94,10 @@
                         //处理服务器响应的数据data,jason格式{flag:boolean,errorMsg:"中文提示"}
                         if (data.flag) {
                             //成功，跳转页面
-                            Location.href = "http://localhost:8080/FilmReviewWeb/Login.html";
+                            location.href = "http://localhost:8080/FilmReviewWeb/Login.html";
                         } else {
+                            //失败，刷新验证码
+                            $("#checkcode_img").attr("src","user/checkCode?" + Math.random());
                             //失败，给errormsg添加提示信息
                             $("#errorMsg").html(data.errorMsg);
                         }
@@ -123,12 +118,19 @@
             $("#checkcode").focus(function () {$("#errorMsg").empty();});
         });
     </script>
+    <script>
+        $(function () {
+            $("#checkcode_img").click(function () {
+                $("#checkcode_img").attr("src","user/checkCode?" + new Date().getTime());
+            });
+        });
+    </script>
 </head>
 <body>
 
 <div id="index">
     <div id="index_div">
-        <a id="index_a" href="#" target="_self"></a>
+        <a id="index_a" href="#" target="_blank"></a>
     </div>
 </div>
 <div id="div">

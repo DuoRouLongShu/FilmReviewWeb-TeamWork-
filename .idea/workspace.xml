@@ -6,7 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a45f3d02-5d55-4185-89ac-6b3269ae0bc0" name="Default Changelist" comment="" />
+    <list default="true" id="a45f3d02-5d55-4185-89ac-6b3269ae0bc0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/Login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Register.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/Register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/Login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/Register.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/Register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/timg2.jpg" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +87,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/images" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -96,23 +103,23 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\images" />
+      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\src" />
+      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\js" />
+      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\pages\js" />
+      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\src\com\FilmReviewWeb\Servlet\User" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.FilmReviewWeb.Servlet.sensitiveWord" />
+      <recent name="com.FilmReviewWeb.Model" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web" />
       <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\css" />
       <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\js" />
       <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\pages" />
       <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\pages\page" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.FilmReviewWeb.Servlet.sensitiveWord" />
-      <recent name="com.FilmReviewWeb.Model" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\src" />
-      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\js" />
-      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\pages\js" />
-      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\src\com\FilmReviewWeb\Servlet\User" />
-      <recent name="C:\Users\10295\Desktop\FilmReviewWeb-TeamWork\FilmReviewWeb-TeamWork-\web\WEB-INF" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.0.M26">
@@ -322,6 +329,9 @@
       <workItem from="1590239245387" duration="12539000" />
       <workItem from="1590292932939" duration="15463000" />
       <workItem from="1590400800718" duration="2786000" />
+      <workItem from="1590509505349" duration="500000" />
+      <workItem from="1590576736894" duration="12100000" />
+      <workItem from="1590665139451" duration="3000" />
     </task>
     <servers />
   </component>
@@ -364,54 +374,54 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="328" y="282" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1590075303637" />
-    <state width="1277" height="177" key="GridCell.Tab.0.bottom" timestamp="1590332604588">
+    <state width="1277" height="258" key="GridCell.Tab.0.bottom" timestamp="1590600135031">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1277" height="177" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590332604588" />
-    <state width="1277" height="177" key="GridCell.Tab.0.center" timestamp="1590332604588">
+    <state width="1277" height="258" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590600135031" />
+    <state width="1277" height="258" key="GridCell.Tab.0.center" timestamp="1590600135031">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1277" height="177" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590332604588" />
-    <state width="1277" height="177" key="GridCell.Tab.0.left" timestamp="1590332604588">
+    <state width="1277" height="258" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590600135031" />
+    <state width="1277" height="258" key="GridCell.Tab.0.left" timestamp="1590600135030">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1277" height="177" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590332604588" />
-    <state width="1277" height="177" key="GridCell.Tab.0.right" timestamp="1590332604588">
+    <state width="1277" height="258" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590600135030" />
+    <state width="1277" height="258" key="GridCell.Tab.0.right" timestamp="1590600135031">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1277" height="177" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590332604588" />
-    <state width="1277" height="177" key="GridCell.Tab.1.bottom" timestamp="1590332604589">
+    <state width="1277" height="258" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590600135031" />
+    <state width="1277" height="258" key="GridCell.Tab.1.bottom" timestamp="1590600135031">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1277" height="177" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590332604589" />
-    <state width="1277" height="177" key="GridCell.Tab.1.center" timestamp="1590332604589">
+    <state width="1277" height="258" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590600135031" />
+    <state width="1277" height="258" key="GridCell.Tab.1.center" timestamp="1590600135031">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1277" height="177" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590332604589" />
-    <state width="1277" height="177" key="GridCell.Tab.1.left" timestamp="1590332604588">
+    <state width="1277" height="258" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590600135031" />
+    <state width="1277" height="258" key="GridCell.Tab.1.left" timestamp="1590600135031">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1277" height="177" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590332604588" />
-    <state width="1277" height="177" key="GridCell.Tab.1.right" timestamp="1590332604589">
+    <state width="1277" height="258" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590600135031" />
+    <state width="1277" height="258" key="GridCell.Tab.1.right" timestamp="1590600135031">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1277" height="177" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590332604589" />
-    <state width="1277" height="177" key="GridCell.Tab.2.bottom" timestamp="1590332604590">
+    <state width="1277" height="258" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590600135031" />
+    <state width="1277" height="258" key="GridCell.Tab.2.bottom" timestamp="1590600135031">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1277" height="177" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590332604590" />
-    <state width="1277" height="177" key="GridCell.Tab.2.center" timestamp="1590332604590">
+    <state width="1277" height="258" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590600135031" />
+    <state width="1277" height="258" key="GridCell.Tab.2.center" timestamp="1590600135031">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1277" height="177" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1590332604590" />
-    <state width="1277" height="177" key="GridCell.Tab.2.left" timestamp="1590332604589">
+    <state width="1277" height="258" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1590600135031" />
+    <state width="1277" height="258" key="GridCell.Tab.2.left" timestamp="1590600135031">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1277" height="177" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1590332604589" />
-    <state width="1277" height="177" key="GridCell.Tab.2.right" timestamp="1590332604590">
+    <state width="1277" height="258" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1590600135031" />
+    <state width="1277" height="258" key="GridCell.Tab.2.right" timestamp="1590600135031">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1277" height="177" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1590332604590" />
+    <state width="1277" height="258" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1590600135031" />
     <state width="1286" height="371" key="GridCell.Tab.3.bottom" timestamp="1590150831839">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
