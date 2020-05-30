@@ -1,7 +1,6 @@
 package com.FilmReviewWeb.Filter;
 
 import javax.servlet.*;
-import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -12,7 +11,7 @@ import java.io.IOException;
  * @author HTwo2O
  * @date 2020/5/24 21:12
  */
-@WebFilter(urlPatterns = {"/search/personalCenter"})
+//@WebFilter(urlPatterns = {"/search/personalCenter"})
 public class LoginFilter implements Filter {
     @Override
     public void destroy() {

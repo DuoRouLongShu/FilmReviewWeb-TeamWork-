@@ -1,5 +1,6 @@
 package com.FilmReviewWeb.Dao;
 
+
 import com.FilmReviewWeb.Model.DisplayFilms;
 import com.FilmReviewWeb.Utils.JDBCUtils;
 
@@ -22,7 +23,7 @@ public class GetDetailsDao {
         ResultSet resultSet =  preparedStatement.executeQuery();
         int i = 0;
         while(resultSet.next()){
-           i = resultSet.getInt(1);
+            i = resultSet.getInt(1);
 
         }
         JDBCUtils.close(connection,preparedStatement,resultSet);
@@ -34,7 +35,6 @@ public class GetDetailsDao {
      */
     public List<DisplayFilms> findByPage(int cid, int start, int pageSize) throws SQLException {
         Connection connection = JDBCUtils.getConnection();
-        System.out.println(start+"---"+pageSize);
         String sql = "select * from display_films where cid = ? limit ?, ?";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setInt(1,cid);
@@ -45,6 +45,7 @@ public class GetDetailsDao {
 
         while(resultSet.next()){
             DisplayFilms displayFilms = new DisplayFilms();
+            displayFilms.setFilmId(resultSet.getInt("film_id"));
             displayFilms.setCid(resultSet.getInt("cid"));
             displayFilms.setFilmName(resultSet.getString("film_name"));
             displayFilms.setImageSource(resultSet.getString("img_src"));

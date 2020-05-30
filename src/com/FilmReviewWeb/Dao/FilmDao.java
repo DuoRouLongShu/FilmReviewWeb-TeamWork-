@@ -1,5 +1,6 @@
 package com.FilmReviewWeb.Dao;
 
+
 import com.FilmReviewWeb.Model.Film;
 import com.FilmReviewWeb.Utils.JDBCUtils;
 
@@ -180,6 +181,7 @@ public class FilmDao {
             preparedStatement.setNull(11, Types.VARCHAR);
         }
         int insertCount = preparedStatement.executeUpdate();
+        JDBCUtils.close(connection,preparedStatement);
         if (insertCount == 1){
             return true;
         }else {
@@ -251,6 +253,7 @@ public class FilmDao {
         preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setInt(1,filmId);
         int update = preparedStatement.executeUpdate();
+        JDBCUtils.close(connection,preparedStatement);
         return (update == 0? false:true);
     }
 
@@ -330,6 +333,7 @@ public class FilmDao {
         }
         int updateCount = preparedStatement.executeUpdate();
         System.out.println(updateCount);
+        JDBCUtils.close(connection,preparedStatement);
         if (updateCount == 1){
             return true;
         }else {

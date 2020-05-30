@@ -15,18 +15,14 @@ import java.io.IOException;
 public class GetDetailsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        this.doPost(req, resp);
-    }
 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");
         resp.setContentType("text/html;charset=UTF-8");
         //接受参数
         String currentPageStr = req.getParameter("curentPage");
         String pageSizeStr = req.getParameter("pageSize");
         String cidStr = req.getParameter("cid");
-
+        System.out.println(cidStr);
         int cid = 0;//类别id
         //处理参数
         if(cidStr != null && cidStr.length() > 0){
@@ -38,7 +34,7 @@ public class GetDetailsServlet extends HttpServlet {
         if(pageSizeStr != null && pageSizeStr.length() > 0){
             pageSize = Integer.parseInt(pageSizeStr);
         }else{
-            pageSize=5;
+            pageSize=10;
         }
 
         int currentPage = 0;//当前页码，如果不传递，则默认为第一页
@@ -52,8 +48,13 @@ public class GetDetailsServlet extends HttpServlet {
         GetDetailsService getDetailsService = new GetDetailsServiceImpl();
         Page page = getDetailsService.pageQuery(cid,currentPage,pageSize);
         resp.getWriter().print(JSON.toJSONString(page));
+        System.out.println(page.getList());
+    }
 
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        this.doGet(req, resp);
 
     }
 }

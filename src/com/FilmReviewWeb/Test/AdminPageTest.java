@@ -1,3 +1,5 @@
+package com.FilmReviewWeb.Test;
+
 import com.FilmReviewWeb.Model.*;
 import com.FilmReviewWeb.Service.AdminPageService;
 import com.FilmReviewWeb.Service.Impl.AdminPageServiceImpl;

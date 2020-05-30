@@ -26,12 +26,12 @@ public class GetReviewsOfAFilmServlet extends HttpServlet {
         resp.setContentType("text/html;charset=UTF-8");
         //resp.setHeader("Access-Control-Allow-Origin", "*");
 
-        String filmName = req.getParameter("filmName");
+        Integer filmId = Integer.valueOf(req.getParameter("filmId"));
         Result result = new Result();
         FilmPageService filmPageService = new FilmPageServiceImpl();
         try {
 
-            ArrayList<Review> reviews = filmPageService.getReviewsByFilmName(filmName);
+            ArrayList<Review> reviews = filmPageService.getReviewsByFilmId(filmId);
             if (reviews.isEmpty()){
                 result.setDataCount(0);
                 result.setData(null);

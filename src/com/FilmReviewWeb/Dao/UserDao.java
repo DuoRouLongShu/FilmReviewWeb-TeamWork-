@@ -58,7 +58,7 @@ public class UserDao {
      * @return
      */
     public User findByUsername(String username) throws SQLException {
-        Connection connection = JDBCUtils.getConnection();
+        connection = JDBCUtils.getConnection();
         User user = new User();
         String sql = "select * from user where user_name = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -84,7 +84,7 @@ public class UserDao {
      */
     public boolean save(User user) throws SQLException{
         boolean hasInsert = true;
-        Connection connection = JDBCUtils.getConnection();
+        connection = JDBCUtils.getConnection();
         String sql = "insert user " +
                 "(user_name,password,power,regist_date)" +
                 "values (?,LEFT(MD5(?),8),?,now())";
@@ -119,7 +119,7 @@ public class UserDao {
      * @return
      */
     public User findByUsernameAndPassword(String userName, String password) throws SQLException {
-        Connection connection = JDBCUtils.getConnection();
+        connection = JDBCUtils.getConnection();
         User user = new User();
         String sql = "select * from user where user_name = ? and password = LEFT(MD5(?),8)";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);

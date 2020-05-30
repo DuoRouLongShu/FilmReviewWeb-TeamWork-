@@ -37,6 +37,7 @@ public class WriteReviewServlet extends HttpServlet {
                 req.getParameter("filmName"),
                 req.getParameter("text"),
                 req.getParameter("title"));
+        review.setFilmId(Integer.valueOf(req.getParameter("userId")));
         FilmPageService filmPageService = new FilmPageServiceImpl();
         Result result = new Result();
         try {

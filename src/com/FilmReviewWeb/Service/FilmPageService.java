@@ -13,11 +13,11 @@ import java.util.ArrayList;
 public interface FilmPageService {
 
     /**
-     * 通过电影名字获得相关影评
-     * @param filmName
+     * 通过电影Id获得相关影评
+     * @param filmId
      * @return
      */
-    public ArrayList<Review> getReviewsByFilmName(String filmName) throws Exception;
+    public ArrayList<Review> getReviewsByFilmId(Integer filmId) throws Exception;
 
     /**
      *通过电影名字获得电影数据

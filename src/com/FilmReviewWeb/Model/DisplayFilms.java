@@ -1,5 +1,6 @@
 package com.FilmReviewWeb.Model;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,10 +16,10 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class DisplayFilms implements Serializable {
-    //判断标志，1为轮播图，0为非轮播图
+
+    private int filmId;
     private String filmName;
     private String imageSource;
     private int cid;
     private float rating ;
-
 }

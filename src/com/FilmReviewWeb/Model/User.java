@@ -1,13 +1,5 @@
 package com.FilmReviewWeb.Model;
 
-
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class User {
     private Integer userId;
     private String userName;
@@ -18,4 +10,73 @@ public class User {
     //最后在线日期
     private String lastOnlineDate;
     private String gender;
+
+    public User() {
+    }
+
+    public User(Integer userId, String userName, String password, Integer power, String registDate, String lastOnlineDate, String gender) {
+        this.userId = userId;
+        this.userName = userName;
+        this.password = password;
+        this.power = power;
+        this.registDate = registDate;
+        this.lastOnlineDate = lastOnlineDate;
+        this.gender = gender;
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Integer getPower() {
+        return power;
+    }
+
+    public void setPower(Integer power) {
+        this.power = power;
+    }
+
+    public String getRegistDate() {
+        return registDate;
+    }
+
+    public void setRegistDate(String registDate) {
+        this.registDate = registDate;
+    }
+
+    public String getLastOnlineDate() {
+        return lastOnlineDate;
+    }
+
+    public void setLastOnlineDate(String lastOnlineDate) {
+        this.lastOnlineDate = lastOnlineDate;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 }

@@ -39,6 +39,11 @@ public class JDBCUtils {
     public static Connection getConnection() throws SQLException {//获取Connection 对象
         return dataSource.getConnection();
     }
+
+    public static DataSource getDataSource(){
+        return dataSource;
+    }
+
     //释放资源
     public static void close(Connection conn,Statement sta){
         if (sta != null){

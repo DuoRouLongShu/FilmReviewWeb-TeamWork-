@@ -22,8 +22,8 @@ public class FilmPageServiceImpl implements FilmPageService {
     }
 
     @Override
-    public ArrayList<Review> getReviewsByFilmName(String filmName) throws Exception{
-        return new ReviewDao().getReviewsByFilmName(filmName);
+    public ArrayList<Review> getReviewsByFilmId(Integer filmId) throws Exception{
+        return new ReviewDao().getReviewsByFilmId(filmId);
     }
 
     @Override

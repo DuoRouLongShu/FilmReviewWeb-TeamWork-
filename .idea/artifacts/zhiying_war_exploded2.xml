@@ -1,0 +1,27 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="zhiying:war exploded2">
+    <output-path>$PROJECT_DIR$/out/artifacts/zhiying_war_exploded2</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="zhiying" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="commons-beanutils-1.9.4" />
+          <element id="library" level="project" name="commons-collections-3.2.2" />
+          <element id="library" level="project" name="commons-logging-1.2" />
+          <element id="library" level="project" name="commons-pool2-2.8.0" />
+          <element id="library" level="project" name="druid-1.0.9" />
+          <element id="library" level="project" name="fastjson-1.2.2" />
+          <element id="library" level="project" name="jedis-3.3.0" />
+          <element id="library" level="project" name="junit-4.8.2" />
+          <element id="library" level="project" name="lombok" />
+          <element id="library" level="project" name="mysql-connector-java-8.0.15" />
+        </element>
+      </element>
+      <element id="library" level="project" name="fastjson-1.2.2-sources" />
+      <element id="javaee-facet-resources" facet="zhiying/web/Web" />
+      <element id="javaee-facet-resources" facet="zhiying/web/Web2" />
+    </root>
+  </artifact>
+</component>

@@ -2,8 +2,8 @@ package com.FilmReviewWeb.Servlet.FilmPage;
 
 import com.FilmReviewWeb.Model.Film;
 import com.FilmReviewWeb.Model.Result;
-import com.FilmReviewWeb.Service.FilmPageService;
-import com.FilmReviewWeb.Service.Impl.FilmPageServiceImpl;
+import com.FilmReviewWeb.Service.AdminPageService;
+import com.FilmReviewWeb.Service.Impl.AdminPageServiceImpl;
 import com.alibaba.fastjson.JSON;
 
 import javax.servlet.ServletException;
@@ -26,12 +26,12 @@ public class GetDataOfFilmSetvlet extends HttpServlet {
         resp.setContentType("text/html;charset=UTF-8");
         //resp.setHeader("Access-Control-Allow-Origin", "*");
         Result result = new Result();
-        String filmName = req.getParameter("filmName");
-        System.out.println(filmName);
+        Integer filmId = Integer.valueOf(req.getParameter("filmId"));
+        System.out.println(filmId);
         try {
 
-            FilmPageService filmPageService = new FilmPageServiceImpl();
-            Film data = filmPageService.getFilmDataByFilmName(filmName);
+            AdminPageService adminPageService = new AdminPageServiceImpl();
+            Film data = adminPageService.checkFilmByFilmId(filmId);
             if (data == null){
                 result.setDataCount(0);
                 result.setData(null);

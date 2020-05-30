@@ -1,7 +1,11 @@
+package com.FilmReviewWeb.Test;
+
 import com.FilmReviewWeb.Model.Film;
 import com.FilmReviewWeb.Model.Result;
 import com.FilmReviewWeb.Model.Review;
+import com.FilmReviewWeb.Service.AdminPageService;
 import com.FilmReviewWeb.Service.FilmPageService;
+import com.FilmReviewWeb.Service.Impl.AdminPageServiceImpl;
 import com.FilmReviewWeb.Service.Impl.FilmPageServiceImpl;
 import com.FilmReviewWeb.Utils.SensitiveWordUtils;
 import com.alibaba.fastjson.JSON;
@@ -17,13 +21,12 @@ public class FilmPageTest {
 
     @Test
     public void getReviewByFilmNameTest() throws Exception{
-        String filmName = "罗马假日";
+        Integer filmId = 6;
         Result result = new Result();
-
+        FilmPageService filmPageService = new FilmPageServiceImpl();
         try {
-            FilmPageService filmPageService = new FilmPageServiceImpl();
-            ArrayList<Review> reviews = filmPageService.getReviewsByFilmName(filmName);
-            //System.out.println(reviews);
+
+            ArrayList<Review> reviews = filmPageService.getReviewsByFilmId(filmId);
             if (reviews.isEmpty()){
                 result.setDataCount(0);
                 result.setData(null);
@@ -62,11 +65,12 @@ public class FilmPageTest {
     public void getFilmDataByFilmNameTest() throws Exception{
 
         Result result = new Result();
-        String filName = "早";
+        Integer filmId = Integer.valueOf(6);
+        System.out.println(filmId);
         try {
 
-            FilmPageService filmPageService = new FilmPageServiceImpl();
-            Film data = filmPageService.getFilmDataByFilmName(filName);
+            AdminPageService adminPageService = new AdminPageServiceImpl();
+            Film data = adminPageService.checkFilmByFilmId(filmId);
             if (data == null){
                 result.setDataCount(0);
                 result.setData(null);
@@ -82,20 +86,6 @@ public class FilmPageTest {
             e.printStackTrace();
         }
         System.out.println(JSON.toJSONString(result));
-
-    }
-
-    @Test
-    public void writeReviewTest() throws Exception {
-        FilmPageService filmPageService = new FilmPageServiceImpl();
-        Review review = new Review();
-        review.setFilmName("罗马假日");
-        review.setUserName("sb");
-        review.setRating(9.5f);
-        review.setTitle("观后感");
-        review.setText("真的好看太好看了啊啊啊啊");
-        boolean flag = filmPageService.writeAReview(review);
-        System.out.println(flag);
     }
 
     @Test

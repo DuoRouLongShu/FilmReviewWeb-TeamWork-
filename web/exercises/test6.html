@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+    <style>
+        #test-image-preview {
+        　　border: 1px solid #ccc;
+            width: 100%;
+            height: 200px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    </style>
+    <script>
+        var image;
+        $(function () {
+            // var tests = [{"userName":"Mazin"}, {"userName":"mytest"}, {"userName":"tt"}, {"userName":"nice"}];
+            // for(var key in tests){
+            //     if(tests.hasOwnProperty(key)){
+            //         console.log(tests[key].userName);
+            //     }
+            // }
+                var
+                    fileInput = document.getElementById('test-image-file'),
+                    info = document.getElementById('test-file-info'),
+                    preview = document.getElementById('test-image-preview');
+                // 监听change事件:
+                fileInput.addEventListener('change', function () {
+                    // 清除背景图片:
+                    preview.style.backgroundImage = '';
+                    // 检查文件是否选择:
+                    if (!fileInput.value) {
+                        info.innerHTML = '没有选择文件';
+                        return;
+                    }
+                    // 获取File引用:
+                    var file = fileInput.files[0];
+                    image = file;
+                    //判断文件大小
+                    var size = file.size;
+                    // if(size >= 1*1024*1024){
+                    //     alert('文件大于1兆不行!');
+                    //     return false;
+                    // }
+                    // 获取File信息:
+                    // info.innerHTML = '文件: ' + file.name + '<br>' +
+                    //     '大小: ' + file.size + 'B<br>' +
+                    //     '修改: ' + file.lastModifiedDate;
+                    if (file.type !== 'image/jpeg' && file.type !== 'image/png' && file.type !== 'image/gif') {
+                        alert('不是有效的图片文件!');
+                        return;
+                    }
+                    // 读取文件:
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        var
+                            data = e.target.result; // 'data:image/jpeg;base64,/9j/4AAQSk...(base64编码)...}'
+                        console.log("data:"+data);
+                        preview.style.backgroundImage = 'url(' + data + ')';
+                    };
+                    // 以DataURL的形式读取文件:
+                    reader.readAsDataURL(file);
+                    console.log(file);
+
+                });
+
+            // var src = "../img/1590053103(1).jpg";
+            // $("#1").append("<img src="+src+">");
+            // $("#2").append("<img src=./img/1590053103(1).jpg>");
+
+        })
+        // function fun() {
+        //     $("#1").prop("hidden","hidden");
+        //     $("button").prop("hidden","hidden");
+        // };
+        function fun1() {
+            var xhr=new XMLHttpRequest();
+            var fd=new FormData();
+            xhr.open('POST','http://localhost:8080/FilmReviewWeb//search/searchFilm');
+            fd.append("File",image);
+            xhr.send(fd);
+            console.log('上传json！');
+        }
+    </script>
+</head>
+<body>
+
+<form method="post" enctype="multipart/form-data" id="file_upload">
+    　　<p>图片预览：</p>
+    　　<div id="test-image-preview"></div>
+    　　<p>
+    　　　　<input type="file" id="test-image-file" name="test" accept="image/gif, image/jpeg, image/png, image/jpg">
+    　　</p>
+    <p id="test-file-info"></p>
+</form>
+<input type="button" onclick=fun1(); value="提交图片">
+<!--<div id="1" >1</div>-->
+<!--<button onclick=fun();>点击隐藏图片</button>-->
+<!--<br><br>-->
+<!--<img src="../img/1590053103(1).jpg" style="width: 30px;height: 30px">-->
+</body>
+</html>
