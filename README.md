@@ -60,7 +60,7 @@
 
 4. 桌面新建一个浏览器快捷方式，设置“属性”中“目标”一栏后添加字符串“--args --disable-web-security --user-data-dir=D:\temp”（以解决javaweb项目与vue项目的跨域问题）
 
-5. 在浏览器地址库输入http://localhost:8081/zhiying/进入  知影  影评网
+5. 在浏览器地址库输入http://localhost:8080/zhiying/进入  知影  影评网
 
 6. 网站默认管理员账号为7530，密码为123456（数据库中uesr表power列为1的用户）
 
